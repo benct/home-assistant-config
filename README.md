@@ -35,6 +35,6 @@ Using custom UI elements from [Custom UI](https://github.com/andrey-git/home-ass
 
 ![Home Tab](https://github.com/benct/home-assistant-config/blob/master/screenshots/ha-home.png)
 
-![Climate Tab](https://github.com/benct/home-assistant-config/blob/master/screenshots/ha-home.png)
+![Climate Tab](https://github.com/benct/home-assistant-config/blob/master/screenshots/ha-climate.png)
 
-![Other Tab](https://github.com/benct/home-assistant-config/blob/master/screenshots/ha-home.png)
+![Other Tab](https://github.com/benct/home-assistant-config/blob/master/screenshots/ha-other.png)
