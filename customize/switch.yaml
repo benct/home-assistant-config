@@ -1,3 +1,8 @@
+switch.power_livingroom_light:
+  friendly_name: Lys (Sofa)
+  assumed_state: false
+  icon: mdi:ceiling-light
+
 switch.power_livingroom_sofa:
   friendly_name: Strøm (Sofa)
   assumed_state: false
@@ -36,6 +41,13 @@ switch.power_bedroom_charger:
   friendly_name: Lader
   assumed_state: false
   icon: mdi:battery-charging-70
+
+switch.power_office_pc:
+  friendly_name: PC/TV
+  assumed_state: false
+  icon: mdi:power
+  confirm_controls_show_lock: true
+  custom_ui_state_card: state-card-custom-ui
 
 switch.thermometer_storeroom:
   hidden: true

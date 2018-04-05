@@ -5,9 +5,9 @@ livingroom:
   entities:
     - sensor.smoke_sensor_livingroom_temperature
     - sensor.power_livingroom_tv_power
-    - sensor.power_livingroom_tv_power_2
     - switch.power_livingroom_tv
     - switch.power_livingroom_sofa
+    - switch.power_livingroom_light
 
 livingroom_heaters:
   name: Varme 

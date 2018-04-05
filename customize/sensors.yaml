@@ -30,13 +30,28 @@ sensor.motion_hall_temperature:
   custom_ui_state_card: state-card-custom-ui
 
 sensor.power_livingroom_tv_power_2:
-  friendly_name: Forbruk (TV - total)
+  friendly_name: Forbruk (TV/Lyd - total)
   icon: mdi:flash
   unit_of_measurement: kWt
 
 sensor.power_livingroom_tv_power:
-  friendly_name: Forbruk (TV)
+  friendly_name: Forbruk (TV/Lyd)
   icon: mdi:flash
+  extra_badge:
+    - entity_id: sensor.power_livingroom_tv_power_2
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.power_office_pc_power_2:
+  friendly_name: Forbruk (PC/TV - total)
+  icon: mdi:flash
+  unit_of_measurement: kWt
+
+sensor.power_office_pc_power:
+  friendly_name: Forbruk (PC/TV)
+  icon: mdi:flash
+  extra_badge:
+    - entity_id: sensor.power_office_pc_power_2
+  custom_ui_state_card: state-card-custom-ui
 
 sensor.smoke_sensor_livingroom_temperature:
   friendly_name: Temperatur

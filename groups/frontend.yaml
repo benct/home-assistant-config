@@ -6,7 +6,7 @@ default_view:
     - group.livingroom
     - group.hall
     - group.bedroom
-    - group.guestroom
+    - group.office
     - group.storeroom
     - group.outside
     - group.yr_no
