@@ -1,13 +1,12 @@
-  purge_interval: 2
-  purge_keep_days: 365
-  exclude:
-    domains:
-      - automation
-      - weblink
-      - updater
-      - camera
-  include:
-    domains:
-      - sensor
-      - light
-      - switch
+purge_interval: 2
+purge_keep_days: 365
+exclude:
+  domains:
+    - automation
+    - updater
+    - camera
+include:
+  domains:
+    - sensor
+    - light
+    - switch

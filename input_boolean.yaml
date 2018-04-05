@@ -1,19 +1,19 @@
-  home:
-    name: Hjemme
-    initial: off
-    icon: mdi:home
-    
-  sleep:
-    name: Sove
-    initial: off
-    icon: mdi:sleep
-    
-  vacation:
-    name: Ferie
-    initial: off
-    icon: mdi:airplane
-    
-  away:
-    name: Borte
-    initial: off
-    icon: mdi:logout
+home:
+  name: Hjemme
+  initial: off
+  icon: mdi:home
+
+sleep:
+  name: Sove
+  initial: off
+  icon: mdi:sleep
+
+vacation:
+  name: Ferie
+  initial: off
+  icon: mdi:airplane
+
+away:
+  name: Borte
+  initial: off
+  icon: mdi:logout

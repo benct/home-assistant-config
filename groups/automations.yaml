@@ -3,4 +3,4 @@ automations:
   icon: mdi:home-automation
   entities:
     - automation.utelys_pa_ved_solnedgang
-    - automation.utelys_av_ved_soloppgang0100
+    - automation.utelys_av_kl_0100
