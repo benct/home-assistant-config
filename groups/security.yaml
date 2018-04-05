@@ -1,0 +1,37 @@
+smoke_sensors:
+  name: Røykvarslere
+  icon: mdi:fire
+  entities:
+    - binary_sensor.smoke_sensor_livingroom
+    - sensor.template_smoke_sensor_livingroom
+
+flood_sensors:
+  name: Vannsensor
+  icon: mdi:pipe-leak
+  entities:
+    - binary_sensor.flood_sensor_bathroom
+    - sensor.template_flood_sensor_bathroom
+
+people:
+  name: Personer
+  icon: mdi:account-multiple
+  entities:
+    - device_tracker.8c85903b5cd5
+    - device_tracker.d8c46a89875e
+    - device_tracker.20ee28f3168c
+    - device_tracker.c869cd9e5486
+
+door_windows:
+  name: Dør og vinduer
+  icon: mdi:door
+  entities:
+    - binary_sensor.magnet_door_main
+    - sensor.template_magnet_door_main
+
+motion:
+  name: Bevegelse
+  icon: mdi:run
+  control: hidden
+  entities:
+    - binary_sensor.motion_hall
+    - sensor.template_motion_hall

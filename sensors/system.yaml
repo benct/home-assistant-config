@@ -1,0 +1,25 @@
+- platform: cpuspeed
+
+- platform: fastdotcom
+  minute:
+    - 0
+    - 30
+
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /
+    - type: disk_use
+      arg: /
+    - type: disk_free
+      arg: /
+    - type: memory_use_percent
+    - type: memory_use
+    - type: memory_free
+    - type: processor_use
+    - type: load_1m
+    - type: load_5m
+    - type: load_15m
+    - type: since_last_boot
+    - type: ipv4_address
+      arg: eth0

@@ -1,0 +1,5 @@
+- platform: template
+  sensors:
+    template_motion_hall:
+      value_template: '{% if is_state("binary_sensor.motion_hall", "off") %}Ingen{% else %}Bevegelse{% endif %}'
+      friendly_name: 'Bevegelse (Gang)'

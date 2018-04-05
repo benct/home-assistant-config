@@ -1,0 +1,56 @@
+default_view:
+  name: Hjem
+  view: true
+#  icon: mdi:home
+  entities:
+    - group.livingroom
+    - group.hall
+    - group.bedroom
+    - group.guestroom
+    - group.storeroom
+    - group.outside
+    - group.yr_no
+    - group.status
+
+climate:
+  name: Klima
+  view: true
+#  icon: mdi:weather-partlycloudy
+  entities:
+    - group.climate_control
+    - group.climate_temperature
+    - group.climate_humidity
+    - group.climate_co2
+    - group.climate_pressure
+
+security:
+  name: Sikkerhet
+  view: true
+#  icon: mdi:security
+  entities:
+    - group.smoke_sensors
+    - group.door_windows
+    - group.motion
+    - group.flood_sensors
+    - group.people
+
+media:
+  name: Media
+  view: true
+#  icon: mdi:television
+  entities:
+    - media_player.ccultra_tomlin
+    - media_player.spotify
+    - media_player.receiver
+    - media_player.tv_stue
+
+other:
+  name: Annet
+  view: true
+#  icon: mdi:settings
+  entities:
+    - group.sensor_battery
+    - group.sensor_signal
+    - group.system
+    - group.automations
+    - group.settings

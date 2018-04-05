@@ -1,0 +1,7 @@
+storeroom:
+  name: Bod
+  icon: mdi:archive
+  entities:
+    - sensor.thermometer_storeroom_temperature
+    - sensor.thermometer_storeroom_humidity
+    - sensor.thermometer_freezer_temperature

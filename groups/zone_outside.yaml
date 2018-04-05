@@ -1,0 +1,9 @@
+outside:
+  name: Ute
+  icon: mdi:weather-sunny
+  control: hidden
+  entities:
+    - sun.sun
+    - sensor.netatmo_outside_temperature
+    - sensor.netatmo_outside_humidity
+    - switch.power_outside_lights

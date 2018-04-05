@@ -1,0 +1,6 @@
+automations:
+  name: Automations
+  icon: mdi:home-automation
+  entities:
+    - automation.utelys_pa_ved_solnedgang
+    - automation.utelys_av_ved_soloppgang0100

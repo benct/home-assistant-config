@@ -1,0 +1,6 @@
+settings:
+  name: Innstillinger
+  icon: mdi:settings
+  entities:
+    - input_select.log_level
+    - updater.updater

@@ -1,0 +1,16 @@
+livingroom:
+  name: Stue
+  icon: mdi:sofa
+  control: hidden
+  entities:
+    - sensor.smoke_sensor_livingroom_temperature
+    - sensor.power_livingroom_tv_power
+    - sensor.power_livingroom_tv_power_2
+    - switch.power_livingroom_tv
+    - switch.power_livingroom_sofa
+
+livingroom_heaters:
+  name: Varme 
+  entities:
+    - switch.power_livingroom_heater_left
+    - switch.power_livingroom_heater_right

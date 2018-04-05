@@ -1,0 +1,9 @@
+hall:
+  name: Gang
+  icon: mdi:hall
+  control: hidden
+  entities:
+    - sensor.motion_hall_temperature
+    - sensor.motion_hall_luminance
+    - sensor.template_motion_hall
+    - sensor.template_magnet_door_main

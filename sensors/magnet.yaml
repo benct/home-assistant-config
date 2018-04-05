@@ -1,0 +1,5 @@
+- platform: template
+  sensors:
+    template_magnet_door_main:
+      value_template: '{% if is_state("binary_sensor.magnet_door_main", "off") %}Lukket{% else %}Åpen{% endif %}'
+      friendly_name: 'Ytterdør'

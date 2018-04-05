@@ -1,0 +1,49 @@
+- alias: 'Set theme on startup'
+  initial_state: 'on'
+  trigger:
+  - platform: homeassistant
+    event: start
+  action:
+    service: frontend.set_theme
+    data:
+      name: midnight
+
+- alias: 'Set ferie status on startup'
+  initial_state: 'on'
+  trigger:
+  - platform: homeassistant
+    event: start
+  action:
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.vacation
+
+- alias: 'Set climate away mode on startup'
+  initial_state: 'on'
+  trigger:
+  - platform: homeassistant
+    event: start
+  action:
+  - service: climate.set_away_mode
+    entity_id: climate.termostat_stue
+    data:
+      away_mode: true
+
+- alias: 'Notification on restart'
+  initial_state: 'on'
+  trigger:
+  - platform: homeassistant
+    event: start
+  action:
+  - service: notify.phone_ben
+    data:
+      message: "Home Assistant has been restarted"
+      title: "Restart"
+
+- alias: Log Level
+  trigger:
+  - platform: state
+    entity_id: input_select.log_level
+  action:
+  - service: logger.set_level
+    data_template:
+      homeassistant.components: "{{ trigger.to_state.state }}"

@@ -1,0 +1,88 @@
+sensor.netatmo_bedroom_co2:
+  friendly_name: CO2
+  icon: mdi:periodic-table-co2
+  group:
+    group.climate_*:
+      friendly_name: Soverom
+      icon: mdi:hotel
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.netatmo_bedroom_humidity:
+  friendly_name: Luftfuktighet
+  group:
+    group.climate_*:
+      friendly_name: Soverom
+      icon: mdi:hotel
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.netatmo_bedroom_noise:
+  friendly_name: Lyd
+
+sensor.netatmo_bedroom_pressure:
+  friendly_name: Trykk
+  group:
+    group.climate_*:
+      friendly_name: Soverom
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.netatmo_bedroom_temperature:
+  friendly_name: Temperatur
+  group:
+    group.climate_*:
+      friendly_name: Soverom
+      icon: mdi:hotel
+#  extra_data_template:
+#    - Min ${sensor.netatmo_bedroom_min_temp.state}
+#    - Max ${sensor.netatmo_bedroom_max_temp.state}
+  extra_badge:
+    - entity_id: sensor.netatmo_bedroom_min_temp
+    - entity_id: sensor.netatmo_bedroom_max_temp
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.netatmo_bedroom_min_temp:
+  friendly_name: Soverom (Min)
+  unit_of_measurement: min
+sensor.netatmo_bedroom_max_temp:
+  friendly_name: Soverom (Max)
+  unit_of_measurement: max
+
+sensor.netatmo_bedroom_wifi:
+  friendly_name: Soverom (Wifi)
+  templates:
+    state: if (state === 'Full') return 'Bra'; else return state;
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.netatmo_outside_battery:
+  friendly_name: Ute
+
+sensor.netatmo_outside_humidity:
+  friendly_name: Luftfuktighet
+  group:
+    group.climate_*:
+      friendly_name: Ute
+      icon: mdi:arrow-right-bold-box-outline
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.netatmo_outside_radio:
+  friendly_name: Ute (Radio)
+  templates:
+    state: if (state === 'High') return 'Bra'; else return state;
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.netatmo_outside_temperature:
+  friendly_name: Temperatur
+  group:
+    group.climate_*:
+      friendly_name: Ute
+      icon: mdi:arrow-right-bold-box-outline
+  extra_badge:
+    - entity_id: sensor.netatmo_outside_min_temp
+    - entity_id: sensor.netatmo_outside_max_temp
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.netatmo_outside_min_temp:
+  friendly_name: Ute (Min)
+  unit_of_measurement: min
+sensor.netatmo_outside_max_temp:
+  friendly_name: Ute (Max)
+  unit_of_measurement: max

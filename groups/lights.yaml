@@ -1,0 +1,5 @@
+lights:
+  name: Lys
+  entities:
+    - switch.power_bedroom_light
+    - switch.power_outside_lights

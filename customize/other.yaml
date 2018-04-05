@@ -1,0 +1,57 @@
+sun.sun:
+  friendly_name: Sun
+#  extra_data_template:
+#    - Neste solnedgang ${attributes.next_setting}
+#    - Neste soloppgang ${attributes.next_rising}
+  custom_ui_state_card: state-card-custom-ui
+
+updater.updater:
+  friendly_name: Oppdatering tilgjengelig
+
+sensor.processor_use:
+  friendly_name: Processor
+  extra_badge:
+    - entity_id: sensor.cpu_speed
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.disk_use_percent_:
+  friendly_name: Disk
+  extra_badge:
+    - entity_id: sensor_disk_use_
+    - entity_id: sensor.disk_free_
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.disk_use_:
+  unit_of_measurement: used
+sensor.disk_free_:
+  unit_of_measurement: free
+
+sensor.memory_use_percent:
+  friendly_name: Memory
+  extra_badge:
+    - entity_id: sensor_memory_use 
+    - entity_id: sensor.memory_free
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.memory_use:
+  unit_of_measurement: used
+sensor.memory_free:
+  unit_of_measurement: free
+
+sensor.load_1m:
+  friendly_name: Load
+  extra_badge:
+    - entity_id: sensor_load_15m 
+    - entity_id: sensor.load_5m
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.load_5m:
+  unit_of_measurement: 5m
+sensor.load_15m:
+  unit_of_measurement: 15m
+
+sensor.ipv4_address_eth0:
+  friendly_name: IPv4 address
+
+sensor.since_last_boot:
+  friendly_name: Uptime

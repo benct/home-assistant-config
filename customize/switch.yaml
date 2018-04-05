@@ -1,0 +1,71 @@
+switch.power_livingroom_sofa:
+  friendly_name: Strøm (Sofa)
+  assumed_state: false
+  icon: mdi:power-plug
+
+switch.power_livingroom_tv:
+  friendly_name: TV/Lyd
+  assumed_state: false
+  icon: mdi:power
+  confirm_controls_show_lock: true
+  custom_ui_state_card: state-card-custom-ui
+
+switch.power_livingroom_heater_left:
+  friendly_name: Varme (V)
+  assumed_state: false
+  icon: mdi:thermometer-lines
+
+switch.power_livingroom_heater_right:
+  friendly_name: Varme (H)
+  assumed_state: false
+  icon: mdi:thermometer-lines
+
+switch.power_outside_lights:
+  friendly_name: Utelys
+  assumed_state: false
+  icon: mdi:lightbulb-on-outline
+  confirm_controls_show_lock: true
+  custom_ui_state_card: state-card-custom-ui
+
+switch.power_bedroom_light:
+  friendly_name: Nattbord
+  assumed_state: false
+  icon: mdi:lamp
+
+switch.power_bedroom_charger:
+  friendly_name: Lader
+  assumed_state: false
+  icon: mdi:battery-charging-70
+
+switch.thermometer_storeroom:
+  hidden: true
+
+switch.remote_livingroom_1:
+  friendly_name: Fjernkontroll 1 (Stue)
+  assumed_state: false
+  icon: mdi:remote
+
+switch.remote_livingroom_2:
+  friendly_name: Fjernkontroll 2 (Stue)
+  assumed_state: false
+  icon: mdi:remote
+
+switch.remote_livingroom_3:
+  friendly_name: Fjernkontroll 3 (Stue)
+  assumed_state: false
+  icon: mdi:remote
+
+switch.remote_bedroom_1:
+  friendly_name: Fjernkontroll 1 (Soverom)
+  assumed_state: false
+  icon: mdi:remote
+
+switch.remote_bedroom_2:
+  friendly_name: Fjernkontroll 2 (Soverom)
+  assumed_state: false
+  icon: mdi:remote
+
+switch.remote_bedroom_3:
+  friendly_name: Fjernkontroll 3 (Soverom)
+  assumed_state: false
+  icon: mdi:remote

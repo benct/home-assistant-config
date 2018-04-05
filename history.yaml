@@ -1,0 +1,13 @@
+  exclude:
+    domains:
+      - automation
+      - updater
+      - camera
+  include:
+    domains:
+      - sensor
+      - light
+      - switch
+      - binary_sensor
+    #entities:
+    # - sensor.x

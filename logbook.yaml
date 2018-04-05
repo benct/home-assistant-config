@@ -1,0 +1,6 @@
+  include:
+    domains:
+      - binary_sensor
+      - sensor
+      - switch
+      - light

@@ -1,0 +1,94 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 40
+  unit_system: metric
+  time_zone: Europe/Oslo
+
+  customize: !include_dir_merge_named customize
+
+frontend:
+  themes: !include themes.yaml
+
+customizer:
+  custom_ui: local
+
+config:
+
+http:
+  api_password: !secret http_password
+  base_url: !secret base_url
+  trusted_networks:
+    - 127.0.0.1
+    - 192.168.0.0/24
+  ip_ban_enabled: true
+  login_attempts_threshold: 5
+
+updater:
+  include_used_components: true
+discovery:
+conversation:
+map:
+sun:
+cloud:
+
+recorder: !include recorder.yaml
+history: !include history.yaml
+logbook: !include logbook.yaml
+
+sensor: !include_dir_merge_list sensors
+group: !include_dir_merge_named groups
+automation: !include_dir_merge_list automations
+script: !include scripts.yaml
+
+input_boolean: !include input_boolean.yaml
+input_select: !include input_select.yaml
+
+tellduslive:
+  host: !secret telldus_host
+  update_interval: 10
+
+netatmo:
+  api_key: !secret netatmo_api_key
+  secret_key: !secret netatmo_secret_key
+  username: !secret netatmo_username
+  password: !secret netatmo_password
+  discovery: false
+
+climate:
+  - platform: generic_thermostat
+    name: Termostat (Stue)
+    heater: group.livingroom_heaters
+    target_sensor: sensor.smoke_sensor_livingroom_temperature
+    target_temp: 22
+    cold_tolerance: 0.3
+    hot_tolerance: 0.1
+    away_temp: 16
+
+media_player:
+  - platform: samsungtv
+    name: TV (Stue)
+    host: 192.168.0.15
+    port: 8001
+  - platform: cast
+  - platform: onkyo
+    name: Receiver
+    host: 192.168.0.16
+#    sources:
+#      video2: GetBox II
+  - platform: spotify
+    client_id: !secret spotify_id
+    client_secret: !secret spotify_secret
+
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 192.168.0.0/24
+    home_interval: 10
+    scan_options: " --privileged -sP "
+    exclude:
+      - 192.168.0.11
+      - 192.168.0.21
+
+tts:
+  - platform: google

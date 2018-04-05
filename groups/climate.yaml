@@ -1,0 +1,58 @@
+climate_control:
+  name: Klimastyring
+  icon: mdi:nest
+  control: hidden
+  entities:
+    - climate.termostat_stue
+    - switch.power_livingroom_heater_left
+    - switch.power_livingroom_heater_right
+
+climate_temperature:
+  name: Temperatur
+  icon: mdi:thermometer
+  entities:
+    - sensor.smoke_sensor_livingroom_temperature
+    - sensor.netatmo_bedroom_temperature
+    - sensor.flood_sensor_bathroom_temperature
+    - sensor.motion_hall_temperature
+    - sensor.magnet_door_main_temperature
+    - sensor.thermometer_storeroom_temperature
+    - sensor.thermometer_freezer_temperature
+    - sensor.netatmo_outside_temperature
+    - sensor.yr_temperature
+
+climate_humidity:
+  name: Luftfuktighet
+  icon: mdi:water-percent
+  entities:
+    - sensor.netatmo_bedroom_humidity
+    - sensor.thermometer_storeroom_humidity
+    - sensor.netatmo_outside_humidity
+    - sensor.yr_humidity
+
+climate_co2:
+  name: CO2
+  icon: mdi:periodic-table-co2
+  entities:
+    - sensor.netatmo_bedroom_co2
+
+climate_pressure:
+  name: Lufttrykk
+  icon: mdi:gauge
+  entities:
+    - sensor.netatmo_bedroom_pressure
+    - sensor.yr_pressure
+
+yr_no:
+  name: Yr.no
+  icon: mdi:weather-partlycloudy
+  entities:
+    - sensor.yr_symbol
+    - sensor.yr_temperature
+    - sensor.yr_precipitation
+    - sensor.yr_cloudiness
+    - sensor.yr_wind_speed
+    - sensor.yr_wind_direction
+    - sensor.yr_humidity
+    - sensor.yr_percipitation
+    - sensor.yr_pressure

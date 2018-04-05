@@ -1,0 +1,68 @@
+sensor.telldus_outside_temperature:
+  hidden: true
+
+sensor.flood_sensor_bathroom_temperature:
+  friendly_name: Temperatur
+  group:
+    group.climate_*:
+      friendly_name: Bad
+      icon: mdi:water-pump
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.magnet_door_main_temperature:
+  friendly_name: Temperatur
+  group:
+    group.climate_*:
+      friendly_name: Ytterdør
+      icon: mdi:door
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.motion_hall_luminance:
+  friendly_name: Lysnivå
+  icon: mdi:ceiling-light
+
+sensor.motion_hall_temperature:
+  friendly_name: Temperatur
+  group:
+    group.climate_*:
+      friendly_name: Gang
+      icon: mdi:bulletin-board
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.power_livingroom_tv_power_2:
+  friendly_name: Forbruk (TV - total)
+  icon: mdi:flash
+  unit_of_measurement: kWt
+
+sensor.power_livingroom_tv_power:
+  friendly_name: Forbruk (TV)
+  icon: mdi:flash
+
+sensor.smoke_sensor_livingroom_temperature:
+  friendly_name: Temperatur
+  group:
+    group.climate_*:
+      friendly_name: Stue
+      icon: mdi:sofa
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.thermometer_storeroom_temperature:
+  friendly_name: Temperatur
+  group:
+    group.climate_*:
+      friendly_name: Bod
+      icon: mdi:archive
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.thermometer_storeroom_humidity:
+  friendly_name: Luftfuktighet
+  icon: mdi:water-percent
+  group:
+    group.climate_*:
+      friendly_name: Bod
+      icon: mdi:archive
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.thermometer_freezer_temperature:
+  friendly_name: Fryser
+  icon: mdi:snowflake

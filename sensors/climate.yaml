@@ -1,0 +1,30 @@
+- platform: yr
+  monitored_conditions:
+    - symbol
+    - temperature
+    - humidity
+    - precipitation
+    - windSpeed
+    - windDirection
+    - cloudiness
+    - pressure
+
+- platform: netatmo
+  station: Home
+  modules:
+    Bedroom:
+      - temperature
+      - co2
+      - pressure
+      - noise
+      - humidity
+      - min_temp
+      - max_temp
+      - wifi_status
+    Outside:
+      - temperature
+      - humidity
+      - min_temp
+      - max_temp
+      - battery_vp
+      - rf_status

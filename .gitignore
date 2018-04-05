@@ -1,0 +1,16 @@
+deps
+logs
+pids
+
+*.log
+*.db
+*.pid
+*.seed
+*.uuid
+*.conf
+
+.cloud
+.spotify-token-cache
+
+secrets.yaml
+known_devices.yaml
