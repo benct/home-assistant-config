@@ -1,17 +1,23 @@
 binary_sensor.flood_sensor_bathroom:
   hidden: true
+
+binary_sensor.magnet_door_main:
+  hidden: true
+
+binary_sensor.motion_hall:
+  hidden: true
+
+binary_sensor.smoke_sensor_livingroom:
+  hidden: true
+
 sensor.template_flood_sensor_bathroom:
   friendly_name: Bad
   icon: mdi:pipe-leak
 
-binary_sensor.magnet_door_main:
-  hidden: true
 sensor.template_magnet_door_main:
   friendly_name: Ytterdør
   icon: mdi:login
 
-binary_sensor.motion_hall:
-  hidden: true
 sensor.template_motion_hall:
   friendly_name: Gang
   icon: mdi:run
@@ -20,8 +26,6 @@ sensor.template_motion_hall:
       friendly_name: Bevegelse
   custom_ui_state_card: state-card-custom-ui
 
-binary_sensor.smoke_sensor_livingroom:
-  hidden: true
 sensor.template_smoke_sensor_livingroom:
   friendly_name: Stue
   icon: mdi:fire

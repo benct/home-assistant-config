@@ -11,7 +11,7 @@
   - service: switch.turn_on
     entity_id: switch.power_outside_lights
 
-- alias: 'Utelys av ved soloppgang/01:00'
+- alias: 'Utelys av kl 01:00'
   initial_state: 'on'
   trigger:
   - platform: sun
