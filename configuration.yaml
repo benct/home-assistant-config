@@ -66,20 +66,7 @@ climate:
     hot_tolerance: 0.1
     away_temp: 16
 
-media_player:
-  - platform: samsungtv
-    name: TV (Stue)
-    host: 192.168.0.15
-    port: 8001
-  - platform: cast
-  - platform: onkyo
-    name: Receiver
-    host: 192.168.0.16
-#    sources:
-#      video2: GetBox II
-  - platform: spotify
-    client_id: !secret spotify_id
-    client_secret: !secret spotify_secret
+media_player: !include media.yaml
 
 device_tracker:
   - platform: nmap_tracker
