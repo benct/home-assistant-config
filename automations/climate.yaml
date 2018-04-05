@@ -1,10 +1,10 @@
-- alias: 'Set away mode when away/vacation'
-  initial_state: 'on'
-  trigger:
-  - platform: homeassistant
-    event: start
-  action:
-  - service: climate.set_away_mode
-    entity_id: climate.termostat_stue
-    data:
-      away_mode: true
+#- alias: 'Set away mode when away/vacation'
+#  initial_state: 'on'
+#  trigger:
+#  - platform: homeassistant
+#    event: start
+#  action:
+#  - service: climate.set_away_mode
+#    entity_id: climate.termostat_stue
+#    data:
+#      away_mode: true
