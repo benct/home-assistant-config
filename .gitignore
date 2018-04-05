@@ -4,11 +4,15 @@ pids
 
 *.log
 *.db
+*.db-journal
+*.db-shm
+*.db-wal
 *.pid
 *.seed
 *.uuid
 *.conf
 
+.idea
 .cloud
 .spotify-token-cache
 
