@@ -11,6 +11,7 @@ pids
 *.seed
 *.uuid
 *.conf
+*.DS_Store
 
 .idea
 .cloud
