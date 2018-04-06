@@ -1,12 +1,9 @@
 sun.sun:
   friendly_name: Sun
-#  extra_data_template:
+  extra_data_template: ${attributes}
 #    - Neste solnedgang ${attributes.next_setting}
 #    - Neste soloppgang ${attributes.next_rising}
   custom_ui_state_card: state-card-custom-ui
-
-updater.updater:
-  friendly_name: Oppdatering tilgjengelig
 
 sensor.processor_use:
   friendly_name: Processor
@@ -53,9 +50,13 @@ sensor.load_15m:
 sensor.ipv4_address_eth0:
   friendly_name: IPv4 address
 
-sensor.since_last_boot:
-  friendly_name: Uptime
-
 sensor.myipopendnscom:
   friendly_name: Public IP
   icon: mdi:server-network
+
+sensor.since_last_boot:
+  friendly_name: Uptime
+
+sensor.fastcom_download:
+  friendly_name: Fast.com (down)
+  show_last_changed: true

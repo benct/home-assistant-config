@@ -7,6 +7,7 @@ sensor.flood_sensor_bathroom_temperature:
     group.climate_*:
       friendly_name: Bad
       icon: mdi:water-pump
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.magnet_door_main_temperature:
@@ -15,11 +16,14 @@ sensor.magnet_door_main_temperature:
     group.climate_*:
       friendly_name: Ytterdør
       icon: mdi:door
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.motion_hall_luminance:
   friendly_name: Lysnivå
   icon: mdi:ceiling-light
+  show_last_changed: true
+  custom_ui_state_card: state-card-custom-ui
 
 sensor.motion_hall_temperature:
   friendly_name: Temperatur
@@ -27,6 +31,7 @@ sensor.motion_hall_temperature:
     group.climate_*:
       friendly_name: Gang
       icon: mdi:bulletin-board
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.power_livingroom_tv_power_2:
@@ -39,6 +44,7 @@ sensor.power_livingroom_tv_power:
   icon: mdi:flash
   extra_badge:
     - entity_id: sensor.power_livingroom_tv_power_2
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.power_office_pc_power_2:
@@ -51,6 +57,7 @@ sensor.power_office_pc_power:
   icon: mdi:flash
   extra_badge:
     - entity_id: sensor.power_office_pc_power_2
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.smoke_sensor_livingroom_temperature:
@@ -59,6 +66,7 @@ sensor.smoke_sensor_livingroom_temperature:
     group.climate_*:
       friendly_name: Stue
       icon: mdi:sofa
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.thermometer_storeroom_temperature:
@@ -67,6 +75,7 @@ sensor.thermometer_storeroom_temperature:
     group.climate_*:
       friendly_name: Bod
       icon: mdi:archive
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.thermometer_storeroom_humidity:
@@ -76,8 +85,11 @@ sensor.thermometer_storeroom_humidity:
     group.climate_*:
       friendly_name: Bod
       icon: mdi:archive
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.thermometer_freezer_temperature:
   friendly_name: Fryser
   icon: mdi:snowflake
+  show_last_changed: true
+  custom_ui_state_card: state-card-custom-ui

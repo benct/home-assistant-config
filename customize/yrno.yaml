@@ -4,6 +4,7 @@ sensor.yr_precipitation:
   group:
     group.climate_*:
       friendly_name: Yr.no
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.yr_cloudiness:
@@ -12,6 +13,7 @@ sensor.yr_cloudiness:
   group:
     group.climate_*:
       friendly_name: Yr.no
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.yr_pressure:
@@ -20,6 +22,7 @@ sensor.yr_pressure:
   group:
     group.climate_*:
       friendly_name: Yr.no
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.yr_humidity:
@@ -28,6 +31,7 @@ sensor.yr_humidity:
   group:
     group.climate_*:
       friendly_name: Yr.no
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.yr_temperature:
@@ -36,6 +40,7 @@ sensor.yr_temperature:
   group:
     group.climate_*:
       friendly_name: Yr.no
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.yr_wind_speed:
@@ -44,6 +49,7 @@ sensor.yr_wind_speed:
   group:
     group.climate_*:
       friendly_name: Yr.no
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.yr_wind_direction:
@@ -52,6 +58,7 @@ sensor.yr_wind_direction:
   group:
     group.climate_*:
       friendly_name: Yr.no
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.yr_symbol:

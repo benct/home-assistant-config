@@ -5,6 +5,7 @@ sensor.netatmo_bedroom_co2:
     group.climate_*:
       friendly_name: Soverom
       icon: mdi:hotel
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.netatmo_bedroom_humidity:
@@ -13,16 +14,19 @@ sensor.netatmo_bedroom_humidity:
     group.climate_*:
       friendly_name: Soverom
       icon: mdi:hotel
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.netatmo_bedroom_noise:
   friendly_name: Lyd
+  show_last_changed: true
 
 sensor.netatmo_bedroom_pressure:
   friendly_name: Trykk
   group:
     group.climate_*:
       friendly_name: Soverom
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.netatmo_bedroom_temperature:
@@ -37,6 +41,7 @@ sensor.netatmo_bedroom_temperature:
   extra_badge:
     - entity_id: sensor.netatmo_bedroom_min_temp
     - entity_id: sensor.netatmo_bedroom_max_temp
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.netatmo_bedroom_min_temp:
@@ -61,6 +66,7 @@ sensor.netatmo_outside_humidity:
     group.climate_*:
       friendly_name: Ute
       icon: mdi:arrow-right-bold-box-outline
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.netatmo_outside_radio:
@@ -78,6 +84,7 @@ sensor.netatmo_outside_temperature:
   extra_badge:
     - entity_id: sensor.netatmo_outside_min_temp
     - entity_id: sensor.netatmo_outside_max_temp
+  show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.netatmo_outside_min_temp:
