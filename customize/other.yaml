@@ -17,7 +17,7 @@ sensor.processor_use:
 sensor.disk_use_percent_:
   friendly_name: Disk
   extra_badge:
-    - entity_id: sensor_disk_use_
+    - entity_id: sensor.disk_use_
     - entity_id: sensor.disk_free_
   custom_ui_state_card: state-card-custom-ui
 
@@ -29,7 +29,7 @@ sensor.disk_free_:
 sensor.memory_use_percent:
   friendly_name: Memory
   extra_badge:
-    - entity_id: sensor_memory_use
+    - entity_id: sensor.memory_use
     - entity_id: sensor.memory_free
   custom_ui_state_card: state-card-custom-ui
 
@@ -41,7 +41,7 @@ sensor.memory_free:
 sensor.load_1m:
   friendly_name: Load
   extra_badge:
-    - entity_id: sensor_load_15m
+    - entity_id: sensor.load_15m
     - entity_id: sensor.load_5m
   custom_ui_state_card: state-card-custom-ui
 
