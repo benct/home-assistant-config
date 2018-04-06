@@ -23,3 +23,6 @@
     - type: since_last_boot
     - type: ipv4_address
       arg: eth0
+
+- platform: dnsip
+  scan_interval: 1200

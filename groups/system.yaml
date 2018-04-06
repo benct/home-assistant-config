@@ -8,4 +8,5 @@ system:
     - sensor.disk_use_percent_
     - sensor.since_last_boot
     - sensor.ipv4_address_eth0
+    - sensor.dnsip
     - sensor.fastcom_download
