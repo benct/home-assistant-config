@@ -55,3 +55,7 @@ sensor.ipv4_address_eth0:
 
 sensor.since_last_boot:
   friendly_name: Uptime
+
+sensor.myipopendnscom:
+  friendly_name: Public IP
+  icon: mdi:server-network
