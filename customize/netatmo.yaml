@@ -20,6 +20,7 @@ sensor.netatmo_bedroom_humidity:
 sensor.netatmo_bedroom_noise:
   friendly_name: Lyd
   show_last_changed: true
+  custom_ui_state_card: state-card-custom-ui
 
 sensor.netatmo_bedroom_pressure:
   friendly_name: Trykk
