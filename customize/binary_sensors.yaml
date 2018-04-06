@@ -13,10 +13,14 @@ binary_sensor.smoke_sensor_livingroom:
 sensor.template_flood_sensor_bathroom:
   friendly_name: Bad
   icon: mdi:pipe-leak
+  extra_data_template: Batteri: ${attributes.battery_level} %
+  custom_ui_state_card: state-card-custom-ui
 
 sensor.template_magnet_door_main:
   friendly_name: Ytterdør
   icon: mdi:login
+  extra_data_template: Batteri: ${attributes.battery_level} %
+  custom_ui_state_card: state-card-custom-ui
 
 sensor.template_motion_hall:
   friendly_name: Gang
@@ -24,8 +28,11 @@ sensor.template_motion_hall:
   group:
     group.hall:
       friendly_name: Bevegelse
+  extra_data_template: Batteri: ${attributes.battery_level} %
   custom_ui_state_card: state-card-custom-ui
 
 sensor.template_smoke_sensor_livingroom:
   friendly_name: Stue
   icon: mdi:fire
+  extra_data_template: Batteri: ${attributes.battery_level} %
+  custom_ui_state_card: state-card-custom-ui
