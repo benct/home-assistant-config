@@ -1,7 +1,7 @@
 - platform: samsungtv
   name: TV (Stue)
   host: 192.168.0.15
-  port: 8001
+#  port: 8001
 
 - platform: cast
 
