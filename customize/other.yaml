@@ -1,8 +1,6 @@
 sun.sun:
-  friendly_name: Sun
-  extra_data_template: ${attributes}
-#    - Neste solnedgang ${attributes.next_setting}
-#    - Neste soloppgang ${attributes.next_rising}
+  friendly_name: Sol
+  extra_data_template: Opp ${new Date(attributes.next_rising).toLocaleTimeString('no-NO')} - Ned ${new Date(attributes.next_setting).toLocaleTimeString('no-NO')}
   custom_ui_state_card: state-card-custom-ui
 
 sensor.processor_use:
@@ -60,3 +58,4 @@ sensor.since_last_boot:
 sensor.fastcom_download:
   friendly_name: Fast.com (down)
   show_last_changed: true
+  custom_ui_state_card: state-card-custom-ui
