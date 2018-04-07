@@ -1,11 +1,3 @@
-#device_battery:
-#  name: Mobil og nettbrett
-#  entities:
-#    - sensor.ben_phone_battery_level
-#    - sensor.ben_phone_battery_state
-#    - sensor.kristin_phone_battery_level
-#    - sensor.kristin_phone_battery_state
-
 sensor_battery:
   name: Batteri
   icon: mdi:battery-charging
