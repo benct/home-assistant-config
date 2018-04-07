@@ -13,6 +13,7 @@
     template_smoke_sensor_livingroom_battery:
       friendly_name: 'Røykvarsler'
       value_template: '{{ states.sensor.smoke_sensor_livingroom_temperature.attributes.battery_level }}'
+      icon: mdi:fire
 
     template_flood_sensor_bathroom:
       friendly_name: 'Vannsensor'
@@ -27,6 +28,7 @@
     template_flood_sensor_bathroom_battery:
       friendly_name: 'Vannsensor'
       value_template: '{{ states.sensor.flood_sensor_bathroom_temperature.attributes.battery_level }}'
+      icon: mdi:pipe-leak
 
     template_magnet_door_main:
       friendly_name: 'Ytterdør'
@@ -34,6 +36,7 @@
     template_magnet_door_main_battery:
       friendly_name: 'Ytterdør'
       value_template: '{{ states.sensor.magnet_door_main_temperature.attributes.battery_level }}'
+      icon: mdi:login
 
     template_motion_hall:
       friendly_name: 'Bevegelse (Gang)'
@@ -41,3 +44,4 @@
     template_motion_hall_battery:
       friendly_name: 'Bevegelse (Gang)'
       value_template: '{{ states.sensor.motion_hall_temperature.attributes.battery_level }}'
+      icon: mdi:run
