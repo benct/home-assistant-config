@@ -10,9 +10,10 @@
         {% else %}
           Standby
         {% endif %}
+    template_flood_sensor_bathroom_battery:
+      friendly_name: 'Røykvarsler'
+      value_template: '{{ states.sensor.smoke_sensor_livingroom.attributes.battery_level }}'
 
-- platform: template
-  sensors:
     template_flood_sensor_bathroom:
       friendly_name: 'Vannsensor'
       value_template: >-
@@ -23,15 +24,20 @@
         {% else %}
           Standby
         {% endif %}
+    template_flood_sensor_bathroom_battery:
+      friendly_name: 'Vannsensor'
+      value_template: '{{ states.sensor.flood_sensor_bathroom.attributes.battery_level }}'
 
-- platform: template
-  sensors:
     template_magnet_door_main:
-      value_template: '{% if is_state("binary_sensor.magnet_door_main", "off") %}Lukket{% else %}Åpen{% endif %}'
       friendly_name: 'Ytterdør'
+      value_template: '{% if is_state("binary_sensor.magnet_door_main", "off") %}Lukket{% else %}Åpen{% endif %}'
+    template_magnet_door_main_battery:
+      friendly_name: 'Ytterdør'
+      value_template: '{{ states.sensor.magnet_door_main_temperature.attributes.battery_level }}'
 
-- platform: template
-  sensors:
     template_motion_hall:
-      value_template: '{% if is_state("binary_sensor.motion_hall", "off") %}Ingen{% else %}Bevegelse{% endif %}'
       friendly_name: 'Bevegelse (Gang)'
+      value_template: '{% if is_state("binary_sensor.motion_hall", "off") %}Ingen{% else %}Bevegelse{% endif %}'
+    template_motion_hall_battery:
+      friendly_name: 'Bevegelse (Gang)'
+      value_template: '{{ states.sensor.magnet_door_main_temperature.attributes.battery_level }}'

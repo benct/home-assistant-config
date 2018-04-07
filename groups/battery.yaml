@@ -11,3 +11,7 @@ sensor_battery:
   icon: mdi:battery-charging
   entities:
     - sensor.netatmo_outside_battery
+    - sensor.template_smoke_sensor_livingroom_battery
+    - sensor.template_flood_sensor_bathroom_battery
+    - sensor.template_magnet_door_main_battery
+    - sensor.template_motion_hall_battery
