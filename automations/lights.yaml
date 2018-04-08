@@ -1,3 +1,16 @@
+- alias: 'Stuelys på ved solnedgang'
+  initial_state: 'on'
+  trigger:
+  - platform: sun
+    event: sunset
+  condition:
+  - condition: state
+    entity_id: input_boolean.home
+    state: 'on'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.power_livingroom_light
+
 - alias: 'Utelys på ved solnedgang'
   initial_state: 'on'
   trigger:
