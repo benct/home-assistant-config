@@ -1,5 +1,5 @@
 sensor_battery:
-  name: Batteri
+  name: Battery
   icon: mdi:battery-charging
   entities:
     - sensor.netatmo_outside_battery
