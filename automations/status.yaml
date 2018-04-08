@@ -1,4 +1,4 @@
-- alias: 'Disable other status when Home is enabled'
+- alias: 'Home mode'
   initial_state: 'on'
   trigger:
   - platform: state
@@ -11,8 +11,16 @@
       - input_boolean.sleep
       - input_boolean.away
       - input_boolean.vacation
+  - service: climate.set_operation_mode
+    entity_id: climate.termostat_stue
+    data:
+      operation_mode: 'heat'
+  - service: climate.set_away_mode
+    entity_id: climate.termostat_stue
+    data:
+      away_mode: false
 
-- alias: 'Disable other status when Sleep is enabled'
+- alias: 'Sleep mode'
   initial_state: 'on'
   trigger:
   - platform: state
@@ -25,8 +33,19 @@
       - input_boolean.home
       - input_boolean.away
       - input_boolean.vacation
+  - service: switch.turn_off
+    entity_id:
+      - switch.power_bedroom_charger
+      - switch.power_bedroom_light
+      - switch.power_livingroom_sofa
+      - switch.power_livingroom_light
+      - switch.power_outside_lights
+  - service: climate.set_away_mode
+    entity_id: climate.termostat_stue
+    data:
+      away_mode: true
 
-- alias: 'Disable other status when Away is enabled'
+- alias: 'Away mode'
   initial_state: 'on'
   trigger:
   - platform: state
@@ -37,10 +56,21 @@
   - service: input_boolean.turn_off
     entity_id:
       - input_boolean.home
-      - input_boolean.sleep
+      - input_boolean.away
       - input_boolean.vacation
+  - service: switch.turn_off
+    entity_id:
+      - switch.power_bedroom_charger
+      - switch.power_bedroom_light
+      - switch.power_livingroom_sofa
+      - switch.power_livingroom_light
+      - switch.power_outside_lights
+  - service: climate.set_away_mode
+    entity_id: climate.termostat_stue
+    data:
+      away_mode: true
 
-- alias: 'Disable other status when Vacation is enabled'
+- alias: 'Vacation mode'
   initial_state: 'on'
   trigger:
   - platform: state
@@ -53,3 +83,18 @@
       - input_boolean.home
       - input_boolean.sleep
       - input_boolean.away
+  - service: switch.turn_off
+    entity_id:
+      - switch.power_bedroom_charger
+      - switch.power_bedroom_light
+      - switch.power_livingroom_tv
+      - switch.power_livingroom_sofa
+      - switch.power_livingroom_light
+      - switch.power_livingroom_heater_left
+      - switch.power_livingroom_heater_right
+      - switch.power_office_pc
+      - switch.power_outside_lights
+  - service: climate.set_operation_mode
+    entity_id: climate.termostat_stue
+    data:
+      operation_mode: 'off'
