@@ -5,3 +5,8 @@ automations:
     - automation.livingroom_light_on_at_sunset
     - automation.outside_light_on_at_sunset
     - automation.set_sleep_mode_at_night
+    - automation.high_co2_levels
+    - automation.high_freezer_temperature
+    - automation.high_inside_temperature
+    - automation.low_inside_temperature
+    - automation.public_ip_change
