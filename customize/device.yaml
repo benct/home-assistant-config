@@ -4,6 +4,9 @@ device_tracker.3497f6b6f0b0:
 device_tracker.8c85903b5cd5:
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
+device_tracker.5c51816404e9:
+  show_last_changed: true
+  custom_ui_state_card: state-card-custom-ui
 device_tracker.d8c46a89875e:
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
