@@ -22,7 +22,7 @@
       message: "Frysertemperatur over -15 grader!"
       title: "Fryseren er varm!"
 
-- alias: 'Cold inside temperature'
+- alias: 'Low inside temperature'
   initial_state: 'on'
   trigger:
   - platform: numeric_state
@@ -34,7 +34,7 @@
       message: "Innetemperatur under 15 grader!"
       title: "Veldig kaldt innendørs!"
 
-- alias: 'Hot inside temperature'
+- alias: 'High inside temperature'
   initial_state: 'on'
   trigger:
   - platform: numeric_state
