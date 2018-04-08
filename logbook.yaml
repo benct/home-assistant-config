@@ -1,6 +1,14 @@
 include:
   domains:
+    - automation
     - binary_sensor
     - sensor
     - switch
     - light
+exclude:
+  entities:
+    - sensor.template_motion_hall
+    - sensor.netatmo_bedroom_wifi
+    - sensor.netatmo_outside_radio
+    - sensor.since_last_boot
+    - sensor.yr_symbol
