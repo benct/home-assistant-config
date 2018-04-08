@@ -34,7 +34,7 @@
   - platform: homeassistant
     event: start
   action:
-  - service: notify.phone_ben
+  - service: notify.default
     data:
       message: "Home Assistant has been restarted"
       title: "Restart"

@@ -5,7 +5,7 @@
     entity_id: sensor.netatmo_bedroom_co2
     above: 2000
   action:
-  - service: notify.phone_ben
+  - service: notify.default
     data:
       message: "CO2 har passert 2000 ppm!"
       title: "Veldig høyt CO2 nivå!"
@@ -17,7 +17,7 @@
     entity_id: sensor.thermostat_freezer_temperature
     above: -15
   action:
-  - service: notify.phone_ben
+  - service: notify.default
     data:
       message: "Frysertemperatur over -15 grader!"
       title: "Fryseren er varm!"
@@ -29,7 +29,7 @@
     entity_id: sensor.smoke_sensor_livingroom_temperature
     below: 15
   action:
-  - service: notify.phone_ben
+  - service: notify.default
     data:
       message: "Innetemperatur under 15 grader!"
       title: "Veldig kaldt innendørs!"
@@ -41,7 +41,7 @@
     entity_id: sensor.smoke_sensor_livingroom_temperature
     above: 25
   action:
-  - service: notify.phone_ben
+  - service: notify.default
     data:
       message: "Innetemperatur over 25 grader!"
       title: "Veldig varmt innendørs!"
@@ -52,7 +52,7 @@
   - platform: state
     entity_id: sensor.myipopendnscom
   action:
-  - service: notify.phone_ben
+  - service: notify.default
     data:
       message: "Public IP har endret seg..."
       title: "Public IP endret!"
