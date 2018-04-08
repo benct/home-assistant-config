@@ -54,9 +54,6 @@ sensor.netatmo_bedroom_max_temp:
 
 sensor.netatmo_bedroom_wifi:
   friendly_name: Soverom (Wifi)
-  templates:
-    state: if (state === 'Full') return 'Bra'; else return state;
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.netatmo_outside_battery:
   friendly_name: Ute
@@ -72,9 +69,6 @@ sensor.netatmo_outside_humidity:
 
 sensor.netatmo_outside_radio:
   friendly_name: Ute (Radio)
-  templates:
-    state: if (state === 'High') return 'Bra'; else return state;
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.netatmo_outside_temperature:
   friendly_name: Temperatur
