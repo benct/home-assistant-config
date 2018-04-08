@@ -56,7 +56,7 @@
   - service: input_boolean.turn_off
     entity_id:
       - input_boolean.home
-      - input_boolean.away
+      - input_boolean.sleep
       - input_boolean.vacation
   - service: switch.turn_off
     entity_id:
