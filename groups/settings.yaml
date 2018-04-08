@@ -1,5 +1,5 @@
 settings:
-  name: Innstillinger
+  name: Settings
   icon: mdi:settings
   entities:
     - input_select.log_level
