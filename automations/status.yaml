@@ -98,3 +98,16 @@
     entity_id: climate.termostat_stue
     data:
       operation_mode: 'off'
+
+- alias: 'Set sleep mode at night'
+  initial_state: 'on'
+  trigger:
+  - platform: time
+    at: '01:00:00'
+  condition:
+  - condition: state
+    entity_id: input_boolean.home
+    state: 'on'
+  action:
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.sleep
