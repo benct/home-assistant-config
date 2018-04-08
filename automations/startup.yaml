@@ -8,14 +8,14 @@
     data:
       name: midnight
 
-- alias: 'Set ferie status on startup'
+- alias: 'Set away status on startup'
   initial_state: 'on'
   trigger:
   - platform: homeassistant
     event: start
   action:
   - service: input_boolean.turn_on
-    entity_id: input_boolean.vacation
+    entity_id: input_boolean.away
 
 - alias: 'Set climate away mode on startup'
   initial_state: 'on'
