@@ -2,6 +2,6 @@ automations:
   name: Automations
   icon: mdi:home-automation
   entities:
-    - automation.stuelys_pa_ved_solnedgang
-    - automation.utelys_pa_ved_solnedgang
-    - automation.utelys_av_kl_0100
+    - automation.livingroom_light_on_at_sunset
+    - automation.outside_light_on_at_sunset
+    - automation.set_sleep_mode_at_night

@@ -1,4 +1,4 @@
-- alias: 'Stuelys på ved solnedgang'
+- alias: 'Livingroom light on at sunset'
   initial_state: 'on'
   trigger:
   - platform: sun
@@ -11,7 +11,7 @@
   - service: switch.turn_on
     entity_id: switch.power_livingroom_light
 
-- alias: 'Utelys på ved solnedgang'
+- alias: 'Outside light on at sunset'
   initial_state: 'on'
   trigger:
   - platform: sun
@@ -22,19 +22,4 @@
     state: 'on'
   action:
   - service: switch.turn_on
-    entity_id: switch.power_outside_lights
-
-- alias: 'Utelys av kl 01:00'
-  initial_state: 'on'
-  trigger:
-  - platform: sun
-    event: sunrise
-  - platform: time
-    at: '01:00:00'
-  condition:
-  - condition: state
-    entity_id: switch.power_outside_lights
-    state: 'on'
-  action:
-  - service: switch.turn_off
     entity_id: switch.power_outside_lights
