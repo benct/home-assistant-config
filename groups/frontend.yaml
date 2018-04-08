@@ -53,4 +53,5 @@ other:
     - group.sensor_signal
     - group.system
     - group.automations
+    - group.notifications
     - group.settings

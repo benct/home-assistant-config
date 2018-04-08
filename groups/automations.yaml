@@ -5,6 +5,12 @@ automations:
     - automation.livingroom_light_on_at_sunset
     - automation.outside_light_on_at_sunset
     - automation.set_sleep_mode_at_night
+
+notifications:
+  name: Notifications
+  icon: mdi:bell-ring
+  entities:
+    - automation.notification_on_restart
     - automation.high_co2_levels
     - automation.high_freezer_temperature
     - automation.high_inside_temperature
