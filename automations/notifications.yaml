@@ -1,0 +1,58 @@
+- alias: 'High CO2 levels'
+  initial_state: 'on'
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.netatmo_bedroom_co2
+    above: 2000
+  action:
+  - service: notify.phone_ben
+    data:
+      message: "CO2 har passert 2000 ppm!"
+      title: "Veldig høyt CO2 nivå!"
+
+- alias: 'High freezer temperature'
+  initial_state: 'on'
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.thermostat_freezer_temperature
+    above: -15
+  action:
+  - service: notify.phone_ben
+    data:
+      message: "Frysertemperatur over -15 grader!"
+      title: "Fryseren er varm!"
+
+- alias: 'Cold inside temperature'
+  initial_state: 'on'
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.smoke_sensor_livingroom_temperature
+    below: 15
+  action:
+  - service: notify.phone_ben
+    data:
+      message: "Innetemperatur under 15 grader!"
+      title: "Veldig kaldt innendørs!"
+
+- alias: 'Hot inside temperature'
+  initial_state: 'on'
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.smoke_sensor_livingroom_temperature
+    above: 25
+  action:
+  - service: notify.phone_ben
+    data:
+      message: "Innetemperatur over 25 grader!"
+      title: "Veldig varmt innendørs!"
+
+- alias: 'Public IP change'
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id: sensor.myipopendnscom
+  action:
+  - service: notify.phone_ben
+    data:
+      message: "Public IP har endret seg..."
+      title: "Public IP endret!"
