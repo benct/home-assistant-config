@@ -15,11 +15,11 @@
   trigger:
   - platform: numeric_state
     entity_id: sensor.thermometer_freezer_temperature
-    above: -15
+    above: -10
   action:
   - service: notify.default
     data:
-      message: "Frysertemperatur over -15 grader!"
+      message: "Frysertemperatur over -10 grader!"
       title: "Fryseren er varm!"
 
 - alias: 'Low inside temperature'
