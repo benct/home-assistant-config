@@ -1,6 +1,7 @@
 - platform: samsungtv
   name: TV (Stue)
   host: 192.168.0.15
+  mac: !secret samsung_tv_mac
 #  port: 8001
 
 - platform: cast
