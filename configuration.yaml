@@ -10,6 +10,8 @@ homeassistant:
 
 frontend:
   themes: !include themes.yaml
+  extra_html_url:
+    - /local/custom_ui/state-card-custom-ui-bct.html
 
 customizer:
   custom_ui: local
