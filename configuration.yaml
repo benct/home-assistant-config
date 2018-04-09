@@ -68,8 +68,8 @@ climate:
 
 timer:
   bedroom_charger:
-    name: Lader (2t)
-    duration: '02:00:00'
+    name: Lader Soverom (1.5t)
+    duration: '01:30:00'
     icon: mdi:battery-charging-70
 
 media_player: !include media.yaml
