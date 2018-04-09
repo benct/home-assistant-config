@@ -7,10 +7,16 @@
 - platform: cast
 
 - platform: onkyo
-  name: Receiver
-  host: 192.168.0.16
-#  sources:
-#    video2: GetBox II
+  sources:
+    tv-cd: TV
+    video2: GetBox II
+    video3: Xbox One
+    video1: SNES
+    video4: Aux
+    video6: PC
+    bd-dvd: BD/DVD
+    dlna: DNLA
+    network: Net
 
 - platform: spotify
   client_id: !secret spotify_id
