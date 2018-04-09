@@ -66,6 +66,12 @@ climate:
     hot_tolerance: 0.1
     away_temp: 16
 
+timer:
+  bedroom_charger:
+    name: Lader (2t)
+    duration: '02:00:00'
+    icon: mdi:battery-charging-70
+
 media_player: !include media.yaml
 
 device_tracker:

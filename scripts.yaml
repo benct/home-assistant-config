@@ -1,0 +1,7 @@
+start_bedroom_charger_timer:
+  alias: Start lading (2t)
+  sequence:
+    - service: switch.turn_on
+      entity_id: switch.power_bedroom_charger
+    - service: timer.start
+      entity_id: timer.bedroom_timer

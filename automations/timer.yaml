@@ -1,0 +1,10 @@
+- alias: 'Turn off bedroom charger on timer end'
+  initial_state: 'on'
+  trigger:
+  - platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.bedroom_charger
+  action:
+  - service: switch.turn_off
+    entity_id: switch.power_bedroom_charger
