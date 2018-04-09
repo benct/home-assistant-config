@@ -7,6 +7,10 @@ include:
     - light
 exclude:
   entities:
+    - sensor.template_flood_sensor_bathroom_battery
+    - sensor.template_smoke_sensor_livingroom_battery
+    - sensor.template_magnet_door_main_battery
+    - sensor.template_motion_hall_battery
     - sensor.template_motion_hall
     - sensor.netatmo_bedroom_wifi
     - sensor.netatmo_outside_radio
