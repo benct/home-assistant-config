@@ -14,7 +14,7 @@
   initial_state: 'on'
   trigger:
   - platform: numeric_state
-    entity_id: sensor.thermostat_freezer_temperature
+    entity_id: sensor.thermometer_freezer_temperature
     above: -15
   action:
   - service: notify.default
