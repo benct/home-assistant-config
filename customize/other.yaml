@@ -5,6 +5,7 @@ sun.sun:
 
 sensor.processor_use:
   friendly_name: Processor
+  icon: mdi:chip
   extra_badge:
     - entity_id: sensor.cpu_speed
   custom_ui_state_card: state-card-custom-ui
@@ -35,6 +36,7 @@ sensor.memory_free:
 
 sensor.load_1m:
   friendly_name: Load
+  icon: mdi:weight
   extra_badge:
     - entity_id: sensor.load_15m
     - entity_id: sensor.load_5m
@@ -47,6 +49,7 @@ sensor.load_15m:
 
 sensor.ipv4_address_eth0:
   friendly_name: IPv4 address
+  icon: mdi:server-network-off
 
 sensor.myipopendnscom:
   friendly_name: Public IP
