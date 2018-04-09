@@ -1,3 +1,27 @@
+- alias: 'Start timer when bedroom charger is turned on'
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id: switch.power_bedroom_charger
+    to: 'on'
+  action:
+  - service: timer.start
+    entity_id: timer.bedroom_charger
+
+- alias: 'Cancel timer when bedroom charger is turned off'
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id: switch.power_bedroom_charger
+    to: 'off'
+  condition:
+  - condition: state
+    entity_id: timer.bedroom_charger
+    state: 'active'
+  action:
+  - service: timer.cancel
+    entity_id: timer.bedroom_charger
+
 - alias: 'Turn off bedroom charger on timer end'
   initial_state: 'on'
   trigger:

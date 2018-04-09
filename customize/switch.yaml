@@ -41,6 +41,9 @@ switch.power_bedroom_charger:
   friendly_name: Lader
   assumed_state: false
   icon: mdi:battery-charging-70
+  extra_badge:
+    - entity_id: timer.bedroom_charger
+  custom_ui_state_card: state-card-custom-ui
 
 switch.power_office_pc:
   friendly_name: PC/TV

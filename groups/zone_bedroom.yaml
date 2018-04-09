@@ -10,4 +10,3 @@ bedroom:
     - sensor.netatmo_bedroom_pressure
     - switch.power_bedroom_charger
     - switch.power_bedroom_light
-    - script.start_bedroom_charger_timer
