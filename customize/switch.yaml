@@ -32,6 +32,11 @@ switch.power_outside_lights:
   confirm_controls_show_lock: true
   custom_ui_state_card: state-card-custom-ui
 
+switch.power_hall_light:
+  friendly_name: Lys
+  assumed_state: true
+  icon: mdi:ceiling-light
+
 switch.power_bedroom_light:
   friendly_name: Nattbord
   assumed_state: false

@@ -7,3 +7,4 @@ hall:
     - sensor.motion_hall_luminance
     - sensor.template_motion_hall
     - sensor.template_magnet_door_main
+    - switch.power_hall_light
