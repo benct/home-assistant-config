@@ -1,4 +1,4 @@
-# Home Assistant (Configuration) (WIP)
+# Home Assistant Configuration (WIP)
 
 Configuration for my home-assistant setup (https://www.home-assistant.io).
 
@@ -13,6 +13,7 @@ Configuration for my home-assistant setup (https://www.home-assistant.io).
 - [Telldus Thermometer/hygrometer](http://telldus.com/produkt/inneute-termohygro-sensor-433mhz/)
 - [NEXA MYCR-3 Plug](https://www.clasohlson.com/no/Nexa-MYCR-3,-3-pack-fjernstr%C3%B8mbrytere--/36-6902) x 6
 - [NEXA LWST-605 Switch](https://www.clasohlson.com/no/Nexa-LWST-605-trådløs-veggstrømbryter-/36-4614)
+- [NEXA WMR-1000 Receiver](https://www.clasohlson.com/no/Nexa-WMR-1000-innbyggingsmottaker-p%C3%A5-av-/36-5940)
 - [Luxorparts Outdoor Plug](https://www.kjell.com/no/produkter/elektro-og-verktoy/smarte-hjem/433mhz/fjernstrombryter/utenpaliggende-bryter/luxorparts-mini-fjernstrombryter-for-utendorsbruk-3000-w-p50990)
 - [FIBARO Wall Plug](https://products.z-wavealliance.org/products/1653) x 2
 - [FIBARO Motion Sensor](https://products.z-wavealliance.org/products/2762)
