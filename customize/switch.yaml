@@ -1,7 +1,7 @@
 switch.power_livingroom_light:
   friendly_name: Lys (Sofa)
   assumed_state: false
-  icon: mdi:ceiling-light
+  icon: mdi:floor-lamp
 
 switch.power_livingroom_sofa:
   friendly_name: Strøm (Sofa)
