@@ -32,8 +32,11 @@
     entity_id: binary_sensor.motion_hall
     to: 'on'
   condition:
-    condition: or
-      conditions:
+  - condition: sun
+    after: sunset
+    after_offset: "-1:00:00"
+  - condition: or
+    conditions:
       - condition: state
         entity_id: input_boolean.home
         state: 'on'
@@ -52,6 +55,10 @@
     to: 'off'
     for:
       minutes: 10
+  condition:
+  - condition: sun
+    after: sunset
+    after_offset: "-1:00:00"
   action:
   - service: switch.turn_on
     entity_id: switch.power_hall_light
@@ -62,6 +69,10 @@
   - platform: state
     entity_id: binary_sensor.magnet_door_main
     to: 'on'
+  condition:
+  - condition: sun
+    after: sunset
+    after_offset: "-1:00:00"
   action:
   - service: switch.turn_on
     entity_id: switch.power_hall_light
