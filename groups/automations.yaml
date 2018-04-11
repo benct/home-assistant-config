@@ -4,6 +4,9 @@ automations:
   entities:
     - automation.livingroom_light_on_at_sunset
     - automation.outside_light_on_at_sunset
+    - automation.hall_light_on_when_opening_front_door
+    - automation.hall_light_on_when_movement
+    - automation.hall_light_off_when_no_movement
     - automation.set_sleep_mode_at_night
 
 notifications:

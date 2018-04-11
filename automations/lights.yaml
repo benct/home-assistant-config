@@ -24,3 +24,44 @@
   action:
   - service: switch.turn_on
     entity_id: switch.power_outside_lights
+
+- alias: 'Hall light on when movement'
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.motion_hall
+    to: 'on'
+  condition:
+    condition: or
+      conditions:
+      - condition: state
+        entity_id: input_boolean.home
+        state: 'on'
+      - condition: state
+        entity_id: input_boolean.sleep
+        state: 'on'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.power_hall_light
+
+- alias: 'Hall light off when no movement'
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.motion_hall
+    to: 'off'
+    for:
+      minutes: 10
+  action:
+  - service: switch.turn_on
+    entity_id: switch.power_hall_light
+
+- alias: 'Hall light on when opening front door'
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.magnet_door_main
+    to: 'on'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.power_hall_light
