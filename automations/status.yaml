@@ -37,6 +37,7 @@
     entity_id:
       - switch.power_bedroom_charger
       - switch.power_bedroom_light
+      - switch.power_hall_light
       - switch.power_livingroom_sofa
       - switch.power_livingroom_light
       - switch.power_outside_lights
@@ -62,6 +63,7 @@
     entity_id:
       - switch.power_bedroom_charger
       - switch.power_bedroom_light
+      - switch.power_hall_light
       - switch.power_livingroom_sofa
       - switch.power_livingroom_light
       - switch.power_outside_lights
@@ -87,6 +89,7 @@
     entity_id:
       - switch.power_bedroom_charger
       - switch.power_bedroom_light
+      - switch.power_hall_light
       - switch.power_livingroom_tv
       - switch.power_livingroom_sofa
       - switch.power_livingroom_light
