@@ -7,6 +7,7 @@ default_view:
     - group.hall
     - group.bedroom
     - group.office
+    - group.bathroom
     - group.storeroom
     - group.outside
     - group.yr_no
