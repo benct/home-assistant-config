@@ -8,6 +8,7 @@ livingroom:
     - switch.power_livingroom_tv
     - switch.power_livingroom_sofa
     - switch.power_livingroom_light
+    - sensor.template_smoke_sensor_livingroom
 
 livingroom_heaters:
   name: Varme 
