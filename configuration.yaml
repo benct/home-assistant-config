@@ -43,6 +43,7 @@ sensor: !include_dir_merge_list sensors
 group: !include_dir_merge_named groups
 automation: !include_dir_merge_list automations
 script: !include scripts.yaml
+light: !include lights.yaml
 
 input_boolean: !include input_boolean.yaml
 input_select: !include input_select.yaml
