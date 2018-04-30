@@ -51,3 +51,6 @@ sensor.yr_wind_direction:
 
 sensor.yr_symbol:
   friendly_name: Yr.no
+
+weather.yweather:
+  friendly_name: Værmelding

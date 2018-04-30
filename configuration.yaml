@@ -59,6 +59,9 @@ netatmo:
   password: !secret netatmo_password
   discovery: false
 
+weather:
+  - platform: yweather
+
 climate:
   - platform: generic_thermostat
     name: Termostat (Stue)
