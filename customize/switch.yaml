@@ -1,5 +1,5 @@
 switch.power_livingroom_light:
-  friendly_name: Lys (Sofa)
+  friendly_name: Lys
   assumed_state: false
   icon: mdi:floor-lamp
 
@@ -12,6 +12,9 @@ switch.power_livingroom_tv:
   friendly_name: TV/Lyd
   assumed_state: false
   icon: mdi:power
+  extra_badge:
+    - entity_id: sensor.power_livingroom_tv_power
+    - entity_id: sensor.power_livingroom_tv_power_2
   confirm_controls_show_lock: true
   custom_ui_state_card: state-card-custom-ui
 
@@ -54,6 +57,9 @@ switch.power_office_pc:
   friendly_name: PC/TV
   assumed_state: false
   icon: mdi:power
+  extra_badge:
+    - entity_id: sensor.power_office_pc_power
+    - entity_id: sensor.power_office_pc_power_2
   confirm_controls_show_lock: true
   custom_ui_state_card: state-card-custom-ui
 

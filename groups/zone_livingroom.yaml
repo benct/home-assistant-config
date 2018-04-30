@@ -4,12 +4,10 @@ livingroom:
   control: hidden
   entities:
     - sensor.smoke_sensor_livingroom_temperature
-    - sensor.power_livingroom_tv_power
     - switch.power_livingroom_tv
     - light.template_receiver_volume
     - switch.power_livingroom_sofa
     - switch.power_livingroom_light
-    - sensor.template_smoke_sensor_livingroom
 
 livingroom_heaters:
   name: Varme 

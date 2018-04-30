@@ -3,5 +3,4 @@ office:
   icon: mdi:desktop-classic
   control: hidden
   entities:
-    - sensor.power_office_pc_power
     - switch.power_office_pc

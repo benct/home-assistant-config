@@ -43,6 +43,16 @@ climate_pressure:
     - sensor.netatmo_bedroom_pressure
     - sensor.yr_pressure
 
+climate_weather:
+  name: Vær (Yr.no)
+  icon: mdi:weather-partlycloudy
+  entities:
+    - sensor.yr_symbol
+    - sensor.yr_precipitation
+    - sensor.yr_cloudiness
+    - sensor.yr_wind_speed
+    - sensor.yr_wind_direction
+
 yr_no:
   name: Yr.no
   icon: mdi:weather-partlycloudy
@@ -54,5 +64,4 @@ yr_no:
     - sensor.yr_wind_speed
     - sensor.yr_wind_direction
     - sensor.yr_humidity
-    - sensor.yr_percipitation
     - sensor.yr_pressure

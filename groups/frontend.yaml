@@ -8,10 +8,8 @@ default_view:
     - group.hall
     - group.bedroom
     - group.office
-    - group.bathroom
     - group.storeroom
     - group.outside
-    - group.yr_no
 
 climate:
   name: Klima
@@ -21,8 +19,8 @@ climate:
     - group.climate_control
     - group.climate_temperature
     - group.climate_humidity
-    - group.climate_co2
     - group.climate_pressure
+    - group.climate_weather
 
 security:
   name: Sikkerhet

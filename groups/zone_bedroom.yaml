@@ -4,9 +4,7 @@ bedroom:
   control: hidden
   entities:
     - sensor.netatmo_bedroom_temperature
-    - sensor.netatmo_bedroom_humidity
     - sensor.netatmo_bedroom_co2
     - sensor.netatmo_bedroom_noise
-    - sensor.netatmo_bedroom_pressure
     - switch.power_bedroom_charger
     - switch.power_bedroom_light

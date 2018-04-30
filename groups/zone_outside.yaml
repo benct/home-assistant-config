@@ -6,4 +6,7 @@ outside:
     - sun.sun
     - sensor.netatmo_outside_temperature
     - sensor.netatmo_outside_humidity
+    - sensor.yr_precipitation
+    - sensor.yr_cloudiness
+    - sensor.yr_wind_speed
     - switch.power_outside_lights
