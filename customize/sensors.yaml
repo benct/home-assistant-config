@@ -35,12 +35,12 @@ sensor.motion_hall_temperature:
   custom_ui_state_card: state-card-custom-ui
 
 sensor.power_livingroom_tv_power_2:
-  friendly_name: Forbruk (TV/Lyd - total)
+  friendly_name: Forbruk (TV/Anlegg - total)
   icon: mdi:flash
   unit_of_measurement: kWt
 
 sensor.power_livingroom_tv_power:
-  friendly_name: Forbruk (TV/Lyd)
+  friendly_name: Forbruk (TV/Anlegg)
   icon: mdi:flash
   extra_badge:
     - entity_id: sensor.power_livingroom_tv_power_2
