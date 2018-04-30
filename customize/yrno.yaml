@@ -1,18 +1,12 @@
 sensor.yr_precipitation:
   friendly_name: Regn
   icon: mdi:weather-rainy
-  group:
-    group.climate_*:
-      friendly_name: Yr.no
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.yr_cloudiness:
   friendly_name: Skyer
   icon: mdi:weather-cloudy
-  group:
-    group.climate_*:
-      friendly_name: Yr.no
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
@@ -20,7 +14,7 @@ sensor.yr_pressure:
   friendly_name: Trykk
   icon: mdi:gauge-low
   group:
-    group.climate_*:
+    group.climate_pressure:
       friendly_name: Yr.no
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
@@ -29,7 +23,7 @@ sensor.yr_humidity:
   friendly_name: Luftfuktighet
   icon: mdi:water-percent
   group:
-    group.climate_*:
+    group.climate_humidity:
       friendly_name: Yr.no
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
@@ -38,7 +32,7 @@ sensor.yr_temperature:
   friendly_name: Temperatur
   icon: mdi:thermometer
   group:
-    group.climate_*:
+    group.climate_temperature:
       friendly_name: Yr.no
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
@@ -46,18 +40,12 @@ sensor.yr_temperature:
 sensor.yr_wind_speed:
   friendly_name: Vind
   icon: mdi:weather-windy
-  group:
-    group.climate_*:
-      friendly_name: Yr.no
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
 sensor.yr_wind_direction:
   friendly_name: Vindretning
   icon: mdi:weather-windy-variant
-  group:
-    group.climate_*:
-      friendly_name: Yr.no
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
