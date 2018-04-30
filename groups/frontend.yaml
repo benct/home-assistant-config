@@ -3,6 +3,7 @@ default_view:
   view: true
 #  icon: mdi:home
   entities:
+    - group.status
     - group.livingroom
     - group.hall
     - group.bedroom
@@ -11,7 +12,6 @@ default_view:
     - group.storeroom
     - group.outside
     - group.yr_no
-    - group.status
 
 climate:
   name: Klima
