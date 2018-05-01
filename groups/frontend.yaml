@@ -1,7 +1,7 @@
 default_view:
   name: Hjem
   view: true
-#  icon: mdi:home
+  icon: mdi:home
   entities:
     - group.status
     - group.livingroom
@@ -14,7 +14,7 @@ default_view:
 climate:
   name: Klima
   view: true
-#  icon: mdi:weather-partlycloudy
+  icon: mdi:weather-partlycloudy
   entities:
     - group.climate_control
     - group.climate_temperature
@@ -23,35 +23,75 @@ climate:
     - group.climate_weather
     - weather.yweather
 
+light:
+  name: Lys
+  view: true
+  icon: mdi:lightbulb-on-outline
+  control: hidden
+  entities:
+    - switch.power_livingroom_light
+    - switch.power_hall_light
+    - switch.power_bedroom_light
+    - switch.power_outside_lights
+
+switch:
+  name: Strøm
+  view: true
+  icon: mdi:power-plug
+  control: hidden
+  entities:
+    - switch.power_livingroom_sofa
+    - switch.power_livingroom_tv
+    - switch.power_office_pc
+    - switch.power_bedroom_charger
+    - group.livingroom_heaters
+
 security:
   name: Sikkerhet
   view: true
-#  icon: mdi:security
+  icon: mdi:security
   entities:
     - group.smoke_sensors
     - group.door_windows
     - group.motion
     - group.flood_sensors
-    - group.people
+
+people:
+  name: Personer
+  view: true
+  icon: mdi:account-multiple
+  entities:
+    - device_tracker.3497f6b6f0b0
+    - device_tracker.8c85903b5cd5
+    - device_tracker.5c51816404e9
+    - device_tracker.d8c46a89875e
+    - device_tracker.c869cd9e5486
+    - device_tracker.20ee28f3168c
 
 media:
   name: Media
   view: true
-#  icon: mdi:television
+  icon: mdi:television
   entities:
     - media_player.ccultra_tomlin
     - media_player.spotify
     - media_player.receiver
     - media_player.tv_stue
 
-other:
-  name: Annet
+automation:
+  name: Automations
   view: true
-#  icon: mdi:settings
+  icon: mdi:home-automation
+  entities:
+    - group.automations
+    - group.notifications
+
+other:
+  name: System
+  view: true
+  icon: mdi:settings
   entities:
     - group.sensor_battery
     - group.sensor_signal
     - group.system
-    - group.automations
-    - group.notifications
     - group.settings
