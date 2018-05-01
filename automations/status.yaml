@@ -11,14 +11,14 @@
       - input_boolean.sleep
       - input_boolean.away
       - input_boolean.vacation
-  - service: climate.set_operation_mode
-    entity_id: climate.termostat_stue
-    data:
-      operation_mode: 'heat'
   - service: climate.set_away_mode
     entity_id: climate.termostat_stue
     data:
       away_mode: false
+  - service: climate.set_operation_mode
+    entity_id: climate.termostat_stue
+    data:
+      operation_mode: 'heat'
 
 - alias: 'Home mode (at night)'
   initial_state: 'on'
