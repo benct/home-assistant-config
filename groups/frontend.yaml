@@ -14,7 +14,7 @@ default_view:
 climate:
   name: Klima
   view: true
-  icon: mdi:weather-partlycloudy
+  icon: mdi:temperature-celsius
   entities:
     - group.climate_control
     - group.climate_temperature
