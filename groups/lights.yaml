@@ -1,0 +1,9 @@
+lights:
+  name: Lys
+  icon: mdi:lightbulb-on-outline
+  control: hidden
+  entities:
+    - switch.power_livingroom_light
+    - switch.power_hall_light
+    - switch.power_bedroom_light
+    - switch.power_outside_lights

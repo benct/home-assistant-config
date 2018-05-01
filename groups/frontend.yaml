@@ -27,12 +27,8 @@ light:
   name: Lys
   view: true
   icon: mdi:lightbulb-on-outline
-  control: hidden
   entities:
-    - switch.power_livingroom_light
-    - switch.power_hall_light
-    - switch.power_bedroom_light
-    - switch.power_outside_lights
+    - group.lights
 
 switch:
   name: Strøm
@@ -40,10 +36,7 @@ switch:
   icon: mdi:power-plug
   control: hidden
   entities:
-    - switch.power_livingroom_sofa
-    - switch.power_livingroom_tv
-    - switch.power_office_pc
-    - switch.power_bedroom_charger
+    - group.switches
     - group.livingroom_heaters
 
 security:

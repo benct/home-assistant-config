@@ -1,0 +1,9 @@
+switches:
+  name: Strøm
+  icon: mdi:power-plug
+  control: hidden
+  entities:
+    - switch.power_livingroom_sofa
+    - switch.power_livingroom_tv
+    - switch.power_office_pc
+    - switch.power_bedroom_charger
