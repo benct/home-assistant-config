@@ -7,6 +7,14 @@ system:
     - sensor.memory_use_percent
     - sensor.disk_use_percent_
     - sensor.since_last_boot
+
+network:
+  name: Network
+  icon: mdi:access-point-network
+  entities:
     - sensor.ipv4_address_eth0
     - sensor.myipopendnscom
+    - sensor.speedtest_ping
+    - sensor.speedtest_update
+    - sensor.speedtest_download
     - sensor.fastcom_download

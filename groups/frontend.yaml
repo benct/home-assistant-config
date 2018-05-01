@@ -82,4 +82,5 @@ other:
     - group.sensor_battery
     - group.sensor_signal
     - group.system
+    - group.network
     - group.settings
