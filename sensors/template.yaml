@@ -29,6 +29,7 @@
       value_template: '{{ states.sensor.motion_hall_temperature.attributes.battery_level }} %'
 
     template_since_last_boot:
+      friendly_name: 'Uptime'
       value_template: >-
         {%- set slb = states.sensor.since_last_boot.state.split(' ') -%}
         {%- set count = slb | length -%}
