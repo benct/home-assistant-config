@@ -1,15 +1,16 @@
 # Home Assistant Configuration (WIP)
 
-Configuration for my home-assistant setup (https://www.home-assistant.io).
+Configuration for my [home-assistant](https://www.home-assistant.io) setup running on
+[Hassbian](https://www.home-assistant.io/docs/installation/hassbian/installation/) on a
+[Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/).
 
 ## Hardware
 
-#### Controllers/hubs:
-- [Raspberry Pi Model B (2011)](https://www.raspberrypi.org/) - needs upgrading
+- [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
 - [Telldus Tellstick ZNet Lite v2](https://home-assistant.io/components/tellduslive/)
 - [Netatmo Weather Station](https://home-assistant.io/components/netatmo/)
  
-#### Components:
+#### Devices:
 - [Telldus Thermometer/hygrometer](http://telldus.com/produkt/inneute-termohygro-sensor-433mhz/)
 - [NEXA MYCR-3 Plug](https://www.clasohlson.com/no/Nexa-MYCR-3,-3-pack-fjernstr%C3%B8mbrytere--/36-6902) x 6
 - [NEXA LWST-605 Switch](https://www.clasohlson.com/no/Nexa-LWST-605-trådløs-veggstrømbryter-/36-4614)
@@ -21,7 +22,7 @@ Configuration for my home-assistant setup (https://www.home-assistant.io).
 - [FIBARO Flood Sensor](https://products.z-wavealliance.org/products/2791)
 - [FIBARO Door/Window Sensor 2](https://products.z-wavealliance.org/products/2181)
  
-#### Media
+#### Media:
 - [Samsung Smart TV](https://home-assistant.io/components/media_player.samsungtv/)
 - [Onkyo Receiver](https://www.home-assistant.io/components/media_player.onkyo/)
 - [Google ChromeCast](https://www.home-assistant.io/components/media_player.cast/)
@@ -30,7 +31,7 @@ Configuration for my home-assistant setup (https://www.home-assistant.io).
 ## Theme
 Using custom UI elements from [Custom UI](https://github.com/andrey-git/home-assistant-custom-ui)
 
-[Midnight theme](https://community.home-assistant.io/t/midnight-theme/28598) from HA Community
+[Midnight theme](https://community.home-assistant.io/t/midnight-theme/28598) from the HA Community
 
 ## Screenshots
 
