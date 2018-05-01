@@ -25,3 +25,14 @@ motion:
   entities:
     - binary_sensor.motion_hall
     - sensor.template_motion_hall
+
+devices:
+  name: Enheter
+  icon: mdi:account-multiple
+  entities:
+    - device_tracker.3497f6b6f0b0
+    - device_tracker.8c85903b5cd5
+    - device_tracker.5c51816404e9
+    - device_tracker.d8c46a89875e
+    - device_tracker.c869cd9e5486
+    - device_tracker.20ee28f3168c
