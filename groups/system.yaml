@@ -3,6 +3,7 @@ system:
   icon: mdi:raspberrypi
   entities:
     - sensor.processor_use
+    - sensor.cpu_temperature
     - sensor.load_1m
     - sensor.memory_use_percent
     - sensor.disk_use_percent_
