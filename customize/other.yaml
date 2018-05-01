@@ -77,3 +77,9 @@ sensor.speedtest_download:
   icon: mdi:download-network
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
+
+sensor.homeassistant_v2db:
+  icon: mdi:database
+
+sensor.homeassistantlog:
+  icon: mdi:file-document

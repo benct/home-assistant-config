@@ -83,4 +83,5 @@ other:
     - group.sensor_signal
     - group.system
     - group.network
+    - group.files
     - group.settings
