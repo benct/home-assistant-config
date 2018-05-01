@@ -63,10 +63,6 @@ switch.power_bedroom_light:
   friendly_name: Nattbord
   assumed_state: false
   icon: mdi:lamp
-  group:
-    group.light*:
-      friendly_name: Gang
-  custom_ui_state_card: state-card-custom-ui
 
 switch.power_bedroom_charger:
   friendly_name: Lader
