@@ -26,7 +26,7 @@ climate:
 light:
   name: Lys
   view: true
-  icon: mdi:lightbulb-on-outline
+  icon: mdi:lightbulb-on
   entities:
     - group.lights
 
