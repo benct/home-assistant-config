@@ -2,6 +2,10 @@ switch.power_livingroom_light:
   friendly_name: Lys
   assumed_state: false
   icon: mdi:floor-lamp
+  group:
+    group.light*:
+      friendly_name: Stue
+  custom_ui_state_card: state-card-custom-ui
 
 switch.power_livingroom_sofa:
   friendly_name: Strøm (Sofa)
@@ -22,16 +26,27 @@ switch.power_livingroom_heater_left:
   friendly_name: Varme (V)
   assumed_state: false
   icon: mdi:thermometer-lines
+  group:
+    group.switch*:
+      friendly_name: Stue (V)
+  custom_ui_state_card: state-card-custom-ui
 
 switch.power_livingroom_heater_right:
   friendly_name: Varme (H)
   assumed_state: false
   icon: mdi:thermometer-lines
+  group:
+    group.switch*:
+      friendly_name: Stue (H)
+  custom_ui_state_card: state-card-custom-ui
 
 switch.power_outside_lights:
   friendly_name: Utelys
   assumed_state: false
   icon: mdi:lightbulb-on-outline
+  group:
+    group.light*:
+      friendly_name: Ute
   confirm_controls_show_lock: true
   custom_ui_state_card: state-card-custom-ui
 
@@ -39,16 +54,27 @@ switch.power_hall_light:
   friendly_name: Lys
   assumed_state: true
   icon: mdi:ceiling-light
+  group:
+    group.light*:
+      friendly_name: Gang
+  custom_ui_state_card: state-card-custom-ui
 
 switch.power_bedroom_light:
   friendly_name: Nattbord
   assumed_state: false
   icon: mdi:lamp
+  group:
+    group.light*:
+      friendly_name: Gang
+  custom_ui_state_card: state-card-custom-ui
 
 switch.power_bedroom_charger:
   friendly_name: Lader
   assumed_state: false
   icon: mdi:battery-charging-70
+  group:
+    group.switch*:
+      friendly_name: Lader (Soverom)
   extra_badge:
     - entity_id: timer.bedroom_charger
   custom_ui_state_card: state-card-custom-ui
