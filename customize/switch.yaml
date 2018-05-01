@@ -9,7 +9,7 @@ switch.power_livingroom_sofa:
   icon: mdi:power-plug
 
 switch.power_livingroom_tv:
-  friendly_name: TV/Anlegg
+  friendly_name: TV/Lyd
   assumed_state: false
   icon: mdi:power
   extra_badge:
