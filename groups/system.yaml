@@ -16,6 +16,6 @@ network:
     - sensor.ipv4_address_eth0
     - sensor.myipopendnscom
     - sensor.speedtest_ping
-    - sensor.speedtest_update
+    - sensor.speedtest_upload
     - sensor.speedtest_download
     - sensor.fastcom_download
