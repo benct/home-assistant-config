@@ -74,7 +74,7 @@ automation:
     - group.automations
     - group.notifications
 
-system:
+other:
   name: System
   view: true
   icon: mdi:settings
