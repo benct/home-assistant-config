@@ -54,7 +54,7 @@ people:
   view: true
   icon: mdi:account-multiple
   entities:
-    - group.devices
+    - group.all_devices
 
 media:
   name: Media

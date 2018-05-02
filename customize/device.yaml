@@ -1,3 +1,7 @@
+group.all_devices:
+  hidden: false
+  friendly_name: Enheter
+
 device_tracker.3497f6b6f0b0:
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
