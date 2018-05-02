@@ -12,7 +12,8 @@ exclude:
     - sensor.template_magnet_door_main_battery
     - sensor.template_motion_hall_battery
     - sensor.template_motion_hall
+    - sensor.template_since_last_boot
+    - sensor.since_last_boot
     - sensor.netatmo_bedroom_wifi
     - sensor.netatmo_outside_radio
-    - sensor.since_last_boot
     - sensor.yr_symbol
