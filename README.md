@@ -1,12 +1,12 @@
 # Home Assistant Configuration (WIP)
 
 Configuration for my [home-assistant](https://www.home-assistant.io) setup running on
-[Hassbian](https://www.home-assistant.io/docs/installation/hassbian/installation/) on a
-[Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/).
+[Hass.io](https://www.home-assistant.io/hassio/) on a
+[Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/).
 
 ## Hardware
 
-- [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
+- [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 - [Telldus Tellstick ZNet Lite v2](https://home-assistant.io/components/tellduslive/)
 - [Netatmo Weather Station](https://home-assistant.io/components/netatmo/)
  
