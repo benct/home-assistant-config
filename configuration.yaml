@@ -6,7 +6,6 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Oslo
   whitelist_external_dirs: /home/homeassistant/.homeassistant
-
   customize: !include_dir_merge_named customize
 
 frontend:
@@ -16,6 +15,10 @@ customizer:
   custom_ui: local
 
 config:
+updater:
+  include_used_components: true
+discovery:
+sun:
 
 http:
   api_password: !secret http_password
@@ -28,14 +31,6 @@ http:
   ip_ban_enabled: true
   login_attempts_threshold: 5
 
-updater:
-  include_used_components: true
-discovery:
-conversation:
-map:
-sun:
-cloud:
-
 recorder: !include recorder.yaml
 history: !include history.yaml
 logbook: !include logbook.yaml
@@ -45,7 +40,7 @@ group: !include_dir_merge_named groups
 automation: !include_dir_merge_list automations
 script: !include scripts.yaml
 light: !include lights.yaml
-
+media_player: !include media.yaml
 input_boolean: !include input_boolean.yaml
 input_select: !include input_select.yaml
 
@@ -79,8 +74,6 @@ timer:
     duration: '01:30:00'
     icon: mdi:battery-charging-70
 
-media_player: !include media.yaml
-
 device_tracker:
   - platform: nmap_tracker
     hosts: 192.168.0.0/24
@@ -88,7 +81,7 @@ device_tracker:
     scan_options: " --privileged -sP "
     exclude:
       - 192.168.0.11
-      - 192.168.0.21
+      - 192.168.0.27
 
 notify:
   - name: browser
