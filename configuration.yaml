@@ -18,6 +18,7 @@ config:
 updater:
   include_used_components: true
 discovery:
+cloud:
 sun:
 
 http:
