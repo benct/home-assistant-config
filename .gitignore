@@ -1,6 +1,7 @@
 deps
 logs
 pids
+ssl
 
 *.log
 *.db
