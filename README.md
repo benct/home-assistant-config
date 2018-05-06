@@ -2,11 +2,11 @@
 
 Configuration for my [home-assistant](https://www.home-assistant.io) setup running on
 [Hassbian](https://www.home-assistant.io/docs/installation/hassbian/installation/) on a
-[Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/).
+[Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/).
 
 ## Hardware
 
-- [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
+- [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 - [Telldus Tellstick ZNet Lite v2](https://home-assistant.io/components/tellduslive/)
 - [Netatmo Weather Station](https://home-assistant.io/components/netatmo/)
  
@@ -27,6 +27,11 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [Onkyo Receiver](https://www.home-assistant.io/components/media_player.onkyo/)
 - [Google ChromeCast](https://www.home-assistant.io/components/media_player.cast/)
 - [Spotify](https://www.home-assistant.io/components/media_player.spotify/)
+
+#### Future plans:
+- [Phillips Hue Hub](https://www.home-assistant.io/components/hue/)
+- [Phillips Hue Lights](https://www.home-assistant.io/components/light.hue/)
+- [Google Home Mini](https://www.home-assistant.io/components/google_assistant/)
 
 ## Theme
 Using custom UI elements from [Custom UI](https://github.com/andrey-git/home-assistant-custom-ui)
