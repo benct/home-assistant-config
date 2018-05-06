@@ -3,6 +3,7 @@ logs
 pids
 ssl
 
+*__pycache__*
 *.log
 *.db
 *.db-journal
