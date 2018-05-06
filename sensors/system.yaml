@@ -44,5 +44,5 @@
 
 - platform: filesize
   file_paths:
-    - /config/home-assistant_v2.db
-    - /config/home-assistant.log
+    - /home/homeassistant/.homeassistant/home-assistant_v2.db
+    - /home/homeassistant/.homeassistant/home-assistant.log

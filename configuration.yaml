@@ -5,7 +5,7 @@ homeassistant:
   elevation: 40
   unit_system: metric
   time_zone: Europe/Oslo
-  whitelist_external_dirs: /config
+  whitelist_external_dirs: /home/homeassistant/.homeassistant
 
   customize: !include_dir_merge_named customize
 
@@ -32,7 +32,6 @@ http:
 
 updater:
   include_used_components: true
-hassio:
 discovery:
 conversation:
 map:
