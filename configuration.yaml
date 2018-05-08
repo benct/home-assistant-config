@@ -104,5 +104,39 @@ notify:
       - service: file
       - service: slack
 
+google_assistant:
+  project_id: home-assistant-203322
+  client_id: !secret ga_client_id
+  access_token: !secret ga_access_token
+  agent_user_id: !secret ga_agent_user_id
+  api_key: !secret ga_api_key
+  exposed_domains:
+    - media_player
+    - input_boolean
+    - switch
+    - light
+    - group
+  entity_config:
+    switch.power_hall_light:
+      name: hall lights
+      room: hall
+      aliases:
+        - entry lights
+    switch.power_livingroom_light:
+      name: living room lights
+      room: living room
+    switch.power_livingroom_sofa:
+      name: living room plug sofa
+      room: living room
+      aliases:
+        - sofa power
+        - sofa plug
+    switch.power_outside_lights:
+      name: outside lights
+      room: outside
+      aliases:
+        - terrace lights
+        - balcony light
+
 tts:
   - platform: google
