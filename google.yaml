@@ -1,0 +1,94 @@
+  project_id: home-assistant-203322
+  client_id: !secret ga_client_id
+  access_token: !secret ga_access_token
+  agent_user_id: !secret ga_agent_user_id
+  api_key: !secret ga_api_key
+  exposed_domains:
+    - input_boolean
+    - switch
+    - light
+    - climate
+  entity_config:
+    climate.termostat_stue:
+      name: Thermostat
+      room: Living Room
+      aliases:
+        - Living Room Thermostat
+        - Living Room Temperature
+        - Temperature
+    input_boolean.home:
+      name: Home
+      room: Status
+      aliases:
+        - Home Status
+        - Home Mode
+    input_boolean.sleep:
+      name: Sleep
+      room: Status
+      aliases:
+        - Sleep Status
+        - Sleep Mode
+    input_boolean.away:
+      name: Away
+      room: Status
+      aliases:
+        - Away Status
+        - Away Mode
+    input_boolean.vacation:
+      expose: false
+    switch.power_hall_light:
+      name: Lights
+      room: Hall
+      aliases:
+        - Hall Lights
+        - Entry Lights
+    switch.power_livingroom_light:
+      name: Lights
+      room: Living Room
+      aliases:
+        - Living Room Lights
+        - Sofa Lights
+    switch.power_livingroom_sofa:
+      name: Power Sofa
+      room: Living Room
+      aliases:
+        - Sofa Power
+        - Sofa Plug
+    switch.power_outside_lights:
+      name: Lights
+      room: Outside
+      aliases:
+        - Outside Lights
+        - Terrace Lights
+        - Balcony Lights
+    switch.power_bedroom_light:
+      name: Lights
+      room: Bedroom
+      aliases:
+        - Bedroom Lights
+        - Bed Lights
+    switch.power_bedroom_charger:
+      name: Charger
+      room: Bedroom
+      aliases:
+        - Bedroom Charger
+        - Phone Charger
+        - Bedroom Power
+    switch.power_livingroom_heater_left:
+      name: Heater
+      room: Living Room
+      aliases:
+        - Living Room Heater
+        - Living Room Heaters
+    switch.power_livingroom_heater_right:
+      name: Heater
+      room: Living Room
+      aliases:
+        - Living Room Heater
+        - Living Room Heaters
+    switch.power_livingroom_tv:
+      expose: false
+    switch.power_livingroom_pc:
+      expose: false
+    switch.thermometer_storeroom:
+      expose: false
