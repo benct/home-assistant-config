@@ -9,6 +9,7 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 - [Telldus Tellstick ZNet Lite v2](https://home-assistant.io/components/tellduslive/)
 - [Netatmo Weather Station](https://home-assistant.io/components/netatmo/)
+- [Google Home Mini](https://www.home-assistant.io/components/google_assistant/)
  
 #### Devices:
 - [Telldus Thermometer/hygrometer](http://telldus.com/produkt/inneute-termohygro-sensor-433mhz/)
@@ -28,10 +29,13 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [Google ChromeCast](https://www.home-assistant.io/components/media_player.cast/)
 - [Spotify](https://www.home-assistant.io/components/media_player.spotify/)
 
+#### Weather:
+- [YR.no](https://www.home-assistant.io/components/sensor.yr/)
+- [Yahoo](https://www.home-assistant.io/components/weather.yweather/)
+
 #### Future plans:
 - [Phillips Hue Hub](https://www.home-assistant.io/components/hue/)
 - [Phillips Hue Lights](https://www.home-assistant.io/components/light.hue/)
-- [Google Home Mini](https://www.home-assistant.io/components/google_assistant/)
 
 ## Theme
 Using custom UI elements from [Custom UI](https://github.com/andrey-git/home-assistant-custom-ui)
