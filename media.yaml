@@ -1,14 +1,15 @@
 - platform: samsungtv
   name: TV (Stue)
   host: 192.168.0.15
+  timeout: 20
   mac: !secret samsung_tv_mac
-#  port: 8001
+  # port: 8001
 
 - platform: cast
 
 - platform: onkyo
   name: Receiver
-  host: 192.168.0.16
+  # host: 192.168.0.17
   sources:
     tv-cd: TV
     video2: GetBox II
@@ -16,7 +17,7 @@
     video1: SNES
     video4: Aux
     video6: PC
-    bd-dvd: BD/DVD
+    bd-dvd: ChromeCast
     dlna: DNLA
     network: Net
 
