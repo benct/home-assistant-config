@@ -16,6 +16,13 @@
         - Living Room Thermostat
         - Living Room Temperature
         - Temperature
+    light.template_receiver_volume:
+      name: Receiver
+      room: Living Room
+      aliases:
+        - Receiver Volume
+        - TV Volume
+        - Media Volume
     input_boolean.home:
       name: Home
       room: Status
