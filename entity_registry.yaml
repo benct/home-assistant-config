@@ -1,4 +1,8 @@
 media_player.ccultra_tomlin:
-  name:
+  name: ChromeCast Tomlin
   platform: cast
   unique_id: c8f13f4c-610e-a509-6433-71e21673ae3a
+media_player.googlehome6625:
+  name: Google Home
+  platform: cast
+  unique_id: 8dca944c-29c2-96ff-5cd4-36a4cb4a7a87
