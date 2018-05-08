@@ -9,7 +9,7 @@
 
 - platform: onkyo
   name: Receiver
-  # host: 192.168.0.17
+  host: 192.168.0.22
   sources:
     tv-cd: TV
     video2: GetBox II
