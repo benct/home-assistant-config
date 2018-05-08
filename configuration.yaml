@@ -111,32 +111,30 @@ google_assistant:
   agent_user_id: !secret ga_agent_user_id
   api_key: !secret ga_api_key
   exposed_domains:
-    - media_player
     - input_boolean
     - switch
     - light
-    - group
   entity_config:
     switch.power_hall_light:
-      name: hall lights
-      room: hall
+      name: Hall Lights
+      room: Hall
       aliases:
-        - entry lights
+        - Entry Lights
     switch.power_livingroom_light:
-      name: living room lights
-      room: living room
+      name: Living Room Lights
+      room: Living Room
     switch.power_livingroom_sofa:
-      name: living room plug sofa
-      room: living room
+      name: Living Room Power Sofa
+      room: Living Room
       aliases:
-        - sofa power
-        - sofa plug
+        - Sofa Power
+        - Sofa Plug
     switch.power_outside_lights:
-      name: outside lights
-      room: outside
+      name: Outside Lights
+      room: Outside
       aliases:
-        - terrace lights
-        - balcony light
+        - Terrace Lights
+        - Balcony Lights
 
 tts:
   - platform: google
