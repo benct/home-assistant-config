@@ -87,33 +87,3 @@ switch.power_office_pc:
 
 switch.thermometer_storeroom:
   hidden: true
-
-switch.remote_livingroom_1:
-  friendly_name: Fjernkontroll 1 (Stue)
-  assumed_state: false
-  icon: mdi:remote
-
-switch.remote_livingroom_2:
-  friendly_name: Fjernkontroll 2 (Stue)
-  assumed_state: false
-  icon: mdi:remote
-
-switch.remote_livingroom_3:
-  friendly_name: Fjernkontroll 3 (Stue)
-  assumed_state: false
-  icon: mdi:remote
-
-switch.remote_bedroom_1:
-  friendly_name: Fjernkontroll 1 (Soverom)
-  assumed_state: false
-  icon: mdi:remote
-
-switch.remote_bedroom_2:
-  friendly_name: Fjernkontroll 2 (Soverom)
-  assumed_state: false
-  icon: mdi:remote
-
-switch.remote_bedroom_3:
-  friendly_name: Fjernkontroll 3 (Soverom)
-  assumed_state: false
-  icon: mdi:remote
