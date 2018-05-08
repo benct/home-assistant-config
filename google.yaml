@@ -95,7 +95,7 @@
         - Living Room Heaters
     switch.power_livingroom_tv:
       expose: false
-    switch.power_livingroom_pc:
+    switch.power_office_pc:
       expose: false
     switch.thermometer_storeroom:
       expose: false
