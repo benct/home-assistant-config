@@ -16,9 +16,18 @@
         - Living Room Thermostat
         - Living Room Temperature
         - Temperature
+    media_player.receiver:
+      name: Receiver
+      room: Living Room
+      expose: true
+      aliases:
+        - Receiver
+        - Sound System
+        - Media Station
     light.template_receiver_volume:
       name: Receiver
       room: Living Room
+      expose: false
       aliases:
         - Receiver Volume
         - TV Volume
