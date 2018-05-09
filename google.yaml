@@ -91,17 +91,9 @@
         - Phone Charger
         - Bedroom Power
     switch.power_livingroom_heater_left:
-      name: Heater
-      room: Living Room
-      aliases:
-        - Living Room Heater
-        - Living Room Heaters
+      expose: false
     switch.power_livingroom_heater_right:
-      name: Heater
-      room: Living Room
-      aliases:
-        - Living Room Heater
-        - Living Room Heaters
+      expose: false
     switch.power_livingroom_tv:
       expose: false
     switch.power_office_pc:
