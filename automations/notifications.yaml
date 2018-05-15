@@ -27,7 +27,7 @@
   trigger:
   - platform: numeric_state
     entity_id: sensor.smoke_sensor_livingroom_temperature
-    below: 15
+    below: 12
   action:
   - service: notify.default
     data:
@@ -39,7 +39,7 @@
   trigger:
   - platform: numeric_state
     entity_id: sensor.smoke_sensor_livingroom_temperature
-    above: 25
+    above: 30
   action:
   - service: notify.default
     data:
