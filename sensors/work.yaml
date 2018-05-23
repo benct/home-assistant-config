@@ -1,0 +1,35 @@
+- platform: netatmo
+  station: Netatmo3-4etg
+  modules:
+    Indoor:
+      - temperature
+      - co2
+      - pressure
+      - noise
+      - humidity
+      - min_temp
+      - max_temp
+
+- platform: netatmo
+  station: Netatmo2-5etg
+  modules:
+    Indoor:
+      - temperature
+      - co2
+      - pressure
+      - noise
+      - humidity
+      - min_temp
+      - max_temp
+
+- platform: netatmo
+  station: Netatmo1-5etg
+  modules:
+    Indoor:
+      - temperature
+      - co2
+      - pressure
+      - noise
+      - humidity
+      - min_temp
+      - max_temp
