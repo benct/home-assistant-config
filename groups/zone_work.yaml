@@ -1,0 +1,22 @@
+work_netatmo_4th:
+  name: 4th Floor
+  icon: mdi:office-building
+  control: hidden
+  entities:
+    - sensor.netatmo_indoor_temperature
+    - sensor.netatmo_indoor_humidity
+    - sensor.netatmo_indoor_co2
+    - sensor.netatmo_indoor_noise
+    - sensor.netatmo_indoor_pressure
+
+work_netatmo_5th:
+  name: 5th Floor
+  icon: mdi:office-building
+  control: hidden
+  entities:
+    - sensor.netatmo_indoor_temperature_2
+    - sensor.netatmo_indoor_temperature_3
+    - sensor.netatmo_indoor_humidity_2
+    - sensor.netatmo_indoor_co2_2
+    - sensor.netatmo_indoor_noise_2
+    - sensor.netatmo_indoor_pressure_2

@@ -23,6 +23,14 @@ climate:
     - group.climate_weather
     - weather.yweather
 
+work:
+  name: FINN
+  view: true
+  icon: mdi:office-building
+  entities:
+    - group.work_netatmo_4th
+    - group.work_netatmo_5th
+
 light:
   name: Lys
   view: true
