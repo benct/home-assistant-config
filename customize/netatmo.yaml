@@ -146,22 +146,22 @@ sensor.netatmo_indoor_pressure_3:
 sensor.netatmo_indoor_temperature:
   friendly_name: Temperatur
   extra_badge:
-    - entity_id: sensor.netatmo_indoor_min_temp
-    - entity_id: sensor.netatmo_indoor_max_temp
+    - entity_id: sensor.netatmo_indoor_min_temp_2
+    - entity_id: sensor.netatmo_indoor_max_temp_2
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 sensor.netatmo_indoor_temperature_2:
   friendly_name: Temperatur
   extra_badge:
-    - entity_id: sensor.netatmo_indoor_min_temp_2
-    - entity_id: sensor.netatmo_indoor_max_temp_2
+    - entity_id: sensor.netatmo_indoor_min_temp
+    - entity_id: sensor.netatmo_indoor_max_temp_3
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 sensor.netatmo_indoor_temperature_3:
   friendly_name: Temperatur
   extra_badge:
     - entity_id: sensor.netatmo_indoor_min_temp_3
-    - entity_id: sensor.netatmo_indoor_max_temp_3
+    - entity_id: sensor.netatmo_indoor_max_temp
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
