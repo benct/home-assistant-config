@@ -1,6 +1,6 @@
 work_netatmo_4th:
   name: 4th Floor
-  icon: mdi:office-building
+  icon: mdi:briefcase
   control: hidden
   entities:
     - sensor.netatmo_indoor_temperature
@@ -11,7 +11,7 @@ work_netatmo_4th:
 
 work_netatmo_5th:
   name: 5th Floor
-  icon: mdi:office-building
+  icon: mdi:briefcase
   control: hidden
   entities:
     - sensor.netatmo_indoor_temperature_2
