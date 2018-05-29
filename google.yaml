@@ -24,6 +24,18 @@
         - Receiver
         - Sound System
         - Media Station
+    light.living_room:
+      expose: false
+    light.living_room_1:
+      expose: false
+    light.living_room_2:
+      expose: false
+    light.bedroom:
+      expose: false
+    light.bedroom_b:
+      expose: false
+    light.bedroom_k:
+      expose: false
     light.template_receiver_volume:
       name: Receiver
       room: Living Room
@@ -58,12 +70,6 @@
       aliases:
         - Hall Lights
         - Entry Lights
-    switch.power_livingroom_light:
-      name: Lights
-      room: Living Room
-      aliases:
-        - Living Room Lights
-        - Sofa Lights
     switch.power_livingroom_sofa:
       name: Power Sofa
       room: Living Room
@@ -77,12 +83,6 @@
         - Outside Lights
         - Terrace Lights
         - Balcony Lights
-    switch.power_bedroom_light:
-      name: Lights
-      room: Bedroom
-      aliases:
-        - Bedroom Lights
-        - Bed Lights
     switch.power_bedroom_charger:
       name: Charger
       room: Bedroom

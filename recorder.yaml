@@ -11,8 +11,9 @@ include:
 
     - climate.termostat_stue
 
-    - switch.power_livingroom_light
-    - switch.power_bedroom_light
+    - light.living_room
+    - light.bedroom
+
     - switch.power_hall_light
     - switch.power_outside_lights
     - switch.power_office_pc

@@ -9,8 +9,8 @@
     entity_id: input_boolean.home
     state: 'on'
   action:
-  - service: switch.turn_on
-    entity_id: switch.power_livingroom_light
+  - service: light.turn_on
+    entity_id: light.living_room
 
 - alias: 'Outside light on at sunset'
   initial_state: 'on'

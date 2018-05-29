@@ -7,4 +7,4 @@ bedroom:
     - sensor.netatmo_bedroom_co2
     - sensor.netatmo_bedroom_noise
     - switch.power_bedroom_charger
-    - switch.power_bedroom_light
+    - light.bedroom

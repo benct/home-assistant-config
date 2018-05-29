@@ -1,12 +1,3 @@
-switch.power_livingroom_light:
-  friendly_name: Lys
-  assumed_state: false
-  icon: mdi:floor-lamp
-  group:
-    group.light*:
-      friendly_name: Stue
-  custom_ui_state_card: state-card-custom-ui
-
 switch.power_livingroom_sofa:
   friendly_name: Strøm (Sofa)
   assumed_state: false
@@ -58,11 +49,6 @@ switch.power_hall_light:
     group.light*:
       friendly_name: Gang
   custom_ui_state_card: state-card-custom-ui
-
-switch.power_bedroom_light:
-  friendly_name: Nattbord
-  assumed_state: false
-  icon: mdi:lamp
 
 switch.power_bedroom_charger:
   friendly_name: Lader

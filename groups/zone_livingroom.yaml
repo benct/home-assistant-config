@@ -7,7 +7,7 @@ livingroom:
     - switch.power_livingroom_tv
     - light.template_receiver_volume
     - switch.power_livingroom_sofa
-    - switch.power_livingroom_light
+    - light.living_room
 
 livingroom_heaters:
   name: Varme 

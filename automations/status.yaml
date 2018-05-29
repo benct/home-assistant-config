@@ -38,8 +38,10 @@
   action:
   - service: switch.turn_on
     entity_id:
-      - switch.power_livingroom_light
       - switch.power_outside_lights
+  - service: light.turn_on
+    entity_id:
+      - light.living_room
 
 - alias: 'Sleep mode'
   initial_state: 'on'
@@ -56,10 +58,8 @@
       - input_boolean.vacation
   - service: switch.turn_off
     entity_id:
-      - switch.power_bedroom_light
-      - switch.power_hall_light
       - switch.power_livingroom_sofa
-      - switch.power_livingroom_light
+      - switch.power_hall_light
       - switch.power_outside_lights
   - service: climate.set_away_mode
     entity_id: climate.termostat_stue
@@ -82,11 +82,13 @@
   - service: switch.turn_off
     entity_id:
       - switch.power_bedroom_charger
-      - switch.power_bedroom_light
-      - switch.power_hall_light
       - switch.power_livingroom_sofa
-      - switch.power_livingroom_light
+      - switch.power_hall_light
       - switch.power_outside_lights
+  - service: light.turn_off
+    entity_id:
+      - light.living_room
+      - light.bedroom
   - service: climate.set_away_mode
     entity_id: climate.termostat_stue
     data:
@@ -108,15 +110,17 @@
   - service: switch.turn_off
     entity_id:
       - switch.power_bedroom_charger
-      - switch.power_bedroom_light
       - switch.power_hall_light
       - switch.power_livingroom_tv
       - switch.power_livingroom_sofa
-      - switch.power_livingroom_light
       - switch.power_livingroom_heater_left
       - switch.power_livingroom_heater_right
       - switch.power_office_pc
       - switch.power_outside_lights
+  - service: light.turn_off
+    entity_id:
+      - light.living_room
+      - light.bedroom
   - service: climate.set_operation_mode
     entity_id: climate.termostat_stue
     data:
