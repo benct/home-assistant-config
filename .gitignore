@@ -17,6 +17,7 @@ ssl
 
 .idea
 .cloud
+.config*
 .spotify-token-cache
 
 secrets.yaml
