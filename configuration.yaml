@@ -14,10 +14,9 @@ frontend:
     - /local/custom_ui/state-card-custom-ui.html
 
 config:
+discovery:
 updater:
   include_used_components: true
-discovery:
-cloud:
 sun:
 
 http:
