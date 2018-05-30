@@ -25,7 +25,7 @@ climate:
 
 work:
   name: FINN
-  view: true
+  #view: true
   icon: mdi:briefcase
   entities:
     - group.work_netatmo_4th
