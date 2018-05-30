@@ -10,18 +10,20 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [Telldus Tellstick ZNet Lite v2](https://home-assistant.io/components/tellduslive/)
 - [Netatmo Weather Station](https://home-assistant.io/components/netatmo/)
 - [Google Home Mini](https://www.home-assistant.io/components/google_assistant/)
+- [Phillips Hue Hub](https://www.home-assistant.io/components/hue/)
  
 #### Devices:
 - [Telldus Thermometer/hygrometer](http://telldus.com/produkt/inneute-termohygro-sensor-433mhz/)
-- [NEXA MYCR-3 Plug](https://www.clasohlson.com/no/Nexa-MYCR-3,-3-pack-fjernstr%C3%B8mbrytere--/36-6902) x 6
-- [NEXA LWST-605 Switch](https://www.clasohlson.com/no/Nexa-LWST-605-trådløs-veggstrømbryter-/36-4614)
-- [NEXA WMR-1000 Receiver](https://www.clasohlson.com/no/Nexa-WMR-1000-innbyggingsmottaker-p%C3%A5-av-/36-5940)
+- [Nexa MYCR-3 Plug](https://www.clasohlson.com/no/Nexa-MYCR-3,-3-pack-fjernstr%C3%B8mbrytere--/36-6902)
+- [Nexa LWST-605 Switch](https://www.clasohlson.com/no/Nexa-LWST-605-trådløs-veggstrømbryter-/36-4614)
+- [Nexa WMR-1000 Receiver](https://www.clasohlson.com/no/Nexa-WMR-1000-innbyggingsmottaker-p%C3%A5-av-/36-5940)
 - [Luxorparts Outdoor Plug](https://www.kjell.com/no/produkter/elektro-og-verktoy/smarte-hjem/433mhz/fjernstrombryter/utenpaliggende-bryter/luxorparts-mini-fjernstrombryter-for-utendorsbruk-3000-w-p50990)
-- [FIBARO Wall Plug](https://products.z-wavealliance.org/products/1653) x 2
-- [FIBARO Motion Sensor](https://products.z-wavealliance.org/products/2762)
-- [FIBARO Smoke Sensor 2](https://products.z-wavealliance.org/products/1273)
-- [FIBARO Flood Sensor](https://products.z-wavealliance.org/products/2791)
-- [FIBARO Door/Window Sensor 2](https://products.z-wavealliance.org/products/2181)
+- [Fibaro Wall Plug](https://products.z-wavealliance.org/products/1653)
+- [Fibaro Motion Sensor](https://products.z-wavealliance.org/products/2762)
+- [Fibaro Smoke Sensor 2](https://products.z-wavealliance.org/products/1273)
+- [Fibaro Flood Sensor](https://products.z-wavealliance.org/products/2791)
+- [Fibaro Door/Window Sensor 2](https://products.z-wavealliance.org/products/2181)
+- [Phillips Hue Lights](https://www.home-assistant.io/components/light.hue/)
  
 #### Media:
 - [Samsung Smart TV](https://home-assistant.io/components/media_player.samsungtv/)
@@ -32,10 +34,6 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 #### Weather:
 - [YR.no](https://www.home-assistant.io/components/sensor.yr/)
 - [Yahoo](https://www.home-assistant.io/components/weather.yweather/)
-
-#### Future plans:
-- [Phillips Hue Hub](https://www.home-assistant.io/components/hue/)
-- [Phillips Hue Lights](https://www.home-assistant.io/components/light.hue/)
 
 ## Theme
 Using custom UI elements from [Custom UI](https://github.com/andrey-git/home-assistant-custom-ui)
