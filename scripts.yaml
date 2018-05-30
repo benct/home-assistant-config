@@ -1,0 +1,55 @@
+activate_livingroom_relax:
+  sequence:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living Room"
+        scene_name: "Relax"
+
+activate_livingroom_read:
+  sequence:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living Room"
+        scene_name: "Read"
+
+activate_livingroom_concentrate:
+  sequence:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living Room"
+        scene_name: "Concentrate"
+
+activate_livingroom_energize:
+  sequence:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living Room"
+        scene_name: "Energize"
+
+activate_bedroom_relax:
+  sequence:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Bedroom"
+        scene_name: "Relax"
+
+activate_bedroom_read:
+  sequence:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Bedroom"
+        scene_name: "Read"
+
+activate_bedroom_concentrate:
+  sequence:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Bedroom"
+        scene_name: "Concentrate"
+
+activate_bedroom_energize:
+  sequence:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Bedroom"
+        scene_name: "Energize"

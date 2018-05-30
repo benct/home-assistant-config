@@ -37,6 +37,8 @@ light:
   icon: mdi:lightbulb-on
   entities:
     - group.lights
+    - group.scenes_livingroom
+    - group.scenes_bedroom
 
 switch:
   name: Strøm
