@@ -1,4 +1,5 @@
 activate_livingroom_relax:
+  alias: Relax
   sequence:
     - service: hue.hue_activate_scene
       data:
@@ -6,6 +7,7 @@ activate_livingroom_relax:
         scene_name: "Relax"
 
 activate_livingroom_read:
+  alias: Read
   sequence:
     - service: hue.hue_activate_scene
       data:
@@ -13,6 +15,7 @@ activate_livingroom_read:
         scene_name: "Read"
 
 activate_livingroom_concentrate:
+  alias: Concentrate
   sequence:
     - service: hue.hue_activate_scene
       data:
@@ -20,6 +23,7 @@ activate_livingroom_concentrate:
         scene_name: "Concentrate"
 
 activate_livingroom_energize:
+  alias: Energize
   sequence:
     - service: hue.hue_activate_scene
       data:
@@ -27,6 +31,7 @@ activate_livingroom_energize:
         scene_name: "Energize"
 
 activate_bedroom_relax:
+  alias: Relax
   sequence:
     - service: hue.hue_activate_scene
       data:
@@ -34,6 +39,7 @@ activate_bedroom_relax:
         scene_name: "Relax"
 
 activate_bedroom_read:
+  alias: Read
   sequence:
     - service: hue.hue_activate_scene
       data:
@@ -41,6 +47,7 @@ activate_bedroom_read:
         scene_name: "Read"
 
 activate_bedroom_concentrate:
+  alias: Concentrate
   sequence:
     - service: hue.hue_activate_scene
       data:
@@ -48,6 +55,7 @@ activate_bedroom_concentrate:
         scene_name: "Concentrate"
 
 activate_bedroom_energize:
+  alias: Energize
   sequence:
     - service: hue.hue_activate_scene
       data:

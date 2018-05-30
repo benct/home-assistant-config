@@ -1,0 +1,17 @@
+script.activate_livingroom_relax:
+  icon: mdi:seat-flat-angled
+script.activate_livingroom_read:
+  icon: mdi:book-open
+script.activate_livingroom_concentrate:
+  icon: mdi:spotlight-beam
+script.activate_livingroom_energize:
+  icon: mdi:flash-outline
+
+script.activate_bedroom_relax:
+  icon: mdi:seat-flat-angled
+script.activate_bedroom_read:
+  icon: mdi:book-open
+script.activate_bedroom_concentrate:
+  icon: mdi:spotlight-beam
+script.activate_bedroom_energize:
+  icon: mdi:flash-outline
