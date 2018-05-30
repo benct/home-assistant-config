@@ -1,0 +1,3 @@
+input_boolean.vacation:
+  confirm_controls_show_lock: true
+  custom_ui_state_card: state-card-custom-ui
