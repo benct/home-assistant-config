@@ -1,6 +1,7 @@
 group.all_devices:
   hidden: false
   friendly_name: Enheter
+  icon: mdi:account-multiple
 
 device_tracker.3497f6b6f0b0:
   show_last_changed: true

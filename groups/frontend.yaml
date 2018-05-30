@@ -56,12 +56,6 @@ security:
     - group.door_windows
     - group.motion
     - group.flood_sensors
-
-people:
-  name: Personer
-  view: true
-  icon: mdi:account-multiple
-  entities:
     - group.all_devices
 
 media:
