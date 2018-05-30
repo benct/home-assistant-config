@@ -5,8 +5,8 @@ livingroom:
   entities:
     - sensor.smoke_sensor_livingroom_temperature
     - switch.power_livingroom_tv
-    - light.template_receiver_volume
     - switch.power_livingroom_sofa
+    - light.template_receiver_volume
     - light.living_room
 
 livingroom_heaters:
