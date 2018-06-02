@@ -61,6 +61,10 @@
       - switch.power_livingroom_sofa
       - switch.power_hall_light
       - switch.power_outside_lights
+  - service: light.turn_off
+    entity_id:
+      - light.living_room
+      - light.bedroom
   - service: climate.set_away_mode
     entity_id: climate.termostat_stue
     data:
