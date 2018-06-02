@@ -1,33 +1,33 @@
 script.activate_livingroom_relax:
   icon: mdi:seat-flat-angled
   action_name: Activate
-  icon_color: ffc864
+  icon_color: #ffc864
 script.activate_livingroom_read:
   icon: mdi:book-open
   action_name: Activate
-  icon_color: fffab4
+  icon_color: #fffab4
 script.activate_livingroom_concentrate:
   icon: mdi:spotlight-beam
   action_name: Activate
-  icon_color: e6ffff
+  icon_color: #e6ffff
 script.activate_livingroom_energize:
   icon: mdi:flash-outline
   action_name: Activate
-  icon_color: 96ffff
+  icon_color: #96ffff
 
 script.activate_bedroom_relax:
   icon: mdi:seat-flat-angled
   action_name: Activate
-  icon_color: ffc864
+  icon_color: #ffc864
 script.activate_bedroom_read:
   icon: mdi:book-open
   action_name: Activate
-  icon_color: fffab4
+  icon_color: #fffab4
 script.activate_bedroom_concentrate:
   icon: mdi:spotlight-beam
   action_name: Activate
-  icon_color: e6ffff
+  icon_color: #e6ffff
 script.activate_bedroom_energize:
   icon: mdi:flash-outline
   action_name: Activate
-  icon_color: 96ffff
+  icon_color: #96ffff
