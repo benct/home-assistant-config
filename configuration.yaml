@@ -40,9 +40,10 @@ automation: !include_dir_merge_list automations
 script: !include scripts.yaml
 light: !include lights.yaml
 media_player: !include media.yaml
+google_assistant: !include google.yaml
+input_number: !include input_number.yaml
 input_boolean: !include input_boolean.yaml
 input_select: !include input_select.yaml
-google_assistant: !include google.yaml
 
 tellduslive:
   host: !secret telldus_host

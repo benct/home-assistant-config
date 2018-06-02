@@ -1,0 +1,15 @@
+livingroom_color_temp:
+  name: Lys (temperatur)
+  initial: 370
+  min: 160
+  max: 500
+  step: 10
+  icon: mdi:palette
+
+bedroom_color_temp:
+  name: Lys (temperatur)
+  initial: 370
+  min: 160
+  max: 500
+  step: 10
+  icon: mdi:palette
