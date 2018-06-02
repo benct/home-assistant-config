@@ -8,22 +8,10 @@ lights:
     - switch.power_hall_light
     - switch.power_outside_lights
 
-scenes_livingroom:
-  name: Stue
-  icon: mdi:lightbulb-on-outline
+scenes:
+  name: Scener
+  icon: mdi:image
   control: hidden
   entities:
-    - script.activate_livingroom_relax
-    - script.activate_livingroom_read
-    - script.activate_livingroom_concentrate
-    - script.activate_livingroom_energize
-
-scenes_bedroom:
-  name: Soverom
-  icon: mdi:lightbulb-on-outline
-  control: hidden
-  entities:
-    - script.activate_bedroom_relax
-    - script.activate_bedroom_read
-    - script.activate_bedroom_concentrate
-    - script.activate_bedroom_energize
+    - input_select.livingroom_hue_scene
+    - input_select.bedroom_hue_scene

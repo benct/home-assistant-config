@@ -10,3 +10,25 @@ log_level:
     - debug
     - notset
   initial: warn
+
+livingroom_hue_scene:
+  name: Livingroom
+  icon: mdi:image
+  options:
+    - Select
+    - Relax
+    - Read
+    - Concentrate
+    - Energize
+  initial: 'Select'
+
+bedroom_hue_scene:
+  name: Bedroom
+  icon: mdi:image
+  options:
+    - Select
+    - Relax
+    - Read
+    - Concentrate
+    - Energize
+  initial: 'Select'
