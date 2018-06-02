@@ -24,7 +24,7 @@
     entity_id: input_select.livingroom_hue_scene
   action:
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: "Living Room"
         scene_name: "{{ trigger.to_state.state }}"
 
@@ -34,6 +34,6 @@
     entity_id: input_select.bedroom_hue_scene
   action:
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: "Bedroom"
         scene_name: "{{ trigger.to_state.state }}"
