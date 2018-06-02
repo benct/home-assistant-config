@@ -4,7 +4,9 @@ lights:
   control: hidden
   entities:
     - light.living_room
+    - input_number.livingroom_color_temp
     - light.bedroom
+    - input_number.bedroom_color_temp
     - switch.power_hall_light
     - switch.power_outside_lights
 
