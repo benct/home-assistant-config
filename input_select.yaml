@@ -12,7 +12,7 @@ log_level:
   initial: warn
 
 livingroom_hue_scene:
-  name: Livingroom
+  name: Stue
   icon: mdi:image
   options:
     - Select
@@ -23,7 +23,7 @@ livingroom_hue_scene:
   initial: 'Select'
 
 bedroom_hue_scene:
-  name: Bedroom
+  name: Nattbord
   icon: mdi:image
   options:
     - Select
