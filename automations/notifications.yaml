@@ -31,7 +31,7 @@
   action:
   - service: notify.default
     data:
-      message: "Innetemperatur under 15 grader!"
+      message: "Innetemperatur under 12 grader!"
       title: "Veldig kaldt innendørs!"
 
 - alias: 'High inside temperature'
@@ -43,7 +43,7 @@
   action:
   - service: notify.default
     data:
-      message: "Innetemperatur over 25 grader!"
+      message: "Innetemperatur over 30 grader!"
       title: "Veldig varmt innendørs!"
 
 - alias: 'Public IP change'
