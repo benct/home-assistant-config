@@ -4,9 +4,7 @@ lights:
   control: hidden
   entities:
     - light.living_room
-    - input_number.livingroom_color_temp
     - light.bedroom
-    - input_number.bedroom_color_temp
     - switch.power_hall_light
     - switch.power_outside_lights
 
@@ -17,3 +15,11 @@ scenes:
   entities:
     - input_select.livingroom_hue_scene
     - input_select.bedroom_hue_scene
+
+color_temp:
+  name: Fargetemperatur
+  icon: mdi:palette
+  control: hidden
+  entities:
+    - input_number.livingroom_color_temp
+    - input_number.bedroom_color_temp

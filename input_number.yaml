@@ -1,5 +1,5 @@
 livingroom_color_temp:
-  name: Stue (temperatur)
+  name: Stue
   initial: 370
   min: 160
   max: 500
@@ -7,7 +7,7 @@ livingroom_color_temp:
   icon: mdi:palette
 
 bedroom_color_temp:
-  name: Nattbord (temperatur)
+  name: Nattbord
   initial: 370
   min: 160
   max: 500

@@ -38,6 +38,7 @@ light:
   entities:
     - group.lights
     - group.scenes
+    - group.color_temp
 
 switch:
   name: Strøm
