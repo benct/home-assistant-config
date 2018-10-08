@@ -1,5 +1,5 @@
 purge_interval: 1
-purge_keep_days: 365
+purge_keep_days: 30
 include:
   entities:
     - device_tracker.c869cd9e5486
