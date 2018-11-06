@@ -1,7 +1,4 @@
   project_id: home-assistant-203322
-  client_id: !secret ga_client_id
-  access_token: !secret ga_access_token
-  agent_user_id: !secret ga_agent_user_id
   api_key: !secret ga_api_key
   exposed_domains:
     - input_boolean
@@ -15,7 +12,8 @@
       aliases:
         - Living Room Thermostat
         - Living Room Temperature
-        - Temperature
+        - Stue Temperatur
+        - Stuetemperatur
     media_player.receiver:
       name: Receiver
       room: Living Room
@@ -24,6 +22,8 @@
         - Receiver
         - Sound System
         - Media Station
+        - Lyd
+        - Lydsystem
     light.living_room:
       expose: false
     light.living_room_1:
@@ -35,6 +35,8 @@
     light.bedroom_b:
       expose: false
     light.bedroom_k:
+      expose: false
+    light.other:
       expose: false
     light.template_receiver_volume:
       name: Receiver
@@ -50,18 +52,21 @@
       aliases:
         - Home Status
         - Home Mode
+        - Hjemmestatus
     input_boolean.sleep:
       name: Sleep
       room: Status
       aliases:
         - Sleep Status
         - Sleep Mode
+        - Nattstatus
     input_boolean.away:
       name: Away
       room: Status
       aliases:
         - Away Status
         - Away Mode
+        - Bortestatus
     input_boolean.vacation:
       expose: false
     switch.power_hall_light:
@@ -70,12 +75,17 @@
       aliases:
         - Hall Lights
         - Entry Lights
+        - Ganglys
+        - Lys gang
     switch.power_livingroom_sofa:
       name: Power Sofa
       room: Living Room
       aliases:
         - Sofa Power
         - Sofa Plug
+        - Sofastrom
+        - Ladestrom
+        - Lading
     switch.power_outside_lights:
       name: Lights
       room: Outside
@@ -83,6 +93,9 @@
         - Outside Lights
         - Terrace Lights
         - Balcony Lights
+        - Utelys
+        - Terrasselys
+        - Balkonglys
     switch.power_bedroom_charger:
       name: Charger
       room: Bedroom
@@ -90,6 +103,8 @@
         - Bedroom Charger
         - Phone Charger
         - Bedroom Power
+        - Soveromslader
+        - Lader soverom
     switch.power_livingroom_heater_left:
       expose: false
     switch.power_livingroom_heater_right:
