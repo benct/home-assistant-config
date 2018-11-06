@@ -47,6 +47,9 @@
       - condition: state
         entity_id: input_boolean.sleep
         state: 'on'
+      - condition: state
+        entity_id: input_boolean.away
+        state: 'on'
   action:
   - service: switch.turn_on
     entity_id: switch.power_hall_light
@@ -58,7 +61,7 @@
     entity_id: binary_sensor.motion_hall
     to: 'off'
     for:
-      minutes: 10
+      minutes: 3
   condition:
     condition: or
     conditions: 
