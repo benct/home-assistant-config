@@ -78,6 +78,8 @@
       expose: false
     light.other:
       expose: false
+    light.dimmable_light_1:
+      expose: false
     light.template_receiver_volume:
       name: Receiver
       room: Living Room
