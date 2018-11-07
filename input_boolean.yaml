@@ -17,3 +17,7 @@ away:
   name: Borte
   initial: off
   icon: mdi:logout
+
+fake_heater:
+  name: Fake heater
+  initial: off

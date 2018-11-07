@@ -6,3 +6,38 @@
   cold_tolerance: 0.3
   hot_tolerance: 0.1
   away_temp: 16
+
+- platform: generic_thermostat
+  name: Termostat (Ute)
+  heater: input_boolean.fake_heater
+  target_sensor: sensor.netatmo_outside_temperature
+  initial_operation_mode: "off"
+  target_temp: -50
+
+- platform: generic_thermostat
+  name: Termostat (Soverom)
+  heater: input_boolean.fake_heater
+  target_sensor: sensor.netatmo_bedroom_temperature
+  initial_operation_mode: "off"
+  target_temp: -50
+
+- platform: generic_thermostat
+  name: Termostat (Bod)
+  heater: input_boolean.fake_heater
+  target_sensor: sensor.thermometer_storeroom_temperature
+  initial_operation_mode: "off"
+  target_temp: -50
+
+- platform: generic_thermostat
+  name: Termostat (Fryser)
+  heater: input_boolean.fake_heater
+  target_sensor: sensor.thermometer_freezer_temperature
+  initial_operation_mode: "off"
+  target_temp: -50
+
+- platform: generic_thermostat
+  name: Termostat (Bad)
+  heater: input_boolean.fake_heater
+  target_sensor: sensor.flood_sensor_bathroom_temperature
+  initial_operation_mode: "off"
+  target_temp: -50
