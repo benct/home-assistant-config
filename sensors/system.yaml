@@ -41,8 +41,3 @@
 
 - platform: dnsip
   scan_interval: 1200
-
-- platform: filesize
-  file_paths:
-    - /home/homeassistant/.homeassistant/home-assistant_v2.db
-    - /home/homeassistant/.homeassistant/home-assistant.log
