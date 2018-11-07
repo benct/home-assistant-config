@@ -12,8 +12,48 @@
       aliases:
         - Living Room Thermostat
         - Living Room Temperature
-        - Stue Temperatur
+        - Temperatur stue
         - Stuetemperatur
+    climate.termostat_soverom:
+      name: Temperature
+      room: Bedroom
+      aliases:
+      - Bedroom Thermostat
+      - Bedroom Temperature
+      - Temperatur soverom
+      - Soveromstemperatur
+    climate.termostat_ute:
+      name: Temperature
+      room: Outside
+      aliases:
+      - Outside Thermostat
+      - Outside Temperature
+      - Temperatur ute
+      - Utetemperatur
+    climate.termostat_bod:
+      name: Temperature
+      room: Storeroom
+      aliases:
+      - Storeroom Thermostat
+      - Storeroom Temperature
+      - Temperatur bod
+      - Bodtemperatur
+    climate.termostat_fryser:
+      name: Freezer
+      room: Storeroom
+      aliases:
+      - Freezer Thermostat
+      - Freezer Temperature
+      - Temperatur fryser
+      - Frysertemperatur
+    climate.termostat_bad:
+      name: Temperature
+      room: Bathroom
+      aliases:
+      - Bathroom Thermostat
+      - Bathroom Temperature
+      - Temperatur bad
+      - Baderomstemperatur
     media_player.receiver:
       name: Receiver
       room: Living Room
