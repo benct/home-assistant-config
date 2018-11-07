@@ -43,6 +43,7 @@ google_assistant: !include google.yaml
 input_number: !include input_number.yaml
 input_boolean: !include input_boolean.yaml
 input_select: !include input_select.yaml
+climate: !include climate.yaml
 
 tellduslive:
   host: !secret telldus_host
@@ -57,16 +58,6 @@ netatmo:
 
 weather:
   - platform: yweather
-
-climate:
-  - platform: generic_thermostat
-    name: Termostat (Stue)
-    heater: group.livingroom_heaters
-    target_sensor: sensor.smoke_sensor_livingroom_temperature
-    target_temp: 22
-    cold_tolerance: 0.3
-    hot_tolerance: 0.1
-    away_temp: 16
 
 timer:
   bedroom_charger:
