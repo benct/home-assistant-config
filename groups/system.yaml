@@ -14,7 +14,7 @@ network:
   icon: mdi:access-point-network
   entities:
     - sensor.ipv4_address_eth0
-    - sensor.myipopendnscom
+    - sensor.myip
     - sensor.speedtest_ping
     - sensor.speedtest_upload
     - sensor.speedtest_download

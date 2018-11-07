@@ -51,7 +51,7 @@ sensor.ipv4_address_eth0:
   friendly_name: IPv4 address
   icon: mdi:server-network-off
 
-sensor.myipopendnscom:
+sensor.myip:
   friendly_name: Public IP
   icon: mdi:server-network
 
