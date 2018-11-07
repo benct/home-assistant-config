@@ -46,7 +46,7 @@ input_select: !include input_select.yaml
 climate: !include climate.yaml
 
 tellduslive:
-  host: !secret telldus_host
+  host: 192.168.0.12
   update_interval: 10
 
 netatmo:
