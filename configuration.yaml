@@ -57,7 +57,7 @@ netatmo:
   discovery: false
 
 weather:
-  - platform: yweather
+  - platform: met
 
 timer:
   bedroom_charger:

@@ -33,7 +33,7 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 
 #### Weather:
 - [YR.no](https://www.home-assistant.io/components/sensor.yr/)
-- [Yahoo](https://www.home-assistant.io/components/weather.yweather/)
+- [Met.no](https://www.home-assistant.io/components/weather.met/)
 
 ## Theme
 Using custom UI elements from [Custom UI](https://github.com/andrey-git/home-assistant-custom-ui)
