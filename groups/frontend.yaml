@@ -23,14 +23,6 @@ climate:
     - group.climate_weather
     - weather.yweather
 
-work:
-  name: FINN
-  #view: true
-  icon: mdi:briefcase
-  entities:
-    - group.work_netatmo_4th
-    - group.work_netatmo_5th
-
 light:
   name: Lys
   view: true
@@ -87,5 +79,4 @@ other:
     - group.sensor_signal
     - group.system
     - group.network
-    - group.files
     - group.settings
