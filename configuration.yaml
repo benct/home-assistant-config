@@ -65,6 +65,10 @@ timer:
     duration: '01:30:00'
     icon: mdi:battery-charging-70
 
+binary_sensor:
+- platform: workday
+  country: 'NO'
+
 device_tracker:
   - platform: nmap_tracker
     hosts: 192.168.0.0/24
