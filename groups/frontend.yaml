@@ -21,7 +21,7 @@ climate:
     - group.climate_humidity
     - group.climate_pressure
     - group.climate_weather
-    - weather.met
+    - weather.metno
 
 light:
   name: Lys
