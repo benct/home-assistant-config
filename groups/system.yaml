@@ -9,6 +9,13 @@ system:
     - sensor.disk_use_percent_
     - sensor.template_since_last_boot
 
+settings:
+  name: Settings
+  icon: mdi:settings
+  entities:
+  - input_select.log_level
+  - updater.updater
+
 network:
   name: Network
   icon: mdi:access-point-network
@@ -19,3 +26,20 @@ network:
     - sensor.speedtest_upload
     - sensor.speedtest_download
     - sensor.fastcom_download
+
+sensor_signal:
+  name: Signal
+  icon: mdi:signal
+  entities:
+  - sensor.netatmo_bedroom_wifi
+  - sensor.netatmo_outside_radio
+
+sensor_battery:
+  name: Battery
+  icon: mdi:battery-charging
+  entities:
+  - sensor.netatmo_outside_battery
+  - sensor.template_smoke_sensor_livingroom_battery
+  - sensor.template_flood_sensor_bathroom_battery
+  - sensor.template_magnet_door_main_battery
+  - sensor.template_motion_hall_battery

@@ -1,6 +1,0 @@
-sensor_signal:
-  name: Signal
-  icon: mdi:signal
-  entities:
-    - sensor.netatmo_bedroom_wifi
-    - sensor.netatmo_outside_radio
