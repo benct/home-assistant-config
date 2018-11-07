@@ -109,6 +109,8 @@
         - Bortestatus
     input_boolean.vacation:
       expose: false
+    input_boolean.fake_heater:
+      expose: false
     switch.power_hall_light:
       name: Lights
       room: Hall
