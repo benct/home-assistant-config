@@ -43,6 +43,7 @@ google_assistant: !include google.yaml
 input_number: !include input_number.yaml
 input_boolean: !include input_boolean.yaml
 input_select: !include input_select.yaml
+rest_command: !include rest_command.yaml
 climate: !include climate.yaml
 
 tellduslive:

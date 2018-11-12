@@ -1,0 +1,7 @@
+tomlin_update_sensor:
+  url: https://tomlin.no/api
+  method: POST
+  headers:
+    authorization: !secret tomlin_api_auth
+  payload: '{"service":"hass","action":"update","sensor":"{{ sensor }}","value":"{{ value }}"}'
+  content_type:  'application/json; charset=utf-8'
