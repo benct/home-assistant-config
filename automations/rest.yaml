@@ -19,7 +19,7 @@
   - platform: state
     entity_id: sensor.speedtest_upload
   action:
-  - service: rest_command.tomlin_set_sensor
+  - service: rest_command.tomlin_sensor
     data_template:
       action: 'set'
       sensor: '{{ trigger.entity_id }}'
@@ -36,7 +36,7 @@
   - platform: state
     entity_id: sun.sun
   action:
-  - service: rest_command.tomlin_update_sensor
+  - service: rest_command.tomlin_sensor
     data_template:
       action: 'update'
       sensor: '{{ trigger.entity_id }}'
