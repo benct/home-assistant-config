@@ -22,7 +22,7 @@
   - service: rest_command.tomlin_sensor
     data_template:
       action: 'set'
-      sensor: '{{ trigger.entity_id }}'
+      sensor: '{{ trigger.to_state.object_id }}'
       value: '{{ trigger.to_state.state }}'
 
 - alias: 'REST update sensor data'
@@ -41,5 +41,5 @@
   - service: rest_command.tomlin_sensor
     data_template:
       action: 'update'
-      sensor: '{{ trigger.entity_id }}'
+      sensor: '{{ trigger.to_state.object_id }}'
       value: '{{ trigger.to_state.state }}'
