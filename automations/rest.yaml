@@ -8,6 +8,6 @@
     entity_id: sensor.smoke_sensor_livingroom_temperature
   action:
   - service: rest_command.tomlin_update_sensor
-    data_template:
-      sensor: '{{ trigger.entity_id }}'
-      value: '{{ trigger.to_state.state }}'
+    data:
+      sensor: trigger.entity_id
+      value: trigger.to_state.state
