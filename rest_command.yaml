@@ -1,5 +1,5 @@
-tomlin_update_sensor:
-  url: https://tomlin.no/api/?service=hass&action=update
+tomlin_sensor:
+  url: 'https://tomlin.no/api/?service=hass&action={{ action }}'
   method: POST
   headers:
     authorization: !secret tomlin_api_auth

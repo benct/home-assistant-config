@@ -1,13 +1,43 @@
-- alias: 'REST update temperatures'
+- alias: 'REST set sensor data'
   initial_state: 'on'
   hide_entity: true
   trigger:
   - platform: state
     entity_id: sensor.netatmo_bedroom_temperature
   - platform: state
+    entity_id: sensor.netatmo_outside_temperature
+  - platform: state
     entity_id: sensor.smoke_sensor_livingroom_temperature
+  - platform: state
+    entity_id: sensor.flood_sensor_bathroom_temperature
+  - platform: state
+    entity_id: sensor.motion_hall_temperature
+  - platform: state
+    entity_id: sensor.thermometer_storeroom_temperature
+  - platform: state
+    entity_id: sensor.speedtest_download
+  - platform: state
+    entity_id: sensor.speedtest_upload
+  action:
+  - service: rest_command.tomlin_set_sensor
+    data_template:
+      action: 'set'
+      sensor: '{{ trigger.entity_id }}'
+      value: '{{ trigger.to_state.state }}'
+
+- alias: 'REST update sensor data'
+  initial_state: 'on'
+  hide_entity: true
+  trigger:
+  - platform: state
+    entity_id: sensor.power_livingroom_tv_power_2
+  - platform: state
+    entity_id: sensor.power_office_pc_power_2
+  - platform: state
+    entity_id: sun.sun
   action:
   - service: rest_command.tomlin_update_sensor
     data_template:
+      action: 'update'
       sensor: '{{ trigger.entity_id }}'
       value: '{{ trigger.to_state.state }}'
