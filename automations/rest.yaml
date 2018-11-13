@@ -33,8 +33,10 @@
     entity_id: sensor.power_livingroom_tv_power_2
   - platform: state
     entity_id: sensor.power_office_pc_power_2
-  - platform: state
-    entity_id: sun.sun
+  - platform: sun
+    event: sunset
+  - platform: sun
+    event: sunrise
   action:
   - service: rest_command.tomlin_sensor
     data_template:
