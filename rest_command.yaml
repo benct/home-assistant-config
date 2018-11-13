@@ -1,5 +1,5 @@
 tomlin_update_sensor:
-  url: https://tomlin.no/api
+  url: https://tomlin.no/api/
   method: POST
   headers:
     authorization: !secret tomlin_api_auth
