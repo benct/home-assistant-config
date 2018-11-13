@@ -5,4 +5,4 @@ tomlin_update_sensor:
     authorization: !secret tomlin_api_auth
     accept: 'application/json, text/html'
   payload: '{"service":"hass","action":"update","sensor":"{{ sensor }}","value":"{{ value }}"}'
-  content_type:  'application/json; charset=utf-8'
+  content_type: 'application/json; charset=utf-8'
