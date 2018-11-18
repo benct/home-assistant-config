@@ -7,20 +7,7 @@
   - platform: state
     entity_id: sensor.flood_sensor_bathroom_temperature, sensor.motion_hall_temperature, sensor.thermometer_storeroom_temperature
   - platform: state
-    entity_id: sensor.speedtest_download, sensor.speedtest_upload
-  action:
-  - service: rest_command.tomlin_sensor
-    data_template:
-      action: 'set'
-      sensor: '{{ trigger.to_state.object_id }}'
-      value: '{{ trigger.to_state.state }}'
-
-- alias: 'REST update sensor data'
-  initial_state: 'on'
-  hide_entity: true
-  trigger:
-  - platform: state
-    entity_id: sensor.power_livingroom_tv_power_2, sensor.power_office_pc_power_2
+    entity_id: sensor.power_livingroom_tv_power_2, sensor.power_office_pc_power_2, sensor.speedtest_download, sensor.speedtest_upload
   - platform: sun
     event: sunset
   - platform: sun
@@ -28,6 +15,23 @@
   action:
   - service: rest_command.tomlin_sensor
     data_template:
-      action: 'update'
+      action: 'set'
       sensor: '{{ trigger.to_state.object_id }}'
       value: '{{ trigger.to_state.state }}'
+
+#- alias: 'REST update sensor data'
+#  initial_state: 'on'
+#  hide_entity: true
+#  trigger:
+#  - platform: state
+#    entity_id: sensor.power_livingroom_tv_power_2, sensor.power_office_pc_power_2
+#  - platform: sun
+#    event: sunset
+#  - platform: sun
+#    event: sunrise
+#  action:
+#  - service: rest_command.tomlin_sensor
+#    data_template:
+#      action: 'update'
+#      sensor: '{{ trigger.to_state.object_id }}'
+#      value: '{{ trigger.to_state.state }}'
