@@ -14,6 +14,9 @@
   - platform: state
     entity_id: sun.sun
     to: below_horizon
+  condition:
+  - condition: template
+    value_template: '{{ trigger.to_state.state != "undefined" }}'
   action:
   - service: rest_command.tomlin_sensor
     data_template:
