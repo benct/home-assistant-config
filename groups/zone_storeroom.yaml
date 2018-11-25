@@ -1,8 +1,7 @@
 storeroom:
-  name: Kontor/Bod
+  name: Bod
   icon: mdi:archive
   entities:
-    - switch.power_office_pc
     - sensor.thermometer_storeroom_temperature
     - sensor.thermometer_storeroom_humidity
     - sensor.thermometer_freezer_temperature

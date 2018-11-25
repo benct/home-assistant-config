@@ -4,3 +4,5 @@ office:
   control: hidden
   entities:
     - switch.power_office_pc
+    - sensor.thermometer_office_temperature
+    - sensor.thermometer_office_humidity
