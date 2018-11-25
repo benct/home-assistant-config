@@ -38,11 +38,13 @@ include:
     - sensor.magnet_door_main_temperature
     - sensor.motion_hall_temperature
     - sensor.netatmo_bedroom_temperature
+    - sensor.thermometer_office_temperature
     - sensor.thermometer_storeroom_temperature
     - sensor.thermometer_freezer_temperature
     - sensor.netatmo_outside_temperature
 
     - sensor.netatmo_bedroom_humidity
+    - sensor.thermometer_office_humidity
     - sensor.thermometer_storeroom_humidity
     - sensor.netatmo_outside_humidity
 
