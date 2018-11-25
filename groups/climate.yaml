@@ -16,6 +16,7 @@ climate_temperature:
     - sensor.flood_sensor_bathroom_temperature
     - sensor.motion_hall_temperature
     - sensor.magnet_door_main_temperature
+    - sensor.thermometer_office_temperature
     - sensor.thermometer_storeroom_temperature
     - sensor.thermometer_freezer_temperature
     - sensor.netatmo_outside_temperature
@@ -26,6 +27,7 @@ climate_humidity:
   icon: mdi:water-percent
   entities:
     - sensor.netatmo_bedroom_humidity
+    - sensor.thermometer_office_humidity
     - sensor.thermometer_storeroom_humidity
     - sensor.netatmo_outside_humidity
     - sensor.yr_humidity
