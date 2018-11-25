@@ -69,6 +69,25 @@ sensor.smoke_sensor_livingroom_temperature:
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
+sensor.thermometer_office_temperature:
+  friendly_name: Temperatur
+  group:
+    group.climate_*:
+      friendly_name: Kontor
+      icon: mdi:desktop-classic
+  show_last_changed: true
+  custom_ui_state_card: state-card-custom-ui
+
+sensor.thermometer_office_humidity:
+  friendly_name: Luftfuktighet
+  icon: mdi:water-percent
+  group:
+    group.climate_*:
+      friendly_name: Kontor
+      icon: mdi:desktop-classic
+  show_last_changed: true
+  custom_ui_state_card: state-card-custom-ui
+
 sensor.thermometer_storeroom_temperature:
   friendly_name: Temperatur
   group:
