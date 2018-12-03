@@ -1,0 +1,7 @@
+christmas:
+  name: Julelys
+  icon: mdi:pine-tree
+  entities:
+    - switch.christmas1
+    - switch.christmas2
+    - switch.christmas3

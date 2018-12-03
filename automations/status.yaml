@@ -39,6 +39,9 @@
   - service: switch.turn_on
     entity_id:
       - switch.power_outside_lights
+      - switch.christmas1
+      - switch.christmas2
+      - switch.christmas3
   - service: light.turn_on
     entity_id:
       - light.living_room
@@ -61,6 +64,9 @@
       - switch.power_livingroom_sofa
       - switch.power_hall_light
       - switch.power_outside_lights
+      - switch.christmas1
+      - switch.christmas2
+      - switch.christmas3
   - service: light.turn_off
     entity_id:
       - light.living_room
@@ -91,6 +97,9 @@
       - switch.power_livingroom_sofa
       - switch.power_hall_light
       - switch.power_outside_lights
+      - switch.christmas1
+      - switch.christmas2
+      - switch.christmas3
   - service: light.turn_off
     entity_id:
       - light.living_room
@@ -123,6 +132,9 @@
       - switch.power_livingroom_heater_right
       - switch.power_office_pc
       - switch.power_outside_lights
+      - switch.christmas1
+      - switch.christmas2
+      - switch.christmas3
   - service: light.turn_off
     entity_id:
       - light.living_room

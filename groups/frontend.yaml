@@ -10,6 +10,7 @@ default_view:
     - group.office
     - group.storeroom
     - group.outside
+    - group.christmas
 
 climate:
   name: Klima
