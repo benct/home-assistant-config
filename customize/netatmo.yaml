@@ -43,10 +43,10 @@ sensor.netatmo_bedroom_temperature:
   custom_ui_state_card: state-card-custom-ui
 
 sensor.netatmo_bedroom_min_temp:
-  friendly_name: Soverom (Min)
+  friendly_name: ""
   unit_of_measurement: min
 sensor.netatmo_bedroom_max_temp:
-  friendly_name: Soverom (Max)
+  friendly_name: ""
   unit_of_measurement: max
 
 sensor.netatmo_bedroom_wifi:
@@ -80,8 +80,8 @@ sensor.netatmo_outside_temperature:
   custom_ui_state_card: state-card-custom-ui
 
 sensor.netatmo_outside_min_temp:
-  friendly_name: Ute (Min)
+  friendly_name: ""
   unit_of_measurement: min
 sensor.netatmo_outside_max_temp:
-  friendly_name: Ute (Max)
+  friendly_name: ""
   unit_of_measurement: max
