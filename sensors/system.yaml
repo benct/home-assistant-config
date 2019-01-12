@@ -35,7 +35,7 @@
     - type: load_1m
     - type: load_5m
     - type: load_15m
-    - type: since_last_boot
+    - type: last_boot
     - type: ipv4_address
       arg: eth0
 
