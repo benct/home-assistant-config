@@ -10,6 +10,9 @@ sensor.processor_use:
     - entity_id: sensor.cpu_speed
   custom_ui_state_card: state-card-custom-ui
 
+sensor.cpu_speed:
+  friendly_name: ""
+
 sensor.disk_use_percent:
   friendly_name: Disk
   extra_badge:
@@ -18,8 +21,10 @@ sensor.disk_use_percent:
   custom_ui_state_card: state-card-custom-ui
 
 sensor.disk_use:
+  friendly_name: ""
   unit_of_measurement: used
 sensor.disk_free:
+  friendly_name: ""
   unit_of_measurement: free
 
 sensor.memory_use_percent:
@@ -30,8 +35,10 @@ sensor.memory_use_percent:
   custom_ui_state_card: state-card-custom-ui
 
 sensor.memory_use:
+  friendly_name: ""
   unit_of_measurement: used
 sensor.memory_free:
+  friendly_name: ""
   unit_of_measurement: free
 
 sensor.load_1m:
@@ -43,8 +50,10 @@ sensor.load_1m:
   custom_ui_state_card: state-card-custom-ui
 
 sensor.load_5m:
+  friendly_name: ""
   unit_of_measurement: 5m
 sensor.load_15m:
+  friendly_name: ""
   unit_of_measurement: 15m
 
 sensor.ipv4_address_eth0:
