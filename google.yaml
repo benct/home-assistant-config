@@ -149,27 +149,6 @@
         - Bedroom Power
         - Soveromslader
         - Lader soverom
-    switch.christmas1:
-      name: Christmas 1
-      room: Living Room
-      aliases:
-        - Christmas Lights
-        - Christmas
-        - Julelys
-    switch.christmas2:
-      name: Christmas 2
-      room: Living Room
-      aliases:
-        - Christmas Lights
-        - Christmas
-        - Julelys
-    switch.christmas3:
-      name: Christmas 3
-      room: Living Room
-      aliases:
-        - Christmas Lights
-        - Christmas
-        - Julelys
     switch.power_livingroom_heater_left:
       expose: false
     switch.power_livingroom_heater_right:

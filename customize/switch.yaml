@@ -73,18 +73,3 @@ switch.power_office_pc:
 
 switch.thermometer_storeroom:
   hidden: true
-
-switch.christmas1:
-  friendly_name: Julelys 1
-  assumed_state: false
-  icon: mdi:pine-tree
-
-switch.christmas2:
-  friendly_name: Julelys 2
-  assumed_state: false
-  icon: mdi:pine-tree
-
-switch.christmas3:
-  friendly_name: Julelys 3
-  assumed_state: false
-  icon: mdi:pine-tree
