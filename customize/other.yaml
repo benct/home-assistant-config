@@ -13,17 +13,17 @@ sensor.processor_use:
 sensor.cpu_speed:
   friendly_name:
 
-sensor.disk_use_percent_:
+sensor.disk_use_percent:
   friendly_name: Disk
   extra_badge:
-    - entity_id: sensor.disk_use_
-    - entity_id: sensor.disk_free_
+    - entity_id: sensor.disk_use
+    - entity_id: sensor.disk_free
   custom_ui_state_card: state-card-custom-ui
 
-sensor.disk_use_:
+sensor.disk_use:
   friendly_name:
   unit_of_measurement: used
-sensor.disk_free_:
+sensor.disk_free:
   friendly_name:
   unit_of_measurement: free
 
