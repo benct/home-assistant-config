@@ -15,7 +15,7 @@
         - Temperatur stue
         - Stuetemperatur
     climate.termostat_soverom:
-      name: Temperature
+      name: Thermostat
       room: Bedroom
       aliases:
       - Bedroom Thermostat
@@ -23,7 +23,7 @@
       - Temperatur soverom
       - Soveromstemperatur
     climate.termostat_ute:
-      name: Temperature
+      name: Thermostat
       room: Outside
       aliases:
       - Outside Thermostat
@@ -31,7 +31,7 @@
       - Temperatur ute
       - Utetemperatur
     climate.termostat_bod:
-      name: Temperature
+      name: Thermostat
       room: Storeroom
       aliases:
       - Storeroom Thermostat
@@ -39,7 +39,7 @@
       - Temperatur bod
       - Bodtemperatur
     climate.termostat_fryser:
-      name: Freezer
+      name: Thermostat
       room: Storeroom
       aliases:
       - Freezer Thermostat
@@ -47,7 +47,7 @@
       - Temperatur fryser
       - Frysertemperatur
     climate.termostat_bad:
-      name: Temperature
+      name: Thermostat
       room: Bathroom
       aliases:
       - Bathroom Thermostat
