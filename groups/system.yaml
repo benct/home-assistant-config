@@ -7,7 +7,7 @@ system:
     - sensor.load_1m
     - sensor.memory_use_percent
     - sensor.disk_use_percent_
-    - sensor.template_since_last_boot
+    - sensor.template_last_boot
 
 settings:
   name: Settings
