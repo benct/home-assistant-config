@@ -1,4 +1,4 @@
-# Home Assistant Configuration (WIP)
+# Home Assistant Configuration
 
 Configuration for my [home-assistant](https://www.home-assistant.io) setup running on
 [Hassbian](https://www.home-assistant.io/docs/installation/hassbian/installation/) on a
@@ -40,6 +40,36 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 #### Weather:
 - [YR.no](https://www.home-assistant.io/components/sensor.yr/)
 - [Met.no](https://www.home-assistant.io/components/weather.met/)
+
+## Maintenance
+
+```bash
+ssh user@192.168.0.XX
+cd /home/homeassistant/.homeassistant/
+```
+
+### Service
+````bash
+sudo systemctl start home-assistant@homeassistant.service
+sudo systemctl stop home-assistant@homeassistant.service
+sudo systemctl restart home-assistant@homeassistant.service
+
+sudo su -s /bin/bash homeassistant
+````
+
+### Updating
+```bash
+sudo hassbian-config upgrade hassbian
+sudo hassbian-config upgrade homeassistant
+```
+
+### Certificate
+
+For initial setup see home-assistants [Let's Encrypt](https://www.home-assistant.io/docs/ecosystem/certificates/lets_encrypt/) guide.
+```bash
+sudo certbot renew
+cp /etc/letsencrypt/live/your.site/your-keys.pem /ha-ssl-folder
+```
 
 ## Theme
 Using custom UI elements from [Custom UI](https://github.com/andrey-git/home-assistant-custom-ui)
