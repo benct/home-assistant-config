@@ -17,7 +17,7 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [Netatmo Weather Station](https://home-assistant.io/components/netatmo/)
 - [Google Home Mini](https://www.home-assistant.io/components/google_assistant/)
 - [Phillips Hue Hub](https://www.home-assistant.io/components/hue/)
- 
+
 #### Devices:
 - [Telldus Thermometer/hygrometer](http://telldus.com/produkt/inneute-termohygro-sensor-433mhz/)
 - [Nexa MYCR-3 Plug](https://www.clasohlson.com/no/Nexa-MYCR-3,-3-pack-fjernstr%C3%B8mbrytere--/36-6902)
@@ -30,7 +30,7 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [Fibaro Flood Sensor](https://products.z-wavealliance.org/products/2791)
 - [Fibaro Door/Window Sensor 2](https://products.z-wavealliance.org/products/2181)
 - [Phillips Hue Lights](https://www.home-assistant.io/components/light.hue/)
- 
+
 #### Media:
 - [Samsung Smart TV](https://home-assistant.io/components/media_player.samsungtv/)
 - [Onkyo Receiver](https://www.home-assistant.io/components/media_player.onkyo/)
@@ -40,6 +40,11 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 #### Weather:
 - [YR.no](https://www.home-assistant.io/components/sensor.yr/)
 - [Met.no](https://www.home-assistant.io/components/weather.met/)
+
+## Theme
+Using custom UI elements from [Custom UI](https://github.com/andrey-git/home-assistant-custom-ui).
+
+[Midnight theme](https://community.home-assistant.io/t/midnight-theme/28598) from the HA Community.
 
 ## Maintenance
 
@@ -70,11 +75,6 @@ For initial setup see home-assistants [Let's Encrypt](https://www.home-assistant
 sudo certbot renew
 cp /etc/letsencrypt/live/your.site/your-keys.pem /ha-ssl-folder
 ```
-
-## Theme
-Using custom UI elements from [Custom UI](https://github.com/andrey-git/home-assistant-custom-ui)
-
-[Midnight theme](https://community.home-assistant.io/t/midnight-theme/28598) from the HA Community
 
 ## Screenshots
 
