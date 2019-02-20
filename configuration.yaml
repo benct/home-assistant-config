@@ -60,6 +60,11 @@ netatmo:
 weather:
   - platform: met
 
+air_quality:
+  - platform: nilu
+    area: Oslo
+    name: Luftforurensing
+
 timer:
   bedroom_charger:
     name: ""
