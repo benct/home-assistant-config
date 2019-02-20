@@ -72,8 +72,8 @@ timer:
     icon: mdi:battery-charging-70
 
 binary_sensor:
-- platform: workday
-  country: 'NO'
+  - platform: workday
+    country: 'NO'
 
 device_tracker:
   - platform: bluetooth_tracker
