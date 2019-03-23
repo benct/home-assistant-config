@@ -64,9 +64,6 @@ sensor.myip:
   friendly_name: Public IP
   icon: mdi:server-network
 
-sensor.last_boot:
-  friendly_name: Uptime
-
 sensor.fast_com_download:
   friendly_name: Fast.com Download
   icon: mdi:download-network
