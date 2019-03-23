@@ -64,8 +64,6 @@ weather:
 
 air_quality:
   - platform: norway_air
-  - platform: nilu
-    area: Oslo
     name: Luftforurensing
 
 fastdotcom:

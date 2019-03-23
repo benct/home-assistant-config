@@ -9,4 +9,5 @@ outside:
     - sensor.yr_precipitation
     - sensor.yr_cloudiness
     - sensor.yr_wind_speed
+    - air_quality.air_quality_norway
     - switch.power_outside_lights
