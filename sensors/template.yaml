@@ -27,23 +27,3 @@
     template_motion_hall_battery:
       friendly_name: 'Bevegelse (Gang)'
       value_template: '{{ states.sensor.motion_hall_temperature.attributes.battery_level }} %'
-
-    template_last_boot:
-      friendly_name: 'Uptime'
-      value_template: >-
-        {%- set slb = states.sensor.last_boot.state.split(' ') -%}
-        {%- set count = slb | length -%}
-        {%- set hms = slb[count - 1] -%}
-        {%- set hms_trimmed = hms.split('.')[0] -%}
-        {%- set hms_split = hms_trimmed.split(':') -%}
-        {%- set hours = hms_split[0] | int -%}
-        {%- if count == 3 -%}
-          {{ slb[0] ~ ' ' ~ slb[1] ~ ' ' }}
-        {%- endif -%}
-        {%- if hours > 0 -%}
-          {%- if hours == 1 -%}
-            1 hour
-          {%- else -%}
-            {{ hours }} hours
-          {%- endif -%}
-        {%- endif -%}
