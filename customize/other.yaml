@@ -73,16 +73,16 @@ sensor.fastcom_download:
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
-sensor.speedtest_ping:
+sensor.speedtestdotnet_ping:
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
-sensor.speedtest_upload:
+sensor.speedtestdotnet_upload:
   icon: mdi:upload-network
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
-sensor.speedtest_download:
+sensor.speedtestdotnet_download:
   icon: mdi:download-network
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui

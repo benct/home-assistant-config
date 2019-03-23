@@ -6,20 +6,6 @@
   unit_of_measurement: '°C'
   value_template: '{{ value | multiply(0.001) | round(1) }}'
 
-- platform: fastdotcom
-  minute:
-    - 0
-    - 30
-
-- platform: speedtest
-  minute:
-    - 15
-    - 45
-  monitored_conditions:
-    - ping
-    - download
-    - upload
-
 - platform: systemmonitor
   resources:
     - type: disk_use_percent

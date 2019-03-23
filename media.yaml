@@ -5,8 +5,6 @@
   mac: !secret samsung_tv_mac
   # port: 8001
 
-- platform: cast
-
 - platform: onkyo
   name: Receiver
   host: 192.168.0.22
