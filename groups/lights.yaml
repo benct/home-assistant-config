@@ -1,7 +1,6 @@
 lights:
   name: Lys
   icon: mdi:lightbulb-on-outline
-  control: hidden
   entities:
     - light.living_room
     - light.bedroom

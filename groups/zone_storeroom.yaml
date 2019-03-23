@@ -1,6 +1,7 @@
 storeroom:
   name: Bod
   icon: mdi:archive
+  control: hidden
   entities:
     - sensor.thermometer_storeroom_temperature
     - sensor.thermometer_storeroom_humidity

@@ -1,6 +1,7 @@
 system:
   name: System
   icon: mdi:raspberrypi
+  control: hidden
   entities:
     - sensor.cpu_temperature
     - sensor.processor_use
@@ -12,6 +13,7 @@ system:
 settings:
   name: Settings
   icon: mdi:settings
+  control: hidden
   entities:
   - input_select.log_level
   - updater.updater
@@ -19,6 +21,7 @@ settings:
 network:
   name: Network
   icon: mdi:access-point-network
+  control: hidden
   entities:
     - sensor.ipv4_address_eth0
     - sensor.myip
@@ -30,6 +33,7 @@ network:
 sensor_signal:
   name: Signal
   icon: mdi:signal
+  control: hidden
   entities:
   - sensor.netatmo_bedroom_wifi
   - sensor.netatmo_outside_radio
@@ -37,6 +41,7 @@ sensor_signal:
 sensor_battery:
   name: Battery
   icon: mdi:battery-charging
+  control: hidden
   entities:
   - sensor.netatmo_outside_battery
   - sensor.template_smoke_sensor_livingroom_battery
