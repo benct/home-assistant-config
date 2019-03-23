@@ -62,6 +62,9 @@ media:
     - media_player.spotify
     - media_player.receiver
     - media_player.tv_stue
+    - media_player.samsung_led55_ue55hu6900
+    - media_player.googlehome1005
+    - media_player.googlehome6625
 
 automation:
   name: Automations
