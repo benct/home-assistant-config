@@ -22,10 +22,10 @@ network:
   entities:
     - sensor.ipv4_address_eth0
     - sensor.myip
-    - sensor.speedtestdotnet_ping
-    - sensor.speedtestdotnet_upload
-    - sensor.speedtestdotnet_download
-    - sensor.fastcom_download
+    - sensor.speedtest_ping
+    - sensor.speedtest_upload
+    - sensor.speedtest_download
+    - sensor.fast_com_download
 
 sensor_signal:
   name: Signal

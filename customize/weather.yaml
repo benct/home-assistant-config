@@ -52,5 +52,5 @@ sensor.yr_wind_direction:
 sensor.yr_symbol:
   friendly_name: Yr.no
 
-weather.metno:
+weather.met_no:
   friendly_name: Værmelding

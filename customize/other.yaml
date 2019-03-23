@@ -67,22 +67,22 @@ sensor.myip:
 sensor.last_boot:
   friendly_name: Uptime
 
-sensor.fastcom_download:
+sensor.fast_com_download:
   friendly_name: Fast.com Download
   icon: mdi:download-network
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
-sensor.speedtestdotnet_ping:
+sensor.speedtest_ping:
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
-sensor.speedtestdotnet_upload:
+sensor.speedtest_upload:
   icon: mdi:upload-network
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
 
-sensor.speedtestdotnet_download:
+sensor.speedtest_download:
   icon: mdi:download-network
   show_last_changed: true
   custom_ui_state_card: state-card-custom-ui
