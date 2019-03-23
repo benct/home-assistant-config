@@ -5,6 +5,12 @@ homeassistant:
   elevation: 40
   unit_system: metric
   time_zone: Europe/Oslo
+  auth_providers:
+    - type: homeassistant
+    - type: trusted_networks
+      trusted_networks:
+        - 192.168.0.0/24
+        - fd00::/8
   customize: !include_dir_merge_named customize
 
 frontend:
@@ -19,13 +25,9 @@ updater:
 sun:
 
 http:
-  api_password: !secret http_password
   base_url: !secret base_url
   ssl_certificate: !secret ssl_cert
   ssl_key: !secret ssl_key
-  trusted_networks:
-    - 127.0.0.1
-    - 192.168.0.0/24
   ip_ban_enabled: true
   login_attempts_threshold: 10
 
