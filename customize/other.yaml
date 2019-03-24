@@ -1,7 +1,3 @@
-sun.sun:
-  friendly_name: Sol
-  extra_data_template: Opp ${new Date(attributes.next_rising).toLocaleTimeString('no-NO')} - Ned ${new Date(attributes.next_setting).toLocaleTimeString('no-NO')}
-
 sensor.processor_use:
   friendly_name: Processor
   icon: mdi:chip
@@ -11,7 +7,6 @@ sensor.cpu_speed:
 
 sensor.disk_use_percent:
   friendly_name: Disk
-
 sensor.disk_use:
   friendly_name: Used
   unit_of_measurement: used
@@ -21,7 +16,6 @@ sensor.disk_free:
 
 sensor.memory_use_percent:
   friendly_name: Memory
-
 sensor.memory_use:
   friendly_name: Used
   unit_of_measurement: used
@@ -32,12 +26,11 @@ sensor.memory_free:
 sensor.load_1m:
   friendly_name: Load
   icon: mdi:weight
-
 sensor.load_5m:
-  friendly_name: ""
+  friendly_name: Load (5m)
   unit_of_measurement: 5m
 sensor.load_15m:
-  friendly_name: ""
+  friendly_name: Load (15m)
   unit_of_measurement: 15m
 
 sensor.ipv4_address_eth0:
