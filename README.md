@@ -17,6 +17,7 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [Netatmo Weather Station](https://home-assistant.io/components/netatmo/)
 - [Google Home Mini](https://www.home-assistant.io/components/google_assistant/)
 - [Phillips Hue Hub](https://www.home-assistant.io/components/hue/)
+- [Xiaomi Roborock Vacuum](https://www.home-assistant.io/components/vacuum.xiaomi_miio/)
 
 #### Devices:
 - [Telldus Thermometer/hygrometer](http://telldus.com/produkt/inneute-termohygro-sensor-433mhz/)
