@@ -1,0 +1,392 @@
+title: Home
+
+resources:
+  - url: /local/slider-entity-row.js
+    type: module
+  - url: /local/weather-card.js
+    type: module
+  - url: /local/dual-gauge-card.js
+    type: module
+  - url: /local/bignumber-card.js
+    type: module
+
+excluded_entities:
+  - binary_sensor.smoke_sensor_livingroom
+  - binary_sensor.motion_hall
+  - binary_sensor.magnet_door_main
+  - binary_sensor.flood_sensor_bathroom
+
+views:
+  - path: home
+    title: Hjem
+    icon: mdi:home
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: glance
+            entities:
+              - entity: input_boolean.home
+                tap_action:
+                  action: toggle
+              - entity: input_boolean.sleep
+                tap_action:
+                  action: toggle
+              - entity: input_boolean.away
+                tap_action:
+                  action: toggle
+              - entity: input_boolean.vacation
+                tap_action:
+                  action: none
+          - type: glance
+            entities:
+              - sensor.template_motion_hall
+              - sensor.template_magnet_door_main
+              - sensor.template_smoke_sensor_livingroom
+              - sensor.template_flood_sensor_bathroom
+          - type: glance
+            show_state: false
+            entities:
+              - entity: switch.power_livingroom_sofa
+                name: Sofa
+                tap_action:
+                  action: toggle
+              - entity: switch.power_bedroom_charger
+                tap_action:
+                  action: toggle
+              - entity: switch.power_hall_light
+                name: Gang
+                tap_action:
+                  action: toggle
+              - entity: switch.power_outside_lights
+                tap_action:
+                  action: toggle
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - type: custom:slider-entity-row
+                entity: light.living_room
+                toggle: true
+              - type: custom:slider-entity-row
+                entity: light.bedroom
+                toggle: true
+              - type: section
+              - type: custom:slider-entity-row
+                entity: media_player.receiver
+              - type: custom:slider-entity-row
+                entity: media_player.spotify
+      - type: vertical-stack
+        cards:
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - entity: sensor.smoke_sensor_livingroom_temperature
+                name: Stue
+                secondary_info: last-changed
+              - vacuum.xiaomi_vacuum_cleaner
+              - type: section
+              - entity: sensor.motion_hall_temperature
+                name: Gang
+                secondary_info: last-changed
+              - entity: sensor.motion_hall_luminance
+                secondary_info: last-changed
+              - type: section
+              - entity: sensor.netatmo_bedroom_temperature
+                name: Soverom
+                secondary_info: last-changed
+              - entity: sensor.netatmo_bedroom_co2
+                secondary_info: last-changed
+              - entity: sensor.netatmo_bedroom_noise
+                secondary_info: last-changed
+              - type: section
+              - entity: sensor.thermometer_office_temperature
+                name: Kontor
+                secondary_info: last-changed
+              - entity: sensor.thermometer_storeroom_temperature
+                name: Bod
+                secondary_info: last-changed
+              - entity: sensor.thermometer_freezer_temperature
+                name: Fryser
+                secondary_info: last-changed
+              - type: section
+              - entity: sensor.netatmo_outside_temperature
+                name: Ute
+                secondary_info: last-changed
+              - entity: air_quality.air_quality_norway
+                secondary_info: last-changed
+      - type: vertical-stack
+        cards:
+          - type: glance
+            show_state: false
+            entities:
+              - entity: switch.power_livingroom_tv
+                icon: mdi:flash-outline
+              - entity: switch.power_office_pc
+                icon: mdi:flash-outline
+              - type: entity-button
+                entity: vacuum.xiaomi_vacuum_cleaner
+                name: Start Vacuum
+                icon: mdi:robot-vacuum
+                tap_action:
+                  action: call-service
+                  service: vacuum.start
+                  service_data:
+                    entity_id: vacuum.xiaomi_vacuum_cleaner
+              - type: entity-button
+                entity: vacuum.xiaomi_vacuum_cleaner
+                name: Stop Vacuum
+                icon: mdi:robot-vacuum
+                tap_action:
+                  action: call-service
+                  service: vacuum.return_to_base
+                  service_data:
+                    entity_id: vacuum.xiaomi_vacuum_cleaner
+          - type: history-graph
+            hours_to_show: 48
+            entities:
+              - entity: sensor.smoke_sensor_livingroom_temperature
+                name: Stue
+              - entity: sensor.motion_hall_temperature
+                name: Gang
+              - entity: sensor.netatmo_bedroom_temperature
+                name: Soverom
+              - entity: sensor.thermometer_office_temperature
+                name: Kontor
+              - entity: sensor.thermometer_storeroom_temperature
+                name: Bod
+          - type: custom:weather-card
+            entity: weather.met_no
+
+  - path: climate
+    title: Klima
+    icon: mdi:temperature-celsius
+    cards:
+      - type: entities
+        entities:
+          - switch.power_livingroom_heater_left
+          - switch.power_livingroom_heater_right
+        title: Klimastyring
+        show_header_toggle: true
+      - type: thermostat
+        entity: climate.termostat_stue
+      - type: entities
+        entities:
+          - sensor.smoke_sensor_livingroom_temperature
+          - sensor.netatmo_bedroom_temperature
+          - sensor.flood_sensor_bathroom_temperature
+          - sensor.motion_hall_temperature
+          - sensor.magnet_door_main_temperature
+          - sensor.thermometer_office_temperature
+          - sensor.thermometer_storeroom_temperature
+          - sensor.thermometer_freezer_temperature
+          - sensor.netatmo_outside_temperature
+          - sensor.yr_temperature
+        title: Temperatur
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - sensor.netatmo_bedroom_humidity
+          - sensor.thermometer_office_humidity
+          - sensor.thermometer_storeroom_humidity
+          - sensor.netatmo_outside_humidity
+          - sensor.yr_humidity
+        title: Luftfuktighet
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - sensor.netatmo_bedroom_pressure
+          - sensor.yr_pressure
+        title: Lufttrykk
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - sensor.yr_symbol
+          - sensor.yr_temperature
+          - sensor.yr_humidity
+          - sensor.yr_precipitation
+          - sensor.yr_cloudiness
+          - sensor.yr_wind_speed
+          - sensor.yr_wind_direction
+          - sensor.yr_pressure
+        title: Vær (Yr.no)
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - air_quality.luftforurensing
+        title: ''
+      - type: weather-forecast
+        entity: weather.met_no
+
+  - path: light
+    title: Lys
+    icon: mdi:lightbulb-on
+    cards:
+      - type: entities
+        entities:
+          - light.living_room
+          - light.bedroom
+          - switch.power_hall_light
+          - switch.power_outside_lights
+        title: Lys
+        show_header_toggle: true
+      - type: entities
+        entities:
+          - input_select.livingroom_hue_scene
+          - input_select.bedroom_hue_scene
+        title: Scener
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - input_number.livingroom_color_temp
+          - input_number.bedroom_color_temp
+        title: Fargetemperatur
+        show_header_toggle: false
+
+  - path: switch
+    title: Strøm
+    icon: mdi:power-plug
+    cards:
+      - type: entities
+        entities:
+          - switch.power_livingroom_sofa
+          - switch.power_livingroom_tv
+          - switch.power_office_pc
+          - switch.power_bedroom_charger
+        title: Strøm
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - switch.power_livingroom_heater_left
+          - switch.power_livingroom_heater_right
+        title: Varme
+        show_header_toggle: true
+
+  - path: security
+    title: Sikkerhet
+    icon: mdi:security
+    cards:
+      - type: entities
+        entities:
+          - binary_sensor.smoke_sensor_livingroom
+          - sensor.template_smoke_sensor_livingroom
+        title: Røykvarslere
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - binary_sensor.magnet_door_main
+          - sensor.template_magnet_door_main
+        title: Dør og vinduer
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - binary_sensor.motion_hall
+          - sensor.template_motion_hall
+        title: Bevegelse
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - binary_sensor.flood_sensor_bathroom
+          - sensor.template_flood_sensor_bathroom
+        title: Vannsensor
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - device_tracker.8c85903b5cd5
+          - device_tracker.3497f6b6f0b0
+          - device_tracker.c869cd9e5486
+          - device_tracker.20ee28f3168c
+          - device_tracker.galaxy_note9
+          - device_tracker.kristin_ns_iphone
+          - device_tracker.kristin_n_s_iphone
+          - device_tracker.5c51816404e9
+        title: Enheter
+        show_header_toggle: true
+
+  - path: media
+    title: Media
+    icon: mdi:television
+    cards:
+      - type: media-control
+        entity: media_player.ccultra_tomlin
+      - type: media-control
+        entity: media_player.spotify
+      - type: media-control
+        entity: media_player.receiver
+      - type: media-control
+        entity: media_player.tv_stue
+      - type: media-control
+        entity: media_player.samsung_led55_ue55hu6900
+      - type: media-control
+        entity: media_player.googlehome1005
+      - type: media-control
+        entity: media_player.googlehome6625
+
+  - path: automation
+    title: Automations
+    icon: mdi:home-automation
+    cards:
+      - type: entities
+        entities:
+          - automation.livingroom_light_on_at_sunset
+          - automation.outside_light_on_at_sunset
+          - automation.hall_light_on_when_opening_front_door
+          - automation.hall_light_on_when_movement
+          - automation.hall_light_off_when_no_movement
+          - automation.set_sleep_mode_at_night
+        title: Automations
+        show_header_toggle: true
+      - type: entities
+        entities:
+          - automation.notification_on_restart
+          - automation.high_co2_levels
+          - automation.high_freezer_temperature
+          - automation.high_inside_temperature
+          - automation.low_inside_temperature
+          - automation.public_ip_change
+        title: Notifications
+        show_header_toggle: true
+
+  - path: other
+    title: System
+    icon: mdi:settings
+    cards:
+      - type: entities
+        entities:
+          - sensor.netatmo_outside_battery
+          - sensor.template_smoke_sensor_livingroom_battery
+          - sensor.template_flood_sensor_bathroom_battery
+          - sensor.template_magnet_door_main_battery
+          - sensor.template_motion_hall_battery
+        title: Battery
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - sensor.netatmo_bedroom_wifi
+          - sensor.netatmo_outside_radio
+        title: Signal
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - sensor.cpu_temperature
+          - sensor.processor_use
+          - sensor.load_1m
+          - sensor.memory_use_percent
+          - sensor.disk_use_percent
+          - sensor.last_boot
+        title: System
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - sensor.ipv4_address_eth0
+          - sensor.myip
+          - sensor.speedtest_ping
+          - sensor.speedtest_upload
+          - sensor.speedtest_download
+          - sensor.fast_com_download
+        title: Network
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - input_select.log_level
+          - updater.updater
+        title: Settings
+        show_header_toggle: false
