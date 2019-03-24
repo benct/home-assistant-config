@@ -80,14 +80,6 @@
       expose: false
     light.dimmable_light_1:
       expose: false
-    light.template_receiver_volume:
-      name: Receiver
-      room: Living Room
-      expose: false
-      aliases:
-        - Receiver Volume
-        - TV Volume
-        - Media Volume
     input_boolean.home:
       name: Home
       room: Status

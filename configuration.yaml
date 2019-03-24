@@ -37,7 +37,6 @@ sensor: !include_dir_merge_list sensors
 group: !include_dir_merge_named groups
 automation: !include_dir_merge_list automations
 script: !include scripts.yaml
-light: !include lights.yaml
 media_player: !include media.yaml
 google_assistant: !include google.yaml
 input_number: !include input_number.yaml
