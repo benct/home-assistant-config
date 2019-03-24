@@ -1,53 +1,37 @@
 sun.sun:
   friendly_name: Sol
   extra_data_template: Opp ${new Date(attributes.next_rising).toLocaleTimeString('no-NO')} - Ned ${new Date(attributes.next_setting).toLocaleTimeString('no-NO')}
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.processor_use:
   friendly_name: Processor
   icon: mdi:chip
-  extra_badge:
-    - entity_id: sensor.cpu_speed
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.cpu_speed:
-  friendly_name: ""
+  friendly_name: CPU Speed
 
 sensor.disk_use_percent:
   friendly_name: Disk
-  extra_badge:
-    - entity_id: sensor.disk_use
-    - entity_id: sensor.disk_free
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.disk_use:
-  friendly_name: ""
+  friendly_name: Used
   unit_of_measurement: used
 sensor.disk_free:
-  friendly_name: ""
+  friendly_name: Free
   unit_of_measurement: free
 
 sensor.memory_use_percent:
   friendly_name: Memory
-  extra_badge:
-    - entity_id: sensor.memory_use
-    - entity_id: sensor.memory_free
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.memory_use:
-  friendly_name: ""
+  friendly_name: Used
   unit_of_measurement: used
 sensor.memory_free:
-  friendly_name: ""
+  friendly_name: Free
   unit_of_measurement: free
 
 sensor.load_1m:
   friendly_name: Load
   icon: mdi:weight
-  extra_badge:
-    - entity_id: sensor.load_15m
-    - entity_id: sensor.load_5m
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.load_5m:
   friendly_name: ""
@@ -67,19 +51,9 @@ sensor.myip:
 sensor.fast_com_download:
   friendly_name: Fast.com Download
   icon: mdi:download-network
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
-
-sensor.speedtest_ping:
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.speedtest_upload:
   icon: mdi:upload-network
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.speedtest_download:
   icon: mdi:download-network
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui

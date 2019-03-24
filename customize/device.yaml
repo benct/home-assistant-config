@@ -2,28 +2,3 @@ group.all_devices:
   hidden: false
   friendly_name: Enheter
   icon: mdi:account-multiple
-
-device_tracker.3497f6b6f0b0:
-  icon_color: #ddffff
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
-device_tracker.8c85903b5cd5:
-  icon_color: #ddffff
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
-device_tracker.5c51816404e9:
-  icon_color: #ddffff
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
-device_tracker.d8c46a89875e:
-  icon_color: #fdddff
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
-device_tracker.c869cd9e5486:
-  icon_color: #fdddff
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
-device_tracker.20ee28f3168c:
-  icon_color: #fdddff
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui

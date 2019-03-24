@@ -1,26 +1,16 @@
-light.template_receiver_volume:
-  custom_ui_state_card: state-card-custom-ui
-  state_card_mode: break-slider
-  stretch_slider: true
-  slider_theme:
-    min: 10
-    max: 200
-    off_when_min: false
-    report_when_not_changed: false
+#light.template_receiver_volume:
+#  state_card_mode: break-slider
+#  stretch_slider: true
+#  slider_theme:
+#    min: 10
+#    max: 200
+#    off_when_min: false
+#    report_when_not_changed: false
 
 light.living_room:
   friendly_name: Lys
   icon: mdi:floor-lamp
-  group:
-    group.light*:
-      friendly_name: Stue
-  state_card_mode: break-slider
-  stretch_slider: true
-  custom_ui_state_card: state-card-custom-ui
 
 light.bedroom:
   friendly_name: Nattbord
   icon: mdi:lamp
-  state_card_mode: break-slider
-  stretch_slider: true
-  custom_ui_state_card: state-card-custom-ui

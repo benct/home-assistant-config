@@ -3,112 +3,51 @@ sensor.telldus_outside_temperature:
 
 sensor.flood_sensor_bathroom_temperature:
   friendly_name: Temperatur
-  group:
-    group.climate_*:
-      friendly_name: Bad
-      icon: mdi:water-pump
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.magnet_door_main_temperature:
   friendly_name: Temperatur
-  group:
-    group.climate_*:
-      friendly_name: Ytterdør
-      icon: mdi:door
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.motion_hall_luminance:
   friendly_name: Lysnivå
   icon: mdi:ceiling-light
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.motion_hall_temperature:
   friendly_name: Temperatur
-  group:
-    group.climate_*:
-      friendly_name: Gang
-      icon: mdi:bulletin-board
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.power_livingroom_tv_power_2:
-  friendly_name: ""
+  friendly_name: Forbruk (total)
   icon: mdi:flash
   unit_of_measurement: kWt
 
 sensor.power_livingroom_tv_power:
-  friendly_name: ""
+  friendly_name: Forbruk
   icon: mdi:flash
-  extra_badge:
-    - entity_id: sensor.power_livingroom_tv_power_2
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.power_office_pc_power_2:
-  friendly_name: ""
+  friendly_name: Forbruk (total)
   icon: mdi:flash
   unit_of_measurement: kWt
 
 sensor.power_office_pc_power:
-  friendly_name: ""
+  friendly_name: Forbruk
   icon: mdi:flash
-  extra_badge:
-    - entity_id: sensor.power_office_pc_power_2
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.smoke_sensor_livingroom_temperature:
   friendly_name: Temperatur
-  group:
-    group.climate_*:
-      friendly_name: Stue
-      icon: mdi:sofa
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.thermometer_office_temperature:
   friendly_name: Temperatur
-  group:
-    group.climate_*:
-      friendly_name: Kontor
-      icon: mdi:desktop-classic
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.thermometer_office_humidity:
   friendly_name: Luftfuktighet
   icon: mdi:water-percent
-  group:
-    group.climate_*:
-      friendly_name: Kontor
-      icon: mdi:desktop-classic
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.thermometer_storeroom_temperature:
   friendly_name: Temperatur
-  group:
-    group.climate_*:
-      friendly_name: Bod
-      icon: mdi:archive
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.thermometer_storeroom_humidity:
   friendly_name: Luftfuktighet
-  icon: mdi:water-percent
-  group:
-    group.climate_*:
-      friendly_name: Bod
-      icon: mdi:archive
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
 
 sensor.thermometer_freezer_temperature:
   friendly_name: Fryser
   icon: mdi:snowflake
-  show_last_changed: true
-  custom_ui_state_card: state-card-custom-ui
