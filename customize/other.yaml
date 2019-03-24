@@ -1,3 +1,10 @@
+vacuum.xiaomi_vacuum_cleaner:
+  friendly_name: Støvsuger
+
+air_quality.air_quality_norway:
+  friendly_name: Luftforurensing
+  icon: mdi:image-filter-tilt-shift
+
 sensor.processor_use:
   friendly_name: Processor
   icon: mdi:chip
