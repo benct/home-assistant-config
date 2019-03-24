@@ -22,8 +22,6 @@ http:
 
 frontend:
   themes: !include themes.yaml
-  extra_html_url:
-    - /local/custom_ui/state-card-custom-ui.html
 
 config:
 discovery:
