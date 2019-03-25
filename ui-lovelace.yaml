@@ -9,6 +9,8 @@ resources:
     type: module
   - url: /local/bignumber-card.js
     type: module
+  - url: /local/state-attribute-element.js
+    type: module
 
 excluded_entities:
   - binary_sensor.smoke_sensor_livingroom
