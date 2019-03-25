@@ -5,6 +5,10 @@ air_quality.air_quality_norway:
   friendly_name: Luftforurensing
   icon: mdi:image-filter-tilt-shift
 
+media_player.receiver:
+  friendly_name: Receiver
+  icon: mdi:speaker
+
 sensor.processor_use:
   friendly_name: Processor
   icon: mdi:chip
