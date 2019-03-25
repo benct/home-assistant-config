@@ -320,67 +320,115 @@ views:
       - type: media-control
         entity: media_player.googlehome6625
 
-  - path: automation
-    title: Automations
-    icon: mdi:home-automation
-    cards:
-      - type: entities
-        entities:
-          - automation.livingroom_light_on_at_sunset
-          - automation.outside_light_on_at_sunset
-          - automation.hall_light_on_when_opening_front_door
-          - automation.hall_light_on_when_movement
-          - automation.hall_light_off_when_no_movement
-          - automation.set_sleep_mode_at_night
-        title: Automations
-        show_header_toggle: true
-      - type: entities
-        entities:
-          - automation.notification_on_restart
-          - automation.high_co2_levels
-          - automation.high_freezer_temperature
-          - automation.high_inside_temperature
-          - automation.low_inside_temperature
-          - automation.public_ip_change
-        title: Notifications
-        show_header_toggle: true
-
-  - path: other
+  - path: system
     title: System
     icon: mdi:settings
     cards:
-      - type: entities
-        entities:
-          - sensor.netatmo_outside_battery
-          - sensor.template_smoke_sensor_livingroom_battery
-          - sensor.template_flood_sensor_bathroom_battery
-          - sensor.template_magnet_door_main_battery
-          - sensor.template_motion_hall_battery
-        title: Battery
-        show_header_toggle: false
-      - type: entities
-        entities:
-          - sensor.netatmo_bedroom_wifi
-          - sensor.netatmo_outside_radio
-        title: Signal
-        show_header_toggle: false
-      - type: entities
-        entities:
-          - sensor.cpu_temperature
-          - sensor.processor_use
-          - sensor.load_1m
-          - sensor.memory_use_percent
-          - sensor.disk_use_percent
-          - sensor.last_boot
-        title: System
-        show_header_toggle: false
-      - type: entities
-        entities:
-          - sensor.ipv4_address_eth0
-          - sensor.myip
-          - sensor.speedtest_ping
-          - sensor.speedtest_upload
-          - sensor.speedtest_download
-          - sensor.fast_com_download
-        title: Network
-        show_header_toggle: false
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:bignumber-card
+                entity: sensor.netatmo_outside_battery
+                title: Ute
+                scale: 20px
+              - type: custom:bignumber-card
+                entity: sensor.template_smoke_sensor_livingroom_battery
+                title: Stue
+                scale: 20px
+              - type: custom:bignumber-card
+                entity: sensor.template_flood_sensor_bathroom_battery
+                title: Bad
+                scale: 20px
+              - type: custom:bignumber-card
+                entity: sensor.template_magnet_door_main_battery
+                title: Dør
+                scale: 20px
+              - type: custom:bignumber-card
+                entity: sensor.template_motion_hall_battery
+                title: Gang
+                scale: 20px
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - type: section
+                label: Signal
+              - sensor.netatmo_bedroom_wifi
+              - sensor.netatmo_outside_radio
+              - type: section
+                label: Network
+              - sensor.ipv4_address_eth0
+              - sensor.myip
+              - type: section
+                label: Speed
+              - sensor.speedtest_ping
+              - sensor.speedtest_upload
+              - sensor.speedtest_download
+              - sensor.fast_com_download
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: gauge
+                entity: sensor.cpu_temperature
+                severity:
+                  green: 10
+                  yellow: 50
+                  red: 70
+              - type: gauge
+                entity: sensor.processor_use
+                severity:
+                  green: 1
+                  yellow: 50
+                  red: 90
+          - type: horizontal-stack
+            cards:
+              - type: gauge
+                entity: sensor.load_1m
+                min: 0
+                max: 1
+                severity:
+                  green: 0.001
+                  yellow: 0.4
+                  red: 0.7
+              - type: gauge
+                entity: sensor.memory_use_percent
+                severity:
+                  green: 1
+                  yellow: 50
+                  red: 80
+          - type: horizontal-stack
+            cards:
+              - type: gauge
+                entity: sensor.disk_use_percent
+                severity:
+                  green: 1
+                  yellow: 50
+                  red: 80
+              - type: entities
+                entities:
+                  - entity: sensor.last_boot
+                    format: relative
+                  - sensor.disk_use
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Automations
+            show_header_toggle: true
+            entities:
+              - automation.livingroom_light_on_at_sunset
+              - automation.outside_light_on_at_sunset
+              - automation.hall_light_on_when_opening_front_door
+              - automation.hall_light_on_when_movement
+              - automation.hall_light_off_when_no_movement
+              - automation.set_sleep_mode_at_night
+          - type: entities
+            title: Notifications
+            show_header_toggle: true
+            entities:
+              - automation.notification_on_restart
+              - automation.high_co2_levels
+              - automation.high_freezer_temperature
+              - automation.high_inside_temperature
+              - automation.low_inside_temperature
+              - automation.public_ip_change
