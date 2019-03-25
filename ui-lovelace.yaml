@@ -384,9 +384,3 @@ views:
           - sensor.fast_com_download
         title: Network
         show_header_toggle: false
-      - type: entities
-        entities:
-          - input_select.log_level
-          - updater.updater
-        title: Settings
-        show_header_toggle: false
