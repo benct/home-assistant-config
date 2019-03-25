@@ -122,8 +122,7 @@ views:
                 icon: mdi:flash-outline
               - entity: switch.power_office_pc
                 icon: mdi:flash-outline
-              - type: entity-button
-                entity: vacuum.xiaomi_vacuum_cleaner
+              - entity: vacuum.xiaomi_vacuum_cleaner
                 name: Start Vacuum
                 icon: mdi:robot-vacuum
                 tap_action:
@@ -131,8 +130,7 @@ views:
                   service: vacuum.start
                   service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
-              - type: entity-button
-                entity: vacuum.xiaomi_vacuum_cleaner
+              - entity: vacuum.xiaomi_vacuum_cleaner
                 name: Stop Vacuum
                 icon: mdi:robot-vacuum
                 tap_action:
