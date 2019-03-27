@@ -94,8 +94,10 @@ class AttributeEntityRow extends Polymer.Element {
                 toggle: true,
             },
             default: {
-                string: stateObj =>
-                    stateObj.state + (stateObj.attributes.unit_of_measurement ? ` ${stateObj.attributes.unit_of_measurement}` : ''),
+                string: stateObj => {
+                    const unit = this._config.unit || stateObj.attributes.unit_of_measurement;
+                    return stateObj.state + (unit ? ` ${unit}` : '');
+                },
                 toggle: false,
             }
         };
