@@ -165,6 +165,103 @@ views:
           - type: custom:weather-card
             entity: weather.met_no
 
+  - path: livingroom
+    title: Stue
+    icon: mdi:sofa
+    cards:
+      - type: entities
+        title: Stue
+        show_header_toggle: false
+        entities:
+          - entity: sensor.smoke_sensor_livingroom_temperature
+            secondary_info: last-changed
+          - entity: sensor.template_smoke_sensor_livingroom
+            type: custom:attribute-entity-row
+            name: Røykvarsler
+            primary:
+              entity: sensor.smoke_sensor_livingroom_temperature
+              key: battery_level
+              name: Battery
+              unit: '%'
+          - entity: vacuum.xiaomi_vacuum_cleaner
+            type: custom:attribute-entity-row
+            primary:
+              key: battery_level
+              name: Battery
+              unit: '%'
+            secondary:
+              key: status
+          - type: section
+          - switch.power_livingroom_heater_left
+          - switch.power_livingroom_heater_right
+          - type: section
+          - entity: light.living_room
+            type: custom:slider-entity-row
+            toggle: true
+          - entity: input_number.livingroom_color_temp
+            name: Farge
+          - entity: input_select.livingroom_hue_scene
+            name: Scene
+          - type: section
+          - entity: switch.power_livingroom_sofa
+            name: Sofa/Ladere
+          - entity: switch.power_livingroom_tv
+            type: custom:toggle-lock-entity-row
+      - type: thermostat
+        entity: climate.termostat_stue
+      - type: glance
+        show_state: false
+        entities:
+          - entity: vacuum.xiaomi_vacuum_cleaner
+            icon: mdi:robot-vacuum
+          - entity: vacuum.xiaomi_vacuum_cleaner
+            icon: mdi:play
+            tap_action:
+              action: call-service
+              service: vacuum.start
+              service_data:
+                entity_id: vacuum.xiaomi_vacuum_cleaner
+          - entity: vacuum.xiaomi_vacuum_cleaner
+            icon: mdi:pause
+            tap_action:
+              action: call-service
+              service: vacuum.pause
+              service_data:
+                entity_id: vacuum.xiaomi_vacuum_cleaner
+          - entity: vacuum.xiaomi_vacuum_cleaner
+            icon: mdi:stop
+            tap_action:
+              action: call-service
+              service: vacuum.stop
+              service_data:
+                entity_id: vacuum.xiaomi_vacuum_cleaner
+          - entity: vacuum.xiaomi_vacuum_cleaner
+            icon: mdi:keyboard-return
+            tap_action:
+              action: call-service
+              service: vacuum.return_to_base
+              service_data:
+                entity_id: vacuum.xiaomi_vacuum_cleaner
+        show_name: false
+      - type: entities
+        title: Gang
+        show_header_toggle: false
+        entities:
+          - entity: sensor.motion_hall_temperature
+            secondary_info: last-changed
+          - entity: sensor.motion_hall_luminance
+            secondary_info: last-changed
+          - entity: sensor.template_motion_hall
+            type: custom:attribute-entity-row
+            name: Bevegelse
+            primary:
+              entity: sensor.motion_hall_temperature
+              key: battery_level
+              name: Battery
+              unit: '%'
+          - type: section
+          - switch.power_hall_light
+
   - path: climate
     title: Klima
     icon: mdi:temperature-celsius
