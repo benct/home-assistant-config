@@ -57,7 +57,7 @@ class AttributeEntityRow extends Polymer.Element {
             </div>
             <template is="dom-if" if="{{displayValue}}">
               <span class="state">
-                [[statusString(stateObj)]]
+                [[stateString(stateObj)]]
               </span>
             </template>
             <template is="dom-if" if="{{displayToggle}}">
@@ -71,8 +71,7 @@ class AttributeEntityRow extends Polymer.Element {
 
     setConfig(config) {
         if (!config.entity) throw new Error('Please define an entity.');
-        if (!config.primary) throw new Error('Please define a primary attribute.');
-        if (!config.primary.key) throw new Error('Please define a primary attribute key.');
+        if (config.primary && !config.primary.key) throw new Error('Please define a primary attribute key.');
         if (config.secondary && !config.secondary.key) throw new Error('Please define a secondary attribute key.');
 
         const controllers = {
@@ -110,7 +109,7 @@ class AttributeEntityRow extends Polymer.Element {
         this.displayValue = !this.displayToggle && !config.hide_state;
     }
 
-    statusString(stateObj) {
+    stateString(stateObj) {
         let i18n = this._hass.resources[this._hass.language];
         if (!stateObj) return i18n['state.default.unavailable'];
         return this.controller.string(stateObj, i18n);
