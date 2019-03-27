@@ -5,6 +5,8 @@ resources:
     type: module
   - url: /local/toggle-lock-entity-row.js
     type: module
+  - url: /local/attribute-entity-row.js
+    type: module
   - url: /local/weather-card.js
     type: module
   - url: /local/dual-gauge-card.js
