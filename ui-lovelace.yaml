@@ -86,7 +86,14 @@ views:
               - entity: sensor.smoke_sensor_livingroom_temperature
                 name: Stue
                 secondary_info: last-changed
-              - vacuum.xiaomi_vacuum_cleaner
+              - entity: vacuum.xiaomi_vacuum_cleaner
+                type: custom:attribute-entity-row
+                primary:
+                  key: battery_level
+                  name: Battery
+                  unit: '%'
+                secondary:
+                  key: status
               - type: section
               - entity: sensor.motion_hall_temperature
                 name: Gang
