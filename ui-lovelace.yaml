@@ -264,6 +264,16 @@ views:
               name: Battery
               unit: '%'
           - type: section
+          - entity: sensor.magnet_door_main_temperature
+            secondary_info: last-changed
+          - entity: sensor.template_magnet_door_main
+            type: custom:attribute-entity-row
+            primary:
+              entity: sensor.magnet_door_main_temperature
+              key: battery_level
+              name: Battery
+              unit: '%'
+          - type: section
           - switch.power_hall_light
 
   - path: climate
