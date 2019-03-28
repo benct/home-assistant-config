@@ -380,9 +380,18 @@ views:
           - type: horizontal-stack
             cards:
               - type: custom:bignumber-card
-                entity: sensor.netatmo_outside_battery
+                entity: sensor.netatmo_outside_battery_percent
                 title: Ute
                 scale: 20px
+                severity:
+                  - value: 10
+                    style: var(--label-badge-red)
+                  - value: 30
+                    style: var(--label-badge-yellow)
+                  - value: 100
+                    style: var(--label-badge-green)
+                min: 0
+                max: 100
               - type: custom:bignumber-card
                 entity: sensor.template_smoke_sensor_livingroom_battery
                 title: Stue
