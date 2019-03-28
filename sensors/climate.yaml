@@ -27,4 +27,5 @@
       - min_temp
       - max_temp
       - battery_vp
+      - battery_percent
       - rf_status
