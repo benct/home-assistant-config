@@ -387,18 +387,54 @@ views:
                 entity: sensor.template_smoke_sensor_livingroom_battery
                 title: Stue
                 scale: 20px
+                severity:
+                  - value: 10
+                    style: var(--label-badge-red)
+                  - value: 30
+                    style: var(--label-badge-yellow)
+                  - value: 100
+                    style: var(--label-badge-green)
+                min: 0
+                max: 100
               - type: custom:bignumber-card
                 entity: sensor.template_flood_sensor_bathroom_battery
                 title: Bad
                 scale: 20px
+                severity:
+                  - value: 10
+                    style: var(--label-badge-red)
+                  - value: 30
+                    style: var(--label-badge-yellow)
+                  - value: 100
+                    style: var(--label-badge-green)
+                min: 0
+                max: 100
               - type: custom:bignumber-card
                 entity: sensor.template_magnet_door_main_battery
                 title: Dør
                 scale: 20px
+                severity:
+                  - value: 10
+                    style: var(--label-badge-red)
+                  - value: 30
+                    style: var(--label-badge-yellow)
+                  - value: 100
+                    style: var(--label-badge-green)
+                min: 0
+                max: 100
               - type: custom:bignumber-card
                 entity: sensor.template_motion_hall_battery
                 title: Gang
                 scale: 20px
+                severity:
+                  - value: 10
+                    style: var(--label-badge-red)
+                  - value: 30
+                    style: var(--label-badge-yellow)
+                  - value: 100
+                    style: var(--label-badge-green)
+                min: 0
+                max: 100
           - type: entities
             show_header_toggle: false
             entities:
@@ -429,7 +465,7 @@ views:
               - type: gauge
                 entity: sensor.processor_use
                 severity:
-                  green: 1
+                  green: 0
                   yellow: 50
                   red: 90
           - type: horizontal-stack
@@ -437,15 +473,15 @@ views:
               - type: gauge
                 entity: sensor.load_1m
                 min: 0
-                max: 1
+                max: 2
                 severity:
-                  green: 0.001
-                  yellow: 0.4
-                  red: 0.7
+                  green: 0
+                  yellow: 0.7
+                  red: 1
               - type: gauge
                 entity: sensor.memory_use_percent
                 severity:
-                  green: 1
+                  green: 0
                   yellow: 50
                   red: 80
           - type: horizontal-stack
@@ -453,7 +489,7 @@ views:
               - type: gauge
                 entity: sensor.disk_use_percent
                 severity:
-                  green: 1
+                  green: 0
                   yellow: 50
                   red: 80
               - type: entities
