@@ -9,8 +9,6 @@ resources:
     type: module
   - url: /local/weather-card.js
     type: module
-  - url: /local/dual-gauge-card.js
-    type: module
   - url: /local/bignumber-card.js
     type: module
 
