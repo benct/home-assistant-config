@@ -320,7 +320,8 @@ views:
               - entity: sensor.thermometer_office_humidity
                 secondary_info: last-changed
               - type: section
-              - switch.power_office_pc
+              - entity: switch.power_office_pc
+                type: custom:toggle-lock-entity-row
               - type: section
               - sensor.power_office_pc_power
               - sensor.power_office_pc_power_2
