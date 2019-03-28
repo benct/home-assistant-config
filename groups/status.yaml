@@ -1,9 +1,0 @@
-status:
-  name: Status
-  icon: mdi:home-assistant
-  control: hidden
-  entities:
-    - input_boolean.home
-    - input_boolean.sleep
-    - input_boolean.away
-    - input_boolean.vacation

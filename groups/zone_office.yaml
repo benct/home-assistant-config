@@ -1,8 +1,0 @@
-office:
-  name: Kontor
-  icon: mdi:desktop-classic
-  control: hidden
-  entities:
-    - switch.power_office_pc
-    - sensor.thermometer_office_temperature
-    - sensor.thermometer_office_humidity

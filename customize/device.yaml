@@ -1,4 +1,0 @@
-group.all_devices:
-  hidden: false
-  friendly_name: Enheter
-  icon: mdi:account-multiple
