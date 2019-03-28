@@ -129,23 +129,34 @@ views:
       - type: vertical-stack
         cards:
           - type: glance
+            show_name: false
             show_state: false
             entities:
-              - entity: switch.power_livingroom_tv
-                icon: mdi:flash-outline
-              - entity: switch.power_office_pc
-                icon: mdi:flash-outline
               - entity: vacuum.xiaomi_vacuum_cleaner
-                name: Start Vacuum
                 icon: mdi:robot-vacuum
+              - entity: vacuum.xiaomi_vacuum_cleaner
+                icon: mdi:play
                 tap_action:
                   action: call-service
                   service: vacuum.start
                   service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
               - entity: vacuum.xiaomi_vacuum_cleaner
-                name: Stop Vacuum
-                icon: mdi:robot-vacuum
+                icon: mdi:pause
+                tap_action:
+                  action: call-service
+                  service: vacuum.pause
+                  service_data:
+                    entity_id: vacuum.xiaomi_vacuum_cleaner
+              - entity: vacuum.xiaomi_vacuum_cleaner
+                icon: mdi:stop
+                tap_action:
+                  action: call-service
+                  service: vacuum.stop
+                  service_data:
+                    entity_id: vacuum.xiaomi_vacuum_cleaner
+              - entity: vacuum.xiaomi_vacuum_cleaner
+                icon: mdi:keyboard-return
                 tap_action:
                   action: call-service
                   service: vacuum.return_to_base
@@ -211,40 +222,6 @@ views:
             type: custom:toggle-lock-entity-row
       - type: thermostat
         entity: climate.termostat_stue
-      - type: glance
-        show_state: false
-        entities:
-          - entity: vacuum.xiaomi_vacuum_cleaner
-            icon: mdi:robot-vacuum
-          - entity: vacuum.xiaomi_vacuum_cleaner
-            icon: mdi:play
-            tap_action:
-              action: call-service
-              service: vacuum.start
-              service_data:
-                entity_id: vacuum.xiaomi_vacuum_cleaner
-          - entity: vacuum.xiaomi_vacuum_cleaner
-            icon: mdi:pause
-            tap_action:
-              action: call-service
-              service: vacuum.pause
-              service_data:
-                entity_id: vacuum.xiaomi_vacuum_cleaner
-          - entity: vacuum.xiaomi_vacuum_cleaner
-            icon: mdi:stop
-            tap_action:
-              action: call-service
-              service: vacuum.stop
-              service_data:
-                entity_id: vacuum.xiaomi_vacuum_cleaner
-          - entity: vacuum.xiaomi_vacuum_cleaner
-            icon: mdi:keyboard-return
-            tap_action:
-              action: call-service
-              service: vacuum.return_to_base
-              service_data:
-                entity_id: vacuum.xiaomi_vacuum_cleaner
-        show_name: false
       - type: entities
         title: Gang
         show_header_toggle: false
