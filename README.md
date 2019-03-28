@@ -10,6 +10,8 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 ![GitHub code size](https://img.shields.io/github/languages/code-size/benct/home-assistant-config.svg)
 [![GitHub licence](https://img.shields.io/github/license/benct/home-assistant-config.svg)](https://github.com/benct/home-assistant-config/blob/master/LICENCE)
 
+[March 19] Updated with Lovelace UI configuration.
+
 ## Hardware
 
 - [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
@@ -43,7 +45,7 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [Met.no](https://www.home-assistant.io/components/weather.met/)
 
 ## Theme
-Using custom UI elements from [Custom UI](https://github.com/andrey-git/home-assistant-custom-ui).
+Frontend using new Lovelace UI configuration and components. See [ui-lovelace.yaml](https://github.com/benct/home-assistant-config/blob/master/ui-lovelace.yaml).
 
 [Midnight theme](https://community.home-assistant.io/t/midnight-theme/28598) from the HA Community.
 
