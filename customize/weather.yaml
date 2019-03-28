@@ -15,7 +15,7 @@ sensor.yr_humidity:
   icon: mdi:water-percent
 
 sensor.yr_temperature:
-  friendly_name: Temperatur
+  friendly_name: Temperatur (Yr)
   icon: mdi:thermometer
 
 sensor.yr_wind_speed:

@@ -170,7 +170,7 @@ views:
             entity: weather.met_no
 
   - path: livingroom
-    title: Stue
+    title: Stue / Gang
     icon: mdi:sofa
     cards:
       - type: entities
@@ -275,6 +275,83 @@ views:
               unit: '%'
           - type: section
           - switch.power_hall_light
+
+  - path: bedroom
+    title: Soverom / Kontor
+    icon: mdi:hotel
+    cards:
+      - type: entities
+        title: Soverom
+        show_header_toggle: false
+        entities:
+          - entity: sensor.netatmo_bedroom_temperature
+            secondary_info: last-changed
+          - entity: sensor.netatmo_bedroom_humidity
+            secondary_info: last-changed
+          - entity: sensor.netatmo_bedroom_pressure
+            secondary_info: last-changed
+          - entity: sensor.netatmo_bedroom_noise
+            secondary_info: last-changed
+          - entity: sensor.netatmo_bedroom_co2
+            secondary_info: last-changed
+          - type: section
+          - entity: light.bedroom
+            type: custom:slider-entity-row
+            toggle: true
+          - entity: input_number.bedroom_color_temp
+            name: Farge
+          - entity: input_select.bedroom_hue_scene
+            name: Scene
+          - type: section
+          - entity: switch.power_bedroom_charger
+            type: custom:attribute-entity-row
+            toggle: true
+            primary:
+              key: remaining
+              entity: timer.bedroom_charger
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Kontor
+            show_header_toggle: false
+            entities:
+              - entity: sensor.thermometer_office_temperature
+                secondary_info: last-changed
+              - entity: sensor.thermometer_office_humidity
+                secondary_info: last-changed
+              - type: section
+              - switch.power_office_pc
+              - type: section
+              - sensor.power_office_pc_power
+              - sensor.power_office_pc_power_2
+          - type: entities
+            title: Bod
+            show_header_toggle: false
+            entities:
+              - entity: sensor.thermometer_storeroom_temperature
+                secondary_info: last-changed
+              - entity: sensor.thermometer_storeroom_humidity
+                secondary_info: last-changed
+              - type: section
+              - entity: sensor.thermometer_freezer_temperature
+                secondary_info: last-changed
+      - type: entities
+        title: Ute
+        show_header_toggle: false
+        entities:
+          - entity: sensor.netatmo_outside_temperature
+            secondary_info: last-changed
+          - entity: sensor.netatmo_outside_humidity
+            secondary_info: last-changed
+          - type: section
+          - entity: sensor.yr_temperature
+            secondary_info: last-changed
+          - sensor.yr_precipitation
+          - sensor.yr_cloudiness
+          - sensor.yr_wind_speed
+          - air_quality.air_quality_norway
+          - type: section
+          - switch.power_outside_lights
 
   - path: media
     title: Media
