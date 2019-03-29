@@ -21,7 +21,7 @@ http:
   login_attempts_threshold: 10
 
 frontend:
-  themes: !include themes.yaml
+  themes: !include theme.yaml
 
 config:
 discovery:
@@ -36,7 +36,7 @@ logbook: !include logbook.yaml
 sensor: !include_dir_merge_list sensors
 automation: !include_dir_merge_list automations
 group: !include group.yaml
-script: !include scripts.yaml
+script: !include script.yaml
 media_player: !include media.yaml
 google_assistant: !include google.yaml
 input_number: !include input_number.yaml
