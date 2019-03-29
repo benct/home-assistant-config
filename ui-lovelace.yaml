@@ -493,7 +493,8 @@ views:
                 entities:
                   - entity: sensor.last_boot
                     format: relative
-                  - sensor.disk_use
+                  - entity: sensor.current_version
+                    name: Version
       - type: vertical-stack
         cards:
           - type: entities
