@@ -1,0 +1,23 @@
+input_boolean.home:
+  templates:
+    icon_color: >
+      if (state === 'on') return 'var(--label-badge-border-color)';
+      return 'var(--primary-text-color)';
+
+input_boolean.sleep:
+  templates:
+    icon_color: >
+      if (state === 'on') return 'var(--label-badge-border-color)';
+      return 'var(--primary-text-color)';
+
+input_boolean.vacation:
+  templates:
+    icon_color: >
+      if (state === 'on') return 'var(--label-badge-border-color)';
+      return 'var(--primary-text-color)';
+
+input_boolean.away:
+  templates:
+    icon_color: >
+      if (state === 'on') return 'var(--label-badge-border-color)';
+      return 'var(--primary-text-color)';
