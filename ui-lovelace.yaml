@@ -27,20 +27,29 @@ views:
     cards:
       - type: vertical-stack
         cards:
-          - type: glance
-            entities:
+          - type: horizontal-stack
+            cards:
               - entity: input_boolean.home
-                tap_action:
-                  action: toggle
+                type: custom:button-card
+                icon: attribute
+                style:
+                  - padding: 8px
               - entity: input_boolean.sleep
-                tap_action:
-                  action: toggle
+                type: custom:button-card
+                icon: attribute
+                style:
+                  - padding: 8px
               - entity: input_boolean.away
-                tap_action:
-                  action: toggle
+                type: custom:button-card
+                icon: attribute
+                style:
+                  - padding: 8px
               - entity: input_boolean.vacation
-                tap_action:
-                  action: none
+                type: custom:button-card
+                icon: attribute
+                action: more_info
+                style:
+                  - padding: 8px
           - type: glance
             entities:
               - sensor.template_motion_hall
