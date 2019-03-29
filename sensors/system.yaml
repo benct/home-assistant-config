@@ -1,3 +1,5 @@
+- platform: version
+
 - platform: cpuspeed
 
 - platform: command_line
