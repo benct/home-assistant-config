@@ -81,7 +81,7 @@ cp /etc/letsencrypt/live/your.site/your-keys.pem /ha-ssl-folder
 
 ## Screenshots
 
-![Home Tab](https://raw.githubusercontent.com/benct/home-assistant-config/master/screenshots/ha-home.png)
+![Home Tab](https://raw.githubusercontent.com/benct/home-assistant-config/master/screenshots/ha-main.png)
 
 ![Livingroom Tab](https://raw.githubusercontent.com/benct/home-assistant-config/master/screenshots/ha-livingroom.png)
 
