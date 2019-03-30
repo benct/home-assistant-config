@@ -340,6 +340,11 @@ views:
               - type: section
               - entity: sensor.thermometer_freezer_temperature
                 secondary_info: last-changed
+
+  - path: outside
+    title: Ute
+    icon: mdi:weather-sunny
+    cards:
       - type: entities
         title: Ute
         show_header_toggle: false
