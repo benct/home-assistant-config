@@ -11,6 +11,8 @@ homeassistant:
       trusted_networks:
         - 192.168.0.0/24
         - fd00::/8
+  whitelist_external_dirs:
+    - /home/homeassistant/camera
   customize: !include_dir_merge_named customize
 
 http:
@@ -55,6 +57,14 @@ netatmo:
   username: !secret netatmo_username
   password: !secret netatmo_password
   discovery: false
+
+camera:
+  - platform: rpi_camera
+    image_width: 1024
+    image_height: 768
+    image_quality: 25
+    image_rotation: 90
+    timelapse: 1000
 
 vacuum:
   - platform: xiaomi_miio
