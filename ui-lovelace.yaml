@@ -89,6 +89,24 @@ views:
                 entity: media_player.receiver
               - type: custom:slider-entity-row
                 entity: media_player.spotify
+      - type: custom:simple-thermostat
+        entity: climate.termostat_stue
+        name: false
+        hide:
+          temperature: true
+        modes:
+          heat: false
+          'off': false
+          'on': false
+        sensors:
+          - entity: sensor.smoke_sensor_livingroom_temperature
+            name: Stue
+          - entity: sensor.motion_hall_temperature
+            name: Gang
+          - entity: sensor.netatmo_outside_temperature
+            name: Ute
+          - attribute: away_mode
+            name: Away
       - type: vertical-stack
         cards:
           - type: entities
@@ -233,8 +251,6 @@ views:
             name: Sofa/Ladere
           - entity: switch.power_livingroom_tv
             type: custom:toggle-lock-entity-row
-      - type: thermostat
-        entity: climate.termostat_stue
       - type: entities
         title: Gang
         show_header_toggle: false
