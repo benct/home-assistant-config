@@ -1,0 +1,13 @@
+camera_snapshot:
+  sequence:
+    - service: camera.snapshot
+      data:
+        entity_id: camera.raspberry_pi_camera
+        filename: '/home/homeassistant/camera/img_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+
+camera_stream:
+  sequence:
+    - service: camera.play_stream
+      data:
+        entity_id: camera.raspberry_pi_camera
+        media_player: media_player.ccultra_tomlin
