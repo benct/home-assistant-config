@@ -551,3 +551,29 @@ views:
           - entity: device_tracker.c869cd9e5486
           - entity: device_tracker.20ee28f3168c
           - entity: device_tracker.kristin_n_s_iphone
+
+  - path: camera
+    title: Camera
+    icon: mdi:cam
+    cards:
+      - type: picture-entity
+        entity: camera.raspberry_pi_camera
+        show_name: false
+        show_state: false
+      - type: horizontal-stack
+        cards:
+          - type: custom:button-card
+            color_type: blank-card
+          - type: custom:button-card
+            color_type: blank-card
+          - type: custom:button-card
+            color_type: blank-card
+          - type: entity-button
+            entity: script.camera_snapshot
+            icon: mdi:camera
+            name: ' '
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.camera_snapshot
