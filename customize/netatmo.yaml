@@ -15,11 +15,9 @@ sensor.netatmo_bedroom_temperature:
   friendly_name: Temperatur
 
 sensor.netatmo_bedroom_min_temp:
-  friendly_name: (min)
-  unit_of_measurement: min
+  friendly_name: min
 sensor.netatmo_bedroom_max_temp:
-  friendly_name: (max)
-  unit_of_measurement: max
+  friendly_name: max
 
 sensor.netatmo_bedroom_wifi:
   friendly_name: Soverom (Wifi)
@@ -37,8 +35,6 @@ sensor.netatmo_outside_temperature:
   friendly_name: Temperatur
 
 sensor.netatmo_outside_min_temp:
-  friendly_name: (min)
-  unit_of_measurement: min
+  friendly_name: min
 sensor.netatmo_outside_max_temp:
-  friendly_name: (max)
-  unit_of_measurement: max
+  friendly_name: max
