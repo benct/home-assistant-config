@@ -251,8 +251,13 @@ views:
           - type: section
           - entity: switch.power_livingroom_sofa
             name: Sofa/Ladere
+          - type: section
           - entity: switch.power_livingroom_tv
-            type: custom:toggle-lock-entity-row
+            type: custom:multiple-entity-row
+            primary:
+              entity: sensor.power_livingroom_tv_power
+            secondary:
+              entity: sensor.power_livingroom_tv_power_2
       - type: entities
         title: Gang
         show_header_toggle: false
@@ -327,10 +332,11 @@ views:
                 secondary_info: last-changed
               - type: section
               - entity: switch.power_office_pc
-                type: custom:toggle-lock-entity-row
-              - type: section
-              - sensor.power_office_pc_power
-              - sensor.power_office_pc_power_2
+                type: custom:multiple-entity-row
+                primary:
+                  entity: sensor.power_office_pc_power
+                secondary:
+                  entity: sensor.power_office_pc_power_2
           - type: entities
             title: Bod
             show_header_toggle: false
@@ -363,7 +369,8 @@ views:
           - sensor.yr_wind_speed
           - air_quality.air_quality_norway
           - type: section
-          - switch.power_outside_lights
+          - entity: switch.power_outside_lights
+            type: custom:toggle-lock-entity-row
 
   - path: media
     title: Media
