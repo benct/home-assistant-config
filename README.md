@@ -12,6 +12,8 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 
 [March 19] Updated with Lovelace UI configuration.
 
+[![BMC](https://www.buymeacoffee.com/assets/img/custom_images/white_img.png)](https://www.buymeacoff.ee/benct)
+
 ## Hardware
 
 - [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
@@ -33,6 +35,7 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [Fibaro Flood Sensor](https://products.z-wavealliance.org/products/2791)
 - [Fibaro Door/Window Sensor 2](https://products.z-wavealliance.org/products/2181)
 - [Phillips Hue Lights](https://www.home-assistant.io/components/light.hue/)
+- [Raspberry Pie Camera V2](https://www.home-assistant.io/components/camera.rpi_camera/)
 
 #### Media:
 - [Samsung Smart TV](https://home-assistant.io/components/media_player.samsungtv/)
