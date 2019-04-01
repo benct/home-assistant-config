@@ -7,6 +7,8 @@ resources:
     type: module
   - url: /local/attribute-entity-row.js
     type: module
+  - url: /local/multiple-entity-row.js
+    type: module
   - url: /local/weather-card.js
     type: module
   - url: /local/bignumber-card.js
