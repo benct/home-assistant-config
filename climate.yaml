@@ -6,6 +6,7 @@
   cold_tolerance: 0.3
   hot_tolerance: 0.1
   away_temp: 16
+  initial_operation_mode: "off"
 
 - platform: generic_thermostat
   name: Termostat (Ute)
