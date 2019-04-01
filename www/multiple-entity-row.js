@@ -94,4 +94,4 @@ class MultipleEntityRow extends Polymer.Element {
     }
 }
 
-customElements.define('multi-entity-row', MultipleEntityRow);
+customElements.define('multiple-entity-row', MultipleEntityRow);
