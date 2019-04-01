@@ -70,7 +70,7 @@ class MultipleEntityRow extends Polymer.Element {
     }
 
     entityName(data) {
-        return data && data.stateObj ? (data.name || data.stateObj.attributes.friendly_name) : null;
+        return data && data.stateObj && data.name !== false ? (data.name || data.stateObj.attributes.friendly_name) : null;
     }
 
     entityState(data) {
