@@ -220,7 +220,12 @@ views:
         show_header_toggle: false
         entities:
           - entity: sensor.smoke_sensor_livingroom_temperature
+            type: custom:multiple-entity-row
             secondary_info: last-changed
+            primary:
+              entity: sensor.smoke_sensor_livingroom_min_temp
+            secondary:
+              entity: sensor.smoke_sensor_livingroom_max_temp
           - entity: sensor.template_smoke_sensor_livingroom
             type: custom:attribute-entity-row
             name: Røykvarsler
@@ -296,7 +301,12 @@ views:
         show_header_toggle: false
         entities:
           - entity: sensor.netatmo_bedroom_temperature
+            type: custom:multiple-entity-row
             secondary_info: last-changed
+            primary:
+              entity: sensor.netatmo_bedroom_min_temp
+            secondary:
+              entity: sensor.netatmo_bedroom_max_temp
           - entity: sensor.netatmo_bedroom_humidity
             secondary_info: last-changed
           - entity: sensor.netatmo_bedroom_pressure
