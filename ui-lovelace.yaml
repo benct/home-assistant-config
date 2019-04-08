@@ -163,40 +163,8 @@ views:
                 secondary_info: last-changed
       - type: vertical-stack
         cards:
-          - type: glance
-            show_name: false
-            show_state: false
-            entities:
-              - entity: vacuum.xiaomi_vacuum_cleaner
-                icon: mdi:robot-vacuum
-              - entity: vacuum.xiaomi_vacuum_cleaner
-                icon: mdi:play
-                tap_action:
-                  action: call-service
-                  service: vacuum.start
-                  service_data:
-                    entity_id: vacuum.xiaomi_vacuum_cleaner
-              - entity: vacuum.xiaomi_vacuum_cleaner
-                icon: mdi:pause
-                tap_action:
-                  action: call-service
-                  service: vacuum.pause
-                  service_data:
-                    entity_id: vacuum.xiaomi_vacuum_cleaner
-              - entity: vacuum.xiaomi_vacuum_cleaner
-                icon: mdi:stop
-                tap_action:
-                  action: call-service
-                  service: vacuum.stop
-                  service_data:
-                    entity_id: vacuum.xiaomi_vacuum_cleaner
-              - entity: vacuum.xiaomi_vacuum_cleaner
-                icon: mdi:keyboard-return
-                tap_action:
-                  action: call-service
-                  service: vacuum.return_to_base
-                  service_data:
-                    entity_id: vacuum.xiaomi_vacuum_cleaner
+          - type: custom:xiaomi-vacuum-card
+            entity: vacuum.xiaomi_vacuum_cleaner
           - type: history-graph
             hours_to_show: 48
             entities:
