@@ -17,6 +17,8 @@ resources:
     type: module
   - url: /local/simple-thermostat.js
     type: module
+  - url: /local/xiaomi-vacuum-card.js
+    type: module
 
 excluded_entities:
   - binary_sensor.smoke_sensor_livingroom
