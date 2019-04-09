@@ -165,6 +165,7 @@ views:
         cards:
           - type: custom:xiaomi-vacuum-card
             entity: vacuum.xiaomi_vacuum_cleaner
+            name: false
           - type: history-graph
             hours_to_show: 48
             entities:
