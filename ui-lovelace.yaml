@@ -19,6 +19,8 @@ resources:
     type: module
   - url: /local/xiaomi-vacuum-card.js
     type: module
+  - url: /local/mini-media-player.js
+    type: module
 
 excluded_entities:
   - binary_sensor.smoke_sensor_livingroom
