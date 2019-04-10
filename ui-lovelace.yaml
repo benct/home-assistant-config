@@ -90,11 +90,10 @@ views:
               - type: custom:slider-entity-row
                 entity: light.bedroom
                 toggle: true
-              - type: section
-              - type: custom:slider-entity-row
-                entity: media_player.receiver
-              - type: custom:slider-entity-row
-                entity: media_player.spotify
+      - type: custom:mini-media-player
+        entity: media_player.spotify
+        hide:
+          power: true
       - type: custom:simple-thermostat
         entity: climate.termostat_stue
         name: false
