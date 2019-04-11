@@ -21,6 +21,8 @@ resources:
     type: module
   - url: /local/mini-media-player.js
     type: module
+  - url: /local/github-card.js?v=1.3.2
+    type: module
 
 excluded_entities:
   - binary_sensor.smoke_sensor_livingroom
