@@ -29,3 +29,11 @@
 
 - platform: dnsip
   scan_interval: 1200
+
+- platform: github
+  access_token: !secret github_token
+  repositories:
+    - path: 'benct/home-assistant-config'
+    - path: 'benct/lovelace-xiaomi-vacuum-card'
+    - path: 'benct/lovelace-multiple-entity-row'
+    - path: 'benct/lovelace-attribute-entity-row'
