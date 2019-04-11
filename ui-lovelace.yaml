@@ -1,25 +1,25 @@
 title: Home
 
 resources:
-  - url: /local/slider-entity-row.js
+  - url: /local/slider-entity-row.js?v=4bc7874
     type: module
-  - url: /local/toggle-lock-entity-row.js
+  - url: /local/toggle-lock-entity-row.js?v=a57ac15
     type: module
-  - url: /local/attribute-entity-row.js
+  - url: /local/attribute-entity-row.js?v=1.0.0
     type: module
-  - url: /local/multiple-entity-row.js
+  - url: /local/multiple-entity-row.js?v=1.0.0
     type: module
-  - url: /local/weather-card.js
+  - url: /local/weather-card.js?v=bc4a508
     type: module
-  - url: /local/bignumber-card.js
+  - url: /local/bignumber-card.js?v=0.0.1
     type: module
-  - url: /local/button-card.js
+  - url: /local/button-card.js?v=0.0.6
     type: module
-  - url: /local/simple-thermostat.js
+  - url: /local/simple-thermostat.js?v=0.21.0
     type: module
-  - url: /local/xiaomi-vacuum-card.js
+  - url: /local/xiaomi-vacuum-card.js?v=1.1.0
     type: module
-  - url: /local/mini-media-player.js
+  - url: /local/mini-media-player.js?v=1.0.3
     type: module
   - url: /local/github-card.js?v=1.3.2
     type: module
