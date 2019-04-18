@@ -319,6 +319,10 @@ views:
               - type: section
               - entity: sensor.thermometer_freezer_temperature
                 secondary_info: last-changed
+          - type: sensor
+            entity: sensor.thermometer_freezer_temperature
+            graph: line
+            detail: 2
 
   - path: outside
     title: Ute
