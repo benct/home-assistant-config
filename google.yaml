@@ -112,3 +112,5 @@
       expose: false
     switch.thermometer_storeroom:
       expose: false
+    switch.livingroom_button:
+      expose: false
