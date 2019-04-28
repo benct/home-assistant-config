@@ -21,6 +21,8 @@ resources:
     type: module
   - url: /local/mini-media-player.js?v=1.0.3
     type: module
+  - url: /local/mini-graph-card.js?v=0.3.3
+    type: module
   - url: /local/github-card.js?v=1.3.2
     type: module
 
