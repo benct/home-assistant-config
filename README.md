@@ -12,8 +12,6 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 
 [March 19] Updated with Lovelace UI configuration.
 
-[![BMC](https://www.buymeacoffee.com/assets/img/custom_images/white_img.png)](https://www.buymeacoff.ee/benct)
-
 ## Hardware
 
 - [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
@@ -91,3 +89,5 @@ cp /etc/letsencrypt/live/your.site/your-keys.pem /ha-ssl-folder
 ![Bedroom Tab](https://raw.githubusercontent.com/benct/home-assistant-config/master/screenshots/ha-bedroom.png)
 
 ![System Tab](https://raw.githubusercontent.com/benct/home-assistant-config/master/screenshots/ha-system.png)
+
+[![BMC](https://www.buymeacoffee.com/assets/img/custom_images/white_img.png)](https://www.buymeacoff.ee/benct)
