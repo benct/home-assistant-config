@@ -48,7 +48,7 @@ rest_command: !include rest_command.yaml
 climate: !include climate.yaml
 
 tellduslive:
-  host: 192.168.0.11
+  host: 192.168.0.10
   scan_interval: 20
 
 netatmo:
