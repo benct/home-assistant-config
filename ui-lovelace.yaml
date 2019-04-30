@@ -187,8 +187,13 @@ views:
         title: Stue
         show_header_toggle: false
         entities:
-          - entity: sensor.smoke_sensor_livingroom_temperature
-            secondary_info: last-changed
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.smoke_sensor_livingroom_temperature
+            align_icon: state
+            show:
+              name: false
+          - type: section
           - entity: sensor.template_smoke_sensor_livingroom
             type: custom:attribute-entity-row
             name: Røykvarsler
@@ -230,8 +235,13 @@ views:
         title: Gang
         show_header_toggle: false
         entities:
-          - entity: sensor.motion_hall_temperature
-            secondary_info: last-changed
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.motion_hall_temperature
+            align_icon: state
+            show:
+              name: false
+          - type: section
           - entity: sensor.motion_hall_luminance
             secondary_info: last-changed
           - entity: sensor.template_motion_hall
@@ -263,9 +273,17 @@ views:
         title: Soverom
         show_header_toggle: false
         entities:
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.netatmo_bedroom_temperature
+            align_icon: state
+            show:
+              name: false
+          - type: section
           - entity: sensor.netatmo_bedroom_temperature
             type: custom:multiple-entity-row
             secondary_info: last-changed
+            hide_state: true
             primary:
               entity: sensor.netatmo_bedroom_min_temp
             secondary:
@@ -299,8 +317,13 @@ views:
             title: Kontor
             show_header_toggle: false
             entities:
-              - entity: sensor.thermometer_office_temperature
-                secondary_info: last-changed
+              - type: custom:mini-graph-card
+                entities:
+                  - sensor.thermometer_office_temperature
+                align_icon: state
+                show:
+                  name: false
+              - type: section
               - entity: sensor.thermometer_office_humidity
                 secondary_info: last-changed
               - type: section
@@ -319,12 +342,17 @@ views:
               - entity: sensor.thermometer_storeroom_humidity
                 secondary_info: last-changed
               - type: section
-              - entity: sensor.thermometer_freezer_temperature
-                secondary_info: last-changed
-          - type: sensor
-            entity: sensor.thermometer_freezer_temperature
-            graph: line
-            detail: 2
+              - type: custom:mini-graph-card
+                entities:
+                  - sensor.thermometer_freezer_temperature
+                align_icon: state
+                show:
+                  name: false
+                  points: false
+                hours_to_show: 48
+                points_per_hour: 4
+                line_width: 3
+                line_color: lightblue
 
   - path: outside
     title: Ute
@@ -334,9 +362,17 @@ views:
         title: Ute
         show_header_toggle: false
         entities:
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.netatmo_outside_temperature
+            align_icon: state
+            show:
+              name: false
+          - type: section
           - entity: sensor.netatmo_outside_temperature
             type: custom:multiple-entity-row
             secondary_info: last-changed
+            hide_state: true
             primary:
               entity: sensor.netatmo_outside_min_temp
             secondary:
