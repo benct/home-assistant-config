@@ -35,5 +35,6 @@
   repositories:
     - path: 'benct/home-assistant-config'
     - path: 'benct/lovelace-xiaomi-vacuum-card'
+    - path: 'benct/lovelace-github-entity-row'
     - path: 'benct/lovelace-multiple-entity-row'
     - path: 'benct/lovelace-attribute-entity-row'
