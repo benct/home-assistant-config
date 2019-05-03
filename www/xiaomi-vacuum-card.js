@@ -49,26 +49,26 @@ class XiaomiVacuumCard extends Polymer.Element {
               border-right: 2px solid var(--primary-color);
             }
           </style>
-          <ha-card hass="[[_hass]]" config="[[_config]]" class="background" style="[[background]]">
+          <ha-card hass="[[_hass]]" config="[[_config]]" class="background" style="[[backgroundImage]]">
             <template is="dom-if" if="{{name}}">
-              <div class="title" style="[[text]]">[[name]]</div>
+              <div class="title" style="[[contentText]]">[[name]]</div>
             </template>
-            <div class="content" on-click="moreInfo" style="[[padding]]">
-              <div class="grid" style="[[text]]">
-                <div class="grid-content grid-left">
-                  <div>Status: [[stateObj.attributes.status]]</div>
-                  <div>Battery: [[stateObj.attributes.battery_level]] %</div>
-                  <div>Mode: [[stateObj.attributes.fan_speed]]</div>
-                </div>
-                <div class="grid-content grid-right">
-                  <div>Main Brush: [[stateObj.attributes.main_brush_left]] h</div>
-                  <div>Side Brush: [[stateObj.attributes.side_brush_left]] h</div>
-                  <div>Filter: [[stateObj.attributes.filter_left]] h</div>
-                  <div>Sensor: [[stateObj.attributes.sensor_dirty_left]] h</div>
-                </div>
+            <div class="content grid" style="[[contentStyle]]" on-click="moreInfo">
+              <div class="grid-content grid-left">
+                <div>[[_config.labels.status]]: [[stateObj.attributes.status]]</div>
+                <div>[[_config.labels.battery]]: [[stateObj.attributes.battery_level]] %</div>
+                <div>[[_config.labels.mode]]: [[stateObj.attributes.fan_speed]]</div>
               </div>
+              <template is="dom-if" if="{{showDetails}}">
+                <div class="grid-content grid-right" >
+                  <div>[[_config.labels.main_brush]]: [[stateObj.attributes.main_brush_left]] [[_config.labels.hours]]</div>
+                  <div>[[_config.labels.side_brush]]: [[stateObj.attributes.side_brush_left]] [[_config.labels.hours]]</div>
+                  <div>[[_config.labels.filter]]: [[stateObj.attributes.filter_left]] [[_config.labels.hours]]</div>
+                  <div>[[_config.labels.sensor]]: [[stateObj.attributes.sensor_dirty_left]] [[_config.labels.hours]]</div>
+                </div>
+              </template>
             </div>
-            <template is="dom-if" if="{{buttons}}">
+            <template is="dom-if" if="{{showButtons}}">
               <div class="flex">
                 <div class="button" on-tap="startVaccum">
                   <ha-icon icon="mdi:play"></ha-icon>
@@ -92,12 +92,11 @@ class XiaomiVacuumCard extends Polymer.Element {
     }
 
     moreInfo() { this.fireEvent('hass-more-info'); }
-
-    startVaccum() { this.callService('start'); }
-    pauseVacuum() { this.callService('pause'); }
-    stopVacuum() { this.callService('stop'); }
-    locateVacuum() { this.callService('locate'); }
-    returnVacuum() { this.callService('return_to_base'); }
+    startVaccum() { this.callService(this._config.service.start); }
+    pauseVacuum() { this.callService(this._config.service.pause); }
+    stopVacuum() { this.callService(this._config.service.stop); }
+    locateVacuum() { this.callService(this._config.service.locate); }
+    returnVacuum() { this.callService(this._config.service.return); }
 
     callService(service) {
         this._hass.callService('vacuum', service, {entity_id: this._config.entity});
@@ -115,20 +114,63 @@ class XiaomiVacuumCard extends Polymer.Element {
     }
 
     getCardSize() {
-        if (this.name && this.buttons) return 5;
-        if (this.name || this.buttons) return 4;
+        if (this.name && this.showButtons) return 5;
+        if (this.name || this.showButtons) return 4;
         return 3;
     }
 
     setConfig(config) {
+        const labels = {
+            status: 'Status',
+            battery: 'Battery',
+            mode: 'Mode',
+            main_brush: 'Main Brush',
+            side_brush: 'Side Brush',
+            filter: 'Filter',
+            sensor: 'Sensor',
+            hours: 'h',
+        };
+
+        const services = {
+            start: 'start',
+            pause: 'pause',
+            stop: 'stop',
+            locate: 'locate',
+            return: 'return_to_base',
+        };
+
+        const vendors = {
+            xiaomi: {
+                image: '/local/img/vacuum.png',
+                buttons: true,
+                details: true,
+            },
+            ecovacs: {
+                image: '/local/img/vacuum_ecovacs.png',
+                buttons: true,
+                details: false,
+                service: {
+                    start: 'turn_on',
+                    pause: 'stop',
+                    stop: 'turn_off',
+                },
+            }
+        };
+
         if (!config.entity) throw new Error('Please define an entity.');
         if (config.entity.split('.')[0] !== 'vacuum') throw new Error('Please define a vacuum entity.');
+        if (config.vendor && !config.vendor in vendors) throw new Error('Please define a valid vendor.');
 
-        this.buttons = config.buttons !== false;
-        this.padding = `padding: ${this.buttons ? '16px 16px 4px' : '16px'}`;
-        this.background = config.background !== false ? `background-image: url('/local/${config.background || 'img/vacuum.png'}')` : '';
-        this.text = `color: ${config.background !== false ? 'white; text-shadow: 0 0 10px black;' : 'var(--primary-text-color)'}`;
+        const vendor = vendors[config.vendor] || vendors.xiaomi;
+        config.service = Object.assign({}, services, vendor.service);
+        config.labels = Object.assign({}, labels, config.labels);
 
+        this.showDetails = vendor.details;
+        this.showButtons = vendor.buttons && config.buttons !== false;
+
+        this.contentText = `color: ${config.image !== false ? 'white; text-shadow: 0 0 10px black;' : 'var(--primary-text-color)'}`;
+        this.contentStyle = `padding: ${this.showButtons ? '16px 16px 4px' : '16px'}; ${this.contentText}`;
+        this.backgroundImage = config.image !== false ? `background-image: url('${config.image || vendor.image}')` : '';
         this._config = config;
     }
 
