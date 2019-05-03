@@ -499,6 +499,18 @@ views:
               - sensor.speedtest_upload
               - sensor.speedtest_download
               - sensor.fast_com_download
+              - type: section
+                label: GitHub
+              - type: custom:github-entity-row
+                entity: sensor.home_assistant_config
+              - type: custom:github-entity-row
+                entity: sensor.lovelace_xiaomi_vacuum_card
+              - type: custom:github-entity-row
+                entity: sensor.lovelace_github_entity_row
+              - type: custom:github-entity-row
+                entity: sensor.lovelace_multiple_entity_row
+              - type: custom:github-entity-row
+                entity: sensor.lovelace_attribute_entity_row
       - type: vertical-stack
         cards:
           - type: horizontal-stack
