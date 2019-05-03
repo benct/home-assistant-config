@@ -54,7 +54,7 @@ Frontend using new Lovelace UI configuration and components. See [ui-lovelace.ya
 
 I've created and currently maintain a few components (cards) for Home Assistant's Lovelace UI:
 
-- [xiaomi-vaccum-card](https://github.com/benct/lovelace-xiaomi-vacuum-card)
+- [xiaomi-vacuum-card](https://github.com/benct/lovelace-xiaomi-vacuum-card)
 - [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row)
 - [attribute-entity-row](https://github.com/benct/lovelace-attribute-entity-row)
 - [github-entity-row](https://github.com/benct/lovelace-github-entity-row)
