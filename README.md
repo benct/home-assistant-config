@@ -50,6 +50,17 @@ Frontend using new Lovelace UI configuration and components. See [ui-lovelace.ya
 
 [Midnight theme](https://community.home-assistant.io/t/midnight-theme/28598) from the HA Community.
 
+## Lovelace UI
+
+I've created and currently maintain a few components (cards) for Home Assistant's Lovelace UI:
+
+- [xiaomi-vaccum-card](https://github.com/benct/lovelace-xiaomi-vacuum-card)
+- [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row)
+- [attribute-entity-row](https://github.com/benct/lovelace-attribute-entity-row)
+- [github-entity-row](https://github.com/benct/lovelace-github-entity-row)
+
+[![BMC](https://www.buymeacoffee.com/assets/img/custom_images/white_img.png)](https://www.buymeacoff.ee/benct)
+
 ## Maintenance
 
 ```bash
@@ -89,5 +100,3 @@ cp /etc/letsencrypt/live/your.site/your-keys.pem /ha-ssl-folder
 ![Bedroom Tab](https://raw.githubusercontent.com/benct/home-assistant-config/master/screenshots/ha-bedroom.png)
 
 ![System Tab](https://raw.githubusercontent.com/benct/home-assistant-config/master/screenshots/ha-system.png)
-
-[![BMC](https://www.buymeacoffee.com/assets/img/custom_images/white_img.png)](https://www.buymeacoff.ee/benct)
