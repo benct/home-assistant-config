@@ -94,28 +94,28 @@ views:
               - type: custom:slider-entity-row
                 entity: light.bedroom
                 toggle: true
-      - type: custom:mini-media-player
-        entity: media_player.spotify
-        hide:
-          power: true
-      - type: custom:simple-thermostat
-        entity: climate.termostat_stue
-        name: false
-        hide:
-          temperature: true
-        modes:
-          heat: false
-          'off': false
-          'on': false
-        sensors:
-          - entity: sensor.smoke_sensor_livingroom_temperature
-            name: Stue
-          - entity: sensor.motion_hall_temperature
-            name: Gang
-          - entity: sensor.netatmo_outside_temperature
-            name: Ute
-          - attribute: away_mode
-            name: Away
+          - type: custom:mini-media-player
+            entity: media_player.spotify
+            hide:
+              power: true
+          - type: custom:simple-thermostat
+            entity: climate.termostat_stue
+            name: false
+            hide:
+              temperature: true
+            modes:
+              heat: false
+              'off': false
+              'on': false
+            sensors:
+              - entity: sensor.smoke_sensor_livingroom_temperature
+                name: Stue
+              - entity: sensor.motion_hall_temperature
+                name: Gang
+              - entity: sensor.netatmo_outside_temperature
+                name: Ute
+              - attribute: away_mode
+                name: Away
       - type: vertical-stack
         cards:
           - type: entities
