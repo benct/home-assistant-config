@@ -493,11 +493,6 @@ views:
                 label: Network
               - sensor.ipv4_address_eth0
               - sensor.myip
-              - type: section
-                label: Speed
-              - sensor.speedtest_ping
-              - sensor.speedtest_upload
-              - sensor.speedtest_download
               - sensor.fast_com_download
               - type: section
                 label: GitHub

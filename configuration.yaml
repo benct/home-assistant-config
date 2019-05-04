@@ -81,15 +81,6 @@ fastdotcom:
   scan_interval:
     minutes: 60
 
-speedtestdotnet:
-  server_id: 3378
-  scan_interval:
-    minutes: 120
-  monitored_conditions:
-    - ping
-    - download
-    - upload
-
 timer:
   bedroom_charger:
     name: Lader (Soverom)

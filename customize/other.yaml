@@ -55,9 +55,3 @@ sensor.myip:
 sensor.fast_com_download:
   friendly_name: Fast.com Download
   icon: mdi:download-network
-
-sensor.speedtest_upload:
-  icon: mdi:upload-network
-
-sensor.speedtest_download:
-  icon: mdi:download-network

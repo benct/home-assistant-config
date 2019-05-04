@@ -28,9 +28,6 @@ include:
     - sensor.load_1m
     - sensor.memory_use_percent
     - sensor.disk_use_percent
-    - sensor.speedtest_ping
-    - sensor.speedtest_upload
-    - sensor.speedtest_download
     - sensor.fast_com_download
 
     - sensor.flood_sensor_bathroom_temperature
