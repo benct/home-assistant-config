@@ -408,6 +408,8 @@ views:
         entity: media_player.googlehome1005
       - type: media-control
         entity: media_player.googlehome6625
+      - type: media-control
+        entity: media_player.googlehomehub0145
 
   - path: system
     title: System
