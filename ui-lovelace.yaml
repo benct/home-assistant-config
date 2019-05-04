@@ -415,6 +415,59 @@ views:
     cards:
       - type: vertical-stack
         cards:
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - entity: sensor.current_version
+                name: Version
+              - entity: sensor.last_boot
+                format: relative
+              - type: section
+                label: Signal
+              - sensor.netatmo_bedroom_wifi
+              - sensor.netatmo_outside_radio
+              - type: section
+                label: Network
+              - sensor.ipv4_address_eth0
+              - sensor.myip
+              - sensor.fast_com_download
+              - type: section
+                label: GitHub
+              - type: custom:github-entity-row
+                entity: sensor.home_assistant_config
+              - type: custom:github-entity-row
+                entity: sensor.lovelace_xiaomi_vacuum_card
+              - type: custom:github-entity-row
+                entity: sensor.lovelace_github_entity_row
+              - type: custom:github-entity-row
+                entity: sensor.lovelace_multiple_entity_row
+              - type: custom:github-entity-row
+                entity: sensor.lovelace_attribute_entity_row
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:mini-graph-card
+                entities:
+                  - sensor.cpu_temperature
+                points_per_hour: 2
+              - type: custom:mini-graph-card
+                entities:
+                  - sensor.processor_use
+                line_color: lightgreen
+                points_per_hour: 2
+          - type: horizontal-stack
+            cards:
+              - type: custom:mini-graph-card
+                entities:
+                  - sensor.load_1m
+                line_color: lightblue
+                points_per_hour: 2
+              - type: custom:mini-graph-card
+                entities:
+                  - sensor.memory_use_percent
+                line_color: yellow
+                points_per_hour: 2
           - type: horizontal-stack
             cards:
               - type: custom:bignumber-card
@@ -483,97 +536,15 @@ views:
                 min: 0
                 max: 100
           - type: entities
-            show_header_toggle: false
             entities:
-              - type: section
-                label: Signal
-              - sensor.netatmo_bedroom_wifi
-              - sensor.netatmo_outside_radio
-              - type: section
-                label: Network
-              - sensor.ipv4_address_eth0
-              - sensor.myip
-              - sensor.fast_com_download
-              - type: section
-                label: GitHub
-              - type: custom:github-entity-row
-                entity: sensor.home_assistant_config
-              - type: custom:github-entity-row
-                entity: sensor.lovelace_xiaomi_vacuum_card
-              - type: custom:github-entity-row
-                entity: sensor.lovelace_github_entity_row
-              - type: custom:github-entity-row
-                entity: sensor.lovelace_multiple_entity_row
-              - type: custom:github-entity-row
-                entity: sensor.lovelace_attribute_entity_row
-      - type: vertical-stack
-        cards:
-          - type: horizontal-stack
-            cards:
-              - type: gauge
-                entity: sensor.cpu_temperature
-                severity:
-                  green: 10
-                  yellow: 50
-                  red: 70
-              - type: gauge
-                entity: sensor.processor_use
-                severity:
-                  green: 0
-                  yellow: 50
-                  red: 90
-          - type: horizontal-stack
-            cards:
-              - type: gauge
-                entity: sensor.load_1m
-                min: 0
-                max: 2
-                severity:
-                  green: 0
-                  yellow: 0.7
-                  red: 1
-              - type: gauge
-                entity: sensor.memory_use_percent
-                severity:
-                  green: 0
-                  yellow: 50
-                  red: 80
-          - type: horizontal-stack
-            cards:
-              - type: gauge
+              - type: custom:multiple-entity-row
                 entity: sensor.disk_use_percent
-                severity:
-                  green: 0
-                  yellow: 50
-                  red: 80
-              - type: entities
-                entities:
-                  - entity: sensor.last_boot
-                    format: relative
-                  - entity: sensor.current_version
-                    name: Version
-      - type: vertical-stack
-        cards:
-          - type: entities
-            title: Automations
-            show_header_toggle: true
-            entities:
-              - automation.livingroom_light_on_at_sunset
-              - automation.outside_light_on_at_sunset
-              - automation.hall_light_on_when_opening_front_door
-              - automation.hall_light_on_when_movement
-              - automation.hall_light_off_when_no_movement
-              - automation.set_sleep_mode_at_night
-          - type: entities
-            title: Notifications
-            show_header_toggle: true
-            entities:
-              - automation.notification_on_restart
-              - automation.high_co2_levels
-              - automation.high_freezer_temperature
-              - automation.high_inside_temperature
-              - automation.low_inside_temperature
-              - automation.public_ip_change
+                primary:
+                  entity: sensor.disk_use
+                  unit: GB
+                secondary:
+                  entity: sensor.disk_free
+                  unit: GB
       - type: entities
         title: Enheter
         show_header_toggle: false
@@ -585,6 +556,31 @@ views:
           - entity: device_tracker.c869cd9e5486
           - entity: device_tracker.20ee28f3168c
           - entity: device_tracker.kristin_n_s_iphone
+
+  - path: automations
+    title: Automations
+    icon: mdi:home-automation
+    cards:
+      - type: entities
+        title: Automations
+        show_header_toggle: true
+        entities:
+          - automation.livingroom_light_on_at_sunset
+          - automation.outside_light_on_at_sunset
+          - automation.hall_light_on_when_opening_front_door
+          - automation.hall_light_on_when_movement
+          - automation.hall_light_off_when_no_movement
+          - automation.set_sleep_mode_at_night
+      - type: entities
+        title: Notifications
+        show_header_toggle: true
+        entities:
+          - automation.notification_on_restart
+          - automation.high_co2_levels
+          - automation.high_freezer_temperature
+          - automation.high_inside_temperature
+          - automation.low_inside_temperature
+          - automation.public_ip_change
 
   - path: camera
     title: Camera
