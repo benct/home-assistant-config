@@ -31,7 +31,7 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [Fibaro Flood Sensor](https://products.z-wavealliance.org/products/2791)
 - [Fibaro Door/Window Sensor 2](https://products.z-wavealliance.org/products/2181)
 - [Phillips Hue Lights](https://www.home-assistant.io/components/light.hue/)
-- [Raspberry Pie Camera V2](https://www.home-assistant.io/components/camera.rpi_camera/)
+- [Raspberry Pi Camera V2](https://www.home-assistant.io/components/camera.rpi_camera/)
 
 #### Media:
 - [Samsung Smart TV](https://home-assistant.io/components/media_player.samsungtv/)
@@ -45,7 +45,8 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 
 ## Lovelace UI
 
-The frontend is using the new Lovelace UI, with customized configuration and several custom cards.
+Frontend is using the new Lovelace UI, with a customized configuration and several custom cards.
+
 See [ui-lovelace.yaml](https://github.com/benct/home-assistant-config/blob/master/ui-lovelace.yaml) for more details.
 
 ### Theme
