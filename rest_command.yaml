@@ -1,8 +1,0 @@
-tomlin_sensor:
-  url: 'https://tomlin.no/api/?service=hass&action={{ action }}'
-  method: POST
-  headers:
-    authorization: !secret tomlin_api_auth
-    accept: 'application/json, text/html'
-  payload: '{"sensor":"{{ sensor }}","value":"{{ value }}"}'
-  content_type: 'application/json; charset=utf-8'

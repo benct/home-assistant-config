@@ -1,0 +1,2 @@
+air_quality:
+  - platform: norway_air

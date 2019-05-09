@@ -1,3 +1,4 @@
+google_assistant:
   project_id: home-assistant-203322
   api_key: !secret ga_api_key
   exposed_domains:

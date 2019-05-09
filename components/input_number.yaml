@@ -1,0 +1,16 @@
+input_number:
+  livingroom_color_temp:
+    name: Stue
+    initial: 370
+    min: 160
+    max: 500
+    step: 10
+    icon: mdi:palette
+
+  bedroom_color_temp:
+    name: Nattbord
+    initial: 370
+    min: 160
+    max: 500
+    step: 10
+    icon: mdi:palette

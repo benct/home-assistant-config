@@ -1,0 +1,25 @@
+media_player:
+  - platform: samsungtv
+    name: TV (Stue)
+    host: 192.168.0.15
+    timeout: 20
+    mac: !secret samsung_tv_mac
+    # port: 8001
+
+  - platform: onkyo
+    name: Receiver
+    host: 192.168.0.22
+    sources:
+      tv-cd: TV
+      video2: GetBox II
+      video3: Xbox One
+      video1: SNES
+      video4: Aux
+      video6: PC
+      bd-dvd: ChromeCast
+      dlna: DNLA
+      network: Net
+
+  - platform: spotify
+    client_id: !secret spotify_id
+    client_secret: !secret spotify_secret

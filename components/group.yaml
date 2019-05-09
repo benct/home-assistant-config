@@ -1,0 +1,6 @@
+group:
+  livingroom_heaters:
+    name: Varme (Stue)
+    entities:
+      - switch.power_livingroom_heater_left
+      - switch.power_livingroom_heater_right

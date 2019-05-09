@@ -1,9 +1,0 @@
-- platform: generic_thermostat
-  name: Termostat (Stue)
-  heater: group.livingroom_heaters
-  target_sensor: sensor.smoke_sensor_livingroom_temperature
-  target_temp: 22
-  cold_tolerance: 0.3
-  hot_tolerance: 0.1
-  away_temp: 16
-  initial_operation_mode: "off"

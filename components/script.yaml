@@ -1,0 +1,7 @@
+script:
+  camera_snapshot:
+    sequence:
+      - service: camera.snapshot
+        data:
+          entity_id: camera.raspberry_pi_camera
+          filename: '/home/homeassistant/camera/img_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'

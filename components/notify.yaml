@@ -1,0 +1,18 @@
+notify:
+  - name: browser
+    platform: html5
+    gcm_api_key: !secret gcm_api_key
+    gcm_sender_id: !secret gcm_sender_id
+  - name: file
+    platform: file
+    filename: notifications.log
+  - name: slack
+    platform: slack
+    api_key: !secret slack_token
+    default_channel: '#general'
+  - name: default
+    platform: group
+    services:
+      - service: browser
+      - service: file
+      - service: slack

@@ -1,0 +1,10 @@
+logbook:
+  include:
+    domains:
+      - sensor
+      - switch
+      - light
+      - climate
+  exclude:
+    entities:
+      - sensor.template_motion_hall
