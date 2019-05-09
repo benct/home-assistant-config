@@ -1,0 +1,89 @@
+path: bedroom
+title: Soverom / Kontor
+icon: mdi:hotel
+cards:
+  - type: entities
+    title: Soverom
+    show_header_toggle: false
+    entities:
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.netatmo_bedroom_temperature
+        align_icon: state
+        show:
+          name: false
+      - type: section
+      - entity: sensor.netatmo_bedroom_temperature
+        type: custom:multiple-entity-row
+        secondary_info: last-changed
+        hide_state: true
+        primary:
+          entity: sensor.netatmo_bedroom_min_temp
+        secondary:
+          entity: sensor.netatmo_bedroom_max_temp
+      - entity: sensor.netatmo_bedroom_humidity
+        secondary_info: last-changed
+      - entity: sensor.netatmo_bedroom_pressure
+        secondary_info: last-changed
+      - entity: sensor.netatmo_bedroom_noise
+        secondary_info: last-changed
+      - entity: sensor.netatmo_bedroom_co2
+        secondary_info: last-changed
+      - type: section
+      - entity: light.bedroom
+        type: custom:slider-entity-row
+        toggle: true
+      - entity: input_number.bedroom_color_temp
+        name: Farge
+      - entity: input_select.bedroom_hue_scene
+        name: Scene
+      - type: section
+      - entity: switch.power_bedroom_charger
+        type: custom:attribute-entity-row
+        toggle: true
+        primary:
+          key: remaining
+          entity: timer.bedroom_charger
+
+  - type: vertical-stack
+    cards:
+      - type: entities
+        title: Kontor
+        show_header_toggle: false
+        entities:
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.thermometer_office_temperature
+            align_icon: state
+            show:
+              name: false
+          - type: section
+          - entity: sensor.thermometer_office_humidity
+            secondary_info: last-changed
+          - type: section
+          - entity: switch.power_office_pc
+            type: custom:multiple-entity-row
+            primary:
+              entity: sensor.power_office_pc_power
+            secondary:
+              entity: sensor.power_office_pc_power_2
+      - type: entities
+        title: Bod
+        show_header_toggle: false
+        entities:
+          - entity: sensor.thermometer_storeroom_temperature
+            secondary_info: last-changed
+          - entity: sensor.thermometer_storeroom_humidity
+            secondary_info: last-changed
+          - type: section
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.thermometer_freezer_temperature
+            align_icon: state
+            show:
+              name: false
+              points: false
+            hours_to_show: 48
+            points_per_hour: 4
+            line_width: 3
+            line_color: lightblue

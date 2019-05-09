@@ -1,0 +1,149 @@
+path: system
+title: System
+icon: mdi:settings
+cards:
+  - type: vertical-stack
+    cards:
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - entity: sensor.current_version
+            name: Version
+          - entity: sensor.last_boot
+            format: relative
+          - type: section
+            label: Signal
+          - sensor.netatmo_bedroom_wifi
+          - sensor.netatmo_outside_radio
+          - type: section
+            label: Network
+          - sensor.ipv4_address_eth0
+          - sensor.myip
+          - sensor.fast_com_download
+          - type: section
+            label: GitHub
+          - type: custom:github-entity-row
+            entity: sensor.home_assistant_config
+          - type: custom:github-entity-row
+            entity: sensor.lovelace_xiaomi_vacuum_card
+          - type: custom:github-entity-row
+            entity: sensor.lovelace_github_entity_row
+          - type: custom:github-entity-row
+            entity: sensor.lovelace_multiple_entity_row
+          - type: custom:github-entity-row
+            entity: sensor.lovelace_attribute_entity_row
+
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.cpu_temperature
+            points_per_hour: 2
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.processor_use
+            line_color: lightgreen
+            points_per_hour: 2
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.load_1m
+            line_color: lightblue
+            points_per_hour: 2
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.memory_use_percent
+            line_color: yellow
+            points_per_hour: 2
+      - type: horizontal-stack
+        cards:
+          - type: custom:bignumber-card
+            entity: sensor.netatmo_outside_battery_percent
+            title: Ute
+            scale: 20px
+            severity:
+              - value: 10
+                style: var(--label-badge-red)
+              - value: 30
+                style: var(--label-badge-yellow)
+              - value: 100
+                style: var(--label-badge-green)
+            min: 0
+            max: 100
+          - type: custom:bignumber-card
+            entity: sensor.template_smoke_sensor_livingroom_battery
+            title: Stue
+            scale: 20px
+            severity:
+              - value: 10
+                style: var(--label-badge-red)
+              - value: 30
+                style: var(--label-badge-yellow)
+              - value: 100
+                style: var(--label-badge-green)
+            min: 0
+            max: 100
+          - type: custom:bignumber-card
+            entity: sensor.template_flood_sensor_bathroom_battery
+            title: Bad
+            scale: 20px
+            severity:
+              - value: 10
+                style: var(--label-badge-red)
+              - value: 30
+                style: var(--label-badge-yellow)
+              - value: 100
+                style: var(--label-badge-green)
+            min: 0
+            max: 100
+          - type: custom:bignumber-card
+            entity: sensor.template_magnet_door_main_battery
+            title: Dør
+            scale: 20px
+            severity:
+              - value: 10
+                style: var(--label-badge-red)
+              - value: 30
+                style: var(--label-badge-yellow)
+              - value: 100
+                style: var(--label-badge-green)
+            min: 0
+            max: 100
+          - type: custom:bignumber-card
+            entity: sensor.template_motion_hall_battery
+            title: Gang
+            scale: 20px
+            severity:
+              - value: 10
+                style: var(--label-badge-red)
+              - value: 30
+                style: var(--label-badge-yellow)
+              - value: 100
+                style: var(--label-badge-green)
+            min: 0
+            max: 100
+      - type: entities
+        entities:
+          - type: custom:multiple-entity-row
+            entity: sensor.disk_use_percent
+            primary:
+              entity: sensor.disk_use
+              unit: GB
+            secondary:
+              entity: sensor.disk_free
+              unit: GB
+
+  - type: entities
+    title: Enheter
+    show_header_toggle: false
+    entities:
+      - entity: device_tracker.8c85903b5cd5
+      - entity: device_tracker.3497f6b6f0b0
+      - entity: device_tracker.galaxy_note9
+      - entity: device_tracker.5c51816404e9
+      - entity: device_tracker.c869cd9e5486
+      - entity: device_tracker.20ee28f3168c
+      - entity: device_tracker.kristin_n_s_iphone

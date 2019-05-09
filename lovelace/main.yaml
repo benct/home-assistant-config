@@ -1,0 +1,156 @@
+path: home
+title: Hjem
+icon: mdi:home
+cards:
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - entity: input_boolean.home
+            type: custom:button-card
+            icon: attribute
+            style:
+              - padding: 8px
+          - entity: input_boolean.sleep
+            type: custom:button-card
+            icon: attribute
+            style:
+              - padding: 8px
+          - entity: input_boolean.away
+            type: custom:button-card
+            icon: attribute
+            style:
+              - padding: 8px
+          - entity: input_boolean.vacation
+            type: custom:button-card
+            icon: attribute
+            action: more_info
+            style:
+              - padding: 8px
+      - type: glance
+        entities:
+          - sensor.template_motion_hall
+          - sensor.template_magnet_door_main
+          - sensor.template_smoke_sensor_livingroom
+          - sensor.template_flood_sensor_bathroom
+      - type: glance
+        show_state: false
+        entities:
+          - entity: switch.power_livingroom_sofa
+            name: Sofa
+            tap_action:
+              action: toggle
+          - entity: switch.power_bedroom_charger
+            tap_action:
+              action: toggle
+          - entity: switch.power_hall_light
+            name: Gang
+            tap_action:
+              action: toggle
+          - entity: switch.power_outside_lights
+            tap_action:
+              action: toggle
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - type: custom:slider-entity-row
+            entity: light.living_room
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.bedroom
+            toggle: true
+      - type: custom:mini-media-player
+        entity: media_player.spotify
+        hide:
+          power: true
+      - type: custom:simple-thermostat
+        entity: climate.termostat_stue
+        name: false
+        hide:
+          temperature: true
+        modes:
+          heat: false
+          'off': false
+          'on': false
+        sensors:
+          - entity: sensor.smoke_sensor_livingroom_temperature
+            name: Stue
+          - entity: sensor.motion_hall_temperature
+            name: Gang
+          - entity: sensor.netatmo_outside_temperature
+            name: Ute
+          - attribute: away_mode
+            name: Away
+
+  - type: vertical-stack
+    cards:
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - entity: sensor.smoke_sensor_livingroom_temperature
+            name: Stue
+            secondary_info: last-changed
+          - entity: group.livingroom_heaters
+            type: custom:toggle-lock-entity-row
+            name: Varmeovner
+            icon: mdi:radiator
+          - type: section
+          - entity: sensor.motion_hall_temperature
+            name: Gang
+            secondary_info: last-changed
+          - entity: sensor.motion_hall_luminance
+            secondary_info: last-changed
+          - type: section
+          - entity: sensor.flood_sensor_bathroom_temperature
+            name: Bad
+            secondary_info: last-changed
+          - type: section
+          - entity: sensor.netatmo_bedroom_temperature
+            name: Soverom
+            secondary_info: last-changed
+          - entity: sensor.netatmo_bedroom_co2
+            secondary_info: last-changed
+          - entity: sensor.netatmo_bedroom_noise
+            secondary_info: last-changed
+          - type: section
+          - entity: sensor.thermometer_office_temperature
+            name: Kontor
+            secondary_info: last-changed
+          - entity: sensor.thermometer_storeroom_temperature
+            name: Bod
+            secondary_info: last-changed
+          - entity: sensor.thermometer_freezer_temperature
+            name: Fryser
+            secondary_info: last-changed
+          - type: section
+          - entity: sensor.netatmo_outside_temperature
+            name: Ute
+            secondary_info: last-changed
+          - entity: air_quality.air_quality_norway
+            type: custom:multiple-entity-row
+            secondary_info: last-changed
+            primary:
+              entity: air_quality.air_quality_norway
+              attribute: level
+              name: false
+
+  - type: vertical-stack
+    cards:
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: false
+      - type: history-graph
+        hours_to_show: 48
+        entities:
+          - entity: sensor.smoke_sensor_livingroom_temperature
+            name: Stue
+          - entity: sensor.motion_hall_temperature
+            name: Gang
+          - entity: sensor.netatmo_bedroom_temperature
+            name: Soverom
+          - entity: sensor.thermometer_office_temperature
+            name: Kontor
+          - entity: sensor.thermometer_storeroom_temperature
+            name: Bod
+      - type: custom:weather-card
+        entity: weather.met_no

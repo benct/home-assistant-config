@@ -1,0 +1,86 @@
+path: livingroom
+title: Stue / Gang
+icon: mdi:sofa
+cards:
+  - type: entities
+    title: Stue
+    show_header_toggle: false
+    entities:
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.smoke_sensor_livingroom_temperature
+        align_icon: state
+        show:
+          name: false
+      - type: section
+      - entity: sensor.template_smoke_sensor_livingroom
+        type: custom:attribute-entity-row
+        name: Røykvarsler
+        primary:
+          entity: sensor.smoke_sensor_livingroom_temperature
+          key: battery_level
+          name: Battery
+          unit: '%'
+      - entity: vacuum.xiaomi_vacuum_cleaner
+        type: custom:attribute-entity-row
+        primary:
+          key: battery_level
+          name: Battery
+          unit: '%'
+        secondary:
+          key: status
+      - type: section
+      - switch.power_livingroom_heater_left
+      - switch.power_livingroom_heater_right
+      - type: section
+      - entity: light.living_room
+        type: custom:slider-entity-row
+        toggle: true
+      - entity: input_number.livingroom_color_temp
+        name: Farge
+      - entity: input_select.livingroom_hue_scene
+        name: Scene
+      - type: section
+      - entity: switch.power_livingroom_sofa
+        name: Sofa/Ladere
+      - type: section
+      - entity: switch.power_livingroom_tv
+        type: custom:multiple-entity-row
+        primary:
+          entity: sensor.power_livingroom_tv_power
+        secondary:
+          entity: sensor.power_livingroom_tv_power_2
+
+  - type: entities
+    title: Gang
+    show_header_toggle: false
+    entities:
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.motion_hall_temperature
+        align_icon: state
+        show:
+          name: false
+      - type: section
+      - entity: sensor.motion_hall_luminance
+        secondary_info: last-changed
+      - entity: sensor.template_motion_hall
+        type: custom:attribute-entity-row
+        name: Bevegelse
+        primary:
+          entity: sensor.motion_hall_temperature
+          key: battery_level
+          name: Battery
+          unit: '%'
+      - type: section
+      - entity: sensor.magnet_door_main_temperature
+        secondary_info: last-changed
+      - entity: sensor.template_magnet_door_main
+        type: custom:attribute-entity-row
+        primary:
+          entity: sensor.magnet_door_main_temperature
+          key: battery_level
+          name: Battery
+          unit: '%'
+      - type: section
+      - switch.power_hall_light

@@ -1,0 +1,35 @@
+path: outside
+title: Ute
+icon: mdi:weather-sunny
+cards:
+  - type: entities
+    title: Ute
+    show_header_toggle: false
+    entities:
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.netatmo_outside_temperature
+        align_icon: state
+        show:
+          name: false
+      - type: section
+      - entity: sensor.netatmo_outside_temperature
+        type: custom:multiple-entity-row
+        secondary_info: last-changed
+        hide_state: true
+        primary:
+          entity: sensor.netatmo_outside_min_temp
+        secondary:
+          entity: sensor.netatmo_outside_max_temp
+      - entity: sensor.netatmo_outside_humidity
+        secondary_info: last-changed
+      - type: section
+      - entity: sensor.yr_temperature
+        secondary_info: last-changed
+      - sensor.yr_precipitation
+      - sensor.yr_cloudiness
+      - sensor.yr_wind_speed
+      - air_quality.air_quality_norway
+      - type: section
+      - entity: switch.power_outside_lights
+        type: custom:toggle-lock-entity-row

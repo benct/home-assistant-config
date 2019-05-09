@@ -1,0 +1,20 @@
+path: media
+title: Media
+icon: mdi:television
+cards:
+  - type: media-control
+    entity: media_player.ccultra_tomlin
+  - type: media-control
+    entity: media_player.spotify
+  - type: media-control
+    entity: media_player.receiver
+  - type: media-control
+    entity: media_player.tv_stue
+  - type: media-control
+    entity: media_player.samsung_led55_ue55hu6900
+  - type: media-control
+    entity: media_player.googlehome1005
+  - type: media-control
+    entity: media_player.googlehome6625
+  - type: media-control
+    entity: media_player.googlehomehub0145
