@@ -22,6 +22,9 @@ http:
   ip_ban_enabled: true
   login_attempts_threshold: 10
 
+#lovelace:
+#  mode: yaml
+
 frontend:
   themes: !include theme.yaml
 
