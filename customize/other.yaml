@@ -20,29 +20,23 @@ sensor.disk_use_percent:
   friendly_name: Disk
 sensor.disk_use:
   friendly_name: Used
-  unit_of_measurement: used
 sensor.disk_free:
   friendly_name: Free
-  unit_of_measurement: free
 
 sensor.memory_use_percent:
   friendly_name: Memory
 sensor.memory_use:
   friendly_name: Used
-  unit_of_measurement: used
 sensor.memory_free:
   friendly_name: Free
-  unit_of_measurement: free
 
 sensor.load_1m:
   friendly_name: Load
   icon: mdi:weight
 sensor.load_5m:
   friendly_name: Load (5m)
-  unit_of_measurement: 5m
 sensor.load_15m:
   friendly_name: Load (15m)
-  unit_of_measurement: 15m
 
 sensor.ipv4_address_eth0:
   friendly_name: IPv4 address
