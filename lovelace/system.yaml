@@ -51,13 +51,24 @@ cards:
           - type: custom:mini-graph-card
             entities:
               - sensor.load_1m
-            line_color: lightblue
+            line_color: orange
             points_per_hour: 2
           - type: custom:mini-graph-card
             entities:
               - sensor.memory_use_percent
             line_color: yellow
             points_per_hour: 2
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.disk_use_percent
+            line_color: lightblue
+            points_per_hour: 2
+          - type: glance
+            entities:
+              - sensor.disk_use
+              - sensor.disk_free
       - type: horizontal-stack
         cards:
           - type: custom:bignumber-card
@@ -125,16 +136,6 @@ cards:
                 style: var(--label-badge-green)
             min: 0
             max: 100
-      - type: entities
-        entities:
-          - type: custom:multiple-entity-row
-            entity: sensor.disk_use_percent
-            primary:
-              entity: sensor.disk_use
-              unit: GB
-            secondary:
-              entity: sensor.disk_free
-              unit: GB
 
   - type: entities
     title: Enheter
