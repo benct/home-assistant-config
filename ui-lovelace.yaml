@@ -11,6 +11,8 @@ resources:
     type: module
   - url: /local/github-entity-row.js?v=1.0.0
     type: module
+  - url: /local/battery-entity.js?v=0.1.0
+    type: module
   - url: /local/weather-card.js?v=bc4a508
     type: module
   - url: /local/bignumber-card.js?v=0.0.1
