@@ -24,11 +24,11 @@ class AttributeEntityRow extends Polymer.Element {
             .info {
               flex: 1 0 60px;
             }
-            .secondary, ha-relative-time {
+            .secondary {
               display: block;
               color: var(--secondary-text-color);
             }
-            .attribute {
+            .attribute {
               color: var(--secondary-text-color);
               margin-right: 16px;
               font-size: 10px;
@@ -124,7 +124,7 @@ class AttributeEntityRow extends Polymer.Element {
             if (!stateObj) return null;
         }
         let i18n = this._hass.resources[this._hass.language];
-        const value = stateObj.attributes[attribute.key] || i18n['state.default.unavailable'];
+        const value = stateObj.attributes[attribute.key] || i18n['state.default.unavailable'];
         return (attribute.name ? `${attribute.name} ` : '') + value + (attribute.unit ? ` ${attribute.unit}` : '');
     }
 
@@ -134,9 +134,12 @@ class AttributeEntityRow extends Polymer.Element {
         if (hass && this._config) {
             this.stateObj = this._config.entity in hass.states ? hass.states[this._config.entity] : null;
             if (this.stateObj) {
-                this.name = this._config.name || this.stateObj.attributes.friendly_name;
                 this.primary = this._config.primary;
                 this.secondary = this._config.secondary;
+                this.name = this._config.name || this.stateObj.attributes.friendly_name;
+                if (this._config.name_attribute && this._config.name_attribute in this.stateObj.attributes) {
+                    this.name = this.stateObj.attributes[this._config.name_attribute];
+                }
             }
         }
     }

@@ -5,7 +5,7 @@ resources:
     type: module
   - url: /local/toggle-lock-entity-row.js?v=a57ac15
     type: module
-  - url: /local/attribute-entity-row.js?v=1.0.0
+  - url: /local/attribute-entity-row.js?v=1.1.0
     type: module
   - url: /local/multiple-entity-row.js?v=1.1.0
     type: module
