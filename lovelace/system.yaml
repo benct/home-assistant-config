@@ -71,71 +71,30 @@ cards:
               - sensor.disk_free
       - type: horizontal-stack
         cards:
-          - type: custom:bignumber-card
-            entity: sensor.netatmo_outside_battery_percent
-            title: Ute
-            scale: 20px
-            severity:
-              - value: 10
-                style: var(--label-badge-red)
-              - value: 30
-                style: var(--label-badge-yellow)
-              - value: 100
-                style: var(--label-badge-green)
-            min: 0
-            max: 100
-          - type: custom:bignumber-card
-            entity: sensor.template_smoke_sensor_livingroom_battery
-            title: Stue
-            scale: 20px
-            severity:
-              - value: 10
-                style: var(--label-badge-red)
-              - value: 30
-                style: var(--label-badge-yellow)
-              - value: 100
-                style: var(--label-badge-green)
-            min: 0
-            max: 100
-          - type: custom:bignumber-card
-            entity: sensor.template_flood_sensor_bathroom_battery
-            title: Bad
-            scale: 20px
-            severity:
-              - value: 10
-                style: var(--label-badge-red)
-              - value: 30
-                style: var(--label-badge-yellow)
-              - value: 100
-                style: var(--label-badge-green)
-            min: 0
-            max: 100
-          - type: custom:bignumber-card
-            entity: sensor.template_magnet_door_main_battery
-            title: Dør
-            scale: 20px
-            severity:
-              - value: 10
-                style: var(--label-badge-red)
-              - value: 30
-                style: var(--label-badge-yellow)
-              - value: 100
-                style: var(--label-badge-green)
-            min: 0
-            max: 100
-          - type: custom:bignumber-card
-            entity: sensor.template_motion_hall_battery
-            title: Gang
-            scale: 20px
-            severity:
-              - value: 10
-                style: var(--label-badge-red)
-              - value: 30
-                style: var(--label-badge-yellow)
-              - value: 100
-                style: var(--label-badge-green)
-            min: 0
-            max: 100
+          - type: vertical-stack
+            cards:
+              - type: custom:mini-graph-card
+                entities:
+                  - sensor.disk_use_percent
+                line_color: lightblue
+                points_per_hour: 2
+              - type: glance
+                entities:
+                  - sensor.disk_use
+                  - sensor.disk_free
+          - type: entities
+            entities:
+              - type: custom:battery-entity
+                entity: sensor.netatmo_outside_battery_percent
+                name: Ute
+              - type: custom:battery-entity
+                entity: sensor.template_smoke_sensor_livingroom_battery
+              - type: custom:battery-entity
+                entity: sensor.template_flood_sensor_bathroom_battery
+              - type: custom:battery-entity
+                entity: sensor.template_magnet_door_main_battery
+              - type: custom:battery-entity
+                entity: sensor.template_motion_hall_battery
 
   - type: entities
     title: Enheter
