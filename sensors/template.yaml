@@ -31,3 +31,27 @@
       friendly_name: 'Bevegelse (Gang)'
       value_template: '{{ states.sensor.motion_hall_temperature.attributes.battery_level }}'
       unit_of_measurement: '%'
+
+    count_binary_sensor:
+      friendly_name: 'Binary Sensors'
+      value_template: '{{ states.binary_sensor | list | length }}'
+
+    count_sensor:
+      friendly_name: 'Sensors'
+      value_template: '{{ states.sensor | list | length }}'
+
+    count_switch:
+      friendly_name: 'Switches'
+      value_template: '{{ states.switch | list | length }}'
+
+    count_light:
+      friendly_name: 'Lights'
+      value_template: '{{ states.light | list | length }}'
+
+    count_media_player:
+      friendly_name: 'Media Players'
+      value_template: '{{ states.media_player | list | length }}'
+
+    count_automations:
+      friendly_name: 'Automations'
+      value_template: '{{ states.automation | list | length }}'
