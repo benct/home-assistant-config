@@ -4,7 +4,7 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 [Hassbian](https://www.home-assistant.io/docs/installation/hassbian/installation/) on a
 [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/).
 
-[![Static version](https://img.shields.io/badge/version-0.92.1-blue.svg)](https://github.com/benct/home-assistant-config/blob/master/.HA_VERSION)
+[![Static version](https://img.shields.io/badge/version-0.94.2-blue.svg)](https://github.com/benct/home-assistant-config/blob/master/.HA_VERSION)
 ![Maintained](https://img.shields.io/maintenance/yes/2019.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/benct/home-assistant-config.svg)
 ![GitHub code size](https://img.shields.io/github/languages/code-size/benct/home-assistant-config.svg)
