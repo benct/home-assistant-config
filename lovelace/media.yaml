@@ -11,10 +11,10 @@ cards:
   - type: media-control
     entity: media_player.tv_stue
   - type: media-control
-    entity: media_player.samsung_led55_ue55hu6900
+    entity: media_player.tv_samsung_led55
   - type: media-control
-    entity: media_player.googlehome1005
+    entity: media_player.hall_speaker
   - type: media-control
-    entity: media_player.googlehome6625
+    entity: media_player.living_room_speaker
   - type: media-control
-    entity: media_player.googlehomehub0145
+    entity: media_player.kitchen_display
