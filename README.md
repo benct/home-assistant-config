@@ -88,9 +88,14 @@ sudo hassbian-config upgrade homeassistant
 ### Certificate
 
 For initial setup see home-assistants [Let's Encrypt](https://www.home-assistant.io/docs/ecosystem/certificates/lets_encrypt/) guide.
+
 ```bash
+sudo apt-get install certbot
+sudo certbot certonly --standalone --preferred-challenges http-01 --email <email> -d <hostname>
+chmod 755 /etc/letsencrypt/live/your.site/
+chmod 755 /etc/letsencrypt/archive/your.site/
+
 sudo certbot renew
-cp /etc/letsencrypt/live/your.site/your-keys.pem /ha-ssl-folder
 ```
 
 ## Screenshots
