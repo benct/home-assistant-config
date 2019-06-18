@@ -98,6 +98,12 @@ chmod 755 /etc/letsencrypt/archive/your.site/
 sudo certbot renew
 ```
 
+### Nmap Tracker
+```bash
+sudo apt-get install net-tools nmap
+sudo setcap cap_net_raw,cap_net_admin,cap_net_bind_service+eip /usr/bin/nmap
+```
+
 ## Screenshots
 
 ![Home Tab](https://raw.githubusercontent.com/benct/home-assistant-config/master/screenshots/ha-main.png)
