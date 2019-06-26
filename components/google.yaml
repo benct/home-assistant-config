@@ -32,6 +32,8 @@ google_assistant:
       expose: false
     light.living_room_2:
       expose: false
+    light.living_room_tv:
+      expose: false
     light.bedroom:
       expose: false
     light.bedroom_b:
@@ -40,7 +42,9 @@ google_assistant:
       expose: false
     light.other:
       expose: false
-    light.dimmable_light_1:
+    light.ikea_tv_bench:
+      expose: false
+    light.entertainment_tv:
       expose: false
     input_boolean.home:
       name: Home
@@ -113,5 +117,5 @@ google_assistant:
       expose: false
     switch.thermometer_storeroom:
       expose: false
-    switch.livingroom_button:
+    switch.remote_livingroom_sofa:
       expose: false
