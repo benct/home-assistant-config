@@ -11,6 +11,7 @@ cards:
             name: Version
           - entity: sensor.last_boot
             format: relative
+          - updater.updater
           - type: section
             label: Signal
           - sensor.netatmo_bedroom_wifi
