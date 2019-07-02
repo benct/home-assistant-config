@@ -1,58 +1,58 @@
 - alias: 'High CO2 levels'
   initial_state: 'on'
   trigger:
-  - platform: numeric_state
-    entity_id: sensor.netatmo_bedroom_co2
-    above: 2000
+    - platform: numeric_state
+      entity_id: sensor.netatmo_bedroom_co2
+      above: 2000
   action:
-  - service: notify.default
-    data:
-      message: "CO2 har passert 2000 ppm!"
-      title: "Veldig høyt CO2 nivå!"
+    - service: notify.default
+      data:
+        message: 'CO2 has passed 2000 ppm...'
+        title: 'High indoor CO2 level!'
 
 - alias: 'High freezer temperature'
   initial_state: 'on'
   trigger:
-  - platform: numeric_state
-    entity_id: sensor.thermometer_freezer_temperature
-    above: -10
+    - platform: numeric_state
+      entity_id: sensor.thermometer_freezer_temperature
+      above: -10
   action:
-  - service: notify.default
-    data:
-      message: "Frysertemperatur over -10 grader!"
-      title: "Fryseren er varm!"
+    - service: notify.default
+      data:
+        message: 'Freezer above -10 degrees...'
+        title: 'Freezer is too hot!'
 
 - alias: 'Low inside temperature'
   initial_state: 'on'
   trigger:
-  - platform: numeric_state
-    entity_id: sensor.smoke_sensor_livingroom_temperature
-    below: 12
+    - platform: numeric_state
+      entity_id: sensor.smoke_sensor_livingroom_temperature
+      below: 12
   action:
-  - service: notify.default
-    data:
-      message: "Innetemperatur under 12 grader!"
-      title: "Veldig kaldt innendørs!"
+    - service: notify.default
+      data:
+        message: 'Temperature below 12 degrees...'
+        title: 'Low indoor temperature!'
 
 - alias: 'High inside temperature'
   initial_state: 'on'
   trigger:
-  - platform: numeric_state
-    entity_id: sensor.smoke_sensor_livingroom_temperature
-    above: 30
+    - platform: numeric_state
+      entity_id: sensor.smoke_sensor_livingroom_temperature
+      above: 30
   action:
-  - service: notify.default
-    data:
-      message: "Innetemperatur over 30 grader!"
-      title: "Veldig varmt innendørs!"
+    - service: notify.default
+      data:
+        message: 'Temperature above 30 degrees...'
+        title: 'High indoor temperature!'
 
 - alias: 'Public IP change'
   initial_state: 'on'
   trigger:
-  - platform: state
-    entity_id: sensor.myip
+    - platform: state
+      entity_id: sensor.myip
   action:
-  - service: notify.default
-    data:
-      message: "Public IP har endret seg..."
-      title: "Public IP endret!"
+    - service: notify.default
+      data:
+        message: 'Public IP has changed...'
+        title: 'Public IP changed!'
