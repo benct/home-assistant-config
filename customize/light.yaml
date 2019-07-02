@@ -1,6 +1,10 @@
 light.living_room:
-  friendly_name: Lys
+  friendly_name: Stue
   icon: mdi:floor-lamp
+
+light.living_room_tv:
+  friendly_name: TV
+  icon: mdi:track-light
 
 light.bedroom:
   friendly_name: Nattbord
