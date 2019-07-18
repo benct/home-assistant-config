@@ -66,7 +66,7 @@
       - light.living_room
   - service: light.turn_on
     entity_id:
-      - light.bedroom
+      - light.nightstand
   - service: climate.set_away_mode
     entity_id: climate.termostat_stue
     data:
@@ -95,6 +95,7 @@
     entity_id:
       - light.living_room
       - light.bedroom
+      - light.nightstand
   - service: climate.set_away_mode
     entity_id: climate.termostat_stue
     data:
@@ -127,6 +128,7 @@
     entity_id:
       - light.living_room
       - light.bedroom
+      - light.nightstand
       - light.other
   - service: climate.set_operation_mode
     entity_id: climate.termostat_stue

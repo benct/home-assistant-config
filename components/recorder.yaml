@@ -14,6 +14,7 @@ recorder:
 
       - light.living_room
       - light.bedroom
+      - light.nightstand
 
       - switch.power_hall_light
       - switch.power_outside_lights

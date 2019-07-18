@@ -34,7 +34,11 @@ google_assistant:
       expose: false
     light.living_room_tv:
       expose: false
+    light.nightstand:
+      expose: false
     light.bedroom:
+      expose: false
+    light.bedroom_main:
       expose: false
     light.bedroom_b:
       expose: false

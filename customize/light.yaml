@@ -2,10 +2,10 @@ light.living_room:
   friendly_name: Stue
   icon: mdi:floor-lamp
 
-light.living_room_tv:
-  friendly_name: TV
+light.bedroom:
+  friendly_name: Soverom
   icon: mdi:track-light
 
-light.bedroom:
+light.nightstand:
   friendly_name: Nattbord
   icon: mdi:lamp

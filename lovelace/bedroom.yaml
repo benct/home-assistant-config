@@ -33,6 +33,9 @@ cards:
       - entity: light.bedroom
         type: custom:slider-entity-row
         toggle: true
+      - entity: light.nightstand
+        type: custom:slider-entity-row
+        toggle: true
       - entity: input_number.bedroom_color_temp
         name: Farge
       - entity: input_select.bedroom_hue_scene

@@ -57,10 +57,10 @@ cards:
             entity: light.living_room
             toggle: true
           - type: custom:slider-entity-row
-            entity: light.living_room_tv
+            entity: light.bedroom
             toggle: true
           - type: custom:slider-entity-row
-            entity: light.bedroom
+            entity: light.nightstand
             toggle: true
       - type: custom:mini-media-player
         entity: media_player.spotify
