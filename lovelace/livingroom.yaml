@@ -36,9 +36,6 @@ cards:
       - entity: light.living_room
         type: custom:slider-entity-row
         toggle: true
-      - entity: light.living_room_tv
-        type: custom:slider-entity-row
-        toggle: true
       - entity: input_number.livingroom_color_temp
         name: Farge
       - entity: input_select.livingroom_hue_scene
