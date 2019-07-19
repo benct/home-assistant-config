@@ -30,7 +30,7 @@ cards:
       - entity: sensor.netatmo_bedroom_co2
         secondary_info: last-changed
       - type: section
-      - entity: light.bedroom
+      - entity: light.bedroom_main
         type: custom:slider-entity-row
         toggle: true
       - entity: light.nightstand

@@ -57,7 +57,7 @@ cards:
             entity: light.living_room
             toggle: true
           - type: custom:slider-entity-row
-            entity: light.bedroom
+            entity: light.bedroom_main
             toggle: true
           - type: custom:slider-entity-row
             entity: light.nightstand
