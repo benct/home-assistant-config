@@ -5,14 +5,14 @@ cards:
     show_header_toggle: false
     entities:
       - type: section
-        label: Single
+        label: Primary
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
         primary:
           entity: sensor.netatmo_bedroom_max_temp
 
       - type: section
-        label: Both
+        label: Primary + Secondary
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
         primary:
