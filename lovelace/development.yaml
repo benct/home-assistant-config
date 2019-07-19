@@ -1,0 +1,101 @@
+path: dev
+title: DEV
+cards:
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: section
+        label: Single
+      - entity: sensor.netatmo_bedroom_temperature
+        type: custom:multiple-entity-row
+        primary:
+          entity: sensor.netatmo_bedroom_max_temp
+
+      - type: section
+        label: Both
+      - entity: sensor.netatmo_bedroom_temperature
+        type: custom:multiple-entity-row
+        primary:
+          entity: sensor.netatmo_bedroom_min_temp
+        secondary:
+          entity: sensor.netatmo_bedroom_max_temp
+
+      - type: section
+        label: Attributes
+      - entity: vacuum.xiaomi_vacuum_cleaner
+        type: custom:multiple-entity-row
+        primary:
+          entity: vacuum.xiaomi_vacuum_cleaner
+          attribute: battery_level
+          name: Battery
+          unit: '%'
+        secondary:
+          entity: vacuum.xiaomi_vacuum_cleaner
+          attribute: status
+          name: Status
+
+      - type: section
+        label: Toggle
+      - entity: switch.power_livingroom_tv
+        type: custom:multiple-entity-row
+        toggle: true
+        primary:
+          entity: sensor.power_livingroom_tv_power
+        secondary:
+          entity: sensor.power_livingroom_tv_power_2
+
+      - type: section
+        label: Hide state
+      - entity: switch.power_livingroom_tv
+        type: custom:multiple-entity-row
+        hide_state: true
+        primary:
+          entity: sensor.power_livingroom_tv_power
+        secondary:
+          entity: sensor.power_livingroom_tv_power_2
+
+      - type: section
+        label: Hide name
+      - entity: sensor.netatmo_bedroom_temperature
+        type: custom:multiple-entity-row
+        primary:
+          entity: sensor.netatmo_bedroom_min_temp
+          name: false
+        secondary:
+          entity: sensor.netatmo_bedroom_max_temp
+          name: false
+
+      - type: section
+        label: Info (secondary_info)
+      - entity: sensor.netatmo_bedroom_temperature
+        type: custom:multiple-entity-row
+        primary:
+          entity: sensor.netatmo_bedroom_max_temp
+        info:
+          entity: sensor.netatmo_bedroom_min_temp
+          name: Min
+
+      - type: section
+        label: Customization
+      - entity: sensor.netatmo_bedroom_temperature
+        type: custom:multiple-entity-row
+        name: Custom Name
+        icon: mdi:fire
+        unit: °F
+        secondary_info: last-changed
+        primary:
+          name: custom name
+          entity: sensor.netatmo_bedroom_max_temp
+          unit: temp
+
+  - type: vertical-stack
+    cards:
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: false
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Xiaomi Vacuum
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        buttons: false
