@@ -7,7 +7,7 @@ resources:
     type: module
   - url: /local/attribute-entity-row.js?v=1.1.0
     type: module
-  - url: /local/multiple-entity-row.js?v=1.1.0
+  - url: /local/multiple-entity-row.js?v=1.2.0
     type: module
   - url: /local/github-entity-row.js?v=1.0.0
     type: module
