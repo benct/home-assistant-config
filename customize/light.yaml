@@ -6,6 +6,10 @@ light.bedroom:
   friendly_name: Soverom
   icon: mdi:track-light
 
+light.bedroom_main:
+  friendly_name: Soverom
+  icon: mdi:track-light
+
 light.nightstand:
   friendly_name: Nattbord
   icon: mdi:lamp
