@@ -8,6 +8,7 @@ cards:
         label: Primary
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
+        name: Temperature
         primary:
           entity: sensor.netatmo_bedroom_max_temp
 
@@ -15,6 +16,7 @@ cards:
         label: Primary + Secondary
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
+        name: Temperature
         primary:
           entity: sensor.netatmo_bedroom_min_temp
         secondary:
@@ -24,6 +26,7 @@ cards:
         label: Info (secondary_info)
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
+        name: Temperature
         primary:
           entity: sensor.netatmo_bedroom_min_temp
         secondary:
@@ -38,6 +41,7 @@ cards:
         label: Attributes
       - entity: vacuum.xiaomi_vacuum_cleaner
         type: custom:multiple-entity-row
+        name: Vacuum Cleaner
         primary:
           entity: vacuum.xiaomi_vacuum_cleaner
           attribute: battery_level
@@ -52,26 +56,33 @@ cards:
         label: Toggle
       - entity: switch.power_livingroom_tv
         type: custom:multiple-entity-row
+        name: TV
         toggle: true
         primary:
           entity: sensor.power_livingroom_tv_power
+          name: Power
         secondary:
           entity: sensor.power_livingroom_tv_power_2
+          name: Total
 
       - type: section
         label: Hide state
       - entity: switch.power_livingroom_tv
         type: custom:multiple-entity-row
+        name: TV
         hide_state: true
         primary:
           entity: sensor.power_livingroom_tv_power
+          name: Power
         secondary:
           entity: sensor.power_livingroom_tv_power_2
+          name: Total
 
       - type: section
         label: Hide name
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
+        name: Temperature
         primary:
           entity: sensor.netatmo_bedroom_min_temp
           name: false
