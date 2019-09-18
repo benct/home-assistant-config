@@ -12,20 +12,5 @@
 - platform: netatmo
   station: Home
   modules:
-    Bedroom:
-      - temperature
-      - co2
-      - pressure
-      - noise
-      - humidity
-      - min_temp
-      - max_temp
-      - wifi_status
-    Outside:
-      - temperature
-      - humidity
-      - min_temp
-      - max_temp
-      - battery_vp
-      - battery_percent
-      - rf_status
+    - Bedroom
+    - Outside
