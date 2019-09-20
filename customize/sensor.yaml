@@ -17,7 +17,6 @@ sensor.motion_hall_temperature:
 sensor.power_livingroom_tv_power_2:
   friendly_name: Forbruk (total)
   icon: mdi:flash
-  unit_of_measurement: kWt
 
 sensor.power_livingroom_tv_power:
   friendly_name: Forbruk
@@ -26,7 +25,6 @@ sensor.power_livingroom_tv_power:
 sensor.power_office_pc_power_2:
   friendly_name: Forbruk (total)
   icon: mdi:flash
-  unit_of_measurement: kWt
 
 sensor.power_office_pc_power:
   friendly_name: Forbruk
