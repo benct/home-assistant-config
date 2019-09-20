@@ -7,7 +7,7 @@
   - platform: state
     entity_id: sensor.flood_sensor_bathroom_temperature, sensor.motion_hall_temperature, sensor.thermometer_storeroom_temperature, sensor.thermometer_office_temperature
   - platform: state
-    entity_id: sensor.power_livingroom_tv_power_2, sensor.power_office_pc_power_2
+    entity_id: sensor.power_livingroom_tv_power, sensor.power_office_pc_power
   - platform: state
     entity_id: sun.sun
     to: above_horizon
@@ -31,7 +31,7 @@
 #  hide_entity: true
 #  trigger:
 #  - platform: state
-#    entity_id: sensor.power_livingroom_tv_power_2, sensor.power_office_pc_power_2
+#    entity_id: sensor.power_livingroom_tv_power, sensor.power_office_pc_power
 #  - platform: sun
 #    event: sunset
 #  - platform: sun

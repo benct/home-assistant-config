@@ -59,10 +59,10 @@ cards:
         name: TV
         toggle: true
         primary:
-          entity: sensor.power_livingroom_tv_power
+          entity: sensor.power_livingroom_tv_power_2
           name: Power
         secondary:
-          entity: sensor.power_livingroom_tv_power_2
+          entity: sensor.power_livingroom_tv_power
           name: Total
 
       - type: section
@@ -72,10 +72,10 @@ cards:
         name: TV
         hide_state: true
         primary:
-          entity: sensor.power_livingroom_tv_power
+          entity: sensor.power_livingroom_tv_power_2
           name: Power
         secondary:
-          entity: sensor.power_livingroom_tv_power_2
+          entity: sensor.power_livingroom_tv_power
           name: Total
 
       - type: section

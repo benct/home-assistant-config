@@ -67,9 +67,11 @@ cards:
           - entity: switch.power_office_pc
             type: custom:multiple-entity-row
             primary:
-              entity: sensor.power_office_pc_power
-            secondary:
               entity: sensor.power_office_pc_power_2
+              unit: W
+            secondary:
+              entity: sensor.power_office_pc_power
+              unit: kWt
       - type: entities
         title: Bod
         show_header_toggle: false

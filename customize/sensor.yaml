@@ -14,19 +14,19 @@ sensor.motion_hall_luminance:
 sensor.motion_hall_temperature:
   friendly_name: Temperatur
 
-sensor.power_livingroom_tv_power_2:
+sensor.power_livingroom_tv_power:
   friendly_name: Forbruk (total)
   icon: mdi:flash
 
-sensor.power_livingroom_tv_power:
+sensor.power_livingroom_tv_power_2:
   friendly_name: Forbruk
   icon: mdi:flash
 
-sensor.power_office_pc_power_2:
+sensor.power_office_pc_power:
   friendly_name: Forbruk (total)
   icon: mdi:flash
 
-sensor.power_office_pc_power:
+sensor.power_office_pc_power_2:
   friendly_name: Forbruk
   icon: mdi:flash
 

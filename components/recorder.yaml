@@ -59,8 +59,8 @@ recorder:
       - sensor.yr_precipitation
       - sensor.yr_wind_speed
 
-      - sensor.power_livingroom_tv_power
-      - sensor.power_office_pc_power
+      - sensor.power_livingroom_tv_power_2
+      - sensor.power_office_pc_power_2
 
       - sensor.template_flood_sensor_bathroom
       - sensor.template_smoke_sensor_livingroom

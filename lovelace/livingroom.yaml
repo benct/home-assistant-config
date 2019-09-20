@@ -63,9 +63,11 @@ cards:
       - entity: switch.power_livingroom_tv
         type: custom:multiple-entity-row
         primary:
-          entity: sensor.power_livingroom_tv_power
-        secondary:
           entity: sensor.power_livingroom_tv_power_2
+          unit: W
+        secondary:
+          entity: sensor.power_livingroom_tv_power
+          unit: kWt
 
   - type: entities
     title: Gang
