@@ -23,10 +23,6 @@ cards:
           entity: sensor.netatmo_living_room_max_temp
       - entity: sensor.netatmo_living_room_humidity
         secondary_info: last-changed
-      - entity: sensor.netatmo_living_room_pressure
-        secondary_info: last-changed
-      - entity: sensor.netatmo_living_room_noise
-        secondary_info: last-changed
       - entity: sensor.netatmo_living_room_co2
         secondary_info: last-changed
       - type: section
