@@ -62,6 +62,6 @@
       entity_id: sensor.myip
   action:
     - service: notify.default
-      data:
-        message: 'Public IP has changed...'
+      data_template:
+        message: 'Public IP has changed: {{ trigger.to_state.state }}'
         title: 'Public IP changed!'
