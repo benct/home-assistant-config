@@ -44,7 +44,7 @@ sensor.netatmo_living_room_max_temp:
   friendly_name: max
 
 sensor.netatmo_living_room_wifi:
-  friendly_name: Stue (Wifi)
+  friendly_name: Stue (Radio)
 
 sensor.netatmo_outside_battery:
   friendly_name: Ute

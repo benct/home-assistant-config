@@ -15,7 +15,7 @@ cards:
           - type: section
             label: Signal
           - sensor.netatmo_bedroom_wifi
-          - sensor.netatmo_living_room_wifi
+          - sensor.netatmo_living_room_radio
           - sensor.netatmo_outside_radio
           - type: section
             label: Network

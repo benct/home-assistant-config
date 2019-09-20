@@ -26,7 +26,7 @@ cards:
       - entity: sensor.netatmo_living_room_co2
         secondary_info: last-changed
       - type: section
-      - entity: sensor.netatmo_living_room_temperature
+      - entity: sensor.smoke_sensor_livingroom_temperature
         name: Stue (tak)
         secondary_info: last-changed
       - entity: sensor.template_smoke_sensor_livingroom
