@@ -22,6 +22,30 @@ sensor.netatmo_bedroom_max_temp:
 sensor.netatmo_bedroom_wifi:
   friendly_name: Soverom (Wifi)
 
+sensor.netatmo_living_room_co2:
+  friendly_name: CO2
+  icon: mdi:periodic-table-co2
+
+sensor.netatmo_living_room_humidity:
+  friendly_name: Luftfuktighet
+
+sensor.netatmo_living_room_noise:
+  friendly_name: Lyd
+
+sensor.netatmo_living_room_pressure:
+  friendly_name: Trykk
+
+sensor.netatmo_living_room_temperature:
+  friendly_name: Temperatur
+
+sensor.netatmo_living_room_min_temp:
+  friendly_name: min
+sensor.netatmo_living_room_max_temp:
+  friendly_name: max
+
+sensor.netatmo_living_room_wifi:
+  friendly_name: Stue (Wifi)
+
 sensor.netatmo_outside_battery:
   friendly_name: Ute
 
