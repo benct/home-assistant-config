@@ -12,5 +12,6 @@
 - platform: netatmo
   station: Home
   modules:
+    - Living Room
     - Bedroom
     - Outside
