@@ -8,7 +8,7 @@ cards:
     entities:
       - type: custom:mini-graph-card
         entities:
-          - sensor.smoke_sensor_livingroom_temperature
+          - sensor.netatmo_living_room_temperature
         align_icon: state
         show:
           name: false
@@ -26,6 +26,9 @@ cards:
       - entity: sensor.netatmo_living_room_co2
         secondary_info: last-changed
       - type: section
+      - entity: sensor.netatmo_living_room_temperature
+        name: Stue (tak)
+        secondary_info: last-changed
       - entity: sensor.template_smoke_sensor_livingroom
         type: custom:attribute-entity-row
         name: Røykvarsler

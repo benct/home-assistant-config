@@ -15,6 +15,7 @@ cards:
           - type: section
             label: Signal
           - sensor.netatmo_bedroom_wifi
+          - sensor.netatmo_living_room_wifi
           - sensor.netatmo_outside_radio
           - type: section
             label: Network
@@ -81,6 +82,7 @@ cards:
                 entity: sensor.netatmo_outside_battery_percent
                 name: Ute
               - type: custom:battery-entity
+                name: Stue (tak)
                 entity: sensor.template_smoke_sensor_livingroom_battery
               - type: custom:battery-entity
                 entity: sensor.template_flood_sensor_bathroom_battery

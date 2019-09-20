@@ -90,8 +90,13 @@ cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - entity: sensor.smoke_sensor_livingroom_temperature
+          - entity: sensor.netatmo_living_room_temperature
             name: Stue
+            secondary_info: last-changed
+          - entity: sensor.smoke_sensor_livingroom_temperature
+            name: Stue (tak)
+            secondary_info: last-changed
+          - entity: sensor.netatmo_living_room_co2
             secondary_info: last-changed
           - entity: group.livingroom_heaters
             type: custom:toggle-lock-entity-row
