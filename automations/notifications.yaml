@@ -4,6 +4,9 @@
     - platform: numeric_state
       entity_id: sensor.netatmo_bedroom_co2
       above: 2000
+    - platform: numeric_state
+      entity_id: sensor.netatmo_living_room_co2
+      above: 2000
   action:
     - service: notify.default
       data:
@@ -28,6 +31,9 @@
     - platform: numeric_state
       entity_id: sensor.smoke_sensor_livingroom_temperature
       below: 12
+    - platform: numeric_state
+      entity_id: sensor.netatmo_living_room_temperature
+      below: 12
   action:
     - service: notify.default
       data:
@@ -40,6 +46,9 @@
     - platform: numeric_state
       entity_id: sensor.smoke_sensor_livingroom_temperature
       above: 30
+    - platform: numeric_state
+      entity_id: sensor.netatmo_living_room_temperature
+      above: 35
   action:
     - service: notify.default
       data:

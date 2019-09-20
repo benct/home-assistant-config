@@ -13,6 +13,23 @@ cards:
         show:
           name: false
       - type: section
+      - entity: sensor.netatmo_living_room_temperature
+        type: custom:multiple-entity-row
+        secondary_info: last-changed
+        hide_state: true
+        primary:
+          entity: sensor.netatmo_living_room_min_temp
+        secondary:
+          entity: sensor.netatmo_living_room_max_temp
+      - entity: sensor.netatmo_living_room_humidity
+        secondary_info: last-changed
+      - entity: sensor.netatmo_living_room_pressure
+        secondary_info: last-changed
+      - entity: sensor.netatmo_living_room_noise
+        secondary_info: last-changed
+      - entity: sensor.netatmo_living_room_co2
+        secondary_info: last-changed
+      - type: section
       - entity: sensor.template_smoke_sensor_livingroom
         type: custom:attribute-entity-row
         name: Røykvarsler

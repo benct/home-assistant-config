@@ -75,6 +75,9 @@ cards:
           - type: entities
             entities:
               - type: custom:battery-entity
+                entity: sensor.netatmo_living_room_battery_percent
+                name: Stue
+              - type: custom:battery-entity
                 entity: sensor.netatmo_outside_battery_percent
                 name: Ute
               - type: custom:battery-entity
