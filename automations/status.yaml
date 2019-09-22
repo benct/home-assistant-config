@@ -11,14 +11,14 @@
       - input_boolean.sleep
       - input_boolean.away
       - input_boolean.vacation
-  - service: climate.set_away_mode
+  - service: climate.set_hvac_mode
     entity_id: climate.termostat_stue
     data:
-      away_mode: false
-  - service: climate.set_operation_mode
+      hvac_mode: 'heat'
+  - service: climate.set_preset_mode
     entity_id: climate.termostat_stue
     data:
-      operation_mode: 'heat'
+      preset_mode: 'heat'
 
 - alias: 'Home mode (at night)'
   initial_state: 'on'
@@ -67,10 +67,10 @@
   - service: light.turn_on
     entity_id:
       - light.nightstand
-  - service: climate.set_away_mode
+  - service: climate.set_preset_mode
     entity_id: climate.termostat_stue
     data:
-      away_mode: true
+      preset_mode: 'away'
 
 - alias: 'Away mode'
   initial_state: 'on'
@@ -96,10 +96,10 @@
       - light.living_room
       - light.bedroom
       - light.nightstand
-  - service: climate.set_away_mode
+  - service: climate.set_preset_mode
     entity_id: climate.termostat_stue
     data:
-      away_mode: true
+      preset_mode: 'away'
 
 - alias: 'Vacation mode'
   initial_state: 'on'
@@ -130,10 +130,10 @@
       - light.bedroom
       - light.nightstand
       - light.other
-  - service: climate.set_operation_mode
+  - service: climate.set_hvac_mode
     entity_id: climate.termostat_stue
     data:
-      operation_mode: 'off'
+      hvac_mode: 'off'
 
 - alias: 'Set sleep mode at night'
   initial_state: 'on'

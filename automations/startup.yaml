@@ -23,10 +23,10 @@
   - platform: homeassistant
     event: start
   action:
-  - service: climate.set_away_mode
+  - service: climate.set_preset_mode
     entity_id: climate.termostat_stue
     data:
-      away_mode: true
+      preset_mode: 'away'
 
 - alias: 'Notification on restart'
   initial_state: 'on'
