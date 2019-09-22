@@ -18,7 +18,7 @@
   - service: climate.set_preset_mode
     entity_id: climate.termostat_stue
     data:
-      preset_mode: 'heat'
+      preset_mode: 'none'
 
 - alias: 'Home mode (at night)'
   initial_state: 'on'
