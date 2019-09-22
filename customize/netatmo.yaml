@@ -43,7 +43,7 @@ sensor.netatmo_living_room_min_temp:
 sensor.netatmo_living_room_max_temp:
   friendly_name: max
 
-sensor.netatmo_living_room_wifi:
+sensor.netatmo_living_room_radio:
   friendly_name: Stue (Radio)
 
 sensor.netatmo_outside_battery:
