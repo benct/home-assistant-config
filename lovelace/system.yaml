@@ -11,7 +11,14 @@ cards:
             name: Version
           - entity: sensor.last_boot
             format: relative
-          - updater.updater
+          - type: custom:multiple-entity-row
+            entity: binary_sensor.updater
+            primary:
+              entity: binary_sensor.updater
+              attribute: newest_version
+            info:
+              entity: binary_sensor.updater
+              attribute: release_notes
           - type: section
             label: Signal
           - sensor.netatmo_bedroom_wifi
