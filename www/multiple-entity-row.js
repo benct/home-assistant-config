@@ -50,22 +50,21 @@ class MultipleEntityRow extends Polymer.Element {
   }
   .state {
     min-width: 45px;
-    text-align: end;
   }
   .toggle {
     margin-left: 8px;
   }
 </style>
-<state-badge state-obj="[[_config.stateObj]]" override-icon="[[_config.icon]]"></state-badge>
+<state-badge state-obj="[[main.stateObj]]" override-icon="[[main.icon]]"></state-badge>
 <div class="flex">
   <div class="info">
-    [[entityName(_config)]]
+    [[entityName(main)]]
     <div class="secondary">
       <template is="dom-if" if="{{displayInfo}}">
         [[entityName(info)]] [[entityState(info)]]
       </template>
       <template is="dom-if" if="{{displayLastChanged}}">
-        <ha-relative-time datetime="[[_config.stateObj.last_changed]]" hass="[[_hass]]"></ha-relative-time>
+        <ha-relative-time datetime="[[main.stateObj.last_changed]]" hass="[[_hass]]"></ha-relative-time>
       </template>
     </div>
   </div>
@@ -81,14 +80,23 @@ class MultipleEntityRow extends Polymer.Element {
         <div>[[entityState(secondary)]]</div>
       </div>
   </template>
+  <template is="dom-if" if="{{displayTertiary}}">
+    <div class="entity" on-click="tertiaryMoreInfo">
+      <span>[[entityName(tertiary)]]</span>
+      <div>[[entityState(tertiary)]]</div>
+    </div>
+  </template>
   <template is="dom-if" if="{{displayValue}}">
-    <div class="state">
-      [[entityState(_config)]]
+    <div class="state entity">
+      <template is="dom-if" if="{{displayHeader}}">
+        <span>[[_config.name_state]]</span>
+      </template>
+      <div>[[entityState(main)]]</div>
     </div>
   </template>
   <template is="dom-if" if="{{displayToggle}}">
     <div class="toggle">
-      <ha-entity-toggle state-obj="[[_config.stateObj]]" hass="[[_hass]]"></ha-entity-toggle>
+      <ha-entity-toggle state-obj="[[main.stateObj]]" hass="[[_hass]]"></ha-entity-toggle>
     </div>
   </template>
 </div>`;
@@ -104,6 +112,11 @@ class MultipleEntityRow extends Polymer.Element {
         this.fireEvent(this._config.secondary.entity)
     }
 
+    tertiaryMoreInfo(e) {
+        e.stopPropagation();
+        this.fireEvent(this._config.tertiary.entity)
+    }
+
     entityName(data) {
         return data && data.stateObj && data.name !== false ? this.computeStateName(data.stateObj, data.name) : null;
     }
@@ -111,7 +124,7 @@ class MultipleEntityRow extends Polymer.Element {
     entityState(data) {
         if (!data || !data.stateObj) return this._hass.localize('state.default.unavailable');
         return data.attribute
-            ? data.stateObj.attributes[data.attribute]
+            ? (data.attribute in data.stateObj.attributes)
                 ? `${data.stateObj.attributes[data.attribute]} ${data.unit ? data.unit : ''}`
                 : this._hass.localize('state.default.unavailable')
             : this.computeStateValue(data.stateObj, data.unit);
@@ -124,21 +137,45 @@ class MultipleEntityRow extends Polymer.Element {
     }
 
     computeStateValue(stateObj, unit) {
-        return (unit || stateObj.attributes.unit_of_measurement) && !["unknown", "unavailable"].includes(stateObj.state)
-            ? `${stateObj.state} ${unit || stateObj.attributes.unit_of_measurement}`
-            : this._hass.localize(`state.${stateObj.entity_id.substr(0, stateObj.entity_id.indexOf("."))}.${stateObj.state}`);
+        let display;
+        const domain = stateObj.entity_id.substr(0, stateObj.entity_id.indexOf("."));
+
+        if (domain === "binary_sensor") {
+            if (stateObj.attributes.device_class) {
+                display = this._hass.localize(`state.${domain}.${stateObj.attributes.device_class}.${stateObj.state}`);
+            }
+            if (!display) {
+                display = this._hass.localize(`state.${domain}.default.${stateObj.state}`);
+            }
+        } else if (unit !== false && (unit || stateObj.attributes.unit_of_measurement) && !["unknown", "unavailable"].includes(stateObj.state)) {
+            display = `${stateObj.state} ${unit || stateObj.attributes.unit_of_measurement}`;
+        } else if (domain === "zwave") {
+            display = ["initializing", "dead"].includes(stateObj.state)
+                ? this._hass.localize(`state.zwave.query_stage.${stateObj.state}`, 'query_stage', stateObj.attributes.query_stage)
+                : this._hass.localize(`state.zwave.default.${stateObj.state}`);
+        } else {
+            display = this._hass.localize(`state.${domain}.${stateObj.state}`);
+        }
+
+        return display ||
+            this._hass.localize(`state.default.${stateObj.state}`) ||
+            this._hass.localize(`component.${domain}.state.${stateObj.state}`) ||
+            stateObj.state;
     }
 
     setConfig(config) {
         if (!config.entity) throw new Error('Please define an entity.');
         if (config.primary && !config.primary.entity) throw new Error('Please define a primary entity.');
         if (config.secondary && !config.secondary.entity) throw new Error('Please define a secondary entity.');
+        if (config.tertiary && !config.tertiary.entity) throw new Error('Please define a tertiary entity.');
 
         this._config = config;
         this.displayToggle = config.toggle === true;
         this.displayValue = !this.displayToggle && !config.hide_state;
+        this.displayHeader = this.displayValue && config.name_state;
         this.displayPrimary = config.primary && config.primary.entity;
         this.displaySecondary = config.secondary && config.secondary.entity;
+        this.displayTertiary = config.tertiary && config.tertiary.entity;
         this.displayInfo = config.info && config.info.entity;
         this.displayLastChanged = !this.displayInfo && config.secondary_info === 'last-changed';
     }
@@ -149,7 +186,7 @@ class MultipleEntityRow extends Polymer.Element {
         if (hass && this._config) {
             const stateObj = this._config.entity in hass.states ? hass.states[this._config.entity] : null;
             if (stateObj) {
-                this._config.stateObj = stateObj;
+                this.main = Object.assign({}, this._config, {stateObj});
 
                 this.primary = Object.assign({}, this._config.primary, {
                     stateObj: this.displayPrimary && this._config.primary.entity in hass.states ?
@@ -159,11 +196,17 @@ class MultipleEntityRow extends Polymer.Element {
                     stateObj: this.displaySecondary && this._config.secondary.entity in hass.states ?
                         hass.states[this._config.secondary.entity] : null
                 });
+                this.tertiary = Object.assign({}, this._config.tertiary, {
+                    stateObj: this.displayTertiary && this._config.tertiary.entity in hass.states ?
+                        hass.states[this._config.tertiary.entity] : null
+                });
                 this.info = Object.assign({}, this._config.info, {
                     stateObj: this.displayInfo && this._config.info.entity in hass.states ?
                         hass.states[this._config.info.entity] : null
                 });
             }
+            this.displayToggle = this._config.toggle === true && stateObj && (stateObj.state === "on" || stateObj.state === "off");
+            this.displayValue = !this.displayToggle && !this._config.hide_state;
         }
     }
 
