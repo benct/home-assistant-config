@@ -9,6 +9,7 @@ cards:
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
         name: Temperature
+        secondary_info: last-changed
         primary:
           entity: sensor.netatmo_bedroom_max_temp
 
@@ -112,6 +113,20 @@ cards:
           entity: sensor.netatmo_bedroom_min_temp
         secondary:
           entity: sensor.netatmo_bedroom_max_temp
+
+      - type: section
+        label: Multiple toggles
+      - entity: sensor.netatmo_bedroom_temperature
+        type: custom:multiple-entity-row
+        name: Temperature
+        name_state: current
+        toggle: true
+        primary:
+          entity: sensor.netatmo_bedroom_min_temp
+          toggle: true
+        secondary:
+          entity: sensor.netatmo_bedroom_max_temp
+          toggle: true
 
       - type: section
         label: Customization
