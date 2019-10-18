@@ -116,7 +116,7 @@ cards:
 
       - type: section
         label: Multiple toggles
-      - entity: sensor.switch.power_livingroom_tv
+      - entity: switch.power_livingroom_tv
         type: custom:multiple-entity-row
         name: Toggles
         name_state: main
