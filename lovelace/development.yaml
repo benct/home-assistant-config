@@ -116,16 +116,18 @@ cards:
 
       - type: section
         label: Multiple toggles
-      - entity: sensor.netatmo_bedroom_temperature
+      - entity: sensor.switch.power_livingroom_tv
         type: custom:multiple-entity-row
-        name: Temperature
-        name_state: current
+        name: Toggles
+        name_state: main
         toggle: true
         primary:
-          entity: sensor.netatmo_bedroom_min_temp
+          entity: switch.power_livingroom_tv
+          name: toggle1
           toggle: true
         secondary:
-          entity: sensor.netatmo_bedroom_max_temp
+          entity: switch.power_livingroom_tv
+          name: toggle2
           toggle: true
 
       - type: section
