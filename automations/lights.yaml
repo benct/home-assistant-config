@@ -11,6 +11,8 @@
   action:
   - service: light.turn_on
     entity_id: light.living_room
+  - service: switch.turn_on
+    entity_id: switch.power_livingroom_cabinet
 
 - alias: 'Outside light on at sunset'
   initial_state: 'on'

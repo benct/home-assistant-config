@@ -97,6 +97,13 @@ google_assistant:
         - Sofastrom
         - Ladestrom
         - Lading
+    switch.power_livingroom_cabinet:
+      name: Power Cabinet
+      room: Living Room
+      aliases:
+        - Cabinet Power
+        - Cabinet Lights
+        - Vitrineskap
     switch.power_outside_lights:
       name: Outside Lights
       room: Outside

@@ -3,6 +3,11 @@ switch.power_livingroom_sofa:
   assumed_state: false
   icon: mdi:power-plug
 
+switch.power_livingroom_cabinet:
+  friendly_name: Vitrineskap
+  assumed_state: false
+  icon: mdi:led-strip
+
 switch.power_livingroom_tv:
   friendly_name: TV/Lyd
   assumed_state: false

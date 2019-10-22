@@ -57,6 +57,8 @@ cards:
       - entity: input_select.livingroom_hue_scene
         name: Scene
       - type: section
+      - entity: switch.power_livingroom_cabinet
+        name: Vitrineskap
       - entity: switch.power_livingroom_sofa
         name: Sofa/Ladere
       - type: section

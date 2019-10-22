@@ -39,6 +39,7 @@
   - service: switch.turn_on
     entity_id:
       - switch.power_outside_lights
+      - switch.power_livingroom_cabinet
   - service: light.turn_on
     entity_id:
       - light.living_room
@@ -59,6 +60,7 @@
   - service: switch.turn_off
     entity_id:
       - switch.power_livingroom_sofa
+      - switch.power_livingroom_cabinet
       - switch.power_hall_light
       - switch.power_outside_lights
   - service: light.turn_off
@@ -89,6 +91,7 @@
     entity_id:
       - switch.power_bedroom_charger
       - switch.power_livingroom_sofa
+      - switch.power_livingroom_cabinet
       - switch.power_hall_light
       - switch.power_outside_lights
   - service: light.turn_off
@@ -120,6 +123,7 @@
       - switch.power_hall_light
       - switch.power_livingroom_tv
       - switch.power_livingroom_sofa
+      - switch.power_livingroom_cabinet
       - switch.power_livingroom_heater_left
       - switch.power_livingroom_heater_right
       - switch.power_office_pc
