@@ -21,11 +21,17 @@ google_assistant:
       room: Living Room
       expose: true
       aliases:
-        - Receiver
         - Sound System
         - Media Station
         - Lyd
         - Lydsystem
+    media_player.getbox:
+      name: GetBox
+      room: Living Room
+      expose: true
+      aliases:
+        - GetTV
+        - Decoder
     light.living_room:
       expose: false
     light.living_room_1:
