@@ -15,7 +15,7 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 - [Telldus Tellstick ZNet Lite v2](https://home-assistant.io/components/tellduslive/)
 - [Netatmo Weather Station](https://home-assistant.io/components/netatmo/)
-- [Google Home Mini](https://www.home-assistant.io/components/google_assistant/)
+- [Google Nest Mini / Hub](https://www.home-assistant.io/components/google_assistant/)
 - [Phillips Hue Hub](https://www.home-assistant.io/components/hue/)
 - [Xiaomi Roborock Vacuum](https://www.home-assistant.io/components/vacuum.xiaomi_miio/)
 
