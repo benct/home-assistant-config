@@ -102,5 +102,6 @@ cards:
           key: battery_level
           name: Battery
           unit: '%'
+      - entity: sensor.template_magnet_door_balcony
       - type: section
       - switch.power_hall_light

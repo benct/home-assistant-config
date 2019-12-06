@@ -4,6 +4,9 @@ binary_sensor.flood_sensor_bathroom:
 binary_sensor.magnet_door_main:
   hidden: true
 
+binary_sensor.magnet_door_balcony:
+  hidden: true
+
 binary_sensor.motion_hall:
   hidden: true
 
@@ -20,6 +23,10 @@ sensor.template_flood_sensor_bathroom_battery:
 
 sensor.template_magnet_door_main:
   friendly_name: Ytterdør
+  icon: mdi:login
+
+sensor.template_magnet_door_balcony:
+  friendly_name: Balkong
   icon: mdi:login
 
 sensor.template_magnet_door_main_battery:

@@ -30,6 +30,7 @@ excluded_entities:
   - binary_sensor.smoke_sensor_livingroom
   - binary_sensor.motion_hall
   - binary_sensor.magnet_door_main
+  - binary_sensor.magnet_door_balcony
   - binary_sensor.flood_sensor_bathroom
 
 views:
