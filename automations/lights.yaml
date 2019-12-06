@@ -1,4 +1,4 @@
-- alias: 'Livingroom light on at sunset'
+- alias: 'Livingroom lights on before sunset'
   initial_state: 'on'
   trigger:
   - platform: sun
@@ -12,7 +12,9 @@
   - service: light.turn_on
     entity_id: light.living_room
   - service: switch.turn_on
-    entity_id: switch.power_livingroom_cabinet
+    entity_id:
+      - switch.power_livingroom_cabinet
+      - switch.power_livingroom_sofa
 
 - alias: 'Outside light on at sunset'
   initial_state: 'on'
