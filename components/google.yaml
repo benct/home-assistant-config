@@ -134,3 +134,13 @@ google_assistant:
       expose: false
     switch.remote_livingroom_sofa:
       expose: false
+    switch.remote_hall:
+      expose: false
+    switch.telldus_home:
+      expose: false
+    switch.telldus_sleep:
+      expose: false
+    switch.telldus_away:
+      expose: false
+    switch.telldus_lights:
+      expose: false
