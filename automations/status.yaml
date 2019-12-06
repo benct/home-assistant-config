@@ -8,11 +8,15 @@
     from: 'off'
     to: 'on'
   action:
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.home
   - service: input_boolean.turn_off
     entity_id:
       - input_boolean.sleep
       - input_boolean.away
       - input_boolean.vacation
+  - service: switch.turn_on
+    entity_id: switch.telldus_home
   - service: switch.turn_off
     entity_id:
       - switch.telldus_sleep
@@ -66,11 +70,15 @@
     from: 'off'
     to: 'on'
   action:
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.sleep
   - service: input_boolean.turn_off
     entity_id:
       - input_boolean.home
       - input_boolean.away
       - input_boolean.vacation
+  - service: switch.turn_on
+    entity_id: switch.telldus_sleep
   - service: switch.turn_off
     entity_id:
       - switch.telldus_home
@@ -103,11 +111,15 @@
     from: 'off'
     to: 'on'
   action:
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.away
   - service: input_boolean.turn_off
     entity_id:
       - input_boolean.home
       - input_boolean.sleep
       - input_boolean.vacation
+  - service: switch.turn_on
+    entity_id: switch.telldus_away
   - service: switch.turn_off
     entity_id:
       - switch.telldus_home
