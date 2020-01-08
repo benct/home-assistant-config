@@ -54,12 +54,12 @@ See [ui-lovelace.yaml](https://github.com/benct/home-assistant-config/blob/maste
 [Midnight theme](https://community.home-assistant.io/t/midnight-theme/28598) from the HA Community (by marcelhoffs).
 
 ### My Lovelace Cards
-I've created and currently maintain a few components (cards) for Home Assistant's Lovelace UI:
+I've created and currently maintain a few plugins (cards) for Home Assistant's Lovelace UI:
 
 - [xiaomi-vacuum-card](https://github.com/benct/lovelace-xiaomi-vacuum-card)
 - [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row)
-- [attribute-entity-row](https://github.com/benct/lovelace-attribute-entity-row)
 - [github-entity-row](https://github.com/benct/lovelace-github-entity-row)
+- [~~attribute-entity-row~~](https://github.com/benct/lovelace-attribute-entity-row)
 
 [![BMC](https://www.buymeacoffee.com/assets/img/custom_images/white_img.png)](https://www.buymeacoff.ee/benct)
 
