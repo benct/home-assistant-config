@@ -19,7 +19,7 @@ resources:
     type: module
   - url: /local/simple-thermostat.js?v=0.21.0
     type: module
-  - url: /local/xiaomi-vacuum-card.js?v=2.3.0
+  - url: /local/xiaomi-vacuum-card.js?v=3.0.0
     type: module
   - url: /local/mini-media-player.js?v=1.0.3
     type: module
