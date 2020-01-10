@@ -4,46 +4,37 @@ cards:
   - type: entities
     show_header_toggle: false
     entities:
-      - type: section
-        label: Primary
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
-        name: Temperature
+        name: Primary
         secondary_info: last-changed
         primary:
           entity: sensor.netatmo_bedroom_max_temp
 
-      - type: section
-        label: Primary + Secondary
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
-        name: Temperature
+        name: Primary + Secondary
+        secondary_info: last-changed
         primary:
           entity: sensor.netatmo_bedroom_min_temp
         secondary:
           entity: sensor.netatmo_bedroom_max_temp
 
-      - type: section
-        label: Primary + Secondary + Tertiary
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
-        name: Temperature
+        name: Pri + Sec + Tertiary
+        secondary_info: last-changed
         primary:
           entity: sensor.netatmo_bedroom_humidity
+          name: humidity
         secondary:
           entity: sensor.netatmo_bedroom_min_temp
         tertiary:
           entity: sensor.netatmo_bedroom_max_temp
 
-      - type: section
-        label: Info (secondary_info)
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
-        name: Temperature
-        primary:
-          entity: sensor.netatmo_bedroom_min_temp
-        secondary:
-          entity: sensor.netatmo_bedroom_max_temp
+        name: Info (secondary_info)
         info:
           entity: sensor.smoke_sensor_livingroom_temperature
           attribute: battery_level
@@ -51,10 +42,9 @@ cards:
           unit: '%'
 
       - type: section
-        label: Attributes
       - entity: vacuum.xiaomi_vacuum_cleaner
         type: custom:multiple-entity-row
-        name: Vacuum Cleaner
+        name: Attributes
         primary:
           entity: vacuum.xiaomi_vacuum_cleaner
           attribute: battery_level
@@ -65,11 +55,44 @@ cards:
           attribute: status
           name: Status
 
+      - entity:  sensor.lovelace_multiple_entity_row
+        type: custom:multiple-entity-row
+        name: Attributes (hide_state)
+        hide_state: true
+        primary:
+          attribute: stargazers
+          name: Stars
+        secondary:
+          attribute: open_issues
+          name: Issues
+        tertiary:
+          attribute: open_pull_requests
+          name: PRs
+
       - type: section
-        label: Toggle
+      - entity: sensor.netatmo_bedroom_temperature
+        type: custom:multiple-entity-row
+        name: Hide names
+        primary:
+          entity: sensor.netatmo_bedroom_min_temp
+          name: false
+        secondary:
+          entity: sensor.netatmo_bedroom_max_temp
+          name: false
+
+      - entity: sensor.netatmo_bedroom_temperature
+        type: custom:multiple-entity-row
+        name: Main state name
+        name_state: current
+        primary:
+          entity: sensor.netatmo_bedroom_min_temp
+        secondary:
+          entity: sensor.netatmo_bedroom_max_temp
+
+      - type: section
       - entity: switch.power_livingroom_tv
         type: custom:multiple-entity-row
-        name: TV
+        name: Toggle
         toggle: true
         primary:
           entity: sensor.power_livingroom_tv_power_2
@@ -78,47 +101,9 @@ cards:
           entity: sensor.power_livingroom_tv_power
           name: Total
 
-      - type: section
-        label: Hide state
       - entity: switch.power_livingroom_tv
         type: custom:multiple-entity-row
-        name: TV
-        hide_state: true
-        primary:
-          entity: sensor.power_livingroom_tv_power_2
-          name: Power
-        secondary:
-          entity: sensor.power_livingroom_tv_power
-          name: Total
-
-      - type: section
-        label: Hide name
-      - entity: sensor.netatmo_bedroom_temperature
-        type: custom:multiple-entity-row
-        name: Temperature
-        primary:
-          entity: sensor.netatmo_bedroom_min_temp
-          name: false
-        secondary:
-          entity: sensor.netatmo_bedroom_max_temp
-          name: false
-
-      - type: section
-        label: Main entity name/header
-      - entity: sensor.netatmo_bedroom_temperature
-        type: custom:multiple-entity-row
-        name: Temperature
-        name_state: current
-        primary:
-          entity: sensor.netatmo_bedroom_min_temp
-        secondary:
-          entity: sensor.netatmo_bedroom_max_temp
-
-      - type: section
-        label: Multiple toggles
-      - entity: switch.power_livingroom_tv
-        type: custom:multiple-entity-row
-        name: Toggles
+        name: Multiple toggles
         name_state: main
         toggle: true
         primary:
@@ -131,10 +116,9 @@ cards:
           toggle: true
 
       - type: section
-        label: Customization
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
-        name: Custom Name
+        name: Customization
         icon: mdi:fire
         unit: °F
         secondary_info: last-changed
@@ -142,6 +126,25 @@ cards:
           name: custom name
           entity: sensor.netatmo_bedroom_max_temp
           unit: temp
+
+      - type: section
+      - entity: sensor.netatmo_bedroom_temperature
+        type: custom:multiple-entity-row
+        name: Icons (service calls)
+        secondary_info: last-changed
+        primary:
+          entity: light.living_room
+          icon: mdi:palette
+        secondary:
+          icon: mdi:lightbulb-off-outline
+          service: light.turn_off
+          service_data:
+            entity_id: light.living_room
+        tertiary:
+          icon: mdi:lightbulb-outline
+          service: light.turn_on
+          service_data:
+            entity_id: light.living_room
 
   - type: vertical-stack
     cards:
@@ -157,3 +160,7 @@ cards:
       - type: custom:xiaomi-vacuum-card
         entity: vacuum.xiaomi_vacuum_cleaner
         image: false
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        image: false
+        vendor: roomba
