@@ -46,12 +46,10 @@ cards:
         type: custom:multiple-entity-row
         name: Attributes
         primary:
-          entity: vacuum.xiaomi_vacuum_cleaner
           attribute: battery_level
           name: Battery
           unit: '%'
         secondary:
-          entity: vacuum.xiaomi_vacuum_cleaner
           attribute: status
           name: Status
 
