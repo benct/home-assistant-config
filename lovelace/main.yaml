@@ -9,29 +9,33 @@ cards:
           - entity: input_boolean.home
             type: custom:button-card
             show_name: false
+            size: 30%
             styles:
               card:
                 - padding: 16px 8px
           - entity: input_boolean.sleep
             type: custom:button-card
             show_name: false
+            size: 30%
             styles:
               card:
                 - padding: 16px 8px
           - entity: input_boolean.away
             type: custom:button-card
             show_name: false
+            size: 30%
             styles:
               card:
                 - padding: 16px 8px
           - entity: input_boolean.vacation
             type: custom:button-card
             show_name: false
-            tap_action:
-              action: more-info
+            size: 30%
             styles:
               card:
                 - padding: 16px 8px
+            tap_action:
+              action: more-info
       - type: glance
         entities:
           - sensor.template_motion_hall
