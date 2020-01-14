@@ -8,25 +8,30 @@ cards:
         cards:
           - entity: input_boolean.home
             type: custom:button-card
-            icon: attribute
-            style:
-              - padding: 8px
+            show_name: false
+            styles:
+              card:
+                - padding: 16px 8px
           - entity: input_boolean.sleep
             type: custom:button-card
-            icon: attribute
-            style:
-              - padding: 8px
+            show_name: false
+            styles:
+              card:
+                - padding: 16px 8px
           - entity: input_boolean.away
             type: custom:button-card
-            icon: attribute
-            style:
-              - padding: 8px
+            show_name: false
+            styles:
+              card:
+                - padding: 16px 8px
           - entity: input_boolean.vacation
             type: custom:button-card
-            icon: attribute
-            action: more_info
-            style:
-              - padding: 8px
+            show_name: false
+            tap_action:
+              action: more-info
+            styles:
+              card:
+                - padding: 16px 8px
       - type: glance
         entities:
           - sensor.template_motion_hall
