@@ -1,15 +1,19 @@
 title: Home
 
 resources:
+  - url: /community_plugin/lovelace-xiaomi-vacuum-card/xiaomi-vacuum-card.js
+    type: module
+  - url: /community_plugin/lovelace-multiple-entity-row/multiple-entity-row.js
+    type: module
+  - url: /community_plugin/lovelace-github-entity-row/github-entity-row.js
+    type: module
+
+  - url: /local/attribute-entity-row.js?v=1.1.0
+    type: module
+
   - url: /local/slider-entity-row.js?v=46be70e
     type: module
   - url: /local/toggle-lock-entity-row.js?v=a57ac15
-    type: module
-  - url: /local/attribute-entity-row.js?v=1.1.0
-    type: module
-  - url: /local/multiple-entity-row.js?v=2.2.0
-    type: module
-  - url: /local/github-entity-row.js?v=1.0.0
     type: module
   - url: /local/battery-entity.js?v=0.1.0
     type: module
@@ -18,8 +22,6 @@ resources:
   - url: /local/button-card.js?v=0.0.6
     type: module
   - url: /local/simple-thermostat.js?v=0.21.0
-    type: module
-  - url: /local/xiaomi-vacuum-card.js?v=3.0.0
     type: module
   - url: /local/mini-media-player.js?v=1.0.3
     type: module
