@@ -7,25 +7,24 @@ resources:
     type: module
   - url: /community_plugin/lovelace-github-entity-row/github-entity-row.js
     type: module
+  - url: /community_plugin/button-card/button-card.js
+    type: module
+  - url: /community_plugin/lovelace-slider-entity-row/slider-entity-row.js
+    type: module
+  - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
+    type: module
+  - url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
+    type: module
+  - url: /community_plugin/simple-thermostat/simple-thermostat.js
+    type: module
+  - url: /community_plugin/weather-card/weather-card.js
+    type: module
 
   - url: /local/attribute-entity-row.js?v=1.1.0
     type: module
-
-  - url: /local/slider-entity-row.js?v=46be70e
-    type: module
-  - url: /local/toggle-lock-entity-row.js?v=a57ac15
-    type: module
   - url: /local/battery-entity.js?v=0.1.0
     type: module
-  - url: /local/weather-card.js?v=bc4a508
-    type: module
-  - url: /local/button-card.js?v=0.0.6
-    type: module
-  - url: /local/simple-thermostat.js?v=0.21.0
-    type: module
-  - url: /local/mini-media-player.js?v=1.0.3
-    type: module
-  - url: /local/mini-graph-card.js?v=0.3.3
+  - url: /local/toggle-lock-entity-row.js?v=a57ac15
     type: module
 
 excluded_entities:
