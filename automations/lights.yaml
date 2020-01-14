@@ -1,4 +1,4 @@
-- alias: 'Livingroom lights on before sunset'
+- alias: 'Livingroom light on before sunset'
   initial_state: 'on'
   trigger:
   - platform: sun

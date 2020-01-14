@@ -6,7 +6,7 @@ cards:
     title: Automations
     show_header_toggle: true
     entities:
-      - automation.livingroom_light_on_at_sunset
+      - automation.livingroom_light_on_before_sunset
       - automation.outside_light_on_at_sunset
       - automation.hall_light_on_when_opening_front_door
       - automation.hall_light_on_when_movement
