@@ -53,6 +53,9 @@ cards:
           - entity: switch.power_bedroom_charger
             tap_action:
               action: toggle
+          - entity: switch.power_bedroom_charger_2
+            tap_action:
+              action: toggle
           - entity: switch.power_hall_light
             name: Gang
             tap_action:

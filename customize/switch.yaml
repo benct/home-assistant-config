@@ -34,7 +34,12 @@ switch.power_hall_light:
   icon: mdi:ceiling-light
 
 switch.power_bedroom_charger:
-  friendly_name: Lader
+  friendly_name: Lader (B)
+  assumed_state: false
+  icon: mdi:battery-charging-70
+
+switch.power_bedroom_charger_2:
+  friendly_name: Lader (K)
   assumed_state: false
   icon: mdi:battery-charging-70
 

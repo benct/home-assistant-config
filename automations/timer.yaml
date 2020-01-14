@@ -4,6 +4,9 @@
   - platform: state
     entity_id: switch.power_bedroom_charger
     to: 'on'
+  - platform: state
+    entity_id: switch.power_bedroom_charger_2
+    to: 'on'
   action:
   - service: timer.start
     entity_id: timer.bedroom_charger
@@ -13,6 +16,9 @@
   trigger:
   - platform: state
     entity_id: switch.power_bedroom_charger
+    to: 'off'
+  - platform: state
+    entity_id: switch.power_bedroom_charger_2
     to: 'off'
   condition:
   - condition: state
@@ -31,4 +37,6 @@
       entity_id: timer.bedroom_charger
   action:
   - service: switch.turn_off
-    entity_id: switch.power_bedroom_charger
+    entity_id:
+      - switch.power_bedroom_charger
+      - switch.power_bedroom_charger_2

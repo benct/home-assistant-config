@@ -113,6 +113,7 @@
       - switch.telldus_home
       - switch.telldus_sleep
       - switch.power_bedroom_charger
+      - switch.power_bedroom_charger_2
       - switch.power_livingroom_sofa
       - switch.power_livingroom_cabinet
       - switch.power_hall_light
@@ -149,6 +150,7 @@
       - switch.telldus_sleep
       - switch.telldus_away
       - switch.power_bedroom_charger
+      - switch.power_bedroom_charger_2
       - switch.power_hall_light
       - switch.power_livingroom_tv
       - switch.power_livingroom_sofa

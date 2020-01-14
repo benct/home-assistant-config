@@ -114,7 +114,7 @@ google_assistant:
         - Terrasselys
         - Balkonglys
     switch.power_bedroom_charger:
-      name: Charger
+      name: Charger Ben
       room: Bedroom
       aliases:
         - Bedroom Charger
@@ -122,6 +122,13 @@ google_assistant:
         - Bedroom Power
         - Soveromslader
         - Lader soverom
+    switch.power_bedroom_charger_2:
+      name: Charger Kristin
+      room: Bedroom
+      aliases:
+        - Bedroom Charger Kristin
+        - Phone Charger Kristin
+        - Soveromslader Kristin
     switch.power_livingroom_heater_left:
       expose: false
     switch.power_livingroom_heater_right:

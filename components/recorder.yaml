@@ -23,6 +23,7 @@ recorder:
       - switch.power_livingroom_sofa
       - switch.power_livingroom_cabinet
       - switch.power_bedroom_charger
+      - switch.power_bedroom_charger_2
       - switch.power_livingroom_heater_left
       - switch.power_livingroom_heater_right
 

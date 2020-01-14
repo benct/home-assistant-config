@@ -47,6 +47,12 @@ cards:
         primary:
           key: remaining
           entity: timer.bedroom_charger
+      - entity: switch.power_bedroom_charger_2
+        type: custom:attribute-entity-row
+        toggle: true
+        primary:
+          key: remaining
+          entity: timer.bedroom_charger
 
   - type: vertical-stack
     cards:
