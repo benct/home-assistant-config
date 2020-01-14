@@ -72,10 +72,13 @@ cards:
         name: false
         hide:
           temperature: true
-        modes:
-          heat: false
-          'off': false
-          'on': false
+        control:
+          hvac:
+            'off': false
+            heat: false
+          preset:
+            none: false
+            away: false
         sensors:
           - entity: sensor.smoke_sensor_livingroom_temperature
             name: Stue
@@ -83,8 +86,8 @@ cards:
             name: Gang
           - entity: sensor.netatmo_outside_temperature
             name: Ute
-          - attribute: away_mode
-            name: Away
+          - attribute: preset_mode
+            name: Preset
 
   - type: vertical-stack
     cards:
