@@ -22,7 +22,6 @@
   action:
   - service: rest_command.tomlin_sensor
     data_template:
-      action: 'set'
       sensor: '{{ trigger.to_state.object_id }}'
       value: '{{ trigger.to_state.state }}'
 

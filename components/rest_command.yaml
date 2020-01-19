@@ -1,6 +1,6 @@
 rest_command:
   tomlin_sensor:
-    url: 'https://tomlin.no/api/?service=hass&action={{ action }}'
+    url: 'https://api.tomlin.no/hass/set'
     method: POST
     headers:
       authorization: !secret tomlin_api_auth
