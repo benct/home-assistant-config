@@ -2,5 +2,5 @@ device_tracker:
   - platform: bluetooth_tracker
   - platform: nmap_tracker
     hosts: 192.168.0.0/24
-    home_interval: 10
+    home_interval: 60
     scan_options: " --privileged -sP "
