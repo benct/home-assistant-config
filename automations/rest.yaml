@@ -1,6 +1,5 @@
 - alias: 'REST set sensor data'
   initial_state: 'on'
-  hide_entity: true
   trigger:
   - platform: state
     entity_id: sensor.netatmo_living_room_temperature, sensor.netatmo_bedroom_temperature, sensor.netatmo_outside_temperature, sensor.smoke_sensor_livingroom_temperature
@@ -27,7 +26,6 @@
 
 #- alias: 'REST update sensor data'
 #  initial_state: 'on'
-#  hide_entity: true
 #  trigger:
 #  - platform: state
 #    entity_id: sensor.power_livingroom_tv_power, sensor.power_office_pc_power
