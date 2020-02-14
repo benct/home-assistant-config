@@ -6,36 +6,33 @@ cards:
     entities:
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
-        name: Primary
+        name: One entity
         secondary_info: last-changed
-        primary:
-          entity: sensor.netatmo_bedroom_max_temp
+        entities:
+          - sensor.netatmo_bedroom_max_temp
 
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
-        name: Primary + Secondary
+        name: Two entities
         secondary_info: last-changed
-        primary:
-          entity: sensor.netatmo_bedroom_min_temp
-        secondary:
-          entity: sensor.netatmo_bedroom_max_temp
+        entities:
+          - sensor.netatmo_bedroom_min_temp
+          - sensor.netatmo_bedroom_max_temp
 
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
-        name: Pri + Sec + Tertiary
+        name: Three entities
         secondary_info: last-changed
-        primary:
-          entity: sensor.netatmo_bedroom_humidity
-          name: humidity
-        secondary:
-          entity: sensor.netatmo_bedroom_min_temp
-        tertiary:
-          entity: sensor.netatmo_bedroom_max_temp
+        entities:
+          - entity: sensor.netatmo_bedroom_humidity
+            name: humidity
+          - sensor.netatmo_bedroom_min_temp
+          - sensor.netatmo_bedroom_max_temp
 
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
-        name: Info (secondary_info)
-        info:
+        name: Custom secondary_info
+        secondary_info:
           entity: sensor.smoke_sensor_livingroom_temperature
           attribute: battery_level
           name: Battery
@@ -45,104 +42,112 @@ cards:
       - entity: vacuum.xiaomi_vacuum_cleaner
         type: custom:multiple-entity-row
         name: Attributes
-        primary:
-          attribute: battery_level
-          name: Battery
-          unit: '%'
-        secondary:
-          attribute: status
-          name: Status
+        entities:
+          - attribute: battery_level
+            name: Battery
+            unit: '%'
+          - attribute: status
+            name: Status
 
       - entity:  sensor.lovelace_multiple_entity_row
         type: custom:multiple-entity-row
-        name: Attributes (hide_state)
-        hide_state: true
-        primary:
-          attribute: stargazers
-          name: Stars
-        secondary:
-          attribute: open_issues
-          name: Issues
-        tertiary:
-          attribute: open_pull_requests
-          name: PRs
+        name: Attributes (show_state=false)
+        show_state: false
+        entities:
+          - attribute: stargazers
+            name: Stars
+          - attribute: open_issues
+            name: Issues
+          - attribute: open_pull_requests
+            name: PRs
 
       - type: section
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
-        name: Hide names
-        primary:
-          entity: sensor.netatmo_bedroom_min_temp
-          name: false
-        secondary:
-          entity: sensor.netatmo_bedroom_max_temp
-          name: false
+        name: Hide headers (name)
+        entities:
+          - entity: sensor.netatmo_bedroom_min_temp
+            name: false
+          - entity: sensor.netatmo_bedroom_max_temp
+            name: false
 
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
-        name: Main state name
-        name_state: current
-        primary:
-          entity: sensor.netatmo_bedroom_min_temp
-        secondary:
-          entity: sensor.netatmo_bedroom_max_temp
+        name: Main state header
+        state_header: current
+        entities:
+          - sensor.netatmo_bedroom_min_temp
+          - sensor.netatmo_bedroom_max_temp
 
       - type: section
       - entity: switch.power_livingroom_tv
         type: custom:multiple-entity-row
         name: Toggle
         toggle: true
-        primary:
-          entity: sensor.power_livingroom_tv_power_2
-          name: Power
-        secondary:
-          entity: sensor.power_livingroom_tv_power
-          name: Total
+        entities:
+          - entity: sensor.power_livingroom_tv_power_2
+            name: Power
+          - entity: sensor.power_livingroom_tv_power
+            name: Total
 
       - entity: switch.power_livingroom_tv
         type: custom:multiple-entity-row
         name: Multiple toggles
-        name_state: main
+        state_header: main
         toggle: true
-        primary:
-          entity: switch.power_livingroom_tv
-          name: toggle1
-          toggle: true
-        secondary:
-          entity: switch.power_livingroom_tv
-          name: toggle2
-          toggle: true
+        entities:
+          - entity: switch.power_livingroom_tv
+            name: toggle1
+            toggle: true
+          - entity: switch.power_livingroom_tv
+            name: toggle2
+            toggle: true
+
+      - type: section
+      - entity: light.living_room
+        type: custom:multiple-entity-row
+        name: Toggle with tap_action
+        state_header: Livingroom
+        toggle: false
+        tap_action:
+          action: toggle
+        entities:
+          - entity: light.nightstand
+            name: Bedroom
+            tap_action:
+              action: toggle
+
+      - entity: light.living_room
+        type: custom:multiple-entity-row
+        name: Icons with tap_action
+        secondary_info: last-changed
+        entities:
+          - entity: light.living_room
+            icon: mdi:palette
+          - icon: mdi:lightbulb-off-outline
+            tap_action:
+              action: call-service
+              service: light.turn_off
+              service_data:
+                entity_id: light.living_room
+          - icon: mdi:lightbulb-outline
+            tap_action:
+              action: call-service
+              service: light.turn_on
+              service_data:
+                entity_id: light.living_room
 
       - type: section
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
         name: Customization
         icon: mdi:fire
-        unit: °F
+        unit:   F
         secondary_info: last-changed
-        primary:
-          name: custom name
-          entity: sensor.netatmo_bedroom_max_temp
-          unit: temp
-
-      - type: section
-      - entity: sensor.netatmo_bedroom_temperature
-        type: custom:multiple-entity-row
-        name: Icons (service calls)
-        secondary_info: last-changed
-        primary:
-          entity: light.living_room
-          icon: mdi:palette
-        secondary:
-          icon: mdi:lightbulb-off-outline
-          service: light.turn_off
-          service_data:
-            entity_id: light.living_room
-        tertiary:
-          icon: mdi:lightbulb-outline
-          service: light.turn_on
-          service_data:
-            entity_id: light.living_room
+        entities:
+          - name: custom name
+            entity: sensor.netatmo_bedroom_max_temp
+            unit: temp
 
   - type: vertical-stack
     cards:
