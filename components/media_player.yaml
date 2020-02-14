@@ -1,10 +1,4 @@
 media_player:
-  - platform: samsungtv
-    name: TV (Stue)
-    host: 192.168.0.18
-    timeout: 20
-    # port: 8001
-
   - platform: onkyo
     name: Receiver
     host: 192.168.0.22
