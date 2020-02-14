@@ -1,6 +1,7 @@
 google_assistant:
   project_id: home-assistant-203322
-  api_key: !secret ga_api_key
+  service_account: !include google-service-account.json
+  report_state: true
   exposed_domains:
     - input_boolean
     - switch

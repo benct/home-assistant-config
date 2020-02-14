@@ -23,6 +23,7 @@ ssl
 
 secrets.yaml
 known_devices.yaml
+google-service-account.json
 
 custom_components/
 www/community/
