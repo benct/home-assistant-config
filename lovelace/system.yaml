@@ -13,11 +13,11 @@ cards:
             format: relative
           - type: custom:multiple-entity-row
             entity: binary_sensor.updater
-            hide_state: true
-            primary:
-              entity: binary_sensor.updater
-              attribute: newest_version
-              name: false
+            show_state: false
+            entities:
+              - entity: binary_sensor.updater
+                attribute: newest_version
+                name: false
           - type: section
             label: Signal
           - sensor.netatmo_bedroom_wifi

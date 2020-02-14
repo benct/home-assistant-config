@@ -16,11 +16,10 @@ cards:
       - entity: sensor.netatmo_bedroom_temperature
         type: custom:multiple-entity-row
         secondary_info: last-changed
-        hide_state: true
-        primary:
-          entity: sensor.netatmo_bedroom_min_temp
-        secondary:
-          entity: sensor.netatmo_bedroom_max_temp
+        show_state: false
+        entities:
+          - sensor.netatmo_bedroom_min_temp
+          - sensor.netatmo_bedroom_max_temp
       - entity: sensor.netatmo_bedroom_humidity
         secondary_info: last-changed
       - entity: sensor.netatmo_bedroom_pressure
@@ -72,12 +71,11 @@ cards:
           - type: section
           - entity: switch.power_office_pc
             type: custom:multiple-entity-row
-            primary:
-              entity: sensor.power_office_pc_power_2
-              unit: W
-            secondary:
-              entity: sensor.power_office_pc_power
-              unit: kWt
+            entities:
+              - entity: sensor.power_office_pc_power_2
+                unit: W
+              - entity: sensor.power_office_pc_power
+                unit: kWt
       - type: entities
         title: Bod
         show_header_toggle: false
