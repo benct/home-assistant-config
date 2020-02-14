@@ -43,12 +43,14 @@ cards:
       - entity: switch.power_bedroom_charger
         type: custom:attribute-entity-row
         toggle: true
+        state_color: true
         primary:
           key: remaining
           entity: timer.bedroom_charger
       - entity: switch.power_bedroom_charger_2
         type: custom:attribute-entity-row
         toggle: true
+        state_color: true
         primary:
           key: remaining
           entity: timer.bedroom_charger
@@ -71,6 +73,7 @@ cards:
           - type: section
           - entity: switch.power_office_pc
             type: custom:multiple-entity-row
+            state_color: true
             entities:
               - entity: sensor.power_office_pc_power_2
                 unit: W

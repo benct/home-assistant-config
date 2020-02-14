@@ -14,6 +14,7 @@ cards:
           - type: custom:multiple-entity-row
             entity: binary_sensor.updater
             show_state: false
+            state_color: true
             entities:
               - entity: binary_sensor.updater
                 attribute: newest_version

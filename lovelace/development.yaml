@@ -84,6 +84,7 @@ cards:
         type: custom:multiple-entity-row
         name: Toggle
         toggle: true
+        state_color: true
         entities:
           - entity: sensor.power_livingroom_tv_power_2
             name: Power
@@ -93,8 +94,9 @@ cards:
       - entity: switch.power_livingroom_tv
         type: custom:multiple-entity-row
         name: Multiple toggles
-        state_header: main
         toggle: true
+        state_header: main
+        state_color: true
         entities:
           - entity: switch.power_livingroom_tv
             name: toggle1
@@ -107,8 +109,9 @@ cards:
       - entity: light.living_room
         type: custom:multiple-entity-row
         name: Toggle with tap_action
-        state_header: Livingroom
         toggle: false
+        state_header: Livingroom
+        state_color: true
         tap_action:
           action: toggle
         entities:
@@ -121,6 +124,7 @@ cards:
         type: custom:multiple-entity-row
         name: Icons with tap_action
         secondary_info: last-changed
+        state_color: true
         entities:
           - entity: light.living_room
             icon: mdi:palette

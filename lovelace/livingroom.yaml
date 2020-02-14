@@ -45,8 +45,10 @@ cards:
         secondary:
           key: status
       - type: section
-      - switch.power_livingroom_heater_left
-      - switch.power_livingroom_heater_right
+      - entity: switch.power_livingroom_heater_left
+        state_color: true
+      - entity: switch.power_livingroom_heater_right
+        state_color: true
       - type: section
       - entity: light.living_room
         type: custom:slider-entity-row
@@ -58,11 +60,14 @@ cards:
       - type: section
       - entity: switch.power_livingroom_cabinet
         name: Vitrineskap
+        state_color: true
       - entity: switch.power_livingroom_sofa
         name: Sofa/Ladere
+        state_color: true
       - type: section
       - entity: switch.power_livingroom_tv
         type: custom:multiple-entity-row
+        state_color: true
         entities:
           - entity: sensor.power_livingroom_tv_power_2
             unit: W

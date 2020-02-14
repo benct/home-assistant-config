@@ -32,3 +32,4 @@ cards:
       - type: section
       - entity: switch.power_outside_lights
         type: custom:toggle-lock-entity-row
+        state_color: true
