@@ -26,23 +26,23 @@ http:
 lovelace:
   mode: yaml
   resources:
-    - url: /community_plugin/lovelace-xiaomi-vacuum-card/xiaomi-vacuum-card.js
+    - url: /hacsfiles/lovelace-xiaomi-vacuum-card/xiaomi-vacuum-card.js
       type: module
-    - url: /community_plugin/lovelace-multiple-entity-row/multiple-entity-row.js
+    - url: /hacsfiles/lovelace-multiple-entity-row/multiple-entity-row.js
       type: module
-    - url: /community_plugin/lovelace-github-entity-row/github-entity-row.js
+    - url: /hacsfiles/lovelace-github-entity-row/github-entity-row.js
       type: module
-    - url: /community_plugin/button-card/button-card.js
+    - url: /hacsfiles/button-card/button-card.js
       type: module
-    - url: /community_plugin/lovelace-slider-entity-row/slider-entity-row.js
+    - url: /hacsfiles/lovelace-slider-entity-row/slider-entity-row.js
       type: module
-    - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
+    - url: /hacsfiles/mini-media-player/mini-media-player-bundle.js
       type: module
-    - url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
+    - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
       type: module
-    - url: /community_plugin/simple-thermostat/simple-thermostat.js
+    - url: /hacsfiles/simple-thermostat/simple-thermostat.js
       type: module
-    - url: /community_plugin/weather-card/weather-card.js
+    - url: /hacsfiles/weather-card/weather-card.js
       type: module
 
     - url: /local/attribute-entity-row.js?v=1.1.0

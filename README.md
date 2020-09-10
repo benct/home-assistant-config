@@ -43,11 +43,11 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [YR.no](https://www.home-assistant.io/components/sensor.yr/)
 - [Met.no](https://www.home-assistant.io/integrations/met/)
 
-## Lovelace UI
+## Frontend
 
-Frontend is using the new Lovelace UI, with a customized configuration and several custom cards.
+The frontend is using the new Lovelace UI, with a customized configuration and several custom cards.
 
-See [ui-lovelace.yaml](https://github.com/benct/home-assistant-config/blob/master/ui-lovelace.yaml) for more details.
+The [Home Assistant Community Store](https://github.com/hacs) (HACS) is used to install and update most of the custom cards/plugins.
 
 ### Theme
 
