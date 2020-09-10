@@ -75,11 +75,30 @@ cd /home/homeassistant/.homeassistant/
 sudo systemctl start home-assistant@homeassistant.service
 sudo systemctl stop home-assistant@homeassistant.service
 sudo systemctl restart home-assistant@homeassistant.service
-
-sudo su -s /bin/bash homeassistant
 ````
 
-### Updating
+### Virtual Environment
+
+See https://www.home-assistant.io/docs/installation/raspberry-pi/
+```
+sudo -u homeassistant -H -s
+source /srv/homeassistant/bin/activate
+```
+
+### Upgrading
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+Stop the home-assistant service before running the following:
+```
+sudo -u homeassistant -H -s
+source /srv/homeassistant/bin/activate
+pip3 install --upgrade homeassistant
+```
+
+#### hassbian-config (deprecated)
 ```bash
 sudo hassbian-config upgrade hassbian
 sudo hassbian-config upgrade homeassistant
