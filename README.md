@@ -51,7 +51,7 @@ See [ui-lovelace.yaml](https://github.com/benct/home-assistant-config/blob/maste
 
 ### Theme
 
-[Midnight theme](https://community.home-assistant.io/t/midnight-theme/28598) from the HA Community (by marcelhoffs).
+[Midnight theme](https://github.com/home-assistant-community-themes/midnight) from the HA Community (by marcelhoffs).
 
 ### My Lovelace Cards
 I've created and currently maintain a few plugins (cards) for Home Assistant's Lovelace UI:
