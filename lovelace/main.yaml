@@ -178,4 +178,4 @@ cards:
           - entity: sensor.thermometer_storeroom_temperature
             name: Bod
       - type: custom:weather-card
-        entity: weather.met_no
+        entity: weather.home

@@ -41,7 +41,7 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 
 #### Weather:
 - [YR.no](https://www.home-assistant.io/components/sensor.yr/)
-- [Met.no](https://www.home-assistant.io/components/weather.met/)
+- [Met.no](https://www.home-assistant.io/integrations/met/)
 
 ## Lovelace UI
 
