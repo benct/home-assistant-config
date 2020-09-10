@@ -1,6 +1,6 @@
 path: bedroom
 title: Soverom / Kontor
-icon: mdi:hotel
+icon: mdi:bed
 cards:
   - type: entities
     title: Soverom

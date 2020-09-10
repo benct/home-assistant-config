@@ -1,6 +1,6 @@
 sensor.netatmo_bedroom_co2:
   friendly_name: CO2
-  icon: mdi:periodic-table-co2
+  icon: mdi:molecule-co2
 
 sensor.netatmo_bedroom_humidity:
   friendly_name: Luftfuktighet
@@ -24,7 +24,7 @@ sensor.netatmo_bedroom_wifi:
 
 sensor.netatmo_living_room_co2:
   friendly_name: CO2
-  icon: mdi:periodic-table-co2
+  icon: mdi:molecule-co2
 
 sensor.netatmo_living_room_humidity:
   friendly_name: Luftfuktighet
