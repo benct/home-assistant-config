@@ -1,7 +1,6 @@
-camera:
-  - platform: rpi_camera
-    image_width: 1024
-    image_height: 768
-    image_quality: 25
-    image_rotation: 0
-    timelapse: 1000
+rpi_camera:
+  image_width: 1024
+  image_height: 768
+  image_quality: 25
+  image_rotation: 0
+  timelapse: 1000
