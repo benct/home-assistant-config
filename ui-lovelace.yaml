@@ -1,32 +1,5 @@
 title: Home
 
-resources:
-  - url: /community_plugin/lovelace-xiaomi-vacuum-card/xiaomi-vacuum-card.js
-    type: module
-  - url: /community_plugin/lovelace-multiple-entity-row/multiple-entity-row.js
-    type: module
-  - url: /community_plugin/lovelace-github-entity-row/github-entity-row.js
-    type: module
-  - url: /community_plugin/button-card/button-card.js
-    type: module
-  - url: /community_plugin/lovelace-slider-entity-row/slider-entity-row.js
-    type: module
-  - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
-    type: module
-  - url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
-    type: module
-  - url: /community_plugin/simple-thermostat/simple-thermostat.js
-    type: module
-  - url: /community_plugin/weather-card/weather-card.js
-    type: module
-
-  - url: /local/attribute-entity-row.js?v=1.1.0
-    type: module
-  - url: /local/battery-entity.js?v=0.1.0
-    type: module
-  - url: /local/toggle-lock-entity-row.js?v=a57ac15
-    type: module
-
 excluded_entities:
   - binary_sensor.smoke_sensor_livingroom
   - binary_sensor.motion_hall
