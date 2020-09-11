@@ -41,19 +41,19 @@ cards:
         name: Scene
       - type: section
       - entity: switch.power_bedroom_charger
-        type: custom:attribute-entity-row
+        type: custom:multiple-entity-row
         toggle: true
         state_color: true
-        primary:
-          key: remaining
-          entity: timer.bedroom_charger
+        entities:
+          - entity: timer.bedroom_charger
+            attribute: remaining
       - entity: switch.power_bedroom_charger_2
-        type: custom:attribute-entity-row
+        type: custom:multiple-entity-row
         toggle: true
         state_color: true
-        primary:
-          key: remaining
-          entity: timer.bedroom_charger
+        entities:
+          - entity: timer.bedroom_charger
+            attribute: remaining
 
   - type: vertical-stack
     cards:

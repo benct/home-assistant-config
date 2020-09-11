@@ -49,9 +49,6 @@ lovelace:
     - url: /hacsfiles/weather-card/weather-card.js
       type: module
 
-    - url: /local/attribute-entity-row.js?v=1.1.0
-      type: module
-
 frontend:
   themes: !include_dir_merge_named themes
 

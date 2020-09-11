@@ -29,21 +29,23 @@ cards:
         name: Stue (tak)
         secondary_info: last-changed
       - entity: sensor.template_smoke_sensor_livingroom
-        type: custom:attribute-entity-row
+        type: custom:multiple-entity-row
         name: Røykvarsler
-        primary:
-          entity: sensor.smoke_sensor_livingroom_temperature
-          key: battery_level
-          name: Battery
-          unit: '%'
+        secondary_info: last-changed
+        entities:
+          - entity: sensor.smoke_sensor_livingroom_temperature
+            attribute: battery_level
+            name: Battery
+            unit: '%'
       - entity: vacuum.xiaomi_vacuum_cleaner
-        type: custom:attribute-entity-row
-        primary:
-          key: battery_level
-          name: Battery
-          unit: '%'
-        secondary:
-          key: status
+        type: custom:multiple-entity-row
+        secondary_info: last-changed
+        entities:
+          - attribute: battery_level
+            name: Battery
+            unit: '%'
+          - attribute: status
+            name: State
       - type: section
       - entity: switch.power_livingroom_heater_left
         state_color: true
@@ -88,23 +90,25 @@ cards:
       - entity: sensor.motion_hall_luminance
         secondary_info: last-changed
       - entity: sensor.template_motion_hall
-        type: custom:attribute-entity-row
+        type: custom:multiple-entity-row
         name: Bevegelse
-        primary:
-          entity: sensor.motion_hall_temperature
-          key: battery_level
-          name: Battery
-          unit: '%'
+        secondary_info: last-changed
+        entities:
+          - entity: sensor.motion_hall_temperature
+            attribute: battery_level
+            name: Battery
+            unit: '%'
       - type: section
       - entity: sensor.magnet_door_main_temperature
         secondary_info: last-changed
       - entity: sensor.template_magnet_door_main
-        type: custom:attribute-entity-row
-        primary:
-          entity: sensor.magnet_door_main_temperature
-          key: battery_level
-          name: Battery
-          unit: '%'
+        type: custom:multiple-entity-row
+        secondary_info: last-changed
+        entities:
+          - entity: sensor.magnet_door_main_temperature
+            attribute: battery_level
+            name: Battery
+            unit: '%'
       - entity: sensor.template_magnet_door_balcony
       - type: section
       - switch.power_hall_light
