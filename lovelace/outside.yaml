@@ -30,6 +30,8 @@ cards:
       - sensor.yr_wind_speed
       - air_quality.air_quality_norway
       - type: section
-      - entity: switch.power_outside_lights
-        type: custom:toggle-lock-entity-row
-        state_color: true
+      - type: custom:restriction-card
+        row: true
+        card:
+          entity: switch.power_outside_lights
+          state_color: true

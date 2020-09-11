@@ -42,14 +42,14 @@ lovelace:
       type: module
     - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
       type: module
+    - url: /hacsfiles/restriction-card/restriction-card.js
+      type: module
     - url: /hacsfiles/simple-thermostat/simple-thermostat.js
       type: module
     - url: /hacsfiles/weather-card/weather-card.js
       type: module
 
     - url: /local/attribute-entity-row.js?v=1.1.0
-      type: module
-    - url: /local/toggle-lock-entity-row.js?v=a57ac15
       type: module
 
 frontend:

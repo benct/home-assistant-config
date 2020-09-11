@@ -114,11 +114,13 @@ cards:
             secondary_info: last-changed
           - entity: sensor.netatmo_living_room_co2
             secondary_info: last-changed
-          - entity: group.livingroom_heaters
-            type: custom:toggle-lock-entity-row
-            name: Varmeovner
-            icon: mdi:radiator
-            state_color: true
+          - type: custom:restriction-card
+            row: true
+            card:
+              entity: group.livingroom_heaters
+              name: Varmeovner
+              icon: mdi:radiator
+              state_color: true
           - type: section
           - entity: sensor.motion_hall_temperature
             name: Gang
