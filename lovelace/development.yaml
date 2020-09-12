@@ -157,17 +157,48 @@ cards:
     cards:
       - type: custom:xiaomi-vacuum-card
         entity: vacuum.xiaomi_vacuum_cleaner
-        name: false
-      - type: custom:xiaomi-vacuum-card
-        entity: vacuum.xiaomi_vacuum_cleaner
+        image: /local/img/vacuum.png
         name: Xiaomi Vacuum
       - type: custom:xiaomi-vacuum-card
         entity: vacuum.xiaomi_vacuum_cleaner
+        image: /local/img/vacuum.png
         buttons: false
       - type: custom:xiaomi-vacuum-card
         entity: vacuum.xiaomi_vacuum_cleaner
-        image: false
+        image: /local/img/vacuum.png
+        name: false
       - type: custom:xiaomi-vacuum-card
         entity: vacuum.xiaomi_vacuum_cleaner
-        image: false
+
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Xiaomi
+        vendor: xiaomi
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Valetudo
+        vendor: valetudo
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Roomba
         vendor: roomba
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Robovac
+        vendor: robovac
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Ecovacs
+        vendor: ecovacs
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Deebot
+        vendor: deebot
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Deebot (slim)
+        vendor: deebot_slim
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Neato
+        vendor: neato
