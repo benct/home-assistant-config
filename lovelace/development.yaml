@@ -202,3 +202,27 @@ cards:
         entity: vacuum.xiaomi_vacuum_cleaner
         name: Vendor Neato
         vendor: neato
+
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Custom
+        state:
+          mode: false
+          cleaned_area:
+            key: total_cleaned_area
+            icon: mdi:fan
+            label: 'Test: '
+            unit: ' m2'
+        attributes:
+          sensor: false
+          cleaned_area:
+            key: total_cleaned_area
+            label: 'Cleaned: '
+            unit: ' m2'
+        buttons:
+          locate: false
+          test:
+            icon: mdi:light-switch
+            service: light.turn_off
+            service_data:
+              entity_id: light.living_room
