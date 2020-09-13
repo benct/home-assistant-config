@@ -70,9 +70,6 @@ cards:
             entity: light.living_room
             toggle: true
           - type: custom:slider-entity-row
-            entity: light.bedroom_main
-            toggle: true
-          - type: custom:slider-entity-row
             entity: light.nightstand
             toggle: true
       - type: custom:mini-media-player
@@ -165,6 +162,7 @@ cards:
     cards:
       - type: custom:xiaomi-vacuum-card
         entity: vacuum.xiaomi_vacuum_cleaner
+        image: /local/img/vacuum.png
         name: false
       - type: history-graph
         hours_to_show: 48
