@@ -57,10 +57,6 @@ recorder:
       - sensor.netatmo_bedroom_pressure
       - sensor.motion_hall_luminance
 
-      - sensor.yr_cloudiness
-      - sensor.yr_precipitation
-      - sensor.yr_wind_speed
-
       - sensor.power_livingroom_tv_power_2
       - sensor.power_office_pc_power_2
 

@@ -40,7 +40,6 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [Spotify](https://www.home-assistant.io/components/media_player.spotify/)
 
 #### Weather:
-- [YR.no](https://www.home-assistant.io/components/sensor.yr/)
 - [Met.no](https://www.home-assistant.io/integrations/met/)
 
 ## Frontend

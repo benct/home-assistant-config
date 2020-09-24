@@ -22,16 +22,13 @@ cards:
           - sensor.netatmo_outside_max_temp
       - entity: sensor.netatmo_outside_humidity
         secondary_info: last-changed
-      - type: section
-      - entity: sensor.yr_temperature
+      - entity: air_quality.air_quality_norway
         secondary_info: last-changed
-      - sensor.yr_precipitation
-      - sensor.yr_cloudiness
-      - sensor.yr_wind_speed
-      - air_quality.air_quality_norway
       - type: section
       - type: custom:restriction-card
         row: true
         card:
           entity: switch.power_outside_lights
           state_color: true
+  - type: weather-forecast
+    entity: weather.home
