@@ -13,11 +13,11 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 ## Hardware
 
 - [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
-- [Telldus Tellstick ZNet Lite v2](https://home-assistant.io/components/tellduslive/)
-- [Netatmo Weather Station](https://home-assistant.io/components/netatmo/)
-- [Google Nest Mini / Hub](https://www.home-assistant.io/components/google_assistant/)
-- [Phillips Hue Hub](https://www.home-assistant.io/components/hue/)
-- [Xiaomi Roborock Vacuum](https://www.home-assistant.io/components/vacuum.xiaomi_miio/)
+- [Telldus Tellstick ZNet Lite v2](https://home-assistant.io/integrations/tellduslive/)
+- [Netatmo Weather Station](https://home-assistant.io/integrations/netatmo/)
+- [Google Nest Mini / Hub](https://www.home-assistant.io/integrations/google_assistant/)
+- [Phillips Hue Hub](https://www.home-assistant.io/integrations/hue/)
+- [Xiaomi Roborock Vacuum](https://www.home-assistant.io/integrations/xiaomi_miio/)
 
 #### Devices:
 - [Telldus Thermometer/hygrometer](http://telldus.com/produkt/inneute-termohygro-sensor-433mhz/)
@@ -30,14 +30,14 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [Fibaro Smoke Sensor 2](https://products.z-wavealliance.org/products/1273)
 - [Fibaro Flood Sensor](https://products.z-wavealliance.org/products/2791)
 - [Fibaro Door/Window Sensor 2](https://products.z-wavealliance.org/products/2181)
-- [Phillips Hue Lights](https://www.home-assistant.io/components/light.hue/)
-- [Raspberry Pi Camera V2](https://www.home-assistant.io/components/camera.rpi_camera/)
+- [Phillips Hue Lights](https://www.home-assistant.io/integrations/hue/)
+- [Raspberry Pi Camera V2](https://www.home-assistant.io/integrations/rpi_camera/)
 
 #### Media:
-- [Samsung Smart TV](https://home-assistant.io/components/media_player.samsungtv/)
-- [Onkyo Receiver](https://www.home-assistant.io/components/media_player.onkyo/)
-- [Google ChromeCast](https://www.home-assistant.io/components/media_player.cast/)
-- [Spotify](https://www.home-assistant.io/components/media_player.spotify/)
+- [Samsung Smart TV](https://home-assistant.io/integrations/samsungtv/)
+- [Onkyo Receiver](https://www.home-assistant.io/integrations/onkyo/)
+- [Google ChromeCast](https://www.home-assistant.io/integrations/cast/)
+- [Spotify](https://www.home-assistant.io/integrations/spotify/)
 
 #### Weather:
 - [Met.no](https://www.home-assistant.io/integrations/met/)
