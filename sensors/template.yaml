@@ -37,31 +37,25 @@
       unit_of_measurement: '%'
 
     count_binary_sensor:
-      entity_id: sensor.date
       friendly_name: 'Binary Sensors'
       value_template: '{{ states.binary_sensor | list | length }}'
 
     count_sensor:
-      entity_id: sensor.date
       friendly_name: 'Sensors'
       value_template: '{{ states.sensor | list | length }}'
 
     count_switch:
-      entity_id: sensor.date
       friendly_name: 'Switches'
       value_template: '{{ states.switch | list | length }}'
 
     count_light:
-      entity_id: sensor.date
       friendly_name: 'Lights'
       value_template: '{{ states.light | list | length }}'
 
     count_media_player:
-      entity_id: sensor.date
       friendly_name: 'Media Players'
       value_template: '{{ states.media_player | list | length }}'
 
     count_automations:
-      entity_id: sensor.date
       friendly_name: 'Automations'
       value_template: '{{ states.automation | list | length }}'
