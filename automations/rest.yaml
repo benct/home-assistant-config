@@ -20,7 +20,7 @@
     value_template: '{{ trigger.to_state.state != "unknown" }}'
   action:
   - service: rest_command.tomlin_sensor
-    data_template:
+    data:
       sensor: '{{ trigger.to_state.object_id }}'
       value: '{{ trigger.to_state.state }}'
 
@@ -35,7 +35,7 @@
 #    event: sunrise
 #  action:
 #  - service: rest_command.tomlin_sensor
-#    data_template:
+#    data:
 #      action: 'update'
 #      sensor: '{{ trigger.to_state.object_id }}'
 #      value: '{{ trigger.to_state.state }}'
