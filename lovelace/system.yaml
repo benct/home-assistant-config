@@ -82,20 +82,20 @@ cards:
                   - sensor.disk_free
           - type: entities
             entities:
-              - type: custom:battery-entity
-                entity: sensor.netatmo_living_room_battery_percent
-                name: Stue
-              - type: custom:battery-entity
+              - type: custom:battery-entity-row
                 entity: sensor.netatmo_outside_battery_percent
                 name: Ute
-              - type: custom:battery-entity
-                name: Stue (tak)
+              - type: custom:battery-entity-row
+                entity: sensor.netatmo_living_room_battery_percent
+                name: Stue
+              - type: custom:battery-entity-row
                 entity: sensor.template_smoke_sensor_livingroom_battery
-              - type: custom:battery-entity
+                name: Stue (tak)
+              - type: custom:battery-entity-row
                 entity: sensor.template_flood_sensor_bathroom_battery
-              - type: custom:battery-entity
+              - type: custom:battery-entity-row
                 entity: sensor.template_magnet_door_main_battery
-              - type: custom:battery-entity
+              - type: custom:battery-entity-row
                 entity: sensor.template_motion_hall_battery
 
   - type: vertical-stack

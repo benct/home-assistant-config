@@ -32,9 +32,9 @@ lovelace:
       type: module
     - url: /hacsfiles/lovelace-github-entity-row/github-entity-row.js
       type: module
-    - url: /hacsfiles/button-card/button-card.js
+    - url: /hacsfiles/lovelace-battery-entity-row/battery-entity-row.js
       type: module
-    - url: /hacsfiles/lovelace-battery-entity/battery-entity.js
+    - url: /hacsfiles/button-card/button-card.js
       type: module
     - url: /hacsfiles/lovelace-slider-entity-row/slider-entity-row.js
       type: module
