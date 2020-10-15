@@ -94,14 +94,17 @@ cards:
                 entity: sensor.netatmo_living_room_battery_percent
                 name: Stue
               - type: custom:battery-entity-row
-                entity: sensor.template_smoke_sensor_livingroom_battery
+                entity: sensor.smoke_sensor_livingroom_temperature
                 name: Stue (tak)
               - type: custom:battery-entity-row
-                entity: sensor.template_flood_sensor_bathroom_battery
+                entity: sensor.flood_sensor_bathroom_temperature
+                name: Bad
               - type: custom:battery-entity-row
-                entity: sensor.template_magnet_door_main_battery
+                entity: sensor.magnet_door_main_temperature
+                name: Ytterdør
               - type: custom:battery-entity-row
-                entity: sensor.template_motion_hall_battery
+                entity: sensor.motion_hall_temperature
+                name: Gang
               - type: custom:battery-entity-row
                 entity: sensor.bedroom_switch_battery_level
                 name: Soverom (bryter)

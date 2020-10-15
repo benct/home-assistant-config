@@ -3,26 +3,14 @@
     template_smoke_sensor_livingroom:
       friendly_name: 'Røykvarsler'
       value_template: '{% if is_state("binary_sensor.smoke_sensor_livingroom", "off") %}Standby{% else %}Brann!?{% endif %}'
-    template_smoke_sensor_livingroom_battery:
-      friendly_name: 'Røykvarsler'
-      value_template: '{{ states.sensor.smoke_sensor_livingroom_temperature.attributes.battery_level }}'
-      unit_of_measurement: '%'
 
     template_flood_sensor_bathroom:
       friendly_name: 'Vannsensor'
       value_template: '{% if is_state("binary_sensor.flood_sensor_bathroom", "off") %}Standby{% else %}Lekkasje!?{% endif %}'
-    template_flood_sensor_bathroom_battery:
-      friendly_name: 'Vannsensor'
-      value_template: '{{ states.sensor.flood_sensor_bathroom_temperature.attributes.battery_level }}'
-      unit_of_measurement: '%'
 
     template_magnet_door_main:
       friendly_name: 'Ytterdør'
       value_template: '{% if is_state("binary_sensor.magnet_door_main", "off") %}Lukket{% else %}Åpen!{% endif %}'
-    template_magnet_door_main_battery:
-      friendly_name: 'Ytterdør'
-      value_template: '{{ states.sensor.magnet_door_main_temperature.attributes.battery_level }}'
-      unit_of_measurement: '%'
 
     template_magnet_door_balcony:
       friendly_name: 'Balkong'
@@ -31,10 +19,6 @@
     template_motion_hall:
       friendly_name: 'Bevegelse (Gang)'
       value_template: '{% if is_state("binary_sensor.motion_hall", "off") %}Ingen{% else %}Bevegelse!{% endif %}'
-    template_motion_hall_battery:
-      friendly_name: 'Bevegelse (Gang)'
-      value_template: '{{ states.sensor.motion_hall_temperature.attributes.battery_level }}'
-      unit_of_measurement: '%'
 
     count_binary_sensor:
       friendly_name: 'Binary Sensors'

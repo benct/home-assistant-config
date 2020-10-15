@@ -158,9 +158,9 @@ cards:
     entities:
       - type: custom:battery-entity-row
         name: Full
-        entity: sensor.template_smoke_sensor_livingroom_battery
+        entity: sensor.smoke_sensor_livingroom_temperature
       - type: custom:battery-entity-row
-        entity: sensor.template_flood_sensor_bathroom_battery
+        entity: sensor.flood_sensor_bathroom_temperature
         name: Warning
         icon: mdi:battery-30
         warning: 100
@@ -171,13 +171,13 @@ cards:
         entity: sensor.netatmo_outside_battery_percent
         name: Unavailable
       - type: custom:battery-entity-row
-        entity: sensor.template_magnet_door_main_battery
+        entity: sensor.magnet_door_main_temperature
         name: Living Room
       - type: custom:battery-entity-row
-        entity: sensor.template_flood_sensor_bathroom_battery
+        entity: sensor.flood_sensor_bathroom_temperature
         name: Bathroom
       - type: custom:battery-entity-row
-        entity: sensor.template_motion_hall_battery
+        entity: sensor.motion_hall_temperature
         name: Custom
         icon: mdi:fire
         unit: '#'
