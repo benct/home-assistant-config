@@ -16,6 +16,7 @@ recorder:
       - light.bedroom
       - light.nightstand
 
+      - switch.bathroom_thermostat
       - switch.power_hall_light
       - switch.power_outside_lights
       - switch.power_office_pc
@@ -34,6 +35,8 @@ recorder:
       - sensor.disk_use_percent
       - sensor.fast_com_download
 
+      - sensor.bathroom_thermostat_floor_temperature
+      - sensor.bathroom_thermostat_internal_temperature
       - sensor.flood_sensor_bathroom_temperature
       - sensor.smoke_sensor_livingroom_temperature
       - sensor.magnet_door_main_temperature
@@ -57,6 +60,7 @@ recorder:
       - sensor.netatmo_bedroom_pressure
       - sensor.motion_hall_luminance
 
+      - sensor.bathroom_thermostat_power_current
       - sensor.power_livingroom_tv_power_2
       - sensor.power_office_pc_power_2
 
