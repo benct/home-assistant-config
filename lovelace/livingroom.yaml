@@ -110,3 +110,42 @@ cards:
       - entity: sensor.template_magnet_door_balcony
       - type: section
       - switch.power_hall_light
+
+  - type: entities
+    title: Bad
+    show_header_toggle: false
+    entities:
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.flood_sensor_bathroom_temperature
+          - sensor.bathroom_thermostat_floor_temperature
+        align_icon: state
+        show:
+          name: false
+      - type: section
+      - entity: sensor.flood_sensor_bathroom_temperature
+        type: custom:multiple-entity-row
+        name: Temperatur
+        secondary_info: last-changed
+        entities:
+          - entity: sensor.flood_sensor_bathroom_temperature
+            attribute: battery_level
+            name: Battery
+            unit: '%'
+      - type: section
+      - entity: sensor.bathroom_thermostat_floor_temperature
+        type: custom:multiple-entity-row
+        name: Termostat
+        secondary_info: last-changed
+        entities:
+          - sensor.bathroom_thermostat_internal_temperature
+      - entity: sensor.bathroom_thermostat_power_current
+        type: custom:multiple-entity-row
+        name: Forbruk
+        secondary_info: last-changed
+        entities:
+          - sensor.bathroom_thermostat_power_voltage
+          - sensor.bathroom_thermostat_power_total
+      - type: section
+      - switch.bathroom_thermostat
+      - switch.bathroom_thermostat_power

@@ -1,6 +1,27 @@
 sensor.telldus_outside_temperature:
   hidden: true
 
+sensor.bathroom_thermostat_floor_temperature:
+  friendly_name: Temperatur (gulv)
+
+sensor.bathroom_thermostat_internal_temperature:
+  friendly_name: Temperatur (vegg)
+
+sensor.bathroom_thermostat_power_current:
+  friendly_name: Forbruk
+  unit_of_measurement: W
+  icon: mdi:flash
+
+sensor.bathroom_thermostat_power_total:
+  friendly_name: Forbruk (total)
+  unit_of_measurement: kWt
+  icon: mdi:flash
+
+sensor.bathroom_thermostat_power_voltage:
+  friendly_name: Volt
+  unit_of_measurement: V
+  icon: mdi:flash-outline
+
 sensor.flood_sensor_bathroom_temperature:
   friendly_name: Temperatur
 
