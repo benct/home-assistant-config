@@ -39,9 +39,11 @@ cards:
           - type: custom:github-entity-row
             entity: sensor.lovelace_xiaomi_vacuum_card
           - type: custom:github-entity-row
+            entity: sensor.lovelace_multiple_entity_row
+          - type: custom:github-entity-row
             entity: sensor.lovelace_github_entity_row
           - type: custom:github-entity-row
-            entity: sensor.lovelace_multiple_entity_row
+            entity: sensor.lovelace_battery_entity_row
           - type: custom:github-entity-row
             entity: sensor.lovelace_attribute_entity_row
 
