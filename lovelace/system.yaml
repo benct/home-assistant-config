@@ -97,6 +97,12 @@ cards:
                 entity: sensor.template_magnet_door_main_battery
               - type: custom:battery-entity-row
                 entity: sensor.template_motion_hall_battery
+              - type: custom:battery-entity-row
+                entity: sensor.bedroom_switch_battery_level
+                name: Soverom (bryter)
+              - type: custom:battery-entity-row
+                entity: sensor.living_room_switch_battery_level
+                name: Stue (bryter)
 
   - type: vertical-stack
     cards:
