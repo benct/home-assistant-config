@@ -128,6 +128,9 @@ cards:
           - entity: sensor.flood_sensor_bathroom_temperature
             name: Bad
             secondary_info: last-changed
+          - entity: sensor.bathroom_thermostat_floor_temperature
+            name: Termostat
+            secondary_info: last-changed
           - type: section
           - entity: sensor.netatmo_bedroom_temperature
             name: Soverom

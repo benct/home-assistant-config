@@ -32,6 +32,7 @@ cards:
         type: custom:multiple-entity-row
         name: Røykvarsler
         secondary_info: last-changed
+        state_color: true
         entities:
           - entity: sensor.smoke_sensor_livingroom_temperature
             attribute: battery_level
@@ -40,6 +41,7 @@ cards:
       - entity: vacuum.xiaomi_vacuum_cleaner
         type: custom:multiple-entity-row
         secondary_info: last-changed
+        state_color: true
         entities:
           - attribute: battery_level
             name: Battery
@@ -91,6 +93,7 @@ cards:
         type: custom:multiple-entity-row
         name: Bevegelse
         secondary_info: last-changed
+        state_color: true
         entities:
           - entity: sensor.motion_hall_temperature
             attribute: battery_level
@@ -102,14 +105,17 @@ cards:
       - entity: sensor.template_magnet_door_main
         type: custom:multiple-entity-row
         secondary_info: last-changed
+        state_color: true
         entities:
           - entity: sensor.magnet_door_main_temperature
             attribute: battery_level
             name: Battery
             unit: '%'
       - entity: sensor.template_magnet_door_balcony
+        state_color: true
       - type: section
-      - switch.power_hall_light
+      - entity: switch.power_hall_light
+        state_color: true
 
   - type: entities
     title: Bad
@@ -136,16 +142,21 @@ cards:
       - entity: sensor.bathroom_thermostat_floor_temperature
         type: custom:multiple-entity-row
         name: Termostat
+        state_header: Gulv
         secondary_info: last-changed
         entities:
-          - sensor.bathroom_thermostat_internal_temperature
+          - entity: sensor.bathroom_thermostat_internal_temperature
+            name: Vegg
       - entity: sensor.bathroom_thermostat_power_current
         type: custom:multiple-entity-row
-        name: Forbruk
+        name: Strøm
+        state_header: Forbruk
         secondary_info: last-changed
         entities:
           - sensor.bathroom_thermostat_power_voltage
           - sensor.bathroom_thermostat_power_total
       - type: section
-      - switch.bathroom_thermostat
-      - switch.bathroom_thermostat_power
+      - entity: switch.bathroom_thermostat
+        state_color: true
+      - entity: switch.bathroom_thermostat_power
+        state_color: true
