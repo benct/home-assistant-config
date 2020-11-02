@@ -28,13 +28,13 @@ sensor.netatmo_home_living_room_min_temp:
 sensor.netatmo_home_living_room_max_temp:
   friendly_name: max
 
-sensor.netatmo_home_outside_humidity:
+sensor.netatmo_home_outdoor_humidity:
   friendly_name: Luftfuktighet
-sensor.netatmo_home_outside_radio:
+sensor.netatmo_home_outdoor_radio:
   friendly_name: Ute (Radio)
-sensor.netatmo_home_outside_temperature:
+sensor.netatmo_home_outdoor_temperature:
   friendly_name: Temperatur
-sensor.netatmo_home_outside_min_temp:
+sensor.netatmo_home_outdoor_min_temp:
   friendly_name: min
-sensor.netatmo_home_outside_max_temp:
+sensor.netatmo_home_outdoor_max_temp:
   friendly_name: max
