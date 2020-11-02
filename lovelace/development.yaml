@@ -4,32 +4,32 @@ cards:
   - type: entities
     show_header_toggle: false
     entities:
-      - entity: sensor.netatmo_bedroom_temperature
+      - entity: sensor.netatmo_home_temperature
         type: custom:multiple-entity-row
         name: One entity
         secondary_info: last-changed
         entities:
-          - sensor.netatmo_bedroom_max_temp
+          - sensor.netatmo_home_max_temp
 
-      - entity: sensor.netatmo_bedroom_temperature
+      - entity: sensor.netatmo_home_temperature
         type: custom:multiple-entity-row
         name: Two entities
         secondary_info: last-changed
         entities:
-          - sensor.netatmo_bedroom_min_temp
-          - sensor.netatmo_bedroom_max_temp
+          - sensor.netatmo_home_min_temp
+          - sensor.netatmo_home_max_temp
 
-      - entity: sensor.netatmo_bedroom_temperature
+      - entity: sensor.netatmo_home_temperature
         type: custom:multiple-entity-row
         name: Three entities
         secondary_info: last-changed
         entities:
-          - entity: sensor.netatmo_bedroom_humidity
+          - entity: sensor.netatmo_home_humidity
             name: humidity
-          - sensor.netatmo_bedroom_min_temp
-          - sensor.netatmo_bedroom_max_temp
+          - sensor.netatmo_home_min_temp
+          - sensor.netatmo_home_max_temp
 
-      - entity: sensor.netatmo_bedroom_temperature
+      - entity: sensor.netatmo_home_temperature
         type: custom:multiple-entity-row
         name: Custom secondary_info
         secondary_info:
@@ -62,22 +62,22 @@ cards:
             name: PRs
 
       - type: section
-      - entity: sensor.netatmo_bedroom_temperature
+      - entity: sensor.netatmo_home_temperature
         type: custom:multiple-entity-row
         name: Hide headers (name)
         entities:
-          - entity: sensor.netatmo_bedroom_min_temp
+          - entity: sensor.netatmo_home_min_temp
             name: false
-          - entity: sensor.netatmo_bedroom_max_temp
+          - entity: sensor.netatmo_home_max_temp
             name: false
 
-      - entity: sensor.netatmo_bedroom_temperature
+      - entity: sensor.netatmo_home_temperature
         type: custom:multiple-entity-row
         name: Main state header
         state_header: current
         entities:
-          - sensor.netatmo_bedroom_min_temp
-          - sensor.netatmo_bedroom_max_temp
+          - sensor.netatmo_home_min_temp
+          - sensor.netatmo_home_max_temp
 
       - type: section
       - entity: switch.power_livingroom_tv
@@ -142,7 +142,7 @@ cards:
                 entity_id: light.living_room
 
       - type: section
-      - entity: sensor.netatmo_bedroom_temperature
+      - entity: sensor.netatmo_home_temperature
         type: custom:multiple-entity-row
         name: Customization
         icon: mdi:fire
@@ -150,7 +150,7 @@ cards:
         secondary_info: last-changed
         entities:
           - name: custom name
-            entity: sensor.netatmo_bedroom_max_temp
+            entity: sensor.netatmo_home_max_temp
             unit: temp
 
   - type: entities
@@ -165,10 +165,10 @@ cards:
         icon: mdi:battery-30
         warning: 100
       - type: custom:battery-entity-row
-        entity: sensor.netatmo_living_room_battery_percent
+        entity: sensor.netatmo_home_living_room_battery_percent
         name: Critical
       - type: custom:battery-entity-row
-        entity: sensor.netatmo_outside_battery_percent
+        entity: sensor.netatmo_home_outdoor_battery_percent
         name: Unavailable
       - type: custom:battery-entity-row
         entity: sensor.magnet_door_main_temperature

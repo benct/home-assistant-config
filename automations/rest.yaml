@@ -2,7 +2,7 @@
   initial_state: 'on'
   trigger:
   - platform: state
-    entity_id: sensor.netatmo_living_room_temperature, sensor.netatmo_bedroom_temperature, sensor.netatmo_outside_temperature, sensor.smoke_sensor_livingroom_temperature
+    entity_id: sensor.netatmo_home_living_room_temperature, sensor.netatmo_home_temperature, sensor.netatmo_home_outdoor_temperature, sensor.smoke_sensor_livingroom_temperature
   - platform: state
     entity_id: sensor.flood_sensor_bathroom_temperature, sensor.motion_hall_temperature, sensor.thermometer_storeroom_temperature, sensor.thermometer_office_temperature
   - platform: state

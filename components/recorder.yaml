@@ -41,23 +41,23 @@ recorder:
       - sensor.smoke_sensor_livingroom_temperature
       - sensor.magnet_door_main_temperature
       - sensor.motion_hall_temperature
-      - sensor.netatmo_living_room_temperature
-      - sensor.netatmo_bedroom_temperature
+      - sensor.netatmo_home_temperature
+      - sensor.netatmo_home_living_room_temperature
+      - sensor.netatmo_home_outdoor_temperature
       - sensor.thermometer_office_temperature
       - sensor.thermometer_storeroom_temperature
       - sensor.thermometer_freezer_temperature
-      - sensor.netatmo_outside_temperature
 
-      - sensor.netatmo_living_room_humidity
-      - sensor.netatmo_bedroom_humidity
+      - sensor.netatmo_home_humidity
+      - sensor.netatmo_home_living_room_humidity
+      - sensor.netatmo_home_outdoor_humidity
       - sensor.thermometer_office_humidity
       - sensor.thermometer_storeroom_humidity
-      - sensor.netatmo_outside_humidity
 
-      - sensor.netatmo_living_room_co2
-      - sensor.netatmo_bedroom_co2
-      - sensor.netatmo_bedroom_noise
-      - sensor.netatmo_bedroom_pressure
+      - sensor.netatmo_home_living_room_co2
+      - sensor.netatmo_home_co2
+      - sensor.netatmo_home_noise
+      - sensor.netatmo_home_pressure
       - sensor.motion_hall_luminance
 
       - sensor.bathroom_thermostat_power_current

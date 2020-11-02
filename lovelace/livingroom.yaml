@@ -8,21 +8,21 @@ cards:
     entities:
       - type: custom:mini-graph-card
         entities:
-          - sensor.netatmo_living_room_temperature
+          - sensor.netatmo_home_living_room_temperature
         align_icon: state
         show:
           name: false
       - type: section
-      - entity: sensor.netatmo_living_room_temperature
+      - entity: sensor.netatmo_home_living_room_temperature
         type: custom:multiple-entity-row
         secondary_info: last-changed
         show_state: false
         entities:
-          - sensor.netatmo_living_room_min_temp
-          - sensor.netatmo_living_room_max_temp
-      - entity: sensor.netatmo_living_room_humidity
+          - sensor.netatmo_home_living_room_min_temp
+          - sensor.netatmo_home_living_room_max_temp
+      - entity: sensor.netatmo_home_living_room_humidity
         secondary_info: last-changed
-      - entity: sensor.netatmo_living_room_co2
+      - entity: sensor.netatmo_home_living_room_co2
         secondary_info: last-changed
       - type: section
       - entity: sensor.smoke_sensor_livingroom_temperature

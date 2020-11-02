@@ -8,19 +8,19 @@ cards:
     entities:
       - type: custom:mini-graph-card
         entities:
-          - sensor.netatmo_outside_temperature
+          - sensor.netatmo_home_outdoor_temperature
         align_icon: state
         show:
           name: false
       - type: section
-      - entity: sensor.netatmo_outside_temperature
+      - entity: sensor.netatmo_home_outdoor_temperature
         type: custom:multiple-entity-row
         secondary_info: last-changed
         show_state: false
         entities:
-          - sensor.netatmo_outside_min_temp
-          - sensor.netatmo_outside_max_temp
-      - entity: sensor.netatmo_outside_humidity
+          - sensor.netatmo_home_outdoor_min_temp
+          - sensor.netatmo_home_outdoor_max_temp
+      - entity: sensor.netatmo_home_outdoor_humidity
         secondary_info: last-changed
       - entity: air_quality.air_quality_norway
         secondary_info: last-changed

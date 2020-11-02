@@ -24,9 +24,9 @@ cards:
             name: HACS
           - type: section
             label: Signal
-          - sensor.netatmo_bedroom_wifi
-          - sensor.netatmo_living_room_radio
-          - sensor.netatmo_outside_radio
+          - sensor.netatmo_home_wifi
+          - sensor.netatmo_home_living_room_radio
+          - sensor.netatmo_home_outdoor_radio
           - type: section
             label: Network
           - sensor.ipv4_address_eth0
@@ -88,10 +88,10 @@ cards:
           - type: entities
             entities:
               - type: custom:battery-entity-row
-                entity: sensor.netatmo_outside_battery_percent
+                entity: sensor.netatmo_home_outdoor_battery_percent
                 name: Ute
               - type: custom:battery-entity-row
-                entity: sensor.netatmo_living_room_battery_percent
+                entity: sensor.netatmo_home_living_room_battery_percent
                 name: Stue
               - type: custom:battery-entity-row
                 entity: sensor.smoke_sensor_livingroom_temperature

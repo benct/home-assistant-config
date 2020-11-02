@@ -93,7 +93,7 @@ cards:
             name: Stue
           - entity: sensor.motion_hall_temperature
             name: Gang
-          - entity: sensor.netatmo_outside_temperature
+          - entity: sensor.netatmo_home_outdoor_temperature
             name: Ute
           - attribute: preset_mode
             name: Preset
@@ -103,13 +103,13 @@ cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - entity: sensor.netatmo_living_room_temperature
+          - entity: sensor.netatmo_home_living_room_temperature
             name: Stue
             secondary_info: last-changed
           - entity: sensor.smoke_sensor_livingroom_temperature
             name: Stue (tak)
             secondary_info: last-changed
-          - entity: sensor.netatmo_living_room_co2
+          - entity: sensor.netatmo_home_living_room_co2
             secondary_info: last-changed
           - type: custom:restriction-card
             row: true
@@ -132,12 +132,12 @@ cards:
             name: Termostat
             secondary_info: last-changed
           - type: section
-          - entity: sensor.netatmo_bedroom_temperature
+          - entity: sensor.netatmo_home_temperature
             name: Soverom
             secondary_info: last-changed
-          - entity: sensor.netatmo_bedroom_co2
+          - entity: sensor.netatmo_home_co2
             secondary_info: last-changed
-          - entity: sensor.netatmo_bedroom_noise
+          - entity: sensor.netatmo_home_noise
             secondary_info: last-changed
           - type: section
           - entity: sensor.thermometer_office_temperature
@@ -150,7 +150,7 @@ cards:
             name: Fryser
             secondary_info: last-changed
           - type: section
-          - entity: sensor.netatmo_outside_temperature
+          - entity: sensor.netatmo_home_outdoor_temperature
             name: Ute
             secondary_info: last-changed
           - entity: air_quality.air_quality_norway
@@ -174,7 +174,7 @@ cards:
             name: Stue
           - entity: sensor.motion_hall_temperature
             name: Gang
-          - entity: sensor.netatmo_bedroom_temperature
+          - entity: sensor.netatmo_home_temperature
             name: Soverom
           - entity: sensor.thermometer_office_temperature
             name: Kontor

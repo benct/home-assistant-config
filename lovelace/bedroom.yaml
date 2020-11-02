@@ -8,25 +8,25 @@ cards:
     entities:
       - type: custom:mini-graph-card
         entities:
-          - sensor.netatmo_bedroom_temperature
+          - sensor.netatmo_home_temperature
         align_icon: state
         show:
           name: false
       - type: section
-      - entity: sensor.netatmo_bedroom_temperature
+      - entity: sensor.netatmo_home_temperature
         type: custom:multiple-entity-row
         secondary_info: last-changed
         show_state: false
         entities:
-          - sensor.netatmo_bedroom_min_temp
-          - sensor.netatmo_bedroom_max_temp
-      - entity: sensor.netatmo_bedroom_humidity
+          - sensor.netatmo_home_min_temp
+          - sensor.netatmo_home_max_temp
+      - entity: sensor.netatmo_home_humidity
         secondary_info: last-changed
-      - entity: sensor.netatmo_bedroom_pressure
+      - entity: sensor.netatmo_home_pressure
         secondary_info: last-changed
-      - entity: sensor.netatmo_bedroom_noise
+      - entity: sensor.netatmo_home_noise
         secondary_info: last-changed
-      - entity: sensor.netatmo_bedroom_co2
+      - entity: sensor.netatmo_home_co2
         secondary_info: last-changed
       - type: section
       - entity: light.bedroom_main
