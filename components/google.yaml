@@ -39,7 +39,7 @@ google_assistant:
       expose: false
     light.living_room_2:
       expose: false
-    light.living_room_tv:
+    light.living_room_sofa:
       expose: false
     light.nightstand:
       expose: false
@@ -55,7 +55,13 @@ google_assistant:
       expose: false
     light.ikea_tv_bench:
       expose: false
-    light.entertainment_tv:
+    light.entertainment_area_1:
+      expose: false
+    light.hue_play_1:
+      expose: false
+    light.hue_play_2:
+      expose: false
+    light.tv:
       expose: false
     input_boolean.home:
       name: Home

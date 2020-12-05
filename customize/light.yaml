@@ -2,6 +2,14 @@ light.living_room:
   friendly_name: Stue
   icon: mdi:floor-lamp
 
+light.living_room_sofa:
+  friendly_name: Sofa
+  icon: mdi:desk-lamp
+
+light.entertainment_area_1:
+  friendly_name: TV
+  icon: mdi:television-ambient-light
+
 light.bedroom:
   friendly_name: Soverom
   icon: mdi:track-light

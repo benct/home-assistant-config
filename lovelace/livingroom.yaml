@@ -57,6 +57,12 @@ cards:
       - entity: light.living_room
         type: custom:slider-entity-row
         toggle: true
+      - type: custom:slider-entity-row
+        entity: light.living_room_sofa
+        toggle: true
+      - type: custom:slider-entity-row
+        entity: light.entertainment_area_1
+        toggle: true
       - entity: input_select.livingroom_hue_scene
         name: Scene
       - type: section
