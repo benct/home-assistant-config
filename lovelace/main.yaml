@@ -73,7 +73,7 @@ cards:
             entity: light.living_room_sofa
             toggle: true
           - type: custom:slider-entity-row
-            entity: light.entertainment_area_1
+            entity: light.entertainment_tv
             toggle: true
           - type: section
           - type: custom:slider-entity-row

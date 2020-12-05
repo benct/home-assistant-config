@@ -6,7 +6,7 @@ light.living_room_sofa:
   friendly_name: Sofa
   icon: mdi:desk-lamp
 
-light.entertainment_area_1:
+light.entertainment_tv:
   friendly_name: TV
   icon: mdi:television-ambient-light
 

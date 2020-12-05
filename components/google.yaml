@@ -55,7 +55,7 @@ google_assistant:
       expose: false
     light.ikea_tv_bench:
       expose: false
-    light.entertainment_area_1:
+    light.entertainment_tv:
       expose: false
     light.hue_play_1:
       expose: false
