@@ -13,7 +13,8 @@ homeassistant:
         - 192.168.0.0/24
         - fd00::/8
   allowlist_external_dirs:
-    - /home/homeassistant/camera
+    - /config/camera
+    - /tmp
   customize: !include_dir_merge_named customize
   packages: !include_dir_named components
 
