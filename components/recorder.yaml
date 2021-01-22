@@ -22,7 +22,7 @@ recorder:
       - switch.power_livingroom_heater_right
 
       - sensor.cpu_temperature
-      - sensor.processor_use
+      - sensor.processor_use_percent
       - sensor.load_1m
       - sensor.memory_use_percent
       - sensor.disk_use_percent

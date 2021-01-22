@@ -19,10 +19,11 @@ cards:
               - entity: binary_sensor.updater
                 attribute: newest_version
                 name: false
-          - sensor.cert_expiry_timestamp_home_tomlin_no
+          - entity: sensor.cert_expiry_timestamp_home_tomlin_no
+            name: Cert Expiry
+          - binary_sensor.rpi_power_status
           - entity: sensor.hacs
             name: HACS
-          - binary_sensor.rpi_power_status
           - type: section
             label: Signal
           - sensor.netatmo_home_wifi
