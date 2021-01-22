@@ -3,13 +3,6 @@ recorder:
   purge_keep_days: 30
   include:
     entities:
-      - device_tracker.c869cd9e5486
-      - device_tracker.d8c46a89875e
-      - device_tracker.3497f6b6f0b0
-      - device_tracker.8c85903b5cd5
-      - device_tracker.5c51816404e9
-      - device_tracker.20ee28f3168c
-
       - climate.termostat_stue
 
       - light.living_room

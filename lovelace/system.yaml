@@ -130,13 +130,3 @@ cards:
             icon: mdi:blur-radial
           - entity: sensor.count_media_player
             icon: mdi:cast
-      - type: entities
-        title: Enheter
-        show_header_toggle: false
-        entities:
-          - entity: device_tracker.8c85903b5cd5
-          - entity: device_tracker.3497f6b6f0b0
-          - entity: device_tracker.galaxy_note9
-          - entity: device_tracker.5c51816404e9
-          - entity: device_tracker.c869cd9e5486
-          - entity: device_tracker.20ee28f3168c

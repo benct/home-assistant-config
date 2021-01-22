@@ -2,7 +2,6 @@ history:
   use_include_order: true
   include:
     domains:
-      - device_tracker
       - switch
       - sensor
       - light
