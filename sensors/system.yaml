@@ -39,3 +39,6 @@
     - path: 'benct/lovelace-github-entity-row'
     - path: 'benct/lovelace-battery-entity-row'
     - path: 'benct/lovelace-attribute-entity-row'
+
+- platform: cert_expiry
+  host: !secret hostname
