@@ -1,7 +1,7 @@
 # Home Assistant Configuration
 
 Configuration for my [home-assistant](https://www.home-assistant.io) setup running on
-[Hassbian](https://www.home-assistant.io/docs/installation/hassbian/installation/) on a
+[Home Assistant OS](https://github.com/home-assistant/operating-system) on a
 [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/).
 
 [![Static version](https://img.shields.io/badge/version-2021.1.4-blue.svg)](https://github.com/benct/home-assistant-config/blob/master/.HA_VERSION)
@@ -22,7 +22,6 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 #### Devices:
 - [Telldus Thermometer/hygrometer](http://telldus.com/produkt/inneute-termohygro-sensor-433mhz/)
 - [Nexa MYCR-3 Plug](https://www.clasohlson.com/no/Nexa-MYCR-3,-3-pack-fjernstr%C3%B8mbrytere--/36-6902)
-- [Nexa LWST-605 Switch](https://www.clasohlson.com/no/Nexa-LWST-605-trådløs-veggstrømbryter-/36-4614)
 - [Nexa WMR-1000 Receiver](https://www.clasohlson.com/no/Nexa-WMR-1000-innbyggingsmottaker-p%C3%A5-av-/36-5940)
 - [Luxorparts Outdoor Plug](https://www.kjell.com/no/produkter/elektro-og-verktoy/smarte-hjem/433mhz/fjernstrombryter/utenpaliggende-bryter/luxorparts-mini-fjernstrombryter-for-utendorsbruk-3000-w-p50990)
 - [Fibaro Wall Plug](https://products.z-wavealliance.org/products/1653)
@@ -46,7 +45,7 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 
 The frontend is using the new Lovelace UI, with a customized configuration and several custom cards.
 
-The [Home Assistant Community Store](https://github.com/hacs) (HACS) is used to install and update most of the custom cards/plugins.
+[Home Assistant Community Store](https://github.com/hacs) (HACS) is used to install and update most of the custom cards/plugins.
 
 ### Theme
 
@@ -58,27 +57,35 @@ I've created and currently maintain a few plugins (cards) for Home Assistant's L
 - [xiaomi-vacuum-card](https://github.com/benct/lovelace-xiaomi-vacuum-card)
 - [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row)
 - [github-entity-row](https://github.com/benct/lovelace-github-entity-row)
-- [~~attribute-entity-row~~](https://github.com/benct/lovelace-attribute-entity-row)
+- [battery-entity-row](https://github.com/benct/lovelace-battery-entity-row)
 
 [![BMC](https://www.buymeacoffee.com/assets/img/custom_images/white_img.png)](https://www.buymeacoff.ee/benct)
 
-## Maintenance
+## HassOS Maintenance
 
 ```bash
-ssh user@192.168.0.XX
-cd /home/homeassistant/.homeassistant/
+ssh root@192.168.0.XX
 ```
 
-### Service
+### SSH to host
+
+- https://gist.github.com/enegaard/a57af286205914bd912270c89650fb1b
+- https://developers.home-assistant.io/docs/operating-system/debugging/#ssh-access-to-the-host
+
 ```bash
+ssh root@homeassistant -p 22222
+```
+
+## Hassbian Maintenance (deprecated)
+```bash
+cd /home/homeassistant/.homeassistant/
+
 sudo systemctl start home-assistant@homeassistant.service
 sudo systemctl stop home-assistant@homeassistant.service
 sudo systemctl restart home-assistant@homeassistant.service
 ```
 
 ### Virtual Environment
-
-See https://www.home-assistant.io/docs/installation/raspberry-pi/
 ```bash
 sudo -u homeassistant -H -s
 source /srv/homeassistant/bin/activate
@@ -95,12 +102,6 @@ Stop the home-assistant service before running the following:
 sudo -u homeassistant -H -s
 source /srv/homeassistant/bin/activate
 pip3 install --upgrade homeassistant
-```
-
-#### hassbian-config (deprecated)
-```bash
-sudo hassbian-config upgrade hassbian
-sudo hassbian-config upgrade homeassistant
 ```
 
 ### Certificate
