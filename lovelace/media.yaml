@@ -5,13 +5,11 @@ cards:
   - type: media-control
     entity: media_player.ccultra_tomlin
   - type: media-control
-    entity: media_player.kristin_chromecast
+    entity: media_player.minilynet
   - type: media-control
     entity: media_player.spotify
   - type: media-control
     entity: media_player.receiver
-  - type: media-control
-    entity: media_player.tv_stue
   - type: media-control
     entity: media_player.getbox
   - type: media-control

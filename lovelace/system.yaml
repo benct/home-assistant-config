@@ -19,9 +19,10 @@ cards:
               - entity: binary_sensor.updater
                 attribute: newest_version
                 name: false
-          - sensor.cert_expiry_home_tomlin_no
+          - sensor.cert_expiry_timestamp_home_tomlin_no
           - entity: sensor.hacs
             name: HACS
+          - binary_sensor.rpi_power_status
           - type: section
             label: Signal
           - sensor.netatmo_home_wifi
@@ -57,7 +58,7 @@ cards:
             points_per_hour: 2
           - type: custom:mini-graph-card
             entities:
-              - sensor.processor_use
+              - sensor.processor_use_percent
             line_color: lightgreen
             points_per_hour: 2
       - type: horizontal-stack
@@ -74,43 +75,41 @@ cards:
             points_per_hour: 2
       - type: horizontal-stack
         cards:
-          - type: vertical-stack
-            cards:
-              - type: custom:mini-graph-card
-                entities:
-                  - sensor.disk_use_percent
-                line_color: lightblue
-                points_per_hour: 2
-              - type: glance
-                entities:
-                  - sensor.disk_use
-                  - sensor.disk_free
-          - type: entities
+          - type: custom:mini-graph-card
             entities:
-              - type: custom:battery-entity-row
-                entity: sensor.netatmo_home_outdoor_battery_percent
-                name: Ute
-              - type: custom:battery-entity-row
-                entity: sensor.netatmo_home_living_room_battery_percent
-                name: Stue
-              - type: custom:battery-entity-row
-                entity: sensor.smoke_sensor_livingroom_temperature
-                name: Stue (tak)
-              - type: custom:battery-entity-row
-                entity: sensor.flood_sensor_bathroom_temperature
-                name: Bad
-              - type: custom:battery-entity-row
-                entity: sensor.magnet_door_main_temperature
-                name: Ytterdør
-              - type: custom:battery-entity-row
-                entity: sensor.motion_hall_temperature
-                name: Gang
-              - type: custom:battery-entity-row
-                entity: sensor.bedroom_switch_battery_level
-                name: Soverom (bryter)
-              - type: custom:battery-entity-row
-                entity: sensor.living_room_switch_battery_level
-                name: Stue (bryter)
+              - sensor.disk_use_percent
+            line_color: lightblue
+            points_per_hour: 2
+          - type: glance
+            entities:
+              - sensor.disk_use
+              - sensor.disk_free
+      - type: entities
+        entities:
+          - type: custom:battery-entity-row
+            entity: sensor.netatmo_home_outdoor_battery_percent
+            name: Ute
+          - type: custom:battery-entity-row
+            entity: sensor.netatmo_home_living_room_battery_percent
+            name: Stue
+          - type: custom:battery-entity-row
+            entity: sensor.smoke_sensor_livingroom_temperature
+            name: Stue (tak)
+          - type: custom:battery-entity-row
+            entity: sensor.flood_sensor_bathroom_temperature
+            name: Bad
+          - type: custom:battery-entity-row
+            entity: sensor.magnet_door_main_temperature
+            name: Ytterdør
+          - type: custom:battery-entity-row
+            entity: sensor.motion_hall_temperature
+            name: Gang
+          - type: custom:battery-entity-row
+            entity: sensor.bedroom_switch_battery_level
+            name: Soverom (bryter)
+          - type: custom:battery-entity-row
+            entity: sensor.living_room_switch_battery_level
+            name: Stue (bryter)
 
   - type: vertical-stack
     cards:
