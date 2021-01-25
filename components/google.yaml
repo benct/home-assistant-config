@@ -5,7 +5,6 @@ google_assistant:
   exposed_domains:
     - input_boolean
     - switch
-    - light
     - climate
   entity_config:
     climate.termostat_stue:
@@ -31,38 +30,8 @@ google_assistant:
       room: Living Room
       expose: true
       aliases:
-        - GetTV
         - Decoder
-    light.living_room:
-      expose: false
-    light.living_room_1:
-      expose: false
-    light.living_room_2:
-      expose: false
-    light.living_room_sofa:
-      expose: false
-    light.nightstand:
-      expose: false
-    light.bedroom:
-      expose: false
-    light.bedroom_main:
-      expose: false
-    light.bedroom_b:
-      expose: false
-    light.bedroom_k:
-      expose: false
-    light.other:
-      expose: false
-    light.ikea_tv_bench:
-      expose: false
-    light.entertainment_tv:
-      expose: false
-    light.hue_play_1:
-      expose: false
-    light.hue_play_2:
-      expose: false
-    light.tv:
-      expose: false
+        - GetTV
     input_boolean.home:
       name: Home
       room: Status
@@ -146,9 +115,25 @@ google_assistant:
       expose: false
     switch.thermometer_storeroom:
       expose: false
-    switch.remote_livingroom_sofa:
+    switch.bathroom_thermostat:
+      expose: false
+    switch.bathroom_thermostat_external:
+      expose: false
+    switch.bathroom_thermostat_power:
+      name: Thermostat
+      room: Bathroom
+      aliases:
+        - Bathroom Thermostat
+        - Termostat Bad
+    switch.remote_bedroom:
       expose: false
     switch.remote_hall:
+      expose: false
+    switch.christmas1:
+      expose: false
+    switch.christmas2:
+      expose: false
+    switch.christmas3:
       expose: false
     switch.telldus_home:
       expose: false
