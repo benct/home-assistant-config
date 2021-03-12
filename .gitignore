@@ -20,6 +20,7 @@ ssl
 .storage
 .config*
 .spotify-token-cache
+.HA_VERSION
 
 secrets.yaml
 known_devices.yaml
@@ -27,3 +28,4 @@ google-service-account.json
 
 custom_components/
 www/community/
+blueprints/
