@@ -154,5 +154,3 @@ cards:
       - type: section
       - entity: switch.bathroom_thermostat
         state_color: true
-      - entity: switch.bathroom_thermostat_power
-        state_color: true
