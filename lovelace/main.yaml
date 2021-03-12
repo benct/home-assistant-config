@@ -40,7 +40,6 @@ cards:
         entities:
           - sensor.template_motion_hall
           - sensor.template_magnet_door_main
-          - sensor.template_magnet_door_balcony
           - sensor.template_smoke_sensor_livingroom
           - sensor.template_flood_sensor_bathroom
       - type: glance

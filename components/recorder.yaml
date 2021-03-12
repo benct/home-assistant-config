@@ -32,7 +32,6 @@ recorder:
       - sensor.bathroom_thermostat_internal_temperature
       - sensor.flood_sensor_bathroom_temperature
       - sensor.smoke_sensor_livingroom_temperature
-      - sensor.magnet_door_main_temperature
       - sensor.motion_hall_temperature
       - sensor.netatmo_home_temperature
       - sensor.netatmo_home_living_room_temperature

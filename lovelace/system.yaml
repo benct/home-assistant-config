@@ -100,9 +100,6 @@ cards:
             entity: sensor.flood_sensor_bathroom_temperature
             name: Bad
           - type: custom:battery-entity-row
-            entity: sensor.magnet_door_main_temperature
-            name: Ytterdør
-          - type: custom:battery-entity-row
             entity: sensor.motion_hall_temperature
             name: Gang
           - type: custom:battery-entity-row

@@ -106,18 +106,8 @@ cards:
             name: Battery
             unit: '%'
       - type: section
-      - entity: sensor.magnet_door_main_temperature
-        secondary_info: last-changed
       - entity: sensor.template_magnet_door_main
-        type: custom:multiple-entity-row
         secondary_info: last-changed
-        state_color: true
-        entities:
-          - entity: sensor.magnet_door_main_temperature
-            attribute: battery_level
-            name: Battery
-            unit: '%'
-      - entity: sensor.template_magnet_door_balcony
         state_color: true
       - type: section
       - entity: switch.power_hall_light

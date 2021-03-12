@@ -171,7 +171,7 @@ cards:
         entity: sensor.netatmo_home_outdoor_battery_percent
         name: Unavailable
       - type: custom:battery-entity-row
-        entity: sensor.magnet_door_main_temperature
+        entity: sensor.living_room_switch_battery_level
         name: Living Room
       - type: custom:battery-entity-row
         entity: sensor.flood_sensor_bathroom_temperature

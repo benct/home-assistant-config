@@ -25,9 +25,6 @@ sensor.bathroom_thermostat_power_voltage:
 sensor.flood_sensor_bathroom_temperature:
   friendly_name: Temperatur
 
-sensor.magnet_door_main_temperature:
-  friendly_name: Temperatur
-
 sensor.motion_hall_luminance:
   friendly_name: Lysnivå
   icon: mdi:ceiling-light
