@@ -4,7 +4,6 @@
   - platform: state
     entity_id:
       - input_boolean.home
-      - switch.telldus_home
     from: 'off'
     to: 'on'
   action:
@@ -13,10 +12,6 @@
       - input_boolean.sleep
       - input_boolean.away
       - input_boolean.vacation
-  - service: switch.turn_off
-    entity_id:
-      - switch.telldus_sleep
-      - switch.telldus_away
   - service: climate.set_hvac_mode
     entity_id: climate.termostat_stue
     data:
@@ -32,7 +27,6 @@
   - platform: state
     entity_id:
       - input_boolean.home
-      - switch.telldus_home
     from: 'off'
     to: 'on'
   condition:
@@ -49,8 +43,6 @@
       - switch.power_outside_lights
       - switch.power_livingroom_sofa
       - switch.power_livingroom_cabinet
-      - switch.christmas1
-      - switch.christmas2
   - service: light.turn_on
     entity_id:
       - light.living_room
@@ -61,7 +53,6 @@
   - platform: state
     entity_id:
       - input_boolean.sleep
-      - switch.telldus_sleep
     from: 'off'
     to: 'on'
   action:
@@ -72,13 +63,9 @@
       - input_boolean.vacation
   - service: switch.turn_off
     entity_id:
-      - switch.telldus_home
-      - switch.telldus_away
       - switch.power_livingroom_sofa
       - switch.power_livingroom_cabinet
       - switch.power_outside_lights
-      - switch.christmas1
-      - switch.christmas2
   - service: light.turn_off
     entity_id:
       - light.living_room
@@ -96,7 +83,6 @@
   - platform: state
     entity_id:
       - input_boolean.away
-      - switch.telldus_away
     from: 'off'
     to: 'on'
   action:
@@ -107,15 +93,11 @@
       - input_boolean.vacation
   - service: switch.turn_off
     entity_id:
-      - switch.telldus_home
-      - switch.telldus_sleep
       - switch.power_bedroom_charger
       - switch.power_bedroom_charger_2
       - switch.power_livingroom_sofa
       - switch.power_livingroom_cabinet
       - switch.power_outside_lights
-      - switch.christmas1
-      - switch.christmas2
   - service: light.turn_off
     entity_id:
       - light.living_room
@@ -142,9 +124,6 @@
       - input_boolean.away
   - service: switch.turn_off
     entity_id:
-      - switch.telldus_home
-      - switch.telldus_sleep
-      - switch.telldus_away
       - switch.power_bedroom_charger
       - switch.power_bedroom_charger_2
       - switch.power_livingroom_tv
@@ -154,8 +133,6 @@
       - switch.power_livingroom_heater_right
       - switch.power_office_pc
       - switch.power_outside_lights
-      - switch.christmas1
-      - switch.christmas2
   - service: light.turn_off
     entity_id:
       - light.living_room
@@ -180,5 +157,3 @@
   action:
   - service: input_boolean.turn_on
     entity_id: input_boolean.sleep
-  - service: switch.turn_on
-    entity_id: switch.telldus_sleep

@@ -122,17 +122,3 @@ google_assistant:
       expose: false
     switch.remote_hall:
       expose: false
-    switch.christmas1:
-      expose: false
-    switch.christmas2:
-      expose: false
-    switch.christmas3:
-      expose: false
-    switch.telldus_home:
-      expose: false
-    switch.telldus_sleep:
-      expose: false
-    switch.telldus_away:
-      expose: false
-    switch.telldus_lights:
-      expose: false

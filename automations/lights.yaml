@@ -15,8 +15,6 @@
     entity_id:
       - switch.power_livingroom_cabinet
       - switch.power_livingroom_sofa
-      - switch.christmas1
-      - switch.christmas2
 
 - alias: 'Outside light on at sunset'
   initial_state: 'on'
