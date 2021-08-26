@@ -38,11 +38,6 @@ switch.power_outside_lights:
   assumed_state: false
   icon: mdi:lightbulb-on-outline
 
-switch.power_hall_light:
-  friendly_name: Lys
-  assumed_state: true
-  icon: mdi:ceiling-light
-
 switch.power_bedroom_charger:
   friendly_name: Lader (B)
   assumed_state: false

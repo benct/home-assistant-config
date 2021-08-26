@@ -110,8 +110,9 @@ cards:
         secondary_info: last-changed
         state_color: true
       - type: section
-      - entity: switch.power_hall_light
-        state_color: true
+      - type: custom:slider-entity-row
+        entity: light.hall
+        toggle: true
 
   - type: entities
     title: Bad

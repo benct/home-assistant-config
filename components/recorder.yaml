@@ -8,9 +8,9 @@ recorder:
       - light.living_room
       - light.bedroom
       - light.nightstand
+      - light.hall
 
       - switch.bathroom_thermostat
-      - switch.power_hall_light
       - switch.power_outside_lights
       - switch.power_office_pc
       - switch.power_livingroom_tv

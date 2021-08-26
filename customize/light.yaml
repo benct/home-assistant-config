@@ -21,3 +21,7 @@ light.bedroom_main:
 light.nightstand:
   friendly_name: Nattbord
   icon: mdi:lamp
+
+light.hall:
+  friendly_name: Gang
+  icon: mdi:ceiling-light

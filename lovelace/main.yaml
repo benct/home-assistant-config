@@ -55,16 +55,16 @@ cards:
           - entity: switch.power_bedroom_charger_2
             tap_action:
               action: toggle
-          - entity: switch.power_hall_light
-            name: Gang
-            tap_action:
-              action: toggle
           - entity: switch.power_outside_lights
             tap_action:
               action: toggle
       - type: entities
         show_header_toggle: false
         entities:
+          - type: custom:slider-entity-row
+            entity: light.hall
+            toggle: true
+          - type: section
           - type: custom:slider-entity-row
             entity: light.living_room
             toggle: true

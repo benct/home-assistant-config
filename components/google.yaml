@@ -57,13 +57,6 @@ google_assistant:
       expose: false
     input_boolean.fake_heater:
       expose: false
-    switch.power_hall_light:
-      name: Hall Lights
-      room: Hall
-      aliases:
-        - Entry Lights
-        - Ganglys
-        - Lys gang
     switch.power_livingroom_sofa:
       name: Power Sofa
       room: Living Room

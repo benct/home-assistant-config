@@ -57,8 +57,8 @@
         entity_id: input_boolean.away
         state: 'on'
   action:
-  - service: switch.turn_on
-    entity_id: switch.power_hall_light
+  - service: light.turn_on
+    entity_id: light.hall
 
 - alias: 'Hall light off when no movement'
   initial_state: 'on'
@@ -67,7 +67,7 @@
     entity_id: binary_sensor.motion_hall
     to: 'off'
     for:
-      minutes: 3
+      minutes: 5
   condition:
     condition: or
     conditions: 
@@ -77,8 +77,8 @@
       - condition: sun
         before: sunrise
   action:
-  - service: switch.turn_off
-    entity_id: switch.power_hall_light
+  - service: light.turn_off
+    entity_id: light.hall
 
 - alias: 'Hall light on when opening front door'
   initial_state: 'on'
@@ -95,5 +95,5 @@
       - condition: sun
         before: sunrise
   action:
-  - service: switch.turn_on
-    entity_id: switch.power_hall_light
+  - service: light.turn_on
+    entity_id: light.hall

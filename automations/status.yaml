@@ -76,7 +76,6 @@
       - switch.telldus_away
       - switch.power_livingroom_sofa
       - switch.power_livingroom_cabinet
-      - switch.power_hall_light
       - switch.power_outside_lights
       - switch.christmas1
       - switch.christmas2
@@ -114,7 +113,6 @@
       - switch.power_bedroom_charger_2
       - switch.power_livingroom_sofa
       - switch.power_livingroom_cabinet
-      - switch.power_hall_light
       - switch.power_outside_lights
       - switch.christmas1
       - switch.christmas2
@@ -123,6 +121,7 @@
       - light.living_room
       - light.bedroom
       - light.nightstand
+      - light.hall
   - service: climate.set_preset_mode
     entity_id: climate.termostat_stue
     data:
@@ -148,7 +147,6 @@
       - switch.telldus_away
       - switch.power_bedroom_charger
       - switch.power_bedroom_charger_2
-      - switch.power_hall_light
       - switch.power_livingroom_tv
       - switch.power_livingroom_sofa
       - switch.power_livingroom_cabinet
@@ -163,6 +161,7 @@
       - light.living_room
       - light.bedroom
       - light.nightstand
+      - light.hall
       - light.other
   - service: climate.set_hvac_mode
     entity_id: climate.termostat_stue
