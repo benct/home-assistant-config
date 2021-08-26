@@ -1,6 +1,6 @@
 recorder:
   auto_purge: true
-  purge_keep_days: 30
+  purge_keep_days: 14
   include:
     entities:
       - climate.termostat_stue
