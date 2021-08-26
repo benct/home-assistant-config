@@ -21,6 +21,9 @@ homeassistant:
 http:
   ip_ban_enabled: true
   login_attempts_threshold: 10
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.30.33.0/24
 
 lovelace:
   mode: yaml
