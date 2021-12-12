@@ -53,28 +53,30 @@ cards:
         type: custom:multiple-entity-row
         name: Varme (V)
         icon: mdi:radiator
-        state_color: true
+        show_state: false
+        secondary_info: last-changed
         entities:
-          - attribute: current_temperature
-            name: Temp
-            unit: '°C'
-          - entity: sensor.heater_l_day_consumption
-            name: Dag
           - entity: sensor.heater_l_year_consumption
             name: År
+          - entity: sensor.heater_l_day_consumption
+            name: Dag
+          - attribute: current_temperature
+            name: false
+            unit: '°C'
       - entity: climate.heater_r
         type: custom:multiple-entity-row
         name: Varme (H)
         icon: mdi:radiator
-        state_color: true
+        show_state: false
+        secondary_info: last-changed
         entities:
-          - attribute: current_temperature
-            name: Temp
-            unit: '°C'
-          - entity: sensor.heater_r_day_consumption
-            name: Dag
           - entity: sensor.heater_r_year_consumption
             name: År
+          - entity: sensor.heater_r_day_consumption
+            name: Dag
+          - attribute: current_temperature
+            name: false
+            unit: '°C'
       - type: section
       - entity: light.living_room
         type: custom:slider-entity-row

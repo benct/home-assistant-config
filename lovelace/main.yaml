@@ -78,16 +78,14 @@ cards:
           - type: custom:slider-entity-row
             entity: light.nightstand
             toggle: true
-      - type: custom:mini-media-player
-        entity: media_player.spotify
-        hide:
-          power: true
       - type: horizontal-stack
         cards:
           - type: thermostat
             entity: climate.heater_l
+            name: ' '
           - type: thermostat
             entity: climate.heater_r
+            name: ' '
 
   - type: vertical-stack
     cards:
@@ -101,16 +99,6 @@ cards:
             name: Stue (tak)
             secondary_info: last-changed
           - entity: sensor.netatmo_home_living_room_co2
-            secondary_info: last-changed
-          - entity: climate.heater_l
-            name: Varme (V)
-            icon: mdi:radiator
-            state_color: true
-            secondary_info: last-changed
-          - entity: climate.heater_r
-            name: Varme (H)
-            icon: mdi:radiator
-            state_color: true
             secondary_info: last-changed
           - type: section
           - entity: sensor.motion_hall_temperature
@@ -161,6 +149,10 @@ cards:
         entity: vacuum.xiaomi_vacuum_cleaner
         image: /local/img/vacuum.png
         name: false
+      - type: custom:mini-media-player
+        entity: media_player.spotify
+        hide:
+          power: true
       - type: history-graph
         hours_to_show: 48
         entities:
