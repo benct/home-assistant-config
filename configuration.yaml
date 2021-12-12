@@ -44,10 +44,6 @@ lovelace:
       type: module
     - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
       type: module
-    - url: /hacsfiles/restriction-card/restriction-card.js
-      type: module
-    - url: /hacsfiles/weather-card/weather-card.js
-      type: module
 
 frontend:
   themes: !include_dir_merge_named themes

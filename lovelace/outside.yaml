@@ -25,10 +25,7 @@ cards:
       - entity: air_quality.air_quality_norway
         secondary_info: last-changed
       - type: section
-      - type: custom:restriction-card
-        row: true
-        card:
-          entity: switch.power_outside_lights
-          state_color: true
+      - entity: switch.power_outside_lights
+        state_color: true
   - type: weather-forecast
     entity: weather.home

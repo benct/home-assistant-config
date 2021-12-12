@@ -174,5 +174,5 @@ cards:
             name: Kontor
           - entity: sensor.thermometer_storeroom_temperature
             name: Bod
-      - type: custom:weather-card
+      - type: weather-forecast
         entity: weather.home
