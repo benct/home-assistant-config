@@ -7,15 +7,12 @@ google_assistant:
     - switch
     - climate
   entity_config:
-    climate.termostat_stue:
-      name: Thermostat
+    climate.heater_l:
+      name: Thermostat (L)
       room: Living Room
-      aliases:
-        - Temperature
-        - Living Room Thermostat
-        - Living Room Temperature
-        - Temperatur stue
-        - Stuetemperatur
+    climate.heater_r:
+      name: Thermostat (R)
+      room: Living Room
     media_player.receiver:
       name: Receiver
       room: Living Room
@@ -54,8 +51,6 @@ google_assistant:
         - Away Mode
         - Bortestatus
     input_boolean.vacation:
-      expose: false
-    input_boolean.fake_heater:
       expose: false
     switch.power_livingroom_sofa:
       name: Power Sofa
@@ -98,10 +93,6 @@ google_assistant:
         - Bedroom Charger Kristin
         - Phone Charger Kristin
         - Soveromslader Kristin
-    switch.power_livingroom_heater_left:
-      expose: false
-    switch.power_livingroom_heater_right:
-      expose: false
     switch.power_livingroom_tv:
       expose: false
     switch.power_office_pc:

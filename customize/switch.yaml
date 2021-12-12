@@ -23,16 +23,6 @@ switch.power_livingroom_tv:
   assumed_state: false
   icon: mdi:power
 
-switch.power_livingroom_heater_left:
-  friendly_name: Varme (V)
-  assumed_state: false
-  icon: mdi:thermometer-lines
-
-switch.power_livingroom_heater_right:
-  friendly_name: Varme (H)
-  assumed_state: false
-  icon: mdi:thermometer-lines
-
 switch.power_outside_lights:
   friendly_name: Utelys
   assumed_state: false

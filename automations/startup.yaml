@@ -17,16 +17,20 @@
   - service: input_boolean.turn_on
     entity_id: input_boolean.away
 
-- alias: 'Set climate away mode on startup'
+- alias: 'Set climate temperature on startup'
   initial_state: 'on'
   trigger:
   - platform: homeassistant
     event: start
   action:
-  - service: climate.set_preset_mode
-    entity_id: climate.termostat_stue
+  - service: climate.set_temperature
+    target:
+      entity_id:
+        - climate.heater_l
+        - climate.heater_r
     data:
-      preset_mode: 'away'
+      temperature: 12
+      hvac_mode: 'off'
 
 - alias: 'Notification on restart'
   initial_state: 'on'

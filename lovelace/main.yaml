@@ -82,27 +82,12 @@ cards:
         entity: media_player.spotify
         hide:
           power: true
-      - type: custom:simple-thermostat
-        entity: climate.termostat_stue
-        name: false
-        hide:
-          temperature: true
-        control:
-          hvac:
-            'off': false
-            heat: false
-          preset:
-            none: false
-            away: false
-        sensors:
-          - entity: sensor.smoke_sensor_livingroom_temperature
-            name: Stue
-          - entity: sensor.motion_hall_temperature
-            name: Gang
-          - entity: sensor.netatmo_home_outdoor_temperature
-            name: Ute
-          - attribute: preset_mode
-            name: Preset
+      - type: horizontal-stack
+        cards:
+          - type: thermostat
+            entity: climate.heater_l
+          - type: thermostat
+            entity: climate.heater_r
 
   - type: vertical-stack
     cards:
@@ -117,13 +102,16 @@ cards:
             secondary_info: last-changed
           - entity: sensor.netatmo_home_living_room_co2
             secondary_info: last-changed
-          - type: custom:restriction-card
-            row: true
-            card:
-              entity: group.livingroom_heaters
-              name: Varmeovner
-              icon: mdi:radiator
-              state_color: true
+          - entity: climate.heater_l
+            name: Varme (V)
+            icon: mdi:radiator
+            state_color: true
+            secondary_info: last-changed
+          - entity: climate.heater_r
+            name: Varme (H)
+            icon: mdi:radiator
+            state_color: true
+            secondary_info: last-changed
           - type: section
           - entity: sensor.motion_hall_temperature
             name: Gang

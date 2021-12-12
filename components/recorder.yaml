@@ -3,7 +3,8 @@ recorder:
   purge_keep_days: 14
   include:
     entities:
-      - climate.termostat_stue
+      - climate.heater_l
+      - climate.heater_r
 
       - light.living_room
       - light.bedroom
@@ -18,8 +19,6 @@ recorder:
       - switch.power_livingroom_cabinet
       - switch.power_bedroom_charger
       - switch.power_bedroom_charger_2
-      - switch.power_livingroom_heater_left
-      - switch.power_livingroom_heater_right
 
       - sensor.cpu_temperature
       - sensor.processor_use_percent

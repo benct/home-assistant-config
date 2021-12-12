@@ -12,14 +12,14 @@
       - input_boolean.sleep
       - input_boolean.away
       - input_boolean.vacation
-  - service: climate.set_hvac_mode
-    entity_id: climate.termostat_stue
+  - service: climate.set_temperature
+    target:
+      entity_id:
+        - climate.heater_l
+        - climate.heater_r
     data:
-      hvac_mode: 'heat'
-  - service: climate.set_preset_mode
-    entity_id: climate.termostat_stue
-    data:
-      preset_mode: 'none'
+      temperature: 18
+      hvac_mode: heat
 
 - alias: 'Home mode (at night)'
   initial_state: 'on'
@@ -72,10 +72,14 @@
   - service: light.turn_on
     entity_id:
       - light.nightstand
-  - service: climate.set_preset_mode
-    entity_id: climate.termostat_stue
+  - service: climate.set_temperature
+    target:
+      entity_id:
+        - climate.heater_l
+        - climate.heater_r
     data:
-      preset_mode: 'away'
+      temperature: 14
+      hvac_mode: heat
 
 - alias: 'Away mode'
   initial_state: 'on'
@@ -104,10 +108,14 @@
       - light.bedroom
       - light.nightstand
       - light.hall
-  - service: climate.set_preset_mode
-    entity_id: climate.termostat_stue
+  - service: climate.set_temperature
+    target:
+      entity_id:
+        - climate.heater_l
+        - climate.heater_r
     data:
-      preset_mode: 'away'
+      temperature: 12
+      hvac_mode: heat
 
 - alias: 'Vacation mode'
   initial_state: 'on'
@@ -129,8 +137,6 @@
       - switch.power_livingroom_tv
       - switch.power_livingroom_sofa
       - switch.power_livingroom_cabinet
-      - switch.power_livingroom_heater_left
-      - switch.power_livingroom_heater_right
       - switch.power_office_pc
       - switch.power_outside_lights
   - service: light.turn_off
@@ -140,9 +146,13 @@
       - light.nightstand
       - light.hall
       - light.other
-  - service: climate.set_hvac_mode
-    entity_id: climate.termostat_stue
+  - service: climate.set_temperature
+    target:
+      entity_id:
+        - climate.heater_l
+        - climate.heater_r
     data:
+      temperature: 12
       hvac_mode: 'off'
 
 - alias: 'Set sleep mode at night'

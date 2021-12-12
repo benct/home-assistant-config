@@ -49,10 +49,32 @@ cards:
           - attribute: status
             name: State
       - type: section
-      - entity: switch.power_livingroom_heater_left
+      - entity: climate.heater_l
+        type: custom:multiple-entity-row
+        name: Varme (V)
+        icon: mdi:radiator
         state_color: true
-      - entity: switch.power_livingroom_heater_right
+        entities:
+          - attribute: current_temperature
+            name: Temp
+            unit: '°C'
+          - entity: sensor.heater_l_day_consumption
+            name: Dag
+          - entity: sensor.heater_l_year_consumption
+            name: År
+      - entity: climate.heater_r
+        type: custom:multiple-entity-row
+        name: Varme (H)
+        icon: mdi:radiator
         state_color: true
+        entities:
+          - attribute: current_temperature
+            name: Temp
+            unit: '°C'
+          - entity: sensor.heater_r_day_consumption
+            name: Dag
+          - entity: sensor.heater_r_year_consumption
+            name: År
       - type: section
       - entity: light.living_room
         type: custom:slider-entity-row

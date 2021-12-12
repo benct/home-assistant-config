@@ -46,8 +46,6 @@ lovelace:
       type: module
     - url: /hacsfiles/restriction-card/restriction-card.js
       type: module
-    - url: /hacsfiles/simple-thermostat/simple-thermostat.js
-      type: module
     - url: /hacsfiles/weather-card/weather-card.js
       type: module
 
