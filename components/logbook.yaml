@@ -5,3 +5,10 @@ logbook:
       - switch
       - light
       - climate
+  exclude:
+    entities:
+      - sensor.load_1m
+      - sensor.load_5m
+      - sensor.load_15m
+      - climate.heater_l
+      - climate.heater_r

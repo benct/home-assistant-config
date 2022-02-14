@@ -19,9 +19,6 @@ cards:
       - entity: sensor.netatmo_home_outdoor_humidity
         name: Luftfuktighet
         secondary_info: last-changed
-      - entity: sensor.netatmo_home_outdoor_battery_percent
-        name: Batteri
-        state_color: true
       - type: section
       - entity: switch.power_outside_lights
         name: Lys

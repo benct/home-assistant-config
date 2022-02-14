@@ -66,7 +66,7 @@ cards:
             tap_action:
               action: toggle
           - entity: switch.charger_kristin
-            name: Lader (B)
+            name: Lader (K)
             icon: mdi:battery-charging-50
             assumed_state: false
             tap_action:
@@ -95,13 +95,11 @@ cards:
             toggle: true
             name: TV
             icon: mdi:television-ambient-light
-          - type: section
           - type: custom:slider-entity-row
             entity: light.hall_roof
             toggle: true
             name: Gang
             icon: mdi:ceiling-light
-          - type: section
           - type: custom:slider-entity-row
             entity: light.nightstand
             toggle: true

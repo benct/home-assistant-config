@@ -39,6 +39,8 @@ recorder:
       - sensor.smoke_detector_battery
       - sensor.water_leak_temperature_measurement
       - sensor.water_leak_battery
+      - sensor.bedroom_button_temperature_measurement
+      - sensor.bedroom_button_battery
 
       - sensor.netatmo_home_temperature
       - sensor.netatmo_home_living_room_temperature
