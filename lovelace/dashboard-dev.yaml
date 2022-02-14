@@ -1,0 +1,415 @@
+title: Home
+views:
+  - title: Multiple
+    path: multiple
+    icon: mdi:card-multiple-outline
+    badges: [ ]
+    cards:
+      - type: entities
+        title: General
+        show_header_toggle: false
+        entities:
+          - entity: sensor.netatmo_home_living_room_temperature
+            type: custom:multiple-entity-row
+            name: Default
+            secondary_info: last-changed
+          - entity: sensor.netatmo_home_living_room_temperature
+            type: custom:multiple-entity-row
+            name: One Entity
+            secondary_info: last-changed
+            entities:
+              - entity: sensor.netatmo_home_living_room_battery_percent
+                name: Battery
+          - entity: sensor.netatmo_home_living_room_temperature
+            type: custom:multiple-entity-row
+            name: Two Entities
+            secondary_info: last-changed
+            entities:
+              - entity: sensor.netatmo_home_living_room_humidity
+                name: Humidity
+              - entity: sensor.netatmo_home_living_room_battery_percent
+                name: Battery
+          - entity: sensor.netatmo_home_living_room_temperature
+            type: custom:multiple-entity-row
+            name: Three Entities
+            secondary_info: last-changed
+            entities:
+              - sensor.netatmo_home_living_room_co2
+              - entity: sensor.netatmo_home_living_room_humidity
+                name: Humidity
+              - entity: sensor.netatmo_home_living_room_battery_percent
+                name: Battery
+          - type: section
+          - entity: sensor.netatmo_home_temperature
+            type: custom:multiple-entity-row
+            name: Hide headers (name)
+            entities:
+              - entity: sensor.netatmo_home_living_room_humidity
+                name: false
+              - entity: sensor.netatmo_home_living_room_battery_percent
+                name: false
+          - entity: sensor.netatmo_home_temperature
+            type: custom:multiple-entity-row
+            name: Main state header
+            state_header: Temp
+            entities:
+              - entity: sensor.netatmo_home_living_room_humidity
+                name: Humidity
+              - entity: sensor.netatmo_home_living_room_battery_percent
+                name: Battery
+          - type: section
+          - entity: vacuum.xiaomi_vacuum_cleaner
+            type: custom:multiple-entity-row
+            name: Attributes
+            secondary_info: last-changed
+            entities:
+              - attribute: battery_level
+                name: Battery
+                unit: '%'
+              - attribute: status
+                name: Status
+          - entity: sensor.lovelace_multiple_entity_row
+            type: custom:multiple-entity-row
+            name: More attributes
+            entities:
+              - attribute: stargazers
+                name: Stars
+              - attribute: open_issues
+                name: Issues
+              - attribute: open_pull_requests
+                name: PRs
+          - entity: sensor.lovelace_multiple_entity_row
+            type: custom:multiple-entity-row
+            name: Hide main state
+            show_state: false
+            entities:
+              - attribute: stargazers
+                name: Stars
+              - attribute: open_issues
+                name: Issues
+              - attribute: open_pull_requests
+                name: PRs
+          - type: section
+          - entity: sensor.netatmo_home_temperature
+            type: custom:multiple-entity-row
+            name: Customization
+            icon: mdi:fire
+            unit: unit
+            secondary_info: Custom secondary text
+            entities:
+              - name: custom name
+                entity: sensor.netatmo_home_living_room_humidity
+                unit: F
+          - entity: sensor.netatmo_home_temperature
+            type: custom:multiple-entity-row
+            name: Last changed/updated
+            attribute: last-changed
+            state_header: changed
+            entities:
+              - name: updated
+                entity: sensor.netatmo_home_temperature
+                attribute: last-updated
+      - type: entities
+        show_header_toggle: false
+        title: Toggles
+        entities:
+          - entity: light.living_room_sofa
+            type: custom:multiple-entity-row
+            name: Default
+            secondary_info: last-updated
+          - entity: light.living_room_sofa
+            type: custom:multiple-entity-row
+            name: Toggle
+            toggle: true
+            secondary_info: last-changed
+          - entity: light.living_room_sofa
+            type: custom:multiple-entity-row
+            name: Toggle with entities
+            toggle: true
+            entities:
+              - entity: sensor.netatmo_home_living_room_humidity
+                name: Humidity
+              - entity: sensor.netatmo_home_living_room_battery_percent
+                name: Battery
+          - entity: light.living_room_sofa
+            type: custom:multiple-entity-row
+            name: Multiple toggles
+            toggle: true
+            entities:
+              - entity: light.living_room_sofa
+                name: false
+                toggle: true
+              - entity: light.living_room_sofa
+                name: false
+                toggle: true
+          - entity: light.living_room_sofa
+            type: custom:multiple-entity-row
+            name: Toggles with name
+            toggle: true
+            state_header: Sofa
+            entities:
+              - entity: light.living_room_sofa
+                name: Wall
+                toggle: true
+              - entity: light.living_room_sofa
+                name: Ceiling
+                toggle: true
+          - type: section
+          - entity: light.living_room
+            type: custom:multiple-entity-row
+            name: Toggle with tap_action
+            state_header: Livingroom
+            state_color: true
+            tap_action:
+              action: toggle
+            entities:
+              - entity: light.nightstand
+                name: Bedroom
+                tap_action:
+                  action: toggle
+          - entity: light.living_room
+            type: custom:multiple-entity-row
+            name: Icons with tap_action
+            secondary_info: last-changed
+            state_color: true
+            entities:
+              - entity: light.living_room
+                icon: mdi:palette
+                name: false
+              - icon: mdi:lightbulb-off-outline
+                tap_action:
+                  action: call-service
+                  service: light.turn_off
+                  service_data:
+                    entity_id: light.living_room
+              - icon: mdi:lightbulb-outline
+                tap_action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.living_room
+      - type: entities
+        title: Formatting
+        show_header_toggle: false
+        entities:
+          - entity: sensor.cert_expiry_timestamp_home_tomlin_no
+            type: custom:multiple-entity-row
+            name: Timestamps
+            format: relative
+            state_header: relative
+            entities:
+              - entity: sensor.last_boot
+                format: time
+                name: time
+              - entity: sensor.last_boot
+                format: time
+                name: date
+              - entity: sensor.last_boot
+                format: total
+                name: total
+          - entity: sensor.netatmo_home_living_room_temperature
+            type: custom:multiple-entity-row
+            name: Precision
+            state_header: original
+            entities:
+              - entity: sensor.netatmo_home_living_room_temperature
+                format: precision0
+                name: precision0
+              - entity: sensor.netatmo_home_living_room_temperature
+                format: precision3
+                name: precision3
+          - entity: sensor.xiaomi_vacuum_cleaner_last_clean_duration
+            type: custom:multiple-entity-row
+            name: Duration
+            state_header: original
+            entities:
+              - entity: sensor.xiaomi_vacuum_cleaner_last_clean_duration
+                format: duration
+                name: duration
+          - entity: light.living_room
+            type: custom:multiple-entity-row
+            name: Brightness
+            attribute: brightness
+            state_header: original
+            entities:
+              - attribute: brightness
+                format: brightness
+                name: brightness
+          - entity: sensor.power_tv_energy_meter
+            type: custom:multiple-entity-row
+            name: Kilo
+            unit: Wh
+            state_header: original
+            entities:
+              - entity: sensor.power_tv_energy_meter
+                format: kilo
+                name: kilo
+                unit: kWh
+          - entity: weather.home
+            type: custom:multiple-entity-row
+            name: Invert
+            attribute: temperature
+            state_header: original
+            entities:
+              - attribute: temperature
+                format: invert
+                name: invert
+          - entity: sensor.netatmo_home_living_room_humidity
+            type: custom:multiple-entity-row
+            name: Position
+            state_header: original
+            entities:
+              - entity: sensor.netatmo_home_living_room_humidity
+                format: position
+                name: position
+      - type: entities
+        title: Hide
+        show_header_toggle: false
+        entities:
+          - entity: light.living_room
+            type: custom:multiple-entity-row
+            name: Hide if on/off
+            state_header: current
+            entities:
+              - entity: light.living_room
+                name: if off
+                hide_if: 'off'
+              - entity: light.living_room
+                name: if on
+                hide_if: 'on'
+          - entity: light.living_room
+            type: custom:multiple-entity-row
+            name: Hide if on/off (list)
+            state_header: current
+            entities:
+              - entity: light.living_room
+                name: if off
+                hide_if:
+                  - 'off'
+              - entity: light.living_room
+                name: if on
+                hide_if:
+                  - 'on'
+              - entity: light.living_room
+                name: if either
+                hide_if:
+                  - 'off'
+                  - 'on'
+          - entity: light.living_room
+            type: custom:multiple-entity-row
+            name: Hide if (bool)
+            attribute: is_hue_group
+            state_header: current
+            entities:
+              - attribute: is_hue_group
+                name: if true
+                hide_if: true
+              - attribute: is_hue_group
+                name: if false
+                hide_if: false
+              - entity: media_player.living_room_tv
+                attribute: is_volume_muted
+                name: is false
+                hide_if: false
+          - entity: sensor.netatmo_home_living_room_temperature
+            type: custom:multiple-entity-row
+            name: Hide below (25)
+            state_header: current
+            entities:
+              - entity: sensor.netatmo_home_living_room_temperature
+                name: below
+                hide_if:
+                  below: 25
+              - entity: sensor.netatmo_home_living_room_temperature
+                name: above
+                hide_if:
+                  above: 25
+          - entity: sensor.netatmo_home_living_room_temperature
+            type: custom:multiple-entity-row
+            name: Hide above (15)
+            state_header: current
+            entities:
+              - entity: sensor.netatmo_home_living_room_temperature
+                name: below
+                hide_if:
+                  below: 15
+              - entity: sensor.netatmo_home_living_room_temperature
+                name: above
+                hide_if:
+                  above: 15
+  - title: Vacuum
+    path: vacuum
+    icon: mdi:robot-vacuum
+    badges: [ ]
+    cards:
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        image: /local/img/vacuum.png
+        name: Xiaomi Vacuum
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        image: /local/img/vacuum.png
+        buttons: false
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        image: /local/img/vacuum.png
+        name: false
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Xiaomi
+        vendor: xiaomi
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Valetudo
+        vendor: valetudo
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Roomba
+        vendor: roomba
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Robovac
+        vendor: robovac
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Ecovacs
+        vendor: ecovacs
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Deebot
+        vendor: deebot
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Deebot (slim)
+        vendor: deebot_slim
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Vendor Neato
+        vendor: neato
+
+      - type: custom:xiaomi-vacuum-card
+        entity: vacuum.xiaomi_vacuum_cleaner
+        name: Custom
+        state:
+          mode: false
+          cleaned_area:
+            key: total_cleaned_area
+            icon: mdi:fan
+            label: 'Test: '
+            unit: ' m2'
+        attributes:
+          sensor: false
+          cleaned_area:
+            key: total_cleaned_area
+            label: 'Cleaned: '
+            unit: ' m2'
+        buttons:
+          locate: false
+          test:
+            icon: mdi:light-switch
+            service: light.turn_off
+            service_data:
+              entity_id: light.living_room
