@@ -135,13 +135,6 @@ cards:
           - entity: sensor.netatmo_home_outdoor_temperature
             name: Ute
             secondary_info: last-changed
-          - entity: air_quality.air_quality_norway
-            type: custom:multiple-entity-row
-            secondary_info: last-changed
-            entities:
-              - entity: air_quality.air_quality_norway
-                attribute: level
-                name: false
 
   - type: vertical-stack
     cards:

@@ -22,8 +22,6 @@ cards:
           - sensor.netatmo_home_outdoor_max_temp
       - entity: sensor.netatmo_home_outdoor_humidity
         secondary_info: last-changed
-      - entity: air_quality.air_quality_norway
-        secondary_info: last-changed
       - type: section
       - entity: switch.power_outside_lights
         state_color: true
