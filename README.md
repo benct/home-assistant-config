@@ -4,8 +4,8 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 [Home Assistant OS](https://github.com/home-assistant/operating-system) on a
 [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/).
 
-![Static version](https://img.shields.io/badge/version-2021.8.8-blue.svg)
-![Maintained](https://img.shields.io/maintenance/yes/2021.svg)
+![Static version](https://img.shields.io/badge/version-2022.2.6-blue.svg)
+![Maintained](https://img.shields.io/maintenance/yes/2022.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/benct/home-assistant-config.svg)
 ![GitHub code size](https://img.shields.io/github/languages/code-size/benct/home-assistant-config.svg)
 [![GitHub licence](https://img.shields.io/github/license/benct/home-assistant-config.svg)](https://github.com/benct/home-assistant-config/blob/master/LICENCE)
@@ -13,29 +13,32 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 ## Hardware
 
 - [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
-- [Telldus Tellstick ZNet Lite v2](https://home-assistant.io/integrations/tellduslive/)
-- [Netatmo Weather Station](https://home-assistant.io/integrations/netatmo/)
-- [Google Nest Mini / Hub](https://www.home-assistant.io/integrations/google_assistant/)
+- [~~Telldus Tellstick ZNet Lite v2~~](https://home-assistant.io/integrations/tellduslive/)
+- [Samsung SmartThings Hub](https://home-assistant.io/integrations/smartthings/)
 - [Phillips Hue Hub](https://www.home-assistant.io/integrations/hue/)
+- [Google Nest Mini / Hub / Audio](https://www.home-assistant.io/integrations/google_assistant/)
+- [Netatmo Weather Station](https://home-assistant.io/integrations/netatmo/)
 - [Xiaomi Roborock Vacuum](https://www.home-assistant.io/integrations/xiaomi_miio/)
+- [Samsung Washer/Dryer](https://www.home-assistant.io/integrations/smartthings/)
+- [Mill Heaters](https://www.home-assistant.io/integrations/mill/)
 
 #### Devices:
-- [Telldus Thermometer/hygrometer](http://telldus.com/produkt/inneute-termohygro-sensor-433mhz/)
-- [Nexa MYCR-3 Plug](https://www.clasohlson.com/no/Nexa-MYCR-3,-3-pack-fjernstr%C3%B8mbrytere--/36-6902)
-- [Nexa WMR-1000 Receiver](https://www.clasohlson.com/no/Nexa-WMR-1000-innbyggingsmottaker-p%C3%A5-av-/36-5940)
-- [Luxorparts Outdoor Plug](https://www.kjell.com/no/produkter/elektro-og-verktoy/smarte-hjem/433mhz/fjernstrombryter/utenpaliggende-bryter/luxorparts-mini-fjernstrombryter-for-utendorsbruk-3000-w-p50990)
+- [Telldus Wall Plug](https://products.z-wavealliance.org/products/1536)
 - [Fibaro Wall Plug](https://products.z-wavealliance.org/products/1653)
 - [Fibaro Motion Sensor](https://products.z-wavealliance.org/products/2762)
-- [Fibaro Smoke Sensor 2](https://products.z-wavealliance.org/products/1273)
+- [Fibaro Smoke Sensor](https://products.z-wavealliance.org/products/1273)
 - [Fibaro Flood Sensor](https://products.z-wavealliance.org/products/2791)
-- [Fibaro Door/Window Sensor 2](https://products.z-wavealliance.org/products/2181)
-- [Phillips Hue Lights](https://www.home-assistant.io/integrations/hue/)
+- [Fibaro Door/Window Sensor](https://products.z-wavealliance.org/products/2181)
+- [HeatIt Z-TRM3 Thermostat](https://products.z-wavealliance.org/products/3802)
+- [Phillips Hue Bulbs / Strips / Play](https://www.home-assistant.io/integrations/hue/)
+- [Phillips Hue Plugs](https://www.home-assistant.io/integrations/hue/)
+- [SmartThings Button](https://home-assistant.io/integrations/smartthings/)
 - [Raspberry Pi Camera V2](https://www.home-assistant.io/integrations/rpi_camera/)
 
 #### Media:
 - [Samsung Smart TV](https://home-assistant.io/integrations/samsungtv/)
 - [Onkyo Receiver](https://www.home-assistant.io/integrations/onkyo/)
-- [Google ChromeCast](https://www.home-assistant.io/integrations/cast/)
+- [Google Chromecast](https://www.home-assistant.io/integrations/cast/)
 - [Spotify](https://www.home-assistant.io/integrations/spotify/)
 
 #### Weather:
