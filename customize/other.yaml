@@ -1,5 +1,5 @@
 vacuum.xiaomi_vacuum_cleaner:
-  friendly_name: Støvsuger
+  friendly_name: Vacuum
 
 media_player.receiver:
   friendly_name: Receiver

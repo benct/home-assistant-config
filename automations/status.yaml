@@ -1,34 +1,34 @@
 - alias: 'Home mode'
   initial_state: 'on'
   trigger:
-  - platform: state
-    entity_id:
-      - input_boolean.home
-    from: 'off'
-    to: 'on'
-  action:
-  - service: input_boolean.turn_off
-    entity_id:
-      - input_boolean.sleep
-      - input_boolean.away
-      - input_boolean.vacation
-  - service: climate.set_temperature
-    target:
+    - platform: state
       entity_id:
-        - climate.heater_l
-        - climate.heater_r
-    data:
-      temperature: 18
-      hvac_mode: heat
+        - input_boolean.home
+      from: 'off'
+      to: 'on'
+  action:
+    - service: input_boolean.turn_off
+      entity_id:
+        - input_boolean.sleep
+        - input_boolean.away
+        - input_boolean.vacation
+    - service: climate.set_temperature
+      target:
+        entity_id:
+          - climate.heater_l
+          - climate.heater_r
+      data:
+        temperature: 18
+        hvac_mode: heat
 
 - alias: 'Home mode (at night)'
   initial_state: 'on'
   trigger:
-  - platform: state
-    entity_id:
-      - input_boolean.home
-    from: 'off'
-    to: 'on'
+    - platform: state
+      entity_id:
+        - input_boolean.home
+      from: 'off'
+      to: 'on'
   condition:
     condition: or
     conditions:
@@ -38,132 +38,130 @@
       - condition: sun
         before: sunrise
   action:
-  - service: switch.turn_on
-    entity_id:
-      - switch.power_outside_lights
-      - switch.power_livingroom_sofa
-      - switch.power_livingroom_cabinet
-  - service: light.turn_on
-    entity_id:
-      - light.living_room
+    - service: switch.turn_on
+      entity_id:
+        - switch.power_outside_lights
+        - switch.power_sofa
+    - service: light.turn_on
+      entity_id:
+        - light.living_room
+        - light.hall_cabinet
 
 - alias: 'Sleep mode'
   initial_state: 'on'
   trigger:
-  - platform: state
-    entity_id:
-      - input_boolean.sleep
-    from: 'off'
-    to: 'on'
-  action:
-  - service: input_boolean.turn_off
-    entity_id:
-      - input_boolean.home
-      - input_boolean.away
-      - input_boolean.vacation
-  - service: switch.turn_off
-    entity_id:
-      - switch.power_livingroom_sofa
-      - switch.power_livingroom_cabinet
-      - switch.power_outside_lights
-  - service: light.turn_off
-    entity_id:
-      - light.living_room
-  - service: light.turn_on
-    entity_id:
-      - light.nightstand
-  - service: climate.set_temperature
-    target:
+    - platform: state
       entity_id:
-        - climate.heater_l
-        - climate.heater_r
-    data:
-      temperature: 14
-      hvac_mode: heat
+        - input_boolean.sleep
+      from: 'off'
+      to: 'on'
+  action:
+    - service: input_boolean.turn_off
+      entity_id:
+        - input_boolean.home
+        - input_boolean.away
+        - input_boolean.vacation
+    - service: switch.turn_off
+      entity_id:
+        - switch.power_sofa
+        - switch.power_outside_lights
+    - service: light.turn_off
+      entity_id:
+        - light.living_room
+        - light.hall_cabinet
+    - service: light.turn_on
+      entity_id:
+        - light.nightstand
+    - service: climate.set_temperature
+      target:
+        entity_id:
+          - climate.heater_l
+          - climate.heater_r
+      data:
+        temperature: 14
+        hvac_mode: heat
 
 - alias: 'Away mode'
   initial_state: 'on'
   trigger:
-  - platform: state
-    entity_id:
-      - input_boolean.away
-    from: 'off'
-    to: 'on'
-  action:
-  - service: input_boolean.turn_off
-    entity_id:
-      - input_boolean.home
-      - input_boolean.sleep
-      - input_boolean.vacation
-  - service: switch.turn_off
-    entity_id:
-      - switch.power_bedroom_charger
-      - switch.power_bedroom_charger_2
-      - switch.power_livingroom_sofa
-      - switch.power_livingroom_cabinet
-      - switch.power_outside_lights
-  - service: light.turn_off
-    entity_id:
-      - light.living_room
-      - light.bedroom
-      - light.nightstand
-      - light.hall
-  - service: climate.set_temperature
-    target:
+    - platform: state
       entity_id:
-        - climate.heater_l
-        - climate.heater_r
-    data:
-      temperature: 12
-      hvac_mode: heat
+        - input_boolean.away
+      from: 'off'
+      to: 'on'
+  action:
+    - service: input_boolean.turn_off
+      entity_id:
+        - input_boolean.home
+        - input_boolean.sleep
+        - input_boolean.vacation
+    - service: switch.turn_off
+      entity_id:
+        - switch.charger_ben
+        - switch.charger_kristin
+        - switch.power_sofa
+        - switch.power_outside_lights
+    - service: light.turn_off
+      entity_id:
+        - light.living_room
+        - light.bedroom
+        - light.nightstand
+        - light.hall
+    - service: climate.set_temperature
+      target:
+        entity_id:
+          - climate.heater_l
+          - climate.heater_r
+      data:
+        temperature: 12
+        hvac_mode: heat
 
 - alias: 'Vacation mode'
   initial_state: 'on'
   trigger:
-  - platform: state
-    entity_id: input_boolean.vacation
-    from: 'off'
-    to: 'on'
+    - platform: state
+      entity_id: input_boolean.vacation
+      from: 'off'
+      to: 'on'
   action:
-  - service: input_boolean.turn_off
-    entity_id:
-      - input_boolean.home
-      - input_boolean.sleep
-      - input_boolean.away
-  - service: switch.turn_off
-    entity_id:
-      - switch.power_bedroom_charger
-      - switch.power_bedroom_charger_2
-      - switch.power_livingroom_tv
-      - switch.power_livingroom_sofa
-      - switch.power_livingroom_cabinet
-      - switch.power_office_pc
-      - switch.power_outside_lights
-  - service: light.turn_off
-    entity_id:
-      - light.living_room
-      - light.bedroom
-      - light.nightstand
-      - light.hall
-      - light.other
-  - service: climate.set_temperature
-    target:
+    - service: input_boolean.turn_off
       entity_id:
-        - climate.heater_l
-        - climate.heater_r
-    data:
-      temperature: 12
-      hvac_mode: 'off'
+        - input_boolean.home
+        - input_boolean.sleep
+        - input_boolean.away
+    - service: switch.turn_off
+      entity_id:
+        - switch.charger_ben
+        - switch.charger_kristin
+        - switch.power_tv
+        - switch.power_pc
+        - switch.power_sofa
+        - switch.power_outside_lights
+    - service: light.turn_off
+      entity_id:
+        - light.living_room
+        - light.bedroom
+        - light.nightstand
+        - light.hall
+        - light.other
+    - service: climate.set_temperature
+      target:
+        entity_id:
+          - climate.heater_l
+          - climate.heater_r
+      data:
+        temperature: 12
+        hvac_mode: 'off'
 
 - alias: 'Set sleep mode at night'
   initial_state: 'on'
   trigger:
-  - platform: time
-    at: '01:00:00'
+    - platform: time
+      at: '01:00:00'
   condition:
-  - condition: state
-    entity_id: input_boolean.home
-    state: 'on'
+    - condition: state
+      entity_id: input_boolean.home
+      state: 'on'
   action:
-  - service: input_boolean.turn_on
-    entity_id: input_boolean.sleep
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.sleep

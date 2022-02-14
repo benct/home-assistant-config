@@ -14,16 +14,18 @@ cards:
           name: false
       - type: section
       - entity: sensor.netatmo_home_outdoor_temperature
-        type: custom:multiple-entity-row
+        name: Temperatur
         secondary_info: last-changed
-        show_state: false
-        entities:
-          - sensor.netatmo_home_outdoor_min_temp
-          - sensor.netatmo_home_outdoor_max_temp
       - entity: sensor.netatmo_home_outdoor_humidity
+        name: Luftfuktighet
         secondary_info: last-changed
+      - entity: sensor.netatmo_home_outdoor_battery_percent
+        name: Batteri
+        state_color: true
       - type: section
       - entity: switch.power_outside_lights
+        name: Lys
         state_color: true
+        assumed_state: false
   - type: weather-forecast
     entity: weather.home

@@ -5,20 +5,23 @@ recorder:
     entities:
       - climate.heater_l
       - climate.heater_r
+      - climate.bathroom_thermostat
 
       - light.living_room
-      - light.bedroom
+      - light.living_room_sofa
+      - light.lounge
+      - light.entertainment_tv
+      - light.bedroom_main
       - light.nightstand
-      - light.hall
+      - light.hall_roof
+      - light.hall_cabinet
 
-      - switch.bathroom_thermostat
       - switch.power_outside_lights
-      - switch.power_office_pc
-      - switch.power_livingroom_tv
-      - switch.power_livingroom_sofa
-      - switch.power_livingroom_cabinet
-      - switch.power_bedroom_charger
-      - switch.power_bedroom_charger_2
+      - switch.power_pc
+      - switch.power_tv
+      - switch.power_sofa
+      - switch.charger_ben
+      - switch.charger_kristin
 
       - sensor.cpu_temperature
       - sensor.processor_use_percent
@@ -27,30 +30,31 @@ recorder:
       - sensor.disk_use_percent
       - sensor.fast_com_download
 
-      - sensor.bathroom_thermostat_floor_temperature
-      - sensor.bathroom_thermostat_internal_temperature
-      - sensor.flood_sensor_bathroom_temperature
-      - sensor.smoke_sensor_livingroom_temperature
-      - sensor.motion_hall_temperature
+      - sensor.hall_motion_temperature_measurement
+      - sensor.hall_motion_illuminance
+      - sensor.hall_motion_battery
+      - sensor.main_door_temperature_measurement
+      - sensor.main_door_battery
+      - sensor.smoke_detector_temperature_measurement
+      - sensor.smoke_detector_battery
+      - sensor.water_leak_temperature_measurement
+      - sensor.water_leak_battery
+
       - sensor.netatmo_home_temperature
       - sensor.netatmo_home_living_room_temperature
       - sensor.netatmo_home_outdoor_temperature
-      - sensor.thermometer_office_temperature
-      - sensor.thermometer_storeroom_temperature
-      - sensor.thermometer_freezer_temperature
-
       - sensor.netatmo_home_humidity
       - sensor.netatmo_home_living_room_humidity
       - sensor.netatmo_home_outdoor_humidity
-      - sensor.thermometer_office_humidity
-      - sensor.thermometer_storeroom_humidity
-
       - sensor.netatmo_home_living_room_co2
       - sensor.netatmo_home_co2
       - sensor.netatmo_home_noise
       - sensor.netatmo_home_pressure
-      - sensor.motion_hall_luminance
 
-      - sensor.bathroom_thermostat_power_current
-      - sensor.power_livingroom_tv_power_2
-      - sensor.power_office_pc_power_2
+      - sensor.power_tv_power_meter
+      - sensor.power_pc_power_meter
+
+      - binary_sensor.hall_motion_motion
+      - binary_sensor.main_door_contact
+      - sensor.smoke_detector_smoke_detector
+      - binary_sensor.water_leak_water

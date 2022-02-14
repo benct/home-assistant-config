@@ -13,18 +13,6 @@
         message: 'CO2 has passed 2000 ppm...'
         title: 'High indoor CO2 level!'
 
-- alias: 'High freezer temperature'
-  initial_state: 'on'
-  trigger:
-    - platform: numeric_state
-      entity_id: sensor.thermometer_freezer_temperature
-      above: -10
-  action:
-    - service: notify.default
-      data:
-        message: 'Freezer above -10 degrees...'
-        title: 'Freezer is too hot!'
-
 - alias: 'Low inside temperature'
   initial_state: 'on'
   trigger:

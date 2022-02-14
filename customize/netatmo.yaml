@@ -1,40 +1,22 @@
 sensor.netatmo_home_co2:
-  friendly_name: CO2
+  friendly_name: Bedroom CO2
 sensor.netatmo_home_humidity:
-  friendly_name: Luftfuktighet
+  friendly_name: Bedroom Humidity
 sensor.netatmo_home_noise:
-  friendly_name: Lyd
+  friendly_name: Bedroom Sound
 sensor.netatmo_home_pressure:
-  friendly_name: Trykk
-sensor.netatmo_home_wifi:
-  friendly_name: Soverom (Wifi)
+  friendly_name: Bedroom Pressure
 sensor.netatmo_home_temperature:
-  friendly_name: Temperatur
-sensor.netatmo_home_min_temp:
-  friendly_name: min
-sensor.netatmo_home_max_temp:
-  friendly_name: max
+  friendly_name: Bedroom Temperature
 
 sensor.netatmo_home_living_room_co2:
-  friendly_name: CO2
+  friendly_name: Living Room CO2
 sensor.netatmo_home_living_room_humidity:
-  friendly_name: Luftfuktighet
+  friendly_name: Living Room Humidity
 sensor.netatmo_home_living_room_temperature:
-  friendly_name: Temperatur
-sensor.netatmo_home_living_room_radio:
-  friendly_name: Stue (Radio)
-sensor.netatmo_home_living_room_min_temp:
-  friendly_name: min
-sensor.netatmo_home_living_room_max_temp:
-  friendly_name: max
+  friendly_name: Living Room Temperature
 
 sensor.netatmo_home_outdoor_humidity:
-  friendly_name: Luftfuktighet
-sensor.netatmo_home_outdoor_radio:
-  friendly_name: Ute (Radio)
+  friendly_name: Outdoor Humidity
 sensor.netatmo_home_outdoor_temperature:
-  friendly_name: Temperatur
-sensor.netatmo_home_outdoor_min_temp:
-  friendly_name: min
-sensor.netatmo_home_outdoor_max_temp:
-  friendly_name: max
+  friendly_name: Outdoor Temperature

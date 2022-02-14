@@ -1,5 +1,5 @@
-path: livingroom
-title: Stue / Gang
+path: rooms
+title: Rom
 icon: mdi:sofa
 cards:
   - type: entities
@@ -14,40 +14,40 @@ cards:
           name: false
       - type: section
       - entity: sensor.netatmo_home_living_room_temperature
-        type: custom:multiple-entity-row
+        name: Temperatur
         secondary_info: last-changed
-        show_state: false
-        entities:
-          - sensor.netatmo_home_living_room_min_temp
-          - sensor.netatmo_home_living_room_max_temp
+      - entity: sensor.smoke_detector_temperature_measurement
+        name: Temperatur (tak)
+        secondary_info: last-changed
       - entity: sensor.netatmo_home_living_room_humidity
+        name: Luftfuktighet
         secondary_info: last-changed
       - entity: sensor.netatmo_home_living_room_co2
+        name: CO2
         secondary_info: last-changed
+      - entity: sensor.netatmo_home_living_room_battery_percent
+        name: Batteri
+        state_color: true
       - type: section
-      - entity: sensor.smoke_sensor_livingroom_temperature
-        name: Stue (tak)
-        secondary_info: last-changed
-      - entity: sensor.template_smoke_sensor_livingroom
+      - entity: sensor.smoke_detector_smoke_detector
         type: custom:multiple-entity-row
         name: Røykvarsler
+        icon: mdi:fire
         secondary_info: last-changed
         state_color: true
         entities:
-          - entity: sensor.smoke_sensor_livingroom_temperature
-            attribute: battery_level
-            name: Battery
-            unit: '%'
+          - entity: sensor.smoke_detector_battery
+            name: Batteri
       - entity: vacuum.xiaomi_vacuum_cleaner
         type: custom:multiple-entity-row
         secondary_info: last-changed
         state_color: true
         entities:
           - attribute: battery_level
-            name: Battery
+            name: Batteri
             unit: '%'
           - attribute: status
-            name: State
+            name: Status
       - type: section
       - entity: climate.heater_l
         type: custom:multiple-entity-row
@@ -81,28 +81,35 @@ cards:
       - entity: light.living_room
         type: custom:slider-entity-row
         toggle: true
-      - type: custom:slider-entity-row
-        entity: light.living_room_sofa
+        name: Alle
+      - entity: light.lounge
+        type: custom:slider-entity-row
         toggle: true
-      - type: custom:slider-entity-row
-        entity: light.entertainment_tv
+        name: Stue
+      - entity: light.living_room_sofa
+        type: custom:slider-entity-row
         toggle: true
+        name: Sofa
+      - entity: light.entertainment_tv
+        type: custom:slider-entity-row
+        toggle: true
+        name: TV
       - type: section
-      - entity: switch.power_livingroom_cabinet
-        name: Vitrineskap
+      - entity: switch.power_sofa
+        name: Sofa
         state_color: true
-      - entity: switch.power_livingroom_sofa
-        name: Sofa/Ladere
-        state_color: true
+        assumed_state: false
       - type: section
-      - entity: switch.power_livingroom_tv
+      - entity: switch.power_tv
         type: custom:multiple-entity-row
+        name: TV
         state_color: true
+        assumed_state: false
         entities:
-          - entity: sensor.power_livingroom_tv_power_2
-            unit: W
-          - entity: sensor.power_livingroom_tv_power
-            unit: kWt
+          - entity: sensor.power_pc_power_meter
+            name: Total
+          - entity: sensor.power_pc_energy_meter
+            name: Forbruk
 
   - type: entities
     title: Gang
@@ -110,31 +117,111 @@ cards:
     entities:
       - type: custom:mini-graph-card
         entities:
-          - sensor.motion_hall_temperature
+          - sensor.hall_motion_temperature_measurement
         align_icon: state
         show:
           name: false
       - type: section
-      - entity: sensor.motion_hall_luminance
+      - entity: sensor.hall_motion_temperature_measurement
+        name: Temperatur
         secondary_info: last-changed
-      - entity: sensor.template_motion_hall
+      - entity: sensor.main_door_temperature_measurement
+        name: Temperatur (dør)
+        secondary_info: last-changed
+      - entity: sensor.hall_motion_illuminance
+        name: Lysnivå
+        secondary_info: last-changed
+      - type: section
+      - entity: sensor.hall_motion_motion
         type: custom:multiple-entity-row
         name: Bevegelse
+        icon: mdi:run
         secondary_info: last-changed
         state_color: true
         entities:
-          - entity: sensor.motion_hall_temperature
-            attribute: battery_level
-            name: Battery
-            unit: '%'
-      - type: section
-      - entity: sensor.template_magnet_door_main
+          - entity: sensor.hall_motion_battery
+            name: Batteri
+      - entity: sensor.main_door_contact
+        type: custom:multiple-entity-row
+        name: Ytterdør
+        icon: mdi:login
         secondary_info: last-changed
         state_color: true
+        entities:
+          - entity: sensor.main_door_battery
+            name: Batteri
       - type: section
-      - type: custom:slider-entity-row
-        entity: light.hall
+      - entity: light.hall_roof
+        type: custom:slider-entity-row
         toggle: true
+        name: Lys
+        icon: mdi:ceiling-light
+      - entity: light.hall_cabinet
+        name: Vitrineskap
+        icon: mdi:track-light
+
+  - type: entities
+    title: Soverom
+    show_header_toggle: false
+    entities:
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.netatmo_home_temperature
+        align_icon: state
+        show:
+          name: false
+      - type: section
+      - entity: sensor.netatmo_home_temperature
+        name: Temperatur
+        secondary_info: last-changed
+      - entity: sensor.bedroom_button_temperature_measurement
+        name: Temperatur (knapp)
+        secondary_info: last-changed
+      - type: section
+      - entity: sensor.netatmo_home_humidity
+        name: Luftfuktighet
+        secondary_info: last-changed
+      - entity: sensor.netatmo_home_pressure
+        name: Trykk
+        secondary_info: last-changed
+      - entity: sensor.netatmo_home_noise
+        name: Lyd
+        secondary_info: last-changed
+      - entity: sensor.netatmo_home_co2
+        name: CO2
+        secondary_info: last-changed
+      - type: section
+      - entity: light.bedroom_main
+        type: custom:slider-entity-row
+        toggle: true
+        name: Lys
+        icon: led-strip-variant
+      - entity: light.nightstand
+        type: custom:slider-entity-row
+        toggle: true
+        name: Nattbord
+        icon: mdi:lamp
+      - type: section
+      - entity: switch.charger_ben
+        name: Lader (B)
+        state_color: true
+        assumed_state: false
+      - entity: switch.charger_kristin
+        name: Lader (K)
+        state_color: true
+        assumed_state: false
+      - entity: timer.bedroom_charger
+      - type: section
+      - entity: switch.power_pc
+        type: custom:multiple-entity-row
+        name: PC
+        state_color: true
+        assumed_state: false
+        entities:
+          - entity: sensor.power_pc_power_meter
+            name: Forbruk
+          - entity: sensor.power_pc_energy_meter
+            name: Total
 
   - type: entities
     title: Bad
@@ -142,38 +229,36 @@ cards:
     entities:
       - type: custom:mini-graph-card
         entities:
-          - sensor.flood_sensor_bathroom_temperature
-          - sensor.bathroom_thermostat_floor_temperature
+          - sensor.water_leak_temperature_measurement
+          - climate.bathroom_thermostat
         align_icon: state
         show:
           name: false
       - type: section
-      - entity: sensor.flood_sensor_bathroom_temperature
-        type: custom:multiple-entity-row
+      - entity: sensor.water_leak_temperature_measurement
         name: Temperatur
-        secondary_info: last-changed
-        entities:
-          - entity: sensor.flood_sensor_bathroom_temperature
-            attribute: battery_level
-            name: Battery
-            unit: '%'
       - type: section
-      - entity: sensor.bathroom_thermostat_floor_temperature
+      - entity: sensor.water_leak_water
+        type: custom:multiple-entity-row
+        name: Vannsensor
+        icon: mdi:pipe-leak
+        secondary_info: last-changed
+        state_color: true
+        entities:
+          - entity: sensor.water_leak_battery
+            name: Batteri
+      - entity: climate.bathroom_thermostat
         type: custom:multiple-entity-row
         name: Termostat
-        state_header: Gulv
+        show_state: false
         secondary_info: last-changed
         entities:
-          - entity: sensor.bathroom_thermostat_internal_temperature
-            name: Vegg
-      - entity: sensor.bathroom_thermostat_power_current
-        type: custom:multiple-entity-row
-        name: Strøm
-        state_header: Forbruk
-        secondary_info: last-changed
-        entities:
-          - sensor.bathroom_thermostat_power_voltage
-          - sensor.bathroom_thermostat_power_total
-      - type: section
-      - entity: switch.bathroom_thermostat
-        state_color: true
+          - attribute: temperature
+            name: Target
+            unit: '°C'
+          - attribute: current_temperature
+            name: false
+            unit: '°C'
+  - type: thermostat
+    entity: climate.bathroom_thermostat
+    name: ' '

@@ -13,22 +13,9 @@ google_assistant:
     climate.heater_r:
       name: Thermostat (R)
       room: Living Room
-    media_player.receiver:
-      name: Receiver
-      room: Living Room
-      expose: true
-      aliases:
-        - Sound System
-        - Media Station
-        - Lyd
-        - Lydsystem
-    media_player.getbox:
-      name: GetBox
-      room: Living Room
-      expose: true
-      aliases:
-        - Decoder
-        - GetTV
+    climate.bathroom_thermostat:
+      name: Thermostat
+      room: Bathroom
     input_boolean.home:
       name: Home
       room: Status
@@ -52,7 +39,7 @@ google_assistant:
         - Bortestatus
     input_boolean.vacation:
       expose: false
-    switch.power_livingroom_sofa:
+    switch.power_sofa:
       name: Power Sofa
       room: Living Room
       aliases:
@@ -61,13 +48,6 @@ google_assistant:
         - Sofastrom
         - Ladestrom
         - Lading
-    switch.power_livingroom_cabinet:
-      name: Power Cabinet
-      room: Living Room
-      aliases:
-        - Cabinet Power
-        - Cabinet Lights
-        - Vitrineskap
     switch.power_outside_lights:
       name: Outside Lights
       room: Outside
@@ -77,7 +57,7 @@ google_assistant:
         - Utelys
         - Terrasselys
         - Balkonglys
-    switch.power_bedroom_charger:
+    switch.charger_ben:
       name: Charger Ben
       room: Bedroom
       aliases:
@@ -86,30 +66,18 @@ google_assistant:
         - Bedroom Power
         - Soveromslader
         - Lader soverom
-    switch.power_bedroom_charger_2:
+    switch.charger_kristin:
       name: Charger Kristin
       room: Bedroom
       aliases:
         - Bedroom Charger Kristin
         - Phone Charger Kristin
         - Soveromslader Kristin
-    switch.power_livingroom_tv:
+    switch.power_tv:
       expose: false
-    switch.power_office_pc:
+    switch.power_pc:
       expose: false
-    switch.thermometer_storeroom:
+    switch.tumble_dryer:
       expose: false
-    switch.bathroom_thermostat:
-      expose: false
-    switch.bathroom_thermostat_external:
-      expose: false
-    switch.bathroom_thermostat_power:
-      name: Thermostat
-      room: Bathroom
-      aliases:
-        - Bathroom Thermostat
-        - Termostat Bad
-    switch.remote_bedroom:
-      expose: false
-    switch.remote_hall:
+    switch.washing_machine:
       expose: false

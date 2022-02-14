@@ -1,8 +1,8 @@
 - alias: 'Set theme on startup'
   initial_state: 'on'
   trigger:
-  - platform: homeassistant
-    event: start
+    - platform: homeassistant
+      event: start
   action:
     service: frontend.set_theme
     data:
@@ -11,34 +11,34 @@
 - alias: 'Set away status on startup'
   initial_state: 'on'
   trigger:
-  - platform: homeassistant
-    event: start
+    - platform: homeassistant
+      event: start
   action:
-  - service: input_boolean.turn_on
-    entity_id: input_boolean.away
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.away
 
 - alias: 'Set climate temperature on startup'
   initial_state: 'on'
   trigger:
-  - platform: homeassistant
-    event: start
+    - platform: homeassistant
+      event: start
   action:
-  - service: climate.set_temperature
-    target:
-      entity_id:
-        - climate.heater_l
-        - climate.heater_r
-    data:
-      temperature: 12
-      hvac_mode: 'off'
+    - service: climate.set_temperature
+      target:
+        entity_id:
+          - climate.heater_l
+          - climate.heater_r
+      data:
+        temperature: 12
+        hvac_mode: 'off'
 
 - alias: 'Notification on restart'
   initial_state: 'on'
   trigger:
-  - platform: homeassistant
-    event: start
+    - platform: homeassistant
+      event: start
   action:
-  - service: notify.default
-    data:
-      message: "Home Assistant has been restarted"
-      title: "Restart"
+    - service: notify.default
+      data:
+        message: "Home Assistant has been restarted"
+        title: "Restart"

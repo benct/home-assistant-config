@@ -1,97 +1,31 @@
-- alias: 'Livingroom light on before sunset'
+- alias: 'Lights on before sunset'
   initial_state: 'on'
   trigger:
-  - platform: sun
-    event: sunset
-    offset: '-01:00:00'
+    - platform: sun
+      event: sunset
+      offset: '-01:00:00'
   condition:
-  - condition: state
-    entity_id: input_boolean.home
-    state: 'on'
+    - condition: state
+      entity_id: input_boolean.home
+      state: 'on'
   action:
-  - service: light.turn_on
-    entity_id: light.living_room
-  - service: switch.turn_on
-    entity_id:
-      - switch.power_livingroom_cabinet
-      - switch.power_livingroom_sofa
+    - service: light.turn_on
+      entity_id:
+        - light.living_room
+        - light.hall_cabinet
+    - service: switch.turn_on
+      entity_id:
+        - switch.power_sofa
 
 - alias: 'Outside light on at sunset'
   initial_state: 'on'
   trigger:
-  - platform: sun
-    event: sunset
+    - platform: sun
+      event: sunset
   condition:
-  - condition: state
-    entity_id: input_boolean.home
-    state: 'on'
+    - condition: state
+      entity_id: input_boolean.home
+      state: 'on'
   action:
-  - service: switch.turn_on
-    entity_id: switch.power_outside_lights
-
-- alias: 'Hall light on when movement'
-  initial_state: 'on'
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.motion_hall
-    to: 'on'
-  condition:
-  - condition: or
-    conditions: 
-      - condition: sun
-        after: sunset
-        after_offset: '-1:00:00'
-      - condition: sun
-        before: sunrise
-  - condition: or
-    conditions:
-      - condition: state
-        entity_id: input_boolean.home
-        state: 'on'
-      - condition: state
-        entity_id: input_boolean.sleep
-        state: 'on'
-      - condition: state
-        entity_id: input_boolean.away
-        state: 'on'
-  action:
-  - service: light.turn_on
-    entity_id: light.hall
-
-- alias: 'Hall light off when no movement'
-  initial_state: 'on'
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.motion_hall
-    to: 'off'
-    for:
-      minutes: 5
-  condition:
-    condition: or
-    conditions: 
-      - condition: sun
-        after: sunset
-        after_offset: '-1:00:00'
-      - condition: sun
-        before: sunrise
-  action:
-  - service: light.turn_off
-    entity_id: light.hall
-
-- alias: 'Hall light on when opening front door'
-  initial_state: 'on'
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.magnet_door_main
-    to: 'on'
-  condition:
-    condition: or
-    conditions:
-      - condition: sun
-        after: sunset
-        after_offset: '-1:00:00'
-      - condition: sun
-        before: sunrise
-  action:
-  - service: light.turn_on
-    entity_id: light.hall
+    - service: switch.turn_on
+      entity_id: switch.power_outside_lights

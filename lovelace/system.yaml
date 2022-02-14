@@ -25,11 +25,6 @@ cards:
           - entity: sensor.hacs
             name: HACS
           - type: section
-            label: Signal
-          - sensor.netatmo_home_wifi
-          - sensor.netatmo_home_living_room_radio
-          - sensor.netatmo_home_outdoor_radio
-          - type: section
             label: Network
           - sensor.ipv4_address_eth0
           - sensor.myip
@@ -93,21 +88,33 @@ cards:
           - type: custom:battery-entity-row
             entity: sensor.netatmo_home_living_room_battery_percent
             name: Stue
+          - type: section
           - type: custom:battery-entity-row
-            entity: sensor.smoke_sensor_livingroom_temperature
-            name: Stue (tak)
+            entity: sensor.smoke_detector_battery
+            name: Røykvarsler
           - type: custom:battery-entity-row
-            entity: sensor.flood_sensor_bathroom_temperature
-            name: Bad
+            entity: sensor.water_leak_battery
+            name: Lekasjesensor
           - type: custom:battery-entity-row
-            entity: sensor.motion_hall_temperature
-            name: Gang
+            entity: sensor.hall_motion_battery
+            name: Bevegelsessensor
+          - type: custom:battery-entity-row
+            entity: sensor.main_door_battery
+            name: Dørsensor
+          - type: section
+          - type: custom:battery-entity-row
+            entity: sensor.hall_remote_battery
+            name: Knapp Gang
+          - type: custom:battery-entity-row
+            entity: sensor.bedroom_button_battery
+            name: Knapp Soverom
+          - type: section
           - type: custom:battery-entity-row
             entity: sensor.bedroom_switch_battery_level
-            name: Soverom (bryter)
+            name: Bryter Soverom
           - type: custom:battery-entity-row
             entity: sensor.living_room_switch_battery_level
-            name: Stue (bryter)
+            name: Bryter Stue
 
   - type: vertical-stack
     cards:
