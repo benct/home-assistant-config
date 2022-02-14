@@ -87,8 +87,6 @@ cards:
       - type: custom:slider-entity-row
         entity: light.entertainment_tv
         toggle: true
-      - entity: input_select.livingroom_hue_scene
-        name: Scene
       - type: section
       - entity: switch.power_livingroom_cabinet
         name: Vitrineskap
