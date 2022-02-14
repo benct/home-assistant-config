@@ -1,11 +1,5 @@
 title: Home
 
-excluded_entities:
-  - binary_sensor.smoke_sensor_livingroom
-  - binary_sensor.motion_hall
-  - binary_sensor.magnet_door_main
-  - binary_sensor.flood_sensor_bathroom
-
 views:
   - !include lovelace/main.yaml
   - !include lovelace/livingroom.yaml

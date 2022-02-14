@@ -54,8 +54,3 @@ recorder:
       - sensor.bathroom_thermostat_power_current
       - sensor.power_livingroom_tv_power_2
       - sensor.power_office_pc_power_2
-
-      - sensor.template_flood_sensor_bathroom
-      - sensor.template_smoke_sensor_livingroom
-      - sensor.template_magnet_door_main
-      - sensor.template_motion_hall
