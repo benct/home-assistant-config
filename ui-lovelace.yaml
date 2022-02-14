@@ -7,6 +7,4 @@ views:
   - !include lovelace/outside.yaml
   - !include lovelace/media.yaml
   - !include lovelace/system.yaml
-  - !include lovelace/automations.yaml
-  - !include lovelace/development.yaml
   - !include lovelace/camera.yaml
