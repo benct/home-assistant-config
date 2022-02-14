@@ -146,6 +146,7 @@ cards:
             type: attribute
             attribute: current_temperature
             name: Termostat
+            unit: '°C'
             icon: mdi:thermometer
             secondary_info: last-changed
           - type: section

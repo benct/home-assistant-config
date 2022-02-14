@@ -95,13 +95,14 @@ cards:
         type: custom:slider-entity-row
         toggle: true
         name: TV
-        idon: mdi:television-ambient-light
+        icon: mdi:television-ambient-light
       - type: section
       - entity: switch.power_sofa
         name: Sofa
         icon: mdi:power-plug
         state_color: true
         assumed_state: false
+      - type: section
       - entity: switch.power_tv
         type: custom:multiple-entity-row
         name: TV
@@ -240,22 +241,7 @@ cards:
       - type: section
       - entity: sensor.water_leak_temperature_measurement
         name: Temperatur
-      - entity: climate.bathroom_thermostat
-        type: attribute
-        attribute: current_temperature
-        name: Termostat
-        icon: mdi:thermometer
         secondary_info: last-changed
-      - type: section
-      - entity: binary_sensor.water_leak_water
-        type: custom:multiple-entity-row
-        name: Vannsensor
-        icon: mdi:pipe-leak
-        secondary_info: last-changed
-        state_color: true
-        entities:
-          - entity: sensor.water_leak_battery
-            name: Batteri
       - entity: climate.bathroom_thermostat
         type: custom:multiple-entity-row
         name: Termostat
@@ -269,6 +255,16 @@ cards:
           - attribute: current_temperature
             name: Current
             unit: '°C'
+      - type: section
+      - entity: binary_sensor.water_leak_water
+        type: custom:multiple-entity-row
+        name: Vannsensor
+        icon: mdi:pipe-leak
+        secondary_info: last-changed
+        state_color: true
+        entities:
+          - entity: sensor.water_leak_battery
+            name: Batteri
       - type: section
       - entity: switch.washing_machine
         type: custom:multiple-entity-row
@@ -290,5 +286,5 @@ cards:
         entities:
           - entity: sensor.tumble_dryer_energy
             name: Total
-          - attribute: sensor.wtumble_dryer_power
+          - attribute: sensor.tumble_dryer_power
             name: Forbruk
