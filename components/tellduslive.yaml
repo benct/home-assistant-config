@@ -1,3 +1,0 @@
-tellduslive:
-  host: !secret telldus_host
-  scan_interval: 30

@@ -1,6 +1,3 @@
-sensor.telldus_outside_temperature:
-  hidden: true
-
 sensor.bathroom_thermostat_floor_temperature:
   friendly_name: Temperatur (gulv)
 
