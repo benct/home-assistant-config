@@ -32,17 +32,20 @@ cards:
           - type: section
             label: GitHub
           - type: custom:github-entity-row
-            entity: sensor.home_assistant_config
+            repo: benct/home-assistant-config
+            name: home-assistant-config
           - type: custom:github-entity-row
-            entity: sensor.lovelace_xiaomi_vacuum_card
+            repo: benct/lovelace-xiaomi-vacuum-card
+            name: xiaomi-vacuum-card
           - type: custom:github-entity-row
-            entity: sensor.lovelace_multiple_entity_row
+            repo: benct/lovelace-multiple-entity-row
+            name: multiple-entity-row
           - type: custom:github-entity-row
-            entity: sensor.lovelace_github_entity_row
+            repo: benct/lovelace-github-entity-row
+            name: github-entity-row
           - type: custom:github-entity-row
-            entity: sensor.lovelace_battery_entity_row
-          - type: custom:github-entity-row
-            entity: sensor.lovelace_attribute_entity_row
+            repo: benct/lovelace-battery-entity-row
+            name: battery-entity-row
 
   - type: vertical-stack
     cards:
@@ -80,6 +83,25 @@ cards:
             entities:
               - sensor.disk_use
               - sensor.disk_free
+      - type: glance
+        title: Components
+        columns: 3
+        entities:
+          - entity: sensor.count_sensor
+            icon: mdi:blur-linear
+          - entity: sensor.count_switch
+            icon: mdi:toggle-switch
+          - entity: sensor.count_light
+            icon: mdi:lightbulb
+          - entity: sensor.count_automations
+            icon: mdi:home-automation
+          - entity: sensor.count_binary_sensor
+            icon: mdi:blur-radial
+          - entity: sensor.count_media_player
+            icon: mdi:cast
+
+  - type: vertical-stack
+    cards:
       - type: entities
         entities:
           - type: custom:battery-entity-row
@@ -115,22 +137,3 @@ cards:
           - type: custom:battery-entity-row
             entity: sensor.living_room_switch_battery_level
             name: Bryter Stue
-
-  - type: vertical-stack
-    cards:
-      - type: glance
-        title: Components
-        columns: 3
-        entities:
-          - entity: sensor.count_sensor
-            icon: mdi:blur-linear
-          - entity: sensor.count_switch
-            icon: mdi:toggle-switch
-          - entity: sensor.count_light
-            icon: mdi:lightbulb
-          - entity: sensor.count_automations
-            icon: mdi:home-automation
-          - entity: sensor.count_binary_sensor
-            icon: mdi:blur-radial
-          - entity: sensor.count_media_player
-            icon: mdi:cast
