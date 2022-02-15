@@ -95,6 +95,48 @@ cards:
             toggle: true
             name: TV
             icon: mdi:television-ambient-light
+          - type: buttons
+            entities:
+              - entity: scene.living_room_relax
+                icon: mdi:lamps
+                name: Relax
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.living_room_relax
+              - entity: scene.living_room_nightlight
+                icon: mdi:lamps
+                name: Dim
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.living_room_nightlight
+              - entity: scene.lounge_relax
+                icon: mdi:floor-lamp
+                name: Relax
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.lounge_relax
+              - entity: scene.lounge_read
+                icon: mdi:floor-lamp
+                name: Read
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.lounge_read
+              - entity: scene.lounge_concentrate
+                icon: mdi:floor-lamp
+                name: Conc
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.lounge_concentrate
           - type: custom:slider-entity-row
             entity: light.hall_roof
             toggle: true
@@ -146,7 +188,7 @@ cards:
             type: attribute
             attribute: current_temperature
             name: Termostat
-            unit: '°C'
+            suffix: '°C'
             icon: mdi:thermometer
             secondary_info: last-changed
           - type: section
