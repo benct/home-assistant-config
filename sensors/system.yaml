@@ -1,7 +1,3 @@
-- platform: version
-
-- platform: cpuspeed
-
 - platform: command_line
   name: CPU Temperature
   command: 'cat /sys/class/thermal/thermal_zone0/temp'
@@ -26,19 +22,3 @@
     - type: last_boot
     - type: ipv4_address
       arg: eth0
-
-- platform: dnsip
-  scan_interval: 1200
-
-- platform: github
-  access_token: !secret github_token
-  repositories:
-    - path: 'benct/home-assistant-config'
-    - path: 'benct/lovelace-xiaomi-vacuum-card'
-    - path: 'benct/lovelace-multiple-entity-row'
-    - path: 'benct/lovelace-github-entity-row'
-    - path: 'benct/lovelace-battery-entity-row'
-    - path: 'benct/lovelace-attribute-entity-row'
-
-- platform: cert_expiry
-  host: !secret hostname

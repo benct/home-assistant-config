@@ -1,5 +1,5 @@
 timer:
   bedroom_charger:
-    name: Lader (Soverom)
+    name: Timer (Lader)
     duration: '02:30:00'
     icon: mdi:battery-charging-70
