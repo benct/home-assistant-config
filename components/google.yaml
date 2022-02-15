@@ -48,15 +48,13 @@ google_assistant:
         - Sofastrom
         - Ladestrom
         - Lading
-    switch.power_outside_lights:
-      name: Outside Lights
-      room: Outside
+    switch.outdoor_light:
+      name: Outdoor Lights
+      room: Outdoor
       aliases:
-        - Terrace Lights
+        - Outside Lights
         - Balcony Lights
         - Utelys
-        - Terrasselys
-        - Balkonglys
     switch.charger_ben:
       name: Charger Ben
       room: Bedroom

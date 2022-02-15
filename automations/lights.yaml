@@ -28,4 +28,4 @@
       state: 'on'
   action:
     - service: switch.turn_on
-      entity_id: switch.power_outside_lights
+      entity_id: switch.outdoor_light

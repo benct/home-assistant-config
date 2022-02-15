@@ -71,7 +71,7 @@ cards:
             assumed_state: false
             tap_action:
               action: toggle
-          - entity: switch.power_outside_lights
+          - entity: switch.outdoor_light
             name: Utelys
             icon: mdi:lightbulb-on-outline
             assumed_state: false

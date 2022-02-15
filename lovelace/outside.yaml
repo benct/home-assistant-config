@@ -20,8 +20,9 @@ cards:
         name: Luftfuktighet
         secondary_info: last-changed
       - type: section
-      - entity: switch.power_outside_lights
+      - entity: switch.outdoor_light
         name: Lys
+        icon: mdi:string-lights
         state_color: true
         assumed_state: false
   - type: weather-forecast

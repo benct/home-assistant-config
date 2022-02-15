@@ -16,7 +16,7 @@ recorder:
       - light.hall_roof
       - light.hall_cabinet
 
-      - switch.power_outside_lights
+      - switch.outdoor_light
       - switch.power_pc
       - switch.power_tv
       - switch.power_sofa

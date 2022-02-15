@@ -40,7 +40,7 @@
   action:
     - service: switch.turn_on
       entity_id:
-        - switch.power_outside_lights
+        - switch.outdoor_light
         - switch.power_sofa
     - service: light.turn_on
       entity_id:
@@ -64,7 +64,7 @@
     - service: switch.turn_off
       entity_id:
         - switch.power_sofa
-        - switch.power_outside_lights
+        - switch.outdoor_light
     - service: light.turn_off
       entity_id:
         - light.living_room
@@ -100,7 +100,7 @@
         - switch.charger_ben
         - switch.charger_kristin
         - switch.power_sofa
-        - switch.power_outside_lights
+        - switch.outdoor_light
     - service: light.turn_off
       entity_id:
         - light.living_room
@@ -136,7 +136,7 @@
         - switch.power_tv
         - switch.power_pc
         - switch.power_sofa
-        - switch.power_outside_lights
+        - switch.outdoor_light
     - service: light.turn_off
       entity_id:
         - light.living_room
