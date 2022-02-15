@@ -13,36 +13,59 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 ## Hardware
 
 - [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+- [Raspberry Pi Camera V2](https://www.home-assistant.io/integrations/rpi_camera/)
 - [~~Telldus Tellstick ZNet Lite v2~~](https://home-assistant.io/integrations/tellduslive/)
 - [Samsung SmartThings Hub](https://home-assistant.io/integrations/smartthings/)
+- [Samsung Washer/Dryer](https://www.home-assistant.io/integrations/smartthings/)
+- [Samsung Smart TV](https://home-assistant.io/integrations/samsungtv/)
 - [Phillips Hue Hub](https://www.home-assistant.io/integrations/hue/)
 - [Google Nest Mini / Hub / Audio](https://www.home-assistant.io/integrations/google_assistant/)
+- [Google Chromecast](https://www.home-assistant.io/integrations/cast/)
 - [Netatmo Weather Station](https://home-assistant.io/integrations/netatmo/)
 - [Xiaomi Roborock Vacuum](https://www.home-assistant.io/integrations/xiaomi_miio/)
-- [Samsung Washer/Dryer](https://www.home-assistant.io/integrations/smartthings/)
 - [Mill Heaters](https://www.home-assistant.io/integrations/mill/)
+- [Onkyo Receiver](https://www.home-assistant.io/integrations/onkyo/)
 
-#### Devices:
+#### Z-Wave/Zigbee Devices
 - [Telldus Wall Plug](https://products.z-wavealliance.org/products/1536)
 - [Fibaro Wall Plug](https://products.z-wavealliance.org/products/1653)
 - [Fibaro Motion Sensor](https://products.z-wavealliance.org/products/2762)
 - [Fibaro Smoke Sensor](https://products.z-wavealliance.org/products/1273)
 - [Fibaro Flood Sensor](https://products.z-wavealliance.org/products/2791)
 - [Fibaro Door/Window Sensor](https://products.z-wavealliance.org/products/2181)
-- [HeatIt Z-TRM3 Thermostat](https://products.z-wavealliance.org/products/3802)
 - [Phillips Hue Bulbs / Strips / Play](https://www.home-assistant.io/integrations/hue/)
 - [Phillips Hue Plugs](https://www.home-assistant.io/integrations/hue/)
 - [SmartThings Button](https://home-assistant.io/integrations/smartthings/)
-- [Raspberry Pi Camera V2](https://www.home-assistant.io/integrations/rpi_camera/)
+- [HeatIt Z-TRM3 Thermostat](https://products.z-wavealliance.org/products/3802)
 
-#### Media:
-- [Samsung Smart TV](https://home-assistant.io/integrations/samsungtv/)
-- [Onkyo Receiver](https://www.home-assistant.io/integrations/onkyo/)
-- [Google Chromecast](https://www.home-assistant.io/integrations/cast/)
+## Integrations
+
+List of installed integrations via the Home Assistant UI.
+
+#### Hubs/Devices
+- [SmartThings](https://home-assistant.io/integrations/smartthings/)
+- [Phillips Hue](https://www.home-assistant.io/integrations/hue/)
+- [Netatmo](https://home-assistant.io/integrations/netatmo/)
+- [Xiaomi Miio](https://www.home-assistant.io/integrations/xiaomi_miio/)
+- [Mill](https://www.home-assistant.io/integrations/mill/)
+- [Tuya](https://www.home-assistant.io/integrations/tuya)
+- [GitHub](https://www.home-assistant.io/integrations/github/)
+
+#### Media
+- [Google Cast](https://www.home-assistant.io/integrations/cast/)
 - [Spotify](https://www.home-assistant.io/integrations/spotify/)
 
-#### Weather:
+#### Weather
 - [Met.no](https://www.home-assistant.io/integrations/met/)
+
+#### System
+- [Certificate Expiry](https://www.home-assistant.io/integrations/cert_expiry/)
+- [CPU Speed](https://www.home-assistant.io/integrations/cpuspeed/)
+- [DNS IP](https://www.home-assistant.io/integrations/dnsip/)
+- [RPi Power](https://www.home-assistant.io/integrations/rpi_power/)
+- [Supervisor](https://www.home-assistant.io/integrations/hassio/)
+- [Version](https://www.home-assistant.io/integrations/version/)
+- [HACS](https://hacs.xyz/)
 
 ## Frontend
 
