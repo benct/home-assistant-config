@@ -17,7 +17,7 @@
   initial_state: 'on'
   trigger:
     - platform: numeric_state
-      entity_id: sensor.smoke_sensor_livingroom_temperature
+      entity_id: sensor.smoke_detector_temperature_measurement
       below: 12
     - platform: numeric_state
       entity_id: sensor.netatmo_home_living_room_temperature
@@ -32,15 +32,18 @@
   initial_state: 'on'
   trigger:
     - platform: numeric_state
-      entity_id: sensor.smoke_sensor_livingroom_temperature
-      above: 30
+      entity_id: sensor.hall_motion_temperature_measurement
+      above: 35
+    - platform: numeric_state
+      entity_id: sensor.smoke_detector_temperature_measurement
+      above: 35
     - platform: numeric_state
       entity_id: sensor.netatmo_home_living_room_temperature
       above: 35
   action:
     - service: notify.default
       data:
-        message: 'Temperature above 30 degrees...'
+        message: 'Temperature above 35 degrees...'
         title: 'High indoor temperature!'
 
 - alias: 'Public IP change'
