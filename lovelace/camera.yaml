@@ -1,6 +1,8 @@
 path: camera
 title: Camera
 icon: mdi:cam
+visible:
+  - user: 25d9bafa1f79482082d57ca1b0b50fce
 cards:
   - type: picture-entity
     entity: camera.raspberry_pi_camera
