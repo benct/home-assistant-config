@@ -225,11 +225,7 @@ cards:
             name: Stue (tak)
           - entity: sensor.hall_motion_temperature_measurement
             name: Gang
-          - entity: sensor.main_door_temperature_measurement
-            name: Dør
           - entity: sensor.netatmo_home_temperature
             name: Soverom
-          - entity: sensor.water_leak_temperature_measurement
-            name: Bad
       - type: weather-forecast
         entity: weather.home
