@@ -18,5 +18,3 @@ cards:
     entity: media_player.kitchen_display
   - type: media-control
     entity: media_player.minilynet
-  - type: media-control
-    entity: media_player.receiver

@@ -11,19 +11,9 @@ cards:
             name: Version
           - entity: sensor.last_boot
             format: relative
-          - type: custom:multiple-entity-row
-            entity: binary_sensor.updater
-            show_state: false
-            state_color: true
-            entities:
-              - entity: binary_sensor.updater
-                attribute: newest_version
-                name: false
           - entity: sensor.cert_expiry_timestamp_home_tomlin_no
             name: Cert Expiry
           - binary_sensor.rpi_power_status
-          - entity: sensor.hacs
-            name: HACS
           - type: section
             label: Network
           - sensor.ipv4_address_eth0

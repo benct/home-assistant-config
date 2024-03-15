@@ -1,10 +1,6 @@
 vacuum.xiaomi_vacuum_cleaner:
   friendly_name: Vacuum
 
-media_player.receiver:
-  friendly_name: Receiver
-  icon: mdi:speaker
-
 sensor.processor_use_percent:
   friendly_name: Processor
   icon: mdi:chip
