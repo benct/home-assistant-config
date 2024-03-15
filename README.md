@@ -14,7 +14,6 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 
 - [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 - [Raspberry Pi Camera V2](https://www.home-assistant.io/integrations/rpi_camera/)
-- [~~Telldus Tellstick ZNet Lite v2~~](https://home-assistant.io/integrations/tellduslive/)
 - [Samsung SmartThings Hub](https://home-assistant.io/integrations/smartthings/)
 - [Samsung Washer/Dryer](https://www.home-assistant.io/integrations/smartthings/)
 - [Samsung Smart TV](https://home-assistant.io/integrations/samsungtv/)
@@ -24,7 +23,6 @@ Configuration for my [home-assistant](https://www.home-assistant.io) setup runni
 - [Netatmo Weather Station](https://home-assistant.io/integrations/netatmo/)
 - [Xiaomi Roborock Vacuum](https://www.home-assistant.io/integrations/xiaomi_miio/)
 - [Mill Heaters](https://www.home-assistant.io/integrations/mill/)
-- [Onkyo Receiver](https://www.home-assistant.io/integrations/onkyo/)
 
 #### Z-Wave/Zigbee Devices
 - [Telldus Wall Plug](https://products.z-wavealliance.org/products/1536)
@@ -59,12 +57,14 @@ List of installed integrations via the Home Assistant UI.
 - [Met.no](https://www.home-assistant.io/integrations/met/)
 
 #### System
+- [System Monitor](https://www.home-assistant.io/integrations/systemmonitor/)
 - [Certificate Expiry](https://www.home-assistant.io/integrations/cert_expiry/)
 - [CPU Speed](https://www.home-assistant.io/integrations/cpuspeed/)
 - [DNS IP](https://www.home-assistant.io/integrations/dnsip/)
 - [RPi Power](https://www.home-assistant.io/integrations/rpi_power/)
 - [Supervisor](https://www.home-assistant.io/integrations/hassio/)
 - [Version](https://www.home-assistant.io/integrations/version/)
+- [Fast.com](https://www.home-assistant.io/integrations/fastdotcom/)
 - [HACS](https://hacs.xyz/)
 
 ## Frontend
