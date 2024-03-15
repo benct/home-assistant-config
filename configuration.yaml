@@ -4,7 +4,10 @@ homeassistant:
   longitude: !secret longitude
   elevation: 40
   unit_system: metric
+  currency: NOK
+  country: NO
   time_zone: Europe/Oslo
+  language: en-GB
   external_url: !secret base_url
   auth_providers:
     - type: homeassistant
@@ -52,7 +55,6 @@ config:
 discovery:
 updater:
 system_health:
-sun:
 
 sensor: !include_dir_merge_list sensors
 automation: !include_dir_merge_list automations
