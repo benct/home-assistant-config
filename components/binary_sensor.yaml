@@ -1,3 +1,0 @@
-binary_sensor:
-  - platform: workday
-    country: 'NO'
