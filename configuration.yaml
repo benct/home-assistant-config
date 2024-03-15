@@ -52,8 +52,12 @@ frontend:
   themes: !include_dir_merge_named themes
 
 config:
-discovery:
-updater:
+history:
+my:
+sun:
+dhcp:
+ssdp:
+cloud:
 system_health:
 
 sensor: !include_dir_merge_list sensors
