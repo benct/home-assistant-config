@@ -5,7 +5,7 @@ homeassistant:
   elevation: 40
   unit_system: metric
   currency: NOK
-  country: NO
+  country: 'NO'
   time_zone: Europe/Oslo
   language: en-GB
   external_url: !secret base_url
